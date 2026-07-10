@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hielos Yopal — Conteo automático de producción</title>
+<style>
+  :root {
+    --surface-1: #fcfcfb; --page: #f9f9f7; --text-primary: #0b0b0b;
+    --text-secondary: #52514e; --text-muted: #898781; --gridline: #e1e0d9;
+    --border: rgba(11,11,11,0.10);
+    --series-1: #2a78d6; --series-2: #1baf7a;
+    --status-good: #0ca30c; --status-warning: #b8790a; --status-pending: #898781;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --surface-1: #1a1a19; --page: #0d0d0d; --text-primary: #ffffff;
+      --text-secondary: #c3c2b7; --text-muted: #898781; --gridline: #2c2c2a;
+      --border: rgba(255,255,255,0.10);
+      --series-1: #3987e5; --series-2: #199e70;
+      --status-good: #0ca30c; --status-warning: #fab219; --status-pending: #898781;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--page); color: var(--text-primary); margin: 0;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 32px 20px 64px; }
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--series-1); margin: 0 0 8px; }
+  h1 { font-size: 24px; font-weight: 650; margin: 0 0 6px; line-height: 1.25; }
+  .subtitle { color: var(--text-secondary); font-size: 14.5px; line-height: 1.5; max-width: 600px; margin: 0; }
+  select#selector-fecha {
+    font-family: inherit; font-size: 14px; font-weight: 600; padding: 8px 12px;
+    border-radius: 8px; border: 1px solid var(--border); background: var(--surface-1);
+    color: var(--text-primary);
+  }
+  .banner {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px 16px; font-size: 13.5px; color: var(--text-secondary); line-height: 1.55;
+    margin: 0 0 28px;
+  }
+  .banner strong { color: var(--text-primary); }
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
+  @media (max-width: 680px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+  .tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .tile .label { font-size: 12.5px; color: var(--text-secondary); margin: 0 0 6px; }
+  .tile .value { font-size: 24px; font-weight: 650; margin: 0; }
+  .tile .unit { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-left: 2px; }
+  section { margin-bottom: 32px; }
+  h2 { font-size: 15.5px; font-weight: 650; margin: 0 0 4px; }
+  .section-note { font-size: 13px; color: var(--text-secondary); margin: 0 0 14px; line-height: 1.5; }
+  .chart-card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 20px 20px 8px; }
+  .legend { display: flex; gap: 16px; margin-bottom: 12px; font-size: 12.5px; color: var(--text-secondary); }
+  .legend .key { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .dot { width: 10px; height: 10px; border-radius: 3px; }
+  .bars { display: flex; align-items: flex-end; gap: 4px; height: 160px; padding: 0 4px; }
+  .bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; position: relative; min-width: 0; }
+  .bar { width: 100%; max-width: 40px; border-radius: 4px 4px 0 0; position: relative; cursor: default; transition: opacity 0.15s; }
+  .bar:hover { opacity: 0.8; }
+  .bar-col .x-label { font-size: 10.5px; color: var(--text-muted); margin-top: 6px; white-space: nowrap; }
+  .bar .bar-value { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 4px; font-size: 12px; font-weight: 700; color: var(--text-primary); white-space: nowrap; }
+  .bar .tooltip {
+    position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(-6px);
+    background: var(--text-primary); color: var(--page); font-size: 11.5px; font-weight: 600;
+    padding: 4px 7px; border-radius: 5px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.12s;
+  }
+  .bar:hover .tooltip { opacity: 1; }
+  .empty-state { padding: 28px 16px; text-align: center; color: var(--text-secondary); font-size: 13.5px; }
+  table.data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 12px; }
+  .table-wrap { overflow-x: auto; }
+  table.data-table th, table.data-table td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--gridline); font-variant-numeric: tabular-nums; }
+  table.data-table th { color: var(--text-secondary); font-weight: 600; font-size: 12px; }
+  details.table-toggle { margin-top: 10px; }
+  details.table-toggle summary { cursor: pointer; font-size: 12.5px; color: var(--series-1); font-weight: 600; }
+  .roadmap { display: flex; flex-direction: column; gap: 10px; }
+  .road-item { display: flex; align-items: flex-start; gap: 12px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; }
+  .badge { flex: none; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 100px; white-space: nowrap; margin-top: 1px; }
+  .badge.done { color: var(--status-good); background: color-mix(in srgb, var(--status-good) 14%, transparent); }
+  .badge.progress { color: var(--status-warning); background: color-mix(in srgb, var(--status-warning) 16%, transparent); }
+  .badge.pending { color: var(--status-pending); background: color-mix(in srgb, var(--status-pending) 16%, transparent); }
+  .road-title { font-size: 14px; font-weight: 600; margin: 0 0 2px; }
+  .road-desc { font-size: 13px; color: var(--text-secondary); margin: 0; line-height: 1.5; }
+  footer { border-top: 1px solid var(--border); padding-top: 16px; margin-top: 40px; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div>
+      <p class="eyebrow">Hielos Yopal SAS</p>
+      <h1>Conteo automático de producción — bloques de hielo</h1>
+      <p class="subtitle">Registro diario de despachos con hora real y respaldo en video, generado automáticamente cada noche.</p>
+    </div>
+    <select id="selector-fecha" aria-label="Elegir fecha"></select>
+  </div>
+
+  <div class="banner" id="banner-dia"></div>
+
+  <div class="tiles" id="tiles-dia"></div>
+
+  <section>
+    <h2>Unidades por presentación</h2>
+    <p class="section-note">Bloques contados en la fecha seleccionada, por tipo.</p>
+    <div class="chart-card" id="card-consolidado"></div>
+  </section>
+
+  <section>
+    <h2>Actividad por hora — <span id="titulo-fecha-actividad"></span></h2>
+    <p class="section-note">El despacho no tiene horario fijo: puede ocurrir en cualquier momento del día. Este gráfico muestra dónde cayó la actividad detectada ese día en particular, no un patrón esperado.</p>
+    <div class="chart-card">
+      <div class="bars" id="chart-horas"></div>
+      <details class="table-toggle">
+        <summary>Ver como tabla</summary>
+        <div class="table-wrap"><table class="data-table" id="tabla-tramos"><thead><tr><th>Inicio</th><th>Fin</th><th>Duración (seg)</th></tr></thead><tbody></tbody></table></div>
+      </details>
+    </div>
+  </section>
+
+  <section>
+    <h2>Estado del proyecto</h2>
+    <p class="section-note">Qué ya funciona y qué falta.</p>
+    <div class="roadmap">
+      <div class="road-item"><span class="badge done">✓ Listo</span><div><p class="road-title">Detección de actividad e ingesta de video</p><p class="road-desc">Filtro de movimiento calibrado sobre la cámara real, con hora exacta de cada tramo y clip de respaldo.</p></div></div>
+      <div class="road-item"><span class="badge done">✓ Listo</span><div><p class="road-title">Informe diario, envío por correo y limpieza automática</p><p class="road-desc">Corrida automática todos los días, con alerta si algo falla o si el volumen de un día es inusual.</p></div></div>
+      <div class="road-item"><span class="badge progress">◐ En calibración</span><div><p class="road-title">Conteo real por tipo de bloque (grande / pequeño)</p><p class="road-desc">El mecanismo ya está construido y probado; falta calibrarlo con video donde se vea bien el punto de extracción.</p></div></div>
+      <div class="road-item"><span class="badge pending">○ Planeado</span><div><p class="road-title">Descarga automática desde el grabador</p><p class="road-desc">Depende de conectividad con la red de la fábrica.</p></div></div>
+    </div>
+  </section>
+
+  <footer id="footer-info">Cargando…</footer>
+
+</div>
+
+<script>
+async function main() {
+  let datos;
+  try {
+    const resp = await fetch('./data.json', { cache: 'no-store' });
+    datos = await resp.json();
+  } catch (e) {
+    document.getElementById('banner-dia').innerHTML = '<strong>No se pudo cargar data.json.</strong> Si estás abriendo este archivo localmente (file://), abrilo desde un servidor o desde la URL publicada.';
+    document.getElementById('footer-info').textContent = '';
+    return;
+  }
+
+  const dias = (datos.dias || []).slice().sort((a, b) => b.fecha.localeCompare(a.fecha));
+  const selector = document.getElementById('selector-fecha');
+  const footer = document.getElementById('footer-info');
+
+  if (dias.length === 0) {
+    document.getElementById('banner-dia').innerHTML = '<strong>Todavía no hay datos procesados.</strong> Esta página se actualiza sola apenas corra la primera corrida diaria.';
+    selector.style.display = 'none';
+    footer.textContent = 'Generado: ' + (datos.generado_en || '—');
+    return;
+  }
+
+  selector.innerHTML = dias.map(d => `<option value="${d.fecha}">${d.fecha}</option>`).join('');
+  selector.addEventListener('change', () => renderDia(dias.find(d => d.fecha === selector.value)));
+  renderDia(dias[0]);
+
+  footer.textContent = 'Última actualización: ' + (datos.generado_en || '—') + ' · Página de validación, se actualiza cada noche con el video del día anterior.';
+}
+
+function renderDia(dia) {
+  document.getElementById('titulo-fecha-actividad').textContent = dia.fecha;
+
+  const banner = document.getElementById('banner-dia');
+  if (dia.conteo_real) {
+    banner.innerHTML = `<strong>${dia.fecha}</strong> — conteo real por presentación.`;
+  } else {
+    banner.innerHTML = `<strong>${dia.fecha}</strong> — el conteo por presentación para este día todavía está en calibración (ver "Estado del proyecto" más abajo); los horarios de actividad sí son reales.`;
+  }
+
+  const total = dia.consolidado.reduce((acc, c) => acc + c.unidades, 0);
+  const tramos = dia.tramos || [];
+  const duracionProm = tramos.length ? (tramos.reduce((a, t) => a + t.duracion_seg, 0) / tramos.length) : 0;
+  const rango = tramos.length ? `${horaCorta(tramos[0].inicio)}–${horaCorta(tramos[tramos.length - 1].fin)}` : '—';
+
+  document.getElementById('tiles-dia').innerHTML = `
+    <div class="tile"><p class="label">Total del día</p><p class="value">${dia.conteo_real ? total : '—'}<span class="unit">bloques</span></p></div>
+    <div class="tile"><p class="label">Tramos de actividad</p><p class="value">${tramos.length}</p></div>
+    <div class="tile"><p class="label">Duración promedio</p><p class="value">${duracionProm.toFixed(1)}<span class="unit">seg</span></p></div>
+    <div class="tile"><p class="label">Rango horario del día</p><p class="value" style="font-size:18px;">${rango}</p></div>
+  `;
+
+  renderConsolidado(dia);
+  renderHoras(tramos);
+  renderTablaTramos(tramos);
+}
+
+function renderConsolidado(dia) {
+  const card = document.getElementById('card-consolidado');
+  if (!dia.conteo_real || dia.consolidado.length === 0) {
+    card.innerHTML = `<div class="empty-state">Conteo por presentación en calibración para este día — ver "Estado del proyecto".</div>`;
+    return;
+  }
+  const colores = { bloque_grande: 'var(--series-1)', bloque_pequeno: 'var(--series-2)' };
+  const etiquetas = { bloque_grande: 'Bloque grande', bloque_pequeno: 'Bloque pequeño' };
+  const max = Math.max(...dia.consolidado.map(c => c.unidades), 1);
+
+  card.innerHTML = `
+    <div class="legend">${dia.consolidado.map(c => `<span class="key"><span class="dot" style="background:${colores[c.clase] || 'var(--text-muted)'}"></span>${etiquetas[c.clase] || c.clase}</span>`).join('')}</div>
+    <div class="bars">
+      ${dia.consolidado.map(c => `
+        <div class="bar-col">
+          <div class="bar" style="height:${(c.unidades / max) * 100}%; background:${colores[c.clase] || 'var(--text-muted)'}">
+            <span class="bar-value">${c.unidades}</span>
+            <span class="tooltip">${etiquetas[c.clase] || c.clase}: ${c.unidades}</span>
+          </div>
+          <span class="x-label">${etiquetas[c.clase] || c.clase}</span>
+        </div>`).join('')}
+    </div>`;
+}
+
+function renderHoras(tramos) {
+  const el = document.getElementById('chart-horas');
+  if (tramos.length === 0) {
+    el.innerHTML = `<div class="empty-state">Sin actividad detectada este día.</div>`;
+    return;
+  }
+  const porHora = {};
+  tramos.forEach(t => {
+    const h = new Date(t.inicio).getHours();
+    porHora[h] = (porHora[h] || 0) + 1;
+  });
+  const horas = Object.keys(porHora).map(Number).sort((a, b) => a - b);
+  const max = Math.max(...horas.map(h => porHora[h]));
+
+  el.innerHTML = horas.map(h => {
+    const v = porHora[h];
+    const hAlt = Math.max((v / max) * 100, 4);
+    return `<div class="bar-col">
+      <div class="bar" style="height:${hAlt}%; background:var(--series-1)"><span class="tooltip">${String(h).padStart(2,'0')}:00 — ${v} tramo(s)</span></div>
+      <span class="x-label">${String(h).padStart(2,'0')}h</span>
+    </div>`;
+  }).join('');
+}
+
+function renderTablaTramos(tramos) {
+  const tbody = document.querySelector('#tabla-tramos tbody');
+  tbody.innerHTML = tramos.map(t => `<tr><td>${horaCorta(t.inicio)}</td><td>${horaCorta(t.fin)}</td><td>${t.duracion_seg}</td></tr>`).join('');
+}
+
+function horaCorta(iso) {
+  if (!iso) return '—';
+  const d = new Date(iso);
+  return d.toTimeString().slice(0, 8);
+}
+
+main();
+</script>
+</body>
+</html>

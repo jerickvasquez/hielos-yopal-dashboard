@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-07-10T17:12:24.804581",
+  "generado_en": "2026-07-12T18:55:21.735115",
   "dias": [
     {
       "fecha": "2026-07-07",
@@ -1056,7 +1056,25 @@
           "fin": "2026-07-07T06:12:05.270000",
           "duracion_seg": 11.9
         }
-      ]
+      ],
+      "anomalia": null
     }
-  ]
+  ],
+  "estado": {
+    "dvr": {
+      "ok": null,
+      "mensaje": "Aun no se ha verificado.",
+      "verificado_en": null
+    },
+    "conteo_en_vivo": [
+      {
+        "planta": "2",
+        "ok": true,
+        "mensaje": "Operando normal.",
+        "ultimo_heartbeat": "2026-07-12T18:55:17.640682",
+        "fraccion_baja_confianza_reciente": 0.0
+      }
+    ],
+    "procesamiento_diario": null
+  }
 }

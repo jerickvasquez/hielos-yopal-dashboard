@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-07-16T06:10:02.634162",
+  "generado_en": "2026-07-16T06:13:04.673888",
   "dias": [
     {
       "fecha": "2026-07-15",
@@ -7179,10 +7179,15 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-07-16T06:09:36.608613",
+        "ultimo_heartbeat": "2026-07-16T06:12:39.214715",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
-    "procesamiento_diario": null
+    "procesamiento_diario": {
+      "fecha": "2026-07-15",
+      "estado": "error",
+      "mensaje": "No se encontro video para canal=0 fecha=2026-07-15 (fuente: dahua)",
+      "actualizado_en": "2026-07-16T06:13:04.436430"
+    }
   }
 }

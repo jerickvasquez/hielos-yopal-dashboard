@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-07-16T22:00:02.919883",
+  "generado_en": "2026-07-16T22:10:02.458383",
   "dias": [
     {
       "fecha": "2026-07-15",
@@ -24,7 +24,7 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 148
+          "unidades": 100
         }
       ],
       "tramos": [
@@ -7177,9 +7177,9 @@
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
-        "ok": false,
-        "mensaje": "Heartbeat viejo (28224s).",
-        "ultimo_heartbeat": "2026-07-16T14:09:39.098823",
+        "ok": true,
+        "mensaje": "Operando normal.",
+        "ultimo_heartbeat": "2026-07-16T22:09:52.047139",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

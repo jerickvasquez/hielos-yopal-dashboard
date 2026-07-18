@@ -194,11 +194,6 @@
       <summary>Ver total por presentación</summary>
       <div class="chart-card" id="card-consolidado" style="margin-top:10px;"></div>
     </details>
-    <details class="table-toggle">
-      <summary>Ver detalle técnico (tramos de movimiento detectados)</summary>
-      <p class="section-note" style="margin-top:8px;">Dato interno de Fase 1 (filtro de movimiento). Un tramo no es un despacho — es cualquier movimiento en la zona. Se conserva para calibración.</p>
-      <div class="table-wrap"><table class="data-table" id="tabla-tramos"><thead><tr><th>Inicio</th><th>Fin</th><th>Duración (seg)</th></tr></thead><tbody></tbody></table></div>
-    </details>
   </section>
 
   <section id="seccion-clips" style="display:none;">
@@ -386,7 +381,6 @@ function renderDia(dia) {
   document.getElementById('titulo-fecha-actividad').textContent = dia.fecha;
 
   const despachos = dia.despachos || [];
-  const tramos = dia.tramos || [];
   const confiables = despachos.filter(d => !d.por_revisar);
   const porRevisar = despachos.filter(d => d.por_revisar);
   const bloquesConfiables = confiables.reduce((a, d) => a + d.bloques, 0);
@@ -421,7 +415,6 @@ function renderDia(dia) {
   renderDespachosPorHora(despachos, dia.conteo_real);
   renderDespachosLista(despachos, dia.conteo_real);
   renderConsolidado(dia);
-  renderTablaTramos(tramos);
 }
 
 function renderDespachosPorHora(despachos, conteoReal) {
@@ -528,11 +521,6 @@ function renderConsolidado(dia) {
           <span class="x-label">${etiquetas[c.clase] || c.clase}</span>
         </div>`).join('')}
     </div>`;
-}
-
-function renderTablaTramos(tramos) {
-  const tbody = document.querySelector('#tabla-tramos tbody');
-  tbody.innerHTML = tramos.map(t => `<tr><td>${horaCorta(t.inicio)}</td><td>${horaCorta(t.fin)}</td><td>${t.duracion_seg}</td></tr>`).join('');
 }
 
 function horaCorta(iso) {

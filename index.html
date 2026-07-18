@@ -46,9 +46,22 @@
   .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
   @media (max-width: 680px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
   .tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .tile.destacada { border-color: color-mix(in srgb, var(--series-1) 45%, var(--border)); background: color-mix(in srgb, var(--series-1) 5%, var(--surface-1)); }
+  .tile.destacada .value { color: var(--series-1); }
   .tile .label { font-size: 12.5px; color: var(--text-secondary); margin: 0 0 6px; }
-  .tile .value { font-size: 24px; font-weight: 650; margin: 0; }
-  .tile .unit { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-left: 2px; }
+  .tile .value { font-size: 26px; font-weight: 680; margin: 0; font-variant-numeric: tabular-nums; }
+  .tile .unit { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-left: 3px; }
+
+  .despachos-lista { display: flex; flex-direction: column; gap: 5px; }
+  .despacho-row { display: flex; align-items: center; gap: 14px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 9px; padding: 9px 14px; }
+  .despacho-num { flex: none; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; font-size: 11.5px; font-weight: 700; color: var(--text-muted); background: color-mix(in srgb, var(--text-muted) 14%, transparent); border-radius: 6px; }
+  .despacho-hora { flex: none; font-size: 15px; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; min-width: 78px; }
+  .despacho-info { flex: 1; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; min-width: 0; }
+  .despacho-bloques { font-size: 13.5px; font-weight: 600; }
+  .despacho-clase { font-size: 12px; color: var(--text-muted); }
+  .despacho-ev { flex: none; font-size: 11.5px; font-weight: 650; padding: 3px 9px; border-radius: 100px; }
+  .despacho-ev.con { color: var(--series-1); background: color-mix(in srgb, var(--series-1) 13%, transparent); }
+  .despacho-ev.sin { color: var(--text-muted); }
   section { margin-bottom: 32px; }
   h2 { font-size: 15.5px; font-weight: 650; margin: 0 0 4px; }
   .section-note { font-size: 13px; color: var(--text-secondary); margin: 0 0 14px; line-height: 1.5; }
@@ -58,8 +71,10 @@
   .legend .dot { width: 10px; height: 10px; border-radius: 3px; }
   .bars { display: flex; align-items: flex-end; gap: 4px; height: 160px; padding: 0 4px; }
   .bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; position: relative; min-width: 0; }
-  .bar { width: 100%; max-width: 40px; border-radius: 4px 4px 0 0; position: relative; cursor: default; transition: opacity 0.15s; }
+  .bar { width: 100%; max-width: 40px; border-radius: 4px 4px 0 0; position: relative; cursor: default; transition: opacity 0.15s; background: var(--series-1); }
   .bar:hover { opacity: 0.8; }
+  .bar.vacia { background: var(--gridline); opacity: 0.6; }
+  .bar.vacia:hover { opacity: 0.6; }
   .bar-col .x-label { font-size: 10.5px; color: var(--text-muted); margin-top: 6px; white-space: nowrap; }
   .bar .bar-value { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 4px; font-size: 12px; font-weight: 700; color: var(--text-primary); white-space: nowrap; }
   .bar .tooltip {
@@ -196,10 +211,10 @@
     <h2>Estado del proyecto</h2>
     <p class="section-note">Qué ya funciona y qué falta.</p>
     <div class="roadmap">
-      <div class="road-item"><span class="badge done">✓ Listo</span><div><p class="road-title">Detección de actividad e ingesta de video</p><p class="road-desc">Filtro de movimiento calibrado sobre la cámara real, con hora exacta de cada tramo y clip de respaldo.</p></div></div>
-      <div class="road-item"><span class="badge done">✓ Listo</span><div><p class="road-title">Informe diario y limpieza automática</p><p class="road-desc">Corrida automática todos los días; el resultado (ok, error, volumen inusual) se ve en "Estado del sistema" arriba, en vez de por correo.</p></div></div>
-      <div class="road-item"><span class="badge progress">◐ En calibración</span><div><p class="road-title">Conteo real por tipo de bloque (grande / pequeño)</p><p class="road-desc">El mecanismo ya está construido y probado; falta calibrarlo con video donde se vea bien el punto de extracción.</p></div></div>
-      <div class="road-item"><span class="badge pending">○ Planeado</span><div><p class="road-title">Descarga automática desde el grabador</p><p class="road-desc">Depende de conectividad con la red de la fábrica.</p></div></div>
+      <div class="road-item"><span class="badge done">✓ Listo</span><div><p class="road-title">Conteo automático de despachos</p><p class="road-desc">Cada salida de molde por la rampa se cuenta con hora exacta y clip de respaldo en video, sobre la cámara real de producción.</p></div></div>
+      <div class="road-item"><span class="badge done">✓ Listo</span><div><p class="road-title">Corrida diaria y publicación automática</p><p class="road-desc">Todo corre solo cada noche; el resultado (ok, error, volumen inusual) aparece en "Estado del sistema" arriba, sin depender del correo.</p></div></div>
+      <div class="road-item"><span class="badge progress">◐ En ajuste</span><div><p class="road-title">Confiabilidad en toda hora</p><p class="road-desc">El conteo de día está validado; las horas de madrugada y atardecer siguen en ajuste — se revisan a mano antes de darlas por firmes.</p></div></div>
+      <div class="road-item"><span class="badge pending">○ Planeado</span><div><p class="road-title">Tipo de bloque y planta de origen</p><p class="road-desc">Distinguir grande/pequeño y de qué planta vino cada molde. En definición con la operación (color de molde por planta).</p></div></div>
     </div>
   </section>
 

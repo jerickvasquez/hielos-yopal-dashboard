@@ -644,7 +644,7 @@ async function reproducirClip(indice) {
     const iv = base64ABuffer(clip.iv);
     const plano = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, claveClipsDerivada, cifrado);
 
-    const blob = new Blob([plano], { type: 'video/webm' });
+    const blob = new Blob([plano], { type: 'video/mp4' });
     const url = URL.createObjectURL(blob);
     const jugador = document.getElementById('clip-player');
     const video = document.getElementById('clip-player-video');

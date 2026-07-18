@@ -150,21 +150,26 @@
   <div class="tiles" id="tiles-dia"></div>
 
   <section>
-    <h2>Unidades por presentación</h2>
-    <p class="section-note">Bloques contados en la fecha seleccionada, por tipo.</p>
-    <div class="chart-card" id="card-consolidado"></div>
+    <h2>Despachos del día — <span id="titulo-fecha-actividad"></span></h2>
+    <p class="section-note">Cada despacho es la salida de un molde completo (≈4 bloques) por la rampa, con hora exacta. El despacho no tiene horario fijo — puede ocurrir en cualquier momento. Las barras muestran cuántos despachos cayeron en cada hora.</p>
+    <div class="chart-card" id="card-despachos">
+      <div class="bars" id="chart-despachos"></div>
+    </div>
   </section>
 
   <section>
-    <h2>Actividad por hora — <span id="titulo-fecha-actividad"></span></h2>
-    <p class="section-note">El despacho no tiene horario fijo: puede ocurrir en cualquier momento del día. Este gráfico muestra dónde cayó la actividad detectada ese día en particular, no un patrón esperado.</p>
-    <div class="chart-card">
-      <div class="bars" id="chart-horas"></div>
-      <details class="table-toggle">
-        <summary>Ver como tabla</summary>
-        <div class="table-wrap"><table class="data-table" id="tabla-tramos"><thead><tr><th>Inicio</th><th>Fin</th><th>Duración (seg)</th></tr></thead><tbody></tbody></table></div>
-      </details>
-    </div>
+    <h2>Detalle de cada despacho</h2>
+    <p class="section-note">Uno por fila, en orden. El icono indica si hay respaldo en video (más abajo, protegido con contraseña).</p>
+    <div class="despachos-lista" id="despachos-lista"></div>
+    <details class="table-toggle" id="toggle-consolidado">
+      <summary>Ver total por presentación</summary>
+      <div class="chart-card" id="card-consolidado" style="margin-top:10px;"></div>
+    </details>
+    <details class="table-toggle">
+      <summary>Ver detalle técnico (tramos de movimiento detectados)</summary>
+      <p class="section-note" style="margin-top:8px;">Dato interno de Fase 1 (filtro de movimiento). Un tramo no es un despacho — es cualquier movimiento en la zona. Se conserva para calibración.</p>
+      <div class="table-wrap"><table class="data-table" id="tabla-tramos"><thead><tr><th>Inicio</th><th>Fin</th><th>Duración (seg)</th></tr></thead><tbody></tbody></table></div>
+    </details>
   </section>
 
   <section id="seccion-clips" style="display:none;">
@@ -335,20 +340,73 @@ function renderDia(dia) {
   }
 
   const total = dia.consolidado.reduce((acc, c) => acc + c.unidades, 0);
+  const despachos = dia.despachos || [];
   const tramos = dia.tramos || [];
-  const duracionProm = tramos.length ? (tramos.reduce((a, t) => a + t.duracion_seg, 0) / tramos.length) : 0;
-  const rango = tramos.length ? `${horaCorta(tramos[0].inicio)}–${horaCorta(tramos[tramos.length - 1].fin)}` : '—';
+  const primero = despachos.length ? horaCorta(despachos[0].hora).slice(0, 5) : '—';
+  const ultimo = despachos.length ? horaCorta(despachos[despachos.length - 1].hora).slice(0, 5) : '—';
 
   document.getElementById('tiles-dia').innerHTML = `
-    <div class="tile"><p class="label">Total del día</p><p class="value">${dia.conteo_real ? total : '—'}<span class="unit">bloques</span></p></div>
-    <div class="tile"><p class="label">Tramos de actividad</p><p class="value">${tramos.length}</p></div>
-    <div class="tile"><p class="label">Duración promedio</p><p class="value">${duracionProm.toFixed(1)}<span class="unit">seg</span></p></div>
-    <div class="tile"><p class="label">Rango horario del día</p><p class="value" style="font-size:18px;">${rango}</p></div>
+    <div class="tile destacada"><p class="label">Bloques del día</p><p class="value">${dia.conteo_real ? total : '—'}<span class="unit">bloques</span></p></div>
+    <div class="tile"><p class="label">Despachos</p><p class="value">${dia.conteo_real ? despachos.length : '—'}<span class="unit">moldes</span></p></div>
+    <div class="tile"><p class="label">Primer despacho</p><p class="value" style="font-size:20px;">${primero}</p></div>
+    <div class="tile"><p class="label">Último despacho</p><p class="value" style="font-size:20px;">${ultimo}</p></div>
   `;
 
+  renderDespachosPorHora(despachos, dia.conteo_real);
+  renderDespachosLista(despachos, dia.conteo_real);
   renderConsolidado(dia);
-  renderHoras(tramos);
   renderTablaTramos(tramos);
+}
+
+function renderDespachosPorHora(despachos, conteoReal) {
+  const el = document.getElementById('chart-despachos');
+  if (!conteoReal) {
+    el.innerHTML = `<div class="empty-state">Conteo por despacho en calibración para este día — ver "Estado del proyecto".</div>`;
+    return;
+  }
+  if (despachos.length === 0) {
+    el.innerHTML = `<div class="empty-state">Sin despachos detectados este día.</div>`;
+    return;
+  }
+  // Distribucion sobre las 24h, para que la forma del dia sea legible aunque
+  // haya horas vacias en el medio.
+  const porHora = {};
+  despachos.forEach(d => { const h = new Date(d.hora).getHours(); porHora[h] = (porHora[h] || 0) + 1; });
+  const hMin = Math.min(...Object.keys(porHora).map(Number));
+  const hMax = Math.max(...Object.keys(porHora).map(Number));
+  const maxV = Math.max(...Object.values(porHora));
+  let cols = '';
+  for (let h = hMin; h <= hMax; h++) {
+    const v = porHora[h] || 0;
+    const alt = v === 0 ? 2 : Math.max((v / maxV) * 100, 8);
+    cols += `<div class="bar-col">
+      <div class="bar ${v === 0 ? 'vacia' : ''}" style="height:${alt}%">
+        ${v > 0 ? `<span class="bar-value">${v}</span>` : ''}
+        ${v > 0 ? `<span class="tooltip">${String(h).padStart(2,'0')}:00 — ${v} despacho(s) · ${v * 4} bloques</span>` : ''}
+      </div>
+      <span class="x-label">${String(h).padStart(2,'0')}h</span>
+    </div>`;
+  }
+  el.innerHTML = cols;
+}
+
+function renderDespachosLista(despachos, conteoReal) {
+  const cont = document.getElementById('despachos-lista');
+  if (!conteoReal || despachos.length === 0) {
+    cont.innerHTML = `<div class="empty-state">Sin despachos confirmados para este día.</div>`;
+    return;
+  }
+  const etiquetas = { bloque_grande: 'Bloque grande', bloque_pequeno: 'Bloque pequeño' };
+  cont.innerHTML = despachos.map((d, i) => `
+    <div class="despacho-row">
+      <span class="despacho-num">${i + 1}</span>
+      <span class="despacho-hora">${horaCorta(d.hora)}</span>
+      <span class="despacho-info">
+        <span class="despacho-bloques">${d.bloques} bloques</span>
+        <span class="despacho-clase">${etiquetas[d.clase] || d.clase}</span>
+      </span>
+      <span class="despacho-ev ${d.evidencia ? 'con' : 'sin'}" title="${d.evidencia ? 'Con respaldo en video' : 'Sin clip'}">${d.evidencia ? '▶ video' : '—'}</span>
+    </div>`).join('');
 }
 
 function renderConsolidado(dia) {
@@ -373,30 +431,6 @@ function renderConsolidado(dia) {
           <span class="x-label">${etiquetas[c.clase] || c.clase}</span>
         </div>`).join('')}
     </div>`;
-}
-
-function renderHoras(tramos) {
-  const el = document.getElementById('chart-horas');
-  if (tramos.length === 0) {
-    el.innerHTML = `<div class="empty-state">Sin actividad detectada este día.</div>`;
-    return;
-  }
-  const porHora = {};
-  tramos.forEach(t => {
-    const h = new Date(t.inicio).getHours();
-    porHora[h] = (porHora[h] || 0) + 1;
-  });
-  const horas = Object.keys(porHora).map(Number).sort((a, b) => a - b);
-  const max = Math.max(...horas.map(h => porHora[h]));
-
-  el.innerHTML = horas.map(h => {
-    const v = porHora[h];
-    const hAlt = Math.max((v / max) * 100, 4);
-    return `<div class="bar-col">
-      <div class="bar" style="height:${hAlt}%; background:var(--series-1)"><span class="tooltip">${String(h).padStart(2,'0')}:00 — ${v} tramo(s)</span></div>
-      <span class="x-label">${String(h).padStart(2,'0')}h</span>
-    </div>`;
-  }).join('');
 }
 
 function renderTablaTramos(tramos) {

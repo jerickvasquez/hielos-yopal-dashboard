@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-07-19T18:00:14.548366",
+  "generado_en": "2026-07-19T18:10:03.196988",
   "dias": [
     {
       "fecha": "2026-07-19",
@@ -706,8 +706,8 @@
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
-        "ok": true,
-        "mensaje": "Operando normal.",
+        "ok": false,
+        "mensaje": "Heartbeat viejo (613s).",
         "ultimo_heartbeat": "2026-07-19T17:59:50.671898",
         "fraccion_baja_confianza_reciente": 0.0
       }

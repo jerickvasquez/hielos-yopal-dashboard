@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-07-19T09:51:30.958526",
+  "generado_en": "2026-07-19T10:00:17.053649",
   "dias": [
     {
       "fecha": "2026-07-19",
@@ -17,7 +17,7 @@
           "clase": "bloque_grande",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false
         }
       ],
@@ -661,14 +661,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-07-19T00:00:22.743351"
+      "verificado_en": "2026-07-19T10:00:16.624159"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-07-19T09:51:09.995259",
+        "ultimo_heartbeat": "2026-07-19T09:59:51.506680",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

@@ -383,8 +383,6 @@ function tiempoRelativo(iso) {
 
 function renderDia(dia) {
   document.getElementById('titulo-fecha-actividad').textContent = dia.fecha;
-  fechaSeleccionada = dia.fecha;
-  renderListaClips();  // los clips se filtran por el dia que se esta viendo
 
   const despachos = dia.despachos || [];
   const confiables = despachos.filter(d => !d.por_revisar);
@@ -555,7 +553,6 @@ function horaCorta(iso) {
 // proposito (no es un login persistente, es una contraseña compartida).
 let manifestClips = null;
 let claveClipsDerivada = null;
-let fechaSeleccionada = null;
 
 async function cargarManifestClips() {
   try {
@@ -578,18 +575,7 @@ function renderListaClips() {
     cont.innerHTML = '<div class="empty-state">No hay clips en la ventana publicada.</div>';
     return;
   }
-  // Solo los clips del dia que se esta viendo -- si estoy en el 20, no
-  // quiero ver los del 18. `manifestClips.clips` conserva su indice
-  // original (lo usa reproducirClip), asi que se filtra sin perderlo.
-  const delDia = manifestClips.clips
-    .map((c, i) => ({ c, i }))
-    .filter(x => !fechaSeleccionada || x.c.fecha === fechaSeleccionada);
-
-  if (delDia.length === 0) {
-    cont.innerHTML = `<div class="empty-state">No hay clips de video para el ${fechaSeleccionada || 'día seleccionado'}. Los clips cubren solo los días más recientes.</div>`;
-    return;
-  }
-  cont.innerHTML = delDia.map(({ c, i }) => {
+  cont.innerHTML = manifestClips.clips.map((c, i) => {
     const esEvidencia = c.tipo === 'evidencia';
     const etiqueta = esEvidencia ? 'Evidencia' : 'Tramo';
     const detalle = esEvidencia

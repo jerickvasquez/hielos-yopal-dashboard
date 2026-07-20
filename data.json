@@ -1,16 +1,6 @@
 {
-  "generado_en": "2026-07-20T13:40:03.016894",
+  "generado_en": "2026-07-20T13:40:22.200187",
   "dias": [
-    {
-      "fecha": "2026-07-20",
-      "conteo_real": true,
-      "consolidado": [],
-      "despachos": [],
-      "anomalia": {
-        "es_anomalia": false,
-        "motivo": "Historial insuficiente (7/14 dias con datos): no se evalua todavia."
-      }
-    },
     {
       "fecha": "2026-07-19",
       "conteo_real": true,
@@ -855,14 +845,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-07-20T12:00:03.132265"
+      "verificado_en": "2026-07-20T13:33:43.328089"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": false,
-        "mensaje": "Heartbeat viejo (1305s).",
-        "ultimo_heartbeat": "2026-07-20T13:18:17.956501",
+        "mensaje": "Heartbeat viejo (54640s).",
+        "ultimo_heartbeat": "2026-07-19T22:29:42.214479",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

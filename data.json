@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-07-20T13:54:58.509146",
+  "generado_en": "2026-07-20T14:00:04.095292",
   "dias": [
     {
       "fecha": "2026-07-20",
@@ -855,14 +855,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-07-20T12:00:03.132265"
+      "verificado_en": "2026-07-20T13:33:43.328089"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
-        "ok": false,
-        "mensaje": "Heartbeat viejo (462s).",
-        "ultimo_heartbeat": "2026-07-20T13:47:16.395942",
+        "ok": true,
+        "mensaje": "Operando normal.",
+        "ultimo_heartbeat": "2026-07-20T13:59:46.404475",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

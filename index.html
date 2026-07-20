@@ -12,6 +12,7 @@
     --border: rgba(11,11,11,0.10);
     --series-1: #2a78d6; --series-2: #1baf7a;
     --status-good: #0ca30c; --status-warning: #b8790a; --status-pending: #898781;
+    --status-critical: #c0392b;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -20,6 +21,7 @@
       --border: rgba(255,255,255,0.10);
       --series-1: #3987e5; --series-2: #199e70;
       --status-good: #0ca30c; --status-warning: #fab219; --status-pending: #898781;
+      --status-critical: #ef6a5a;
     }
   }
   * { box-sizing: border-box; }
@@ -63,6 +65,8 @@
   .despacho-clase { font-size: 12px; color: var(--text-muted); }
   .despacho-revisar { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; color: var(--status-warning); background: color-mix(in srgb, var(--status-warning) 15%, transparent); padding: 2px 8px; border-radius: 100px; }
   .despacho-row.revisar { border-color: color-mix(in srgb, var(--status-warning) 35%, var(--border)); }
+  .despacho-gap { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; color: var(--status-critical); background: color-mix(in srgb, var(--status-critical) 14%, transparent); padding: 2px 8px; border-radius: 100px; }
+  .despacho-row.gap-corto { border-color: color-mix(in srgb, var(--status-critical) 35%, var(--border)); }
   .despacho-ev { flex: none; font-size: 11.5px; font-weight: 650; padding: 4px 11px; border-radius: 100px; font-family: inherit; }
   button.despacho-ev.con { color: var(--page); background: var(--series-1); border: none; cursor: pointer; transition: opacity 0.15s; }
   button.despacho-ev.con:hover { opacity: 0.85; }
@@ -468,14 +472,22 @@ function renderDespachosLista(despachos, conteoReal) {
     const video = d.evidencia
       ? `<button type="button" class="despacho-ev con" onclick="reproducirDespacho('${d.hora}')" title="Ver respaldo en video">▶ video</button>`
       : `<span class="despacho-ev sin" title="Sin clip">—</span>`;
+    // Gap corto respecto al despacho anterior: probablemente el MISMO molde
+    // contado dos veces porque el operario tuvo que entrar a ayudar con un
+    // hielo pegado (ver data_export.GAP_SOSPECHOSO_SEG). Solo marca cual
+    // conviene mirar primero; el numero no se descuenta solo.
+    const gapAviso = d.gap_sospechoso
+      ? `<span class="despacho-gap" title="Solo ${minutos(d.gap_anterior_seg)} despues del anterior: puede ser el mismo molde contado dos veces. Revisar el video.">⚠ ${minutos(d.gap_anterior_seg)} tras el anterior</span>`
+      : '';
     return `
-    <div class="despacho-row ${d.por_revisar ? 'revisar' : ''}">
+    <div class="despacho-row ${d.por_revisar ? 'revisar' : ''} ${d.gap_sospechoso ? 'gap-corto' : ''}">
       <span class="despacho-num">${i + 1}</span>
       <span class="despacho-hora">${horaCorta(d.hora)}</span>
       <span class="despacho-info">
         <span class="despacho-bloques">${d.bloques} bloques</span>
         <span class="despacho-clase">${etiquetas[d.clase] || d.clase}</span>
         ${d.por_revisar ? '<span class="despacho-revisar">madrugada · por revisar</span>' : ''}
+        ${gapAviso}
       </span>
       ${video}
     </div>`;
@@ -521,6 +533,11 @@ function renderConsolidado(dia) {
           <span class="x-label">${etiquetas[c.clase] || c.clase}</span>
         </div>`).join('')}
     </div>`;
+}
+
+function minutos(seg) {
+  if (seg == null) return '';
+  return seg < 90 ? Math.round(seg) + ' s' : (seg / 60).toFixed(1).replace('.0', '') + ' min';
 }
 
 function horaCorta(iso) {

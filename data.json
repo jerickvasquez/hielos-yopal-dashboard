@@ -1,11 +1,28 @@
 {
-  "generado_en": "2026-07-20T19:40:02.863435",
+  "generado_en": "2026-07-20T19:45:50.564757",
   "dias": [
     {
       "fecha": "2026-07-20",
       "conteo_real": true,
-      "consolidado": [],
-      "despachos": [],
+      "consolidado": [
+        {
+          "canal": "0",
+          "clase": "bloque_grande",
+          "unidades": 4
+        }
+      ],
+      "despachos": [
+        {
+          "hora": "2026-07-20T19:45:39.833532",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
+        }
+      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Historial insuficiente (7/14 dias con datos): no se evalua todavia."
@@ -862,8 +879,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-07-20T19:40:01.058444",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-07-20T19:45:34.092743",
+        "fraccion_baja_confianza_reciente": 0.035
       }
     ],
     "procesamiento_diario": {

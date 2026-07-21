@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-07-21T01:30:03.094519",
+  "generado_en": "2026-07-21T01:40:03.111964",
   "dias": [
     {
       "fecha": "2026-07-21",
@@ -1104,10 +1104,10 @@
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
-        "ok": true,
-        "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-07-21T01:30:01.079045",
-        "fraccion_baja_confianza_reciente": 0.08
+        "ok": false,
+        "mensaje": "80% de predicciones recientes de baja confianza.",
+        "ultimo_heartbeat": "2026-07-21T01:39:36.546812",
+        "fraccion_baja_confianza_reciente": 0.795
       }
     ],
     "procesamiento_diario": {

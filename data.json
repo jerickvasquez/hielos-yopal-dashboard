@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-07-25T20:20:25.613634",
+  "generado_en": "2026-07-25T20:20:33.907643",
   "dias": [
     {
       "fecha": "2026-07-25",
@@ -8,7 +8,7 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 108
+          "unidades": 112
         }
       ],
       "despachos": [
@@ -280,6 +280,16 @@
           "evidencia": true,
           "por_revisar": false,
           "gap_anterior_seg": 619.3,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-07-25T20:20:24.461185",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "gap_anterior_seg": 423.6,
           "gap_sospechoso": false
         }
       ],

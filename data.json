@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-07-25T19:20:05.562310",
+  "generado_en": "2026-07-25T19:30:03.894390",
   "dias": [
     {
       "fecha": "2026-07-25",
@@ -227,7 +227,7 @@
           "clase": "bloque_grande",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "gap_anterior_seg": 544.0,
           "gap_sospechoso": false
@@ -2402,10 +2402,10 @@
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
-        "ok": false,
-        "mensaje": "76% de predicciones recientes de baja confianza.",
-        "ultimo_heartbeat": "2026-07-25T19:20:00.210059",
-        "fraccion_baja_confianza_reciente": 0.755
+        "ok": true,
+        "mensaje": "Operando normal.",
+        "ultimo_heartbeat": "2026-07-25T19:29:35.988373",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {

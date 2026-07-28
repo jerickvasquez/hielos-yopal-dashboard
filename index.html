@@ -7,57 +7,139 @@
 <title>Hielos Yopal — Conteo automático de producción</title>
 <style>
   :root {
-    --surface-1: #fcfcfb; --page: #f9f9f7; --text-primary: #0b0b0b;
-    --text-secondary: #52514e; --text-muted: #898781; --gridline: #e1e0d9;
-    --border: rgba(11,11,11,0.10);
-    --series-1: #2a78d6; --series-2: #1baf7a;
-    --status-good: #0ca30c; --status-warning: #b8790a; --status-pending: #898781;
-    --status-critical: #c0392b;
+    /* Tema hielo — claro (escarcha diurna) */
+    --surface-1: #ffffff; --surface-2: #f2f8fd; --page: #e9f2fa;
+    --text-primary: #0a1b2e; --text-secondary: #42586f; --text-muted: #8298ad;
+    --gridline: #d3e3f0; --border: rgba(10,27,46,0.11);
+    --accent: #0e7ec9; --accent-2: #10a7bd;
+    --series-1: #0e7ec9; --series-2: #10a7bd;
+    --status-good: #0f9d58; --status-warning: #c07d09; --status-pending: #8298ad;
+    --status-critical: #d0342c;
+    --glass: rgba(255,255,255,0.72); --glass-brd: rgba(255,255,255,0.6);
+    --halo-1: rgba(56,182,255,0.16); --halo-2: rgba(16,167,189,0.13);
+    --hielo-linea: rgba(14,126,201,0.30);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --surface-1: #1a1a19; --page: #0d0d0d; --text-primary: #ffffff;
-      --text-secondary: #c3c2b7; --text-muted: #898781; --gridline: #2c2c2a;
-      --border: rgba(255,255,255,0.10);
-      --series-1: #3987e5; --series-2: #199e70;
-      --status-good: #0ca30c; --status-warning: #fab219; --status-pending: #898781;
-      --status-critical: #ef6a5a;
+      /* Tema hielo — oscuro (glaciar nocturno) */
+      --surface-1: #0f1d2e; --surface-2: #12233a; --page: #060d17;
+      --text-primary: #eaf4ff; --text-secondary: #a7c0d8; --text-muted: #6c8399;
+      --gridline: #1c2f45; --border: rgba(120,190,255,0.13);
+      --accent: #38b6ff; --accent-2: #4fd6e0;
+      --series-1: #38b6ff; --series-2: #4fd6e0;
+      --status-good: #22c079; --status-warning: #f2b43a; --status-pending: #6c8399;
+      --status-critical: #ff6a5a;
+      --glass: rgba(15,29,46,0.62); --glass-brd: rgba(120,190,255,0.14);
+      --halo-1: rgba(56,182,255,0.20); --halo-2: rgba(79,214,224,0.14);
+      --hielo-linea: rgba(56,182,255,0.34);
     }
   }
+  :root[data-theme="light"] {
+    --surface-1: #ffffff; --surface-2: #f2f8fd; --page: #e9f2fa;
+    --text-primary: #0a1b2e; --text-secondary: #42586f; --text-muted: #8298ad;
+    --gridline: #d3e3f0; --border: rgba(10,27,46,0.11);
+    --accent: #0e7ec9; --accent-2: #10a7bd; --series-1: #0e7ec9; --series-2: #10a7bd;
+    --status-good: #0f9d58; --status-warning: #c07d09; --status-pending: #8298ad; --status-critical: #d0342c;
+    --glass: rgba(255,255,255,0.72); --glass-brd: rgba(255,255,255,0.6);
+    --halo-1: rgba(56,182,255,0.16); --halo-2: rgba(16,167,189,0.13); --hielo-linea: rgba(14,126,201,0.30);
+  }
+  :root[data-theme="dark"] {
+    --surface-1: #0f1d2e; --surface-2: #12233a; --page: #060d17;
+    --text-primary: #eaf4ff; --text-secondary: #a7c0d8; --text-muted: #6c8399;
+    --gridline: #1c2f45; --border: rgba(120,190,255,0.13);
+    --accent: #38b6ff; --accent-2: #4fd6e0; --series-1: #38b6ff; --series-2: #4fd6e0;
+    --status-good: #22c079; --status-warning: #f2b43a; --status-pending: #6c8399; --status-critical: #ff6a5a;
+    --glass: rgba(15,29,46,0.62); --glass-brd: rgba(120,190,255,0.14);
+    --halo-1: rgba(56,182,255,0.20); --halo-2: rgba(79,214,224,0.14); --hielo-linea: rgba(56,182,255,0.34);
+  }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     background: var(--page); color: var(--text-primary); margin: 0;
+    -webkit-font-smoothing: antialiased; position: relative; min-height: 100vh;
   }
-  .wrap { max-width: 1000px; margin: 0 auto; padding: 32px 20px 64px; }
-  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
-  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--series-1); margin: 0 0 8px; }
-  h1 { font-size: 24px; font-weight: 650; margin: 0 0 6px; line-height: 1.25; }
-  .subtitle { color: var(--text-secondary); font-size: 14.5px; line-height: 1.5; max-width: 600px; margin: 0; }
+
+  /* --- Fondo de hielo con parallax (fijo detrás de todo) --- */
+  .bg-hielo { position: fixed; inset: 0; z-index: -2; overflow: hidden; pointer-events: none; }
+  .bg-halo {
+    position: absolute; border-radius: 50%; filter: blur(60px); will-change: transform;
+  }
+  .bg-halo.h1 { width: 55vw; height: 55vw; top: -14vw; left: -10vw; background: radial-gradient(circle, var(--halo-1), transparent 68%); }
+  .bg-halo.h2 { width: 48vw; height: 48vw; top: 32vh; right: -14vw; background: radial-gradient(circle, var(--halo-2), transparent 68%); }
+  .bg-halo.h3 { width: 42vw; height: 42vw; bottom: -12vw; left: 22vw; background: radial-gradient(circle, var(--halo-1), transparent 70%); }
+  #copos { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    #copos { display: none; }
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 34px 20px 72px; }
+  .topbar { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 26px; }
+  .brand-row { display: flex; align-items: center; gap: 11px; margin: 0 0 12px; }
+  .brand-mark { flex: none; width: 34px; height: 34px; display: grid; place-items: center;
+    border-radius: 10px; color: #fff;
+    background: linear-gradient(140deg, var(--accent), var(--accent-2));
+    box-shadow: 0 6px 18px -6px var(--halo-1); }
+  .brand-mark svg { width: 21px; height: 21px; }
+  .eyebrow { font-size: 11.5px; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase;
+    color: var(--accent); margin: 0; }
+  h1 { font-size: 27px; font-weight: 720; margin: 0 0 8px; line-height: 1.18; letter-spacing: -0.018em; text-wrap: balance; }
+  .subtitle { color: var(--text-secondary); font-size: 14.5px; line-height: 1.55; max-width: 620px; margin: 0; }
+  .topbar-tools { display: flex; align-items: center; gap: 10px; }
   select#selector-fecha {
-    font-family: inherit; font-size: 14px; font-weight: 600; padding: 8px 12px;
-    border-radius: 8px; border: 1px solid var(--border); background: var(--surface-1);
-    color: var(--text-primary);
+    font-family: inherit; font-size: 14px; font-weight: 650; padding: 9px 14px;
+    border-radius: 10px; border: 1px solid var(--border); background: var(--glass);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    color: var(--text-primary); cursor: pointer;
+  }
+  .theme-toggle {
+    flex: none; width: 40px; height: 40px; display: grid; place-items: center; cursor: pointer;
+    border-radius: 10px; border: 1px solid var(--border); background: var(--glass);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); color: var(--text-secondary);
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+  .theme-toggle svg { width: 19px; height: 19px; }
+  .theme-toggle .icon-luna { display: none; }
+  :root[data-theme="dark"] .theme-toggle .icon-sol { display: none; }
+  :root[data-theme="dark"] .theme-toggle .icon-luna { display: block; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .icon-sol { display: none; }
+    :root:not([data-theme="light"]) .theme-toggle .icon-luna { display: block; }
   }
   .banner {
-    background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px;
-    padding: 14px 16px; font-size: 13.5px; color: var(--text-secondary); line-height: 1.55;
-    margin: 0 0 28px;
+    background: var(--glass); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-brd); border-radius: 13px;
+    padding: 15px 17px; font-size: 13.5px; color: var(--text-secondary); line-height: 1.55;
+    margin: 0 0 28px; display: flex; gap: 11px; align-items: flex-start;
   }
+  .banner .banner-ico { flex: none; margin-top: 1px; color: var(--accent); }
+  .banner .banner-ico svg { width: 18px; height: 18px; display: block; }
   .banner strong { color: var(--text-primary); }
-  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; margin-bottom: 30px; }
   @media (max-width: 680px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
-  .tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
-  .tile.destacada { border-color: color-mix(in srgb, var(--series-1) 45%, var(--border)); background: color-mix(in srgb, var(--series-1) 5%, var(--surface-1)); }
-  .tile.destacada .value { color: var(--series-1); }
-  .tile.aviso { border-color: color-mix(in srgb, var(--status-warning) 45%, var(--border)); background: color-mix(in srgb, var(--status-warning) 6%, var(--surface-1)); }
-  .tile.aviso .value { color: var(--status-warning); }
-  .tile .label { font-size: 12.5px; color: var(--text-secondary); margin: 0 0 6px; }
-  .tile .value { font-size: 26px; font-weight: 680; margin: 0; font-variant-numeric: tabular-nums; }
-  .tile .unit { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-left: 3px; }
+  .tile {
+    position: relative; overflow: hidden;
+    background: var(--glass); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-brd); border-radius: 14px; padding: 16px 17px;
+    box-shadow: 0 10px 30px -22px rgba(10,27,46,0.5);
+  }
+  .tile .tile-head { display: flex; align-items: center; gap: 7px; margin: 0 0 10px; }
+  .tile .tile-ico { color: var(--text-muted); display: grid; place-items: center; }
+  .tile .tile-ico svg { width: 15px; height: 15px; display: block; }
+  .tile.destacada { border-color: color-mix(in srgb, var(--accent) 45%, var(--glass-brd)); }
+  .tile.destacada::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: linear-gradient(var(--accent), var(--accent-2)); }
+  .tile.destacada .value { color: var(--accent); } .tile.destacada .tile-ico { color: var(--accent); }
+  .tile.aviso { border-color: color-mix(in srgb, var(--status-warning) 45%, var(--glass-brd)); }
+  .tile.aviso::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--status-warning); }
+  .tile.aviso .value { color: var(--status-warning); } .tile.aviso .tile-ico { color: var(--status-warning); }
+  .tile .label { font-size: 12px; color: var(--text-secondary); margin: 0; font-weight: 600; }
+  .tile .value { font-size: 28px; font-weight: 720; margin: 0; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; line-height: 1.1; }
+  .tile .unit { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-left: 4px; }
 
-  .despachos-lista { display: flex; flex-direction: column; gap: 5px; }
-  .despacho-row { display: flex; align-items: center; gap: 14px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 9px; padding: 9px 14px; }
+  .despachos-lista { display: flex; flex-direction: column; gap: 6px; }
+  .despacho-row { display: flex; align-items: center; gap: 14px; background: var(--glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-brd); border-radius: 11px; padding: 10px 15px; transition: border-color 0.15s, transform 0.12s; }
+  .despacho-row:hover { border-color: color-mix(in srgb, var(--accent) 30%, var(--glass-brd)); }
   .despacho-num { flex: none; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; font-size: 11.5px; font-weight: 700; color: var(--text-muted); background: color-mix(in srgb, var(--text-muted) 14%, transparent); border-radius: 6px; }
   .despacho-hora { flex: none; font-size: 15px; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; min-width: 78px; }
   .despacho-info { flex: 1; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; min-width: 0; }
@@ -67,24 +149,32 @@
   .despacho-row.revisar { border-color: color-mix(in srgb, var(--status-warning) 35%, var(--border)); }
   .despacho-gap { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; color: var(--status-critical); background: color-mix(in srgb, var(--status-critical) 14%, transparent); padding: 2px 8px; border-radius: 100px; }
   .despacho-row.gap-corto { border-color: color-mix(in srgb, var(--status-critical) 35%, var(--border)); }
-  .despacho-ev { flex: none; font-size: 11.5px; font-weight: 650; padding: 4px 11px; border-radius: 100px; font-family: inherit; }
-  button.despacho-ev.con { color: var(--page); background: var(--series-1); border: none; cursor: pointer; transition: opacity 0.15s; }
-  button.despacho-ev.con:hover { opacity: 0.85; }
+  .despacho-ev { flex: none; display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 650; padding: 5px 12px; border-radius: 100px; font-family: inherit; }
+  .despacho-ev svg { width: 13px; height: 13px; }
+  button.despacho-ev.con { color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2)); border: none; cursor: pointer; transition: filter 0.15s, transform 0.1s; }
+  button.despacho-ev.con:hover { filter: brightness(1.08); }
+  button.despacho-ev.con:active { transform: scale(0.96); }
   .despacho-ev.sin { color: var(--text-muted); }
-  section { margin-bottom: 32px; }
-  h2 { font-size: 15.5px; font-weight: 650; margin: 0 0 4px; }
+  section { margin-bottom: 34px; }
+  h2 { font-size: 16px; font-weight: 700; margin: 0 0 5px; letter-spacing: -0.01em; display: flex; align-items: center; gap: 8px; }
+  h2 .h2-ico { color: var(--accent); display: inline-grid; place-items: center; }
+  h2 .h2-ico svg { width: 17px; height: 17px; display: block; }
   .section-note { font-size: 13px; color: var(--text-secondary); margin: 0 0 14px; line-height: 1.5; }
-  .chart-card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 20px 20px 8px; }
+  .chart-card {
+    background: var(--glass); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-brd); border-radius: 14px; padding: 22px 22px 10px;
+    box-shadow: 0 10px 30px -24px rgba(10,27,46,0.5);
+  }
   .legend { display: flex; gap: 16px; margin-bottom: 12px; font-size: 12.5px; color: var(--text-secondary); }
   .legend .key { display: inline-flex; align-items: center; gap: 6px; }
   .legend .dot { width: 10px; height: 10px; border-radius: 3px; }
   .bars { display: flex; align-items: flex-end; gap: 4px; height: 160px; padding: 0 4px; }
   .bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; position: relative; min-width: 0; }
-  .bar { width: 100%; max-width: 40px; border-radius: 4px 4px 0 0; position: relative; cursor: default; transition: opacity 0.15s; background: var(--series-1); }
-  .bar:hover { opacity: 0.8; }
-  .bar.vacia { background: var(--gridline); opacity: 0.6; }
-  .bar.vacia:hover { opacity: 0.6; }
-  .bar.revisar { background: var(--status-warning); }
+  .bar { width: 100%; max-width: 40px; border-radius: 6px 6px 2px 2px; position: relative; cursor: default; transition: opacity 0.15s, filter 0.15s; background: linear-gradient(var(--accent), var(--accent-2)); box-shadow: 0 2px 10px -4px var(--halo-1); }
+  .bar:hover { filter: brightness(1.08); }
+  .bar.vacia { background: var(--gridline); opacity: 0.55; box-shadow: none; }
+  .bar.vacia:hover { filter: none; }
+  .bar.revisar { background: linear-gradient(var(--status-warning), color-mix(in srgb, var(--status-warning) 70%, #000)); }
   .bars-tendencia { height: 120px; }
   .bars-tendencia .bar { max-width: 48px; }
   .bar-col .x-label { font-size: 10.5px; color: var(--text-muted); margin-top: 6px; white-space: nowrap; }
@@ -115,20 +205,21 @@
   details.table-toggle { margin-top: 10px; }
   details.table-toggle summary { cursor: pointer; font-size: 12.5px; color: var(--series-1); font-weight: 600; }
   .roadmap { display: flex; flex-direction: column; gap: 10px; }
-  .road-item { display: flex; align-items: flex-start; gap: 12px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; }
-  .badge { flex: none; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 100px; white-space: nowrap; margin-top: 1px; }
+  .road-item { display: flex; align-items: flex-start; gap: 13px; background: var(--glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-brd); border-radius: 13px; padding: 13px 17px; }
+  .badge { flex: none; display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 100px; white-space: nowrap; margin-top: 1px; }
+  .badge svg { width: 12px; height: 12px; }
   .badge.done { color: var(--status-good); background: color-mix(in srgb, var(--status-good) 14%, transparent); }
   .badge.progress { color: var(--status-warning); background: color-mix(in srgb, var(--status-warning) 16%, transparent); }
   .badge.pending { color: var(--status-pending); background: color-mix(in srgb, var(--status-pending) 16%, transparent); }
-  .road-title { font-size: 14px; font-weight: 600; margin: 0 0 2px; }
+  .road-title { font-size: 14px; font-weight: 650; margin: 0 0 2px; }
   .road-desc { font-size: 13px; color: var(--text-secondary); margin: 0; line-height: 1.5; }
-  footer { border-top: 1px solid var(--border); padding-top: 16px; margin-top: 40px; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+  footer { border-top: 1px solid var(--border); padding-top: 18px; margin-top: 44px; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
 
   .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--status-good); margin-right: 6px; vertical-align: middle; animation: pulse 1.8s ease-in-out infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
   .estado-panel { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
-  .estado-item { display: flex; align-items: flex-start; gap: 10px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; }
+  .estado-item { display: flex; align-items: flex-start; gap: 11px; background: var(--glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-brd); border-radius: 12px; padding: 11px 15px; }
   .estado-item .estado-dot { flex: none; width: 9px; height: 9px; border-radius: 50%; margin-top: 5px; }
   .estado-item.ok .estado-dot { background: var(--status-good); }
   .estado-item.problema .estado-dot { background: #d0342c; }
@@ -144,15 +235,17 @@
   .banner.alerta { border-color: color-mix(in srgb, #d0342c 45%, var(--border)); }
   .banner.alerta strong { color: #d0342c; }
 
-  .clips-gate { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; }
+  .clips-gate { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: var(--glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-brd); border-radius: 12px; padding: 14px 16px; margin-bottom: 14px; }
   .clips-gate p { margin: 0; font-size: 13px; color: var(--text-secondary); flex: 1 1 260px; min-width: 200px; }
   .clips-gate input[type="password"] { font-family: inherit; font-size: 13.5px; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--page); color: var(--text-primary); min-width: 160px; }
-  .clips-gate button, .clip-row button { font-family: inherit; font-size: 12.5px; font-weight: 650; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--text-primary); color: var(--page); cursor: pointer; }
-  .clips-gate button:hover, .clip-row button:hover { opacity: 0.85; }
+  .clips-gate button, .clip-row button { display: inline-flex; align-items: center; gap: 6px; font-family: inherit; font-size: 12.5px; font-weight: 650; padding: 8px 14px; border-radius: 9px; border: none; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; cursor: pointer; transition: filter 0.15s; }
+  .clips-gate button:hover, .clip-row button:hover { filter: brightness(1.08); }
+  .clip-row button svg, .clips-gate button svg { width: 13px; height: 13px; }
+  .despacho-gap svg, .despacho-revisar svg { width: 11px; height: 11px; vertical-align: -1px; }
   .clips-gate .clips-error { color: #d0342c; font-size: 12.5px; margin: 0; flex-basis: 100%; }
   .clips-gate .clips-ok { color: var(--status-good); font-size: 12.5px; margin: 0; flex-basis: 100%; }
   .clips-lista { display: flex; flex-direction: column; gap: 6px; }
-  .clip-row { display: flex; align-items: center; gap: 10px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 9px 14px; }
+  .clip-row { display: flex; align-items: center; gap: 10px; background: var(--glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-brd); border-radius: 11px; padding: 10px 15px; }
   .clip-row .clip-info { flex: 1; min-width: 0; }
   .clip-row .clip-titulo { font-size: 13px; font-weight: 600; margin: 0; }
   .clip-row .clip-detalle { font-size: 12px; color: var(--text-secondary); margin: 1px 0 0; }
@@ -166,15 +259,30 @@
 </style>
 </head>
 <body>
+<div class="bg-hielo" aria-hidden="true">
+  <div class="bg-halo h1"></div>
+  <div class="bg-halo h2"></div>
+  <div class="bg-halo h3"></div>
+</div>
+<canvas id="copos" aria-hidden="true"></canvas>
 <div class="wrap">
 
   <div class="topbar">
     <div>
-      <p class="eyebrow">Hielos Yopal SAS</p>
-      <h1>Conteo automático de producción — bloques de hielo</h1>
-      <p class="subtitle">Registro diario de despachos con hora real y respaldo en video, generado automáticamente cada noche.</p>
+      <div class="brand-row">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M12 2l-3 3M12 2l3 3M12 22l-3-3M12 22l3-3M2.7 7l17.6 10M2.7 7l4.1.1M2.7 7 2.8 11M20.3 17l-4.1-.1M20.3 17l-.1-4M2.7 17 20.3 7M2.7 17l.1-4M2.7 17l4.1-.1M20.3 7l-4.1.1M20.3 7l-.1 4"/></svg></span>
+        <p class="eyebrow">Hielos Yopal SAS</p>
+      </div>
+      <h1>Conteo automático de producción</h1>
+      <p class="subtitle">Registro diario de despachos de bloques de hielo con hora real y respaldo en video, generado automáticamente cada noche.</p>
     </div>
-    <select id="selector-fecha" aria-label="Elegir fecha"></select>
+    <div class="topbar-tools">
+      <select id="selector-fecha" aria-label="Elegir fecha"></select>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema">
+        <svg class="icon-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2 12h2.2M19.8 12H22M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+        <svg class="icon-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.2 6.2 0 0 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
   </div>
 
   <section>
@@ -184,7 +292,7 @@
   </section>
 
   <section id="seccion-tendencia" style="display:none;">
-    <h2>Producción por día</h2>
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span>Producción por día</h2>
     <p class="section-note">Bloques confirmados por día (sin la madrugada por revisar). Toca una barra para ver el detalle de ese día.</p>
     <div class="chart-card"><div class="bars bars-tendencia" id="chart-tendencia"></div></div>
   </section>
@@ -195,7 +303,7 @@
   <div class="tiles" id="tiles-dia"></div>
 
   <section>
-    <h2>Despachos del día — <span id="titulo-fecha-actividad"></span></h2>
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Despachos del día — <span id="titulo-fecha-actividad"></span></h2>
     <p class="section-note">Cada despacho es la salida de un molde completo (≈4 bloques) por la rampa, con hora exacta. El despacho no tiene horario fijo — puede ocurrir en cualquier momento. Las barras muestran cuántos despachos cayeron en cada hora.</p>
     <div class="chart-card" id="card-despachos">
       <div class="bars" id="chart-despachos"></div>
@@ -203,7 +311,7 @@
   </section>
 
   <section id="seccion-analisis">
-    <h2>Análisis por planta y presentación</h2>
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>Análisis por planta y presentación</h2>
     <p class="section-note" id="nota-analisis">Producción del día desglosada por planta de origen y por tamaño de bloque (grande / pequeño).</p>
     <div class="analisis-grid">
       <div class="chart-card">
@@ -218,8 +326,8 @@
   </section>
 
   <section>
-    <h2>Detalle de cada despacho</h2>
-    <p class="section-note">Uno por fila, en orden. El icono indica si hay respaldo en video (más abajo, protegido con contraseña).</p>
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></span>Detalle de cada despacho</h2>
+    <p class="section-note">Uno por fila, en orden. El botón indica si hay respaldo en video (más abajo, protegido con contraseña).</p>
     <div class="despachos-lista" id="despachos-lista"></div>
     <details class="table-toggle" id="toggle-consolidado">
       <summary>Ver total por presentación</summary>
@@ -228,7 +336,7 @@
   </section>
 
   <section id="seccion-clips" style="display:none;">
-    <h2>Clips de video</h2>
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="12" rx="2"/><path d="M15 10l6-3v10l-6-3z"/></svg></span>Clips de video</h2>
     <p class="section-note">Respaldo en video de los despachos y tramos de actividad recientes. Protegidos con contraseña — pídesela a quien administra el sistema si la necesitas.</p>
     <div class="clips-gate" id="clips-gate">
       <p>Ingresa la contraseña para poder reproducir los clips.</p>
@@ -241,20 +349,20 @@
     <div class="clip-player" id="clip-player" style="display:none;">
       <div class="clip-player-head">
         <span id="clip-player-titulo"></span>
-        <button type="button" id="clip-player-cerrar">Cerrar ✕</button>
+        <button type="button" id="clip-player-cerrar">Cerrar</button>
       </div>
       <video id="clip-player-video" controls></video>
     </div>
   </section>
 
   <section>
-    <h2>Estado del proyecto</h2>
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></span>Estado del proyecto</h2>
     <p class="section-note">Qué ya funciona y qué falta.</p>
     <div class="roadmap">
-      <div class="road-item"><span class="badge done">✓ Listo</span><div><p class="road-title">Conteo automático de despachos</p><p class="road-desc">Cada salida de molde por la rampa se cuenta con hora exacta y clip de respaldo en video, sobre la cámara real de producción.</p></div></div>
-      <div class="road-item"><span class="badge done">✓ Listo</span><div><p class="road-title">Corrida diaria y publicación automática</p><p class="road-desc">Todo corre solo cada noche; el resultado (ok, error, volumen inusual) aparece en "Estado del sistema" arriba, sin depender del correo.</p></div></div>
-      <div class="road-item"><span class="badge progress">◐ En ajuste</span><div><p class="road-title">Confiabilidad en toda hora</p><p class="road-desc">El conteo de día está validado; las horas de madrugada y atardecer siguen en ajuste — se revisan a mano antes de darlas por firmes.</p></div></div>
-      <div class="road-item"><span class="badge pending">○ Planeado</span><div><p class="road-title">Tipo de bloque y planta de origen</p><p class="road-desc">Distinguir grande/pequeño y de qué planta vino cada molde. En definición con la operación (color de molde por planta).</p></div></div>
+      <div class="road-item"><span class="badge done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Conteo automático de despachos</p><p class="road-desc">Cada salida de molde por la rampa se cuenta con hora exacta y clip de respaldo en video, sobre la cámara real de producción.</p></div></div>
+      <div class="road-item"><span class="badge done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Corrida diaria y publicación automática</p><p class="road-desc">Todo corre solo cada noche; el resultado (ok, error, volumen inusual) aparece en "Estado del sistema" arriba, sin depender del correo.</p></div></div>
+      <div class="road-item"><span class="badge progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En ajuste</span><div><p class="road-title">Confiabilidad en toda hora</p><p class="road-desc">El conteo de día está validado; las horas de madrugada y atardecer siguen en ajuste — se revisan a mano antes de darlas por firmes.</p></div></div>
+      <div class="road-item"><span class="badge pending"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>Planeado</span><div><p class="road-title">Tipo de bloque y planta de origen</p><p class="road-desc">Distinguir grande/pequeño y de qué planta vino cada molde. En definición con la operación (color de molde por planta).</p></div></div>
     </div>
   </section>
 
@@ -265,6 +373,76 @@
 <script>
 const INTERVALO_REFRESCO_MS = 25000;
 let datosActuales = null;
+
+// --- Iconos SVG (inline, sin dependencias externas) ---
+const _svg = (d, extra) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"${extra || ''}>${d}</svg>`;
+const ICO = {
+  cubo: _svg('<path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/>'),
+  molde: _svg('<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M9 6v12M15 6v12"/>'),
+  luna: _svg('<path d="M20 14.5A8 8 0 1 1 9.5 4a6.2 6.2 0 0 0 10.5 10.5z"/>'),
+  reloj: _svg('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'),
+  play: _svg('<path d="M7 5v14l11-7z" fill="currentColor" stroke="none"/>'),
+  alerta: _svg('<path d="M10.3 3.5 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.5a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/>'),
+  info: _svg('<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>'),
+};
+
+// --- Tema claro/oscuro (persistido en localStorage) ---
+function aplicarTema(t) {
+  if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  else document.documentElement.removeAttribute('data-theme');
+}
+(function initTema() {
+  try { aplicarTema(localStorage.getItem('hy-tema')); } catch (e) {}
+})();
+function toggleTema() {
+  const oscuroAhora = document.documentElement.getAttribute('data-theme') === 'dark'
+    || (!document.documentElement.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+  const nuevo = oscuroAhora ? 'light' : 'dark';
+  aplicarTema(nuevo);
+  try { localStorage.setItem('hy-tema', nuevo); } catch (e) {}
+}
+
+// --- Copos de hielo a la deriva + parallax suave del fondo ---
+function initFondoHielo() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const canvas = document.getElementById('copos');
+  const ctx = canvas.getContext('2d');
+  let ancho = 0, alto = 0, copos = [];
+  function redimensionar() {
+    ancho = canvas.width = innerWidth; alto = canvas.height = innerHeight;
+    const n = Math.min(70, Math.round(ancho * alto / 26000));
+    copos = Array.from({ length: n }, () => ({
+      x: Math.random() * ancho, y: Math.random() * alto,
+      r: 0.7 + Math.random() * 2.1, vy: 0.15 + Math.random() * 0.5,
+      vx: -0.25 + Math.random() * 0.5, op: 0.25 + Math.random() * 0.5,
+    }));
+  }
+  function color() {
+    return getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#38b6ff';
+  }
+  function dibujar() {
+    ctx.clearRect(0, 0, ancho, alto);
+    const c = color();
+    for (const f of copos) {
+      f.y += f.vy; f.x += f.vx;
+      if (f.y > alto + 4) { f.y = -4; f.x = Math.random() * ancho; }
+      if (f.x < -4) f.x = ancho + 4; if (f.x > ancho + 4) f.x = -4;
+      ctx.globalAlpha = f.op; ctx.fillStyle = c;
+      ctx.beginPath(); ctx.arc(f.x, f.y, f.r, 0, 6.2832); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(dibujar);
+  }
+  addEventListener('resize', redimensionar);
+  redimensionar(); dibujar();
+
+  // parallax: los halos se desplazan un poco al hacer scroll
+  const halos = document.querySelectorAll('.bg-halo');
+  addEventListener('scroll', () => {
+    const y = scrollY;
+    halos.forEach((h, i) => { h.style.transform = 'translateY(' + (y * (0.04 + i * 0.03)) + 'px)'; });
+  }, { passive: true });
+}
 
 async function cargarDatos() {
   const resp = await fetch('./data.json', { cache: 'no-store' });
@@ -378,7 +556,9 @@ function renderEstado(estado) {
   }
   if (estado && estado.procesamiento_diario) {
     const pd = estado.procesamiento_diario;
-    items.push(estadoItem('Última corrida diaria (' + pd.fecha + ')', pd.estado === 'ok', pd.mensaje, pd.actualizado_en));
+    // El estado que persiste procesar-diario es 'completado' / 'error' (no 'ok').
+    const corridaOk = pd.estado === 'completado' || pd.estado === 'ok';
+    items.push(estadoItem('Última corrida diaria (' + pd.fecha + ')', corridaOk, pd.mensaje, pd.actualizado_en));
   }
 
   cont.innerHTML = items.length
@@ -422,13 +602,15 @@ function renderDia(dia) {
   const ultimo = confiables.length ? horaCorta(confiables[confiables.length - 1].hora).slice(0, 5) : '—';
 
   const banner = document.getElementById('banner-dia');
+  let bannerTexto;
   if (!dia.conteo_real) {
-    banner.innerHTML = `<strong>${dia.fecha}</strong> — el conteo por despacho para este día todavía está en calibración (ver "Estado del proyecto" más abajo); los horarios de actividad sí son reales.`;
+    bannerTexto = `<strong>${dia.fecha}</strong> — el conteo por despacho para este día todavía está en calibración (ver "Estado del proyecto" más abajo); los horarios de actividad sí son reales.`;
   } else if (porRevisar.length) {
-    banner.innerHTML = `<strong>${dia.fecha}</strong> — ${bloquesConfiables} bloques confirmados. ${bloquesRevisar} bloques (${porRevisar.length} despacho${porRevisar.length > 1 ? 's' : ''}) cayeron en madrugada y están <strong>por revisar</strong>: esa franja todavía no es confiable, no se suma al total confirmado.`;
+    bannerTexto = `<strong>${dia.fecha}</strong> — ${bloquesConfiables} bloques confirmados. ${bloquesRevisar} bloques (${porRevisar.length} despacho${porRevisar.length > 1 ? 's' : ''}) cayeron en madrugada y están <strong>por revisar</strong>: esa franja todavía no es confiable, no se suma al total confirmado.`;
   } else {
-    banner.innerHTML = `<strong>${dia.fecha}</strong> — ${bloquesConfiables} bloques confirmados en ${confiables.length} despacho${confiables.length === 1 ? '' : 's'}, con hora exacta y respaldo en video.`;
+    bannerTexto = `<strong>${dia.fecha}</strong> — ${bloquesConfiables} bloques confirmados en ${confiables.length} despacho${confiables.length === 1 ? '' : 's'}, con hora exacta y respaldo en video.`;
   }
+  banner.innerHTML = `<span class="banner-ico">${ICO.info}</span><span>${bannerTexto}</span>`;
 
   const bannerAnomalia = document.getElementById('banner-anomalia');
   if (dia.anomalia && dia.anomalia.es_anomalia) {
@@ -439,10 +621,10 @@ function renderDia(dia) {
   }
 
   document.getElementById('tiles-dia').innerHTML = `
-    <div class="tile destacada"><p class="label">Bloques confirmados</p><p class="value">${dia.conteo_real ? bloquesConfiables : '—'}<span class="unit">bloques</span></p></div>
-    <div class="tile"><p class="label">Despachos confirmados</p><p class="value">${dia.conteo_real ? confiables.length : '—'}<span class="unit">moldes</span></p></div>
-    <div class="tile ${bloquesRevisar > 0 ? 'aviso' : ''}"><p class="label">Por revisar (madrugada)</p><p class="value">${dia.conteo_real ? bloquesRevisar : '—'}<span class="unit">bloques</span></p></div>
-    <div class="tile"><p class="label">Rango del día</p><p class="value" style="font-size:19px;">${primero}${confiables.length ? '–' + ultimo : ''}</p></div>
+    <div class="tile destacada"><div class="tile-head"><span class="tile-ico">${ICO.cubo}</span><p class="label">Bloques confirmados</p></div><p class="value">${dia.conteo_real ? bloquesConfiables : '—'}<span class="unit">bloques</span></p></div>
+    <div class="tile"><div class="tile-head"><span class="tile-ico">${ICO.molde}</span><p class="label">Despachos confirmados</p></div><p class="value">${dia.conteo_real ? confiables.length : '—'}<span class="unit">moldes</span></p></div>
+    <div class="tile ${bloquesRevisar > 0 ? 'aviso' : ''}"><div class="tile-head"><span class="tile-ico">${ICO.luna}</span><p class="label">Por revisar (madrugada)</p></div><p class="value">${dia.conteo_real ? bloquesRevisar : '—'}<span class="unit">bloques</span></p></div>
+    <div class="tile"><div class="tile-head"><span class="tile-ico">${ICO.reloj}</span><p class="label">Rango del día</p></div><p class="value" style="font-size:20px;">${primero}${confiables.length ? '–' + ultimo : ''}</p></div>
   `;
 
   renderDespachosPorHora(despachos, dia.conteo_real);
@@ -530,14 +712,14 @@ function renderDespachosLista(despachos, conteoReal) {
   const etiquetas = { bloque_grande: 'Bloque grande', bloque_pequeno: 'Bloque pequeño' };
   cont.innerHTML = despachos.map((d, i) => {
     const video = d.evidencia
-      ? `<button type="button" class="despacho-ev con" onclick="reproducirDespacho('${d.hora}')" title="Ver respaldo en video">▶ video</button>`
+      ? `<button type="button" class="despacho-ev con" onclick="reproducirDespacho('${d.hora}')" title="Ver respaldo en video">${ICO.play} video</button>`
       : `<span class="despacho-ev sin" title="Sin clip">—</span>`;
     // Gap corto respecto al despacho anterior: probablemente el MISMO molde
     // contado dos veces porque el operario tuvo que entrar a ayudar con un
     // hielo pegado (ver data_export.GAP_SOSPECHOSO_SEG). Solo marca cual
     // conviene mirar primero; el numero no se descuenta solo.
     const gapAviso = d.gap_sospechoso
-      ? `<span class="despacho-gap" title="Solo ${minutos(d.gap_anterior_seg)} despues del anterior: puede ser el mismo molde contado dos veces. Revisar el video.">⚠ ${minutos(d.gap_anterior_seg)} tras el anterior</span>`
+      ? `<span class="despacho-gap" title="Solo ${minutos(d.gap_anterior_seg)} despues del anterior: puede ser el mismo molde contado dos veces. Revisar el video.">${ICO.alerta} ${minutos(d.gap_anterior_seg)} tras el anterior</span>`
       : '';
     return `
     <div class="despacho-row ${d.por_revisar ? 'revisar' : ''} ${d.gap_sospechoso ? 'gap-corto' : ''}">
@@ -660,7 +842,7 @@ function renderListaClips() {
           <p class="clip-detalle">${detalle}</p>
         </div>
         <span class="clip-estado" id="clip-estado-${i}"></span>
-        <button type="button" onclick="reproducirClip(${i})">▶ Reproducir</button>
+        <button type="button" onclick="reproducirClip(${i})">${ICO.play} Reproducir</button>
       </div>`;
   }).join('');
 }
@@ -752,7 +934,9 @@ document.getElementById('clip-player-cerrar').addEventListener('click', () => {
   video.removeAttribute('src');
   jugador.style.display = 'none';
 });
+document.getElementById('theme-toggle').addEventListener('click', toggleTema);
 
+initFondoHielo();
 main();
 </script>
 </body>

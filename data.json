@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-07-28T07:50:11.962319",
+  "generado_en": "2026-07-28T07:56:01.037176",
   "dias": [
     {
       "fecha": "2026-07-28",
@@ -8,7 +8,7 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 8
+          "unidades": 12
         }
       ],
       "despachos": [
@@ -31,21 +31,16 @@
           "por_revisar": false,
           "gap_anterior_seg": 462.7,
           "gap_sospechoso": false
-        }
-      ],
-      "por_planta": [
+        },
         {
-          "planta": "desconocida",
-          "despachos": 2,
-          "bloques": 8
-        }
-      ],
-      "por_clase": [
-        {
+          "hora": "2026-07-28T07:55:54.903317",
           "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 2,
-          "bloques": 8
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "gap_anterior_seg": 659.1,
+          "gap_sospechoso": false
         }
       ],
       "anomalia": {
@@ -285,21 +280,6 @@
           "gap_sospechoso": false
         }
       ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 22,
-          "bloques": 88
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 22,
-          "bloques": 88
-        }
-      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Dentro del rango habitual (84.0 +/- 53.6)."
@@ -495,21 +475,6 @@
           "por_revisar": false,
           "gap_anterior_seg": 823.0,
           "gap_sospechoso": false
-        }
-      ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 18,
-          "bloques": 72
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 18,
-          "bloques": 72
         }
       ],
       "anomalia": {
@@ -909,21 +874,6 @@
           "gap_sospechoso": false
         }
       ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 38,
-          "bloques": 152
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 38,
-          "bloques": 152
-        }
-      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Historial insuficiente (12/14 dias con datos): no se evalua todavia."
@@ -1181,21 +1131,6 @@
           "gap_sospechoso": false
         }
       ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 24,
-          "bloques": 96
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 24,
-          "bloques": 96
-        }
-      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Historial insuficiente (11/14 dias con datos): no se evalua todavia."
@@ -1373,21 +1308,6 @@
           "gap_sospechoso": false
         }
       ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 15,
-          "bloques": 60
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 15,
-          "bloques": 60
-        }
-      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Historial insuficiente (10/14 dias con datos): no se evalua todavia."
@@ -1563,21 +1483,6 @@
           "por_revisar": false,
           "gap_anterior_seg": 7586.9,
           "gap_sospechoso": false
-        }
-      ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 15,
-          "bloques": 60
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 15,
-          "bloques": 60
         }
       ],
       "anomalia": {
@@ -2087,21 +1992,6 @@
           "gap_sospechoso": false
         }
       ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 10,
-          "bloques": 40
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 10,
-          "bloques": 40
-        }
-      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Historial insuficiente (8/14 dias con datos): no se evalua todavia."
@@ -2299,21 +2189,6 @@
           "gap_sospechoso": false
         }
       ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 18,
-          "bloques": 72
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 18,
-          "bloques": 72
-        }
-      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Historial insuficiente (7/14 dias con datos): no se evalua todavia."
@@ -2389,21 +2264,6 @@
           "por_revisar": false,
           "gap_anterior_seg": 203.7,
           "gap_sospechoso": true
-        }
-      ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 6,
-          "bloques": 24
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 6,
-          "bloques": 24
         }
       ],
       "anomalia": {
@@ -2541,21 +2401,6 @@
           "por_revisar": false,
           "gap_anterior_seg": 1723.7,
           "gap_sospechoso": false
-        }
-      ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 12,
-          "bloques": 48
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 12,
-          "bloques": 48
         }
       ],
       "anomalia": {
@@ -2785,21 +2630,6 @@
           "gap_sospechoso": false
         }
       ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 17,
-          "bloques": 68
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 17,
-          "bloques": 68
-        }
-      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Historial insuficiente (4/14 dias con datos): no se evalua todavia."
@@ -2897,21 +2727,6 @@
           "gap_sospechoso": false
         }
       ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 8,
-          "bloques": 32
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 8,
-          "bloques": 32
-        }
-      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Historial insuficiente (3/14 dias con datos): no se evalua todavia."
@@ -2959,21 +2774,6 @@
           "gap_sospechoso": false
         }
       ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 2,
-          "bloques": 8
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 2,
-          "bloques": 8
-        }
-      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Historial insuficiente (2/14 dias con datos): no se evalua todavia."
@@ -2984,8 +2784,6 @@
       "conteo_real": true,
       "consolidado": [],
       "despachos": [],
-      "por_planta": [],
-      "por_clase": [],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Historial insuficiente (2/14 dias con datos): no se evalua todavia."
@@ -3223,21 +3021,6 @@
           "gap_sospechoso": false
         }
       ],
-      "por_planta": [
-        {
-          "planta": "desconocida",
-          "despachos": 22,
-          "bloques": 88
-        }
-      ],
-      "por_clase": [
-        {
-          "clase": "bloque_grande",
-          "etiqueta": "Grande",
-          "despachos": 22,
-          "bloques": 88
-        }
-      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Historial insuficiente (1/14 dias con datos): no se evalua todavia."
@@ -3248,8 +3031,6 @@
       "conteo_real": false,
       "consolidado": [],
       "despachos": [],
-      "por_planta": [],
-      "por_clase": [],
       "anomalia": null
     }
   ],
@@ -3264,7 +3045,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-07-28T07:49:41.664954",
+        "ultimo_heartbeat": "2026-07-28T07:55:45.800860",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

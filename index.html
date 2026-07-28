@@ -96,6 +96,18 @@
   }
   .bar:hover .tooltip { opacity: 1; }
   .empty-state { padding: 28px 16px; text-align: center; color: var(--text-secondary); font-size: 13.5px; }
+  .analisis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 680px) { .analisis-grid { grid-template-columns: 1fr; } }
+  .mini-titulo { font-size: 12.5px; font-weight: 650; color: var(--text-secondary); margin: 0 0 12px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .barras-h { display: flex; flex-direction: column; gap: 9px; }
+  .barra-h { display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 10px; }
+  .barra-h .etq { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .barra-h .via { background: color-mix(in srgb, var(--series-1) 12%, transparent); border-radius: 5px; height: 22px; overflow: hidden; }
+  .barra-h .fill { height: 100%; background: var(--series-1); border-radius: 5px; min-width: 3px; transition: width 0.3s; }
+  .barra-h .val { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 58px; text-align: right; }
+  .barra-h.plt2 .fill { background: #d0342c; } .barra-h.plt1 .fill { background: #c026a8; }
+  .barra-h.plt3 .fill { background: #7c3aed; } .barra-h.plt4 .fill { background: #d99a0a; }
+  .barra-h.desc .fill { background: var(--text-muted); }
   table.data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 12px; }
   .table-wrap { overflow-x: auto; }
   table.data-table th, table.data-table td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--gridline); font-variant-numeric: tabular-nums; }
@@ -187,6 +199,21 @@
     <p class="section-note">Cada despacho es la salida de un molde completo (≈4 bloques) por la rampa, con hora exacta. El despacho no tiene horario fijo — puede ocurrir en cualquier momento. Las barras muestran cuántos despachos cayeron en cada hora.</p>
     <div class="chart-card" id="card-despachos">
       <div class="bars" id="chart-despachos"></div>
+    </div>
+  </section>
+
+  <section id="seccion-analisis">
+    <h2>Análisis por planta y presentación</h2>
+    <p class="section-note" id="nota-analisis">Producción del día desglosada por planta de origen y por tamaño de bloque (grande / pequeño).</p>
+    <div class="analisis-grid">
+      <div class="chart-card">
+        <h3 class="mini-titulo">Bloques por planta</h3>
+        <div id="chart-planta" class="barras-h"></div>
+      </div>
+      <div class="chart-card">
+        <h3 class="mini-titulo">Bloques por presentación</h3>
+        <div id="chart-clase" class="barras-h"></div>
+      </div>
     </div>
   </section>
 
@@ -420,7 +447,38 @@ function renderDia(dia) {
 
   renderDespachosPorHora(despachos, dia.conteo_real);
   renderDespachosLista(despachos, dia.conteo_real);
+  renderAnalisis(dia);
   renderConsolidado(dia);
+}
+
+function renderAnalisis(dia) {
+  const planta = dia.por_planta || [];
+  const clase = dia.por_clase || [];
+  const nota = document.getElementById('nota-analisis');
+  // Si todo cae en "desconocida", la atribucion por color aun no esta activa.
+  const soloDesconocida = planta.length > 0 && planta.every(p => p.planta === 'desconocida');
+  nota.innerHTML = soloDesconocida
+    ? 'Producción del día por planta y tamaño. <strong>La planta y el tamaño se calibran con el color de la barra del molde</strong> — mientras se termina de pintar, aparecen como "por calibrar".'
+    : 'Producción del día desglosada por planta de origen y por tamaño de bloque (grande / pequeño).';
+  renderBarrasH('chart-planta', planta.map(p => ({
+    etiqueta: p.planta === 'desconocida' ? 'Por calibrar' : 'Planta ' + p.planta,
+    valor: p.bloques, sub: p.despachos, cls: p.planta === 'desconocida' ? 'desc' : 'plt' + p.planta,
+  })));
+  renderBarrasH('chart-clase', clase.map(c => ({
+    etiqueta: c.etiqueta, valor: c.bloques, sub: c.despachos, cls: '',
+  })));
+}
+
+function renderBarrasH(id, filas) {
+  const cont = document.getElementById(id);
+  if (!filas.length) { cont.innerHTML = '<div class="empty-state">Sin datos confirmados este día.</div>'; return; }
+  const max = Math.max(...filas.map(f => f.valor), 1);
+  cont.innerHTML = filas.map(f => `
+    <div class="barra-h ${f.cls}">
+      <span class="etq" title="${f.etiqueta}">${f.etiqueta}</span>
+      <span class="via"><span class="fill" style="width:${Math.round(f.valor / max * 100)}%"></span></span>
+      <span class="val">${f.valor} <span style="font-weight:500;color:var(--text-muted)">(${f.sub})</span></span>
+    </div>`).join('');
 }
 
 function renderDespachosPorHora(despachos, conteoReal) {

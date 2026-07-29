@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-07-29T15:50:04.009318",
+  "generado_en": "2026-07-29T16:00:06.803821",
   "dias": [
     {
       "fecha": "2026-07-29",
@@ -3727,16 +3727,16 @@
   ],
   "estado": {
     "dvr": {
-      "ok": true,
-      "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-07-29T14:00:04.615508"
+      "ok": false,
+      "mensaje": "ATENCION: la grabacion del DVR estaba APAGADA y se reactivo automaticamente (Enable=True, franjas activas 7/8). Alguien con acceso de admin la desactivo -- revisar el equipo.",
+      "verificado_en": "2026-07-29T16:00:05.323397"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-07-29T15:49:58.802316",
+        "ultimo_heartbeat": "2026-07-29T16:00:04.652600",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

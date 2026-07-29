@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-07-29T16:12:07.931160",
+  "generado_en": "2026-07-29T17:12:51.897965",
   "dias": [
     {
       "fecha": "2026-07-29",
@@ -237,7 +237,7 @@
           "clase": "bloque_grande",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "gap_anterior_seg": 3832.9,
           "gap_sospechoso": false
@@ -3744,9 +3744,9 @@
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
-        "ok": true,
-        "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-07-29T16:11:41.803265",
+        "ok": false,
+        "mensaje": "Heartbeat viejo (3213s).",
+        "ultimo_heartbeat": "2026-07-29T16:19:19.271601",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

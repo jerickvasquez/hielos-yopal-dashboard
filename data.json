@@ -1,6 +1,18 @@
 {
-  "generado_en": "2026-07-30T00:00:08.894443",
+  "generado_en": "2026-07-30T00:00:16.829735",
   "dias": [
+    {
+      "fecha": "2026-07-30",
+      "conteo_real": true,
+      "consolidado": [],
+      "despachos": [],
+      "por_planta": [],
+      "por_clase": [],
+      "anomalia": {
+        "es_anomalia": false,
+        "motivo": "Dentro del rango habitual (85.6 +/- 48.8)."
+      }
+    },
     {
       "fecha": "2026-07-29",
       "conteo_real": true,
@@ -3747,9 +3759,9 @@
   ],
   "estado": {
     "dvr": {
-      "ok": false,
-      "mensaje": "ATENCION: la grabacion del DVR estaba APAGADA y se reactivo automaticamente (Enable=True, franjas activas 7/8). Alguien con acceso de admin la desactivo -- revisar el equipo.",
-      "verificado_en": "2026-07-29T22:00:05.754814"
+      "ok": true,
+      "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
+      "verificado_en": "2026-07-30T00:00:15.204895"
     },
     "conteo_en_vivo": [
       {

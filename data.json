@@ -1,6 +1,18 @@
 {
-  "generado_en": "2026-08-01T23:50:04.657696",
+  "generado_en": "2026-08-02T00:00:09.040986",
   "dias": [
+    {
+      "fecha": "2026-08-02",
+      "conteo_real": true,
+      "consolidado": [],
+      "despachos": [],
+      "por_planta": [],
+      "por_clase": [],
+      "anomalia": {
+        "es_anomalia": false,
+        "motivo": "Dentro del rango habitual (85.8 +/- 45.6)."
+      }
+    },
     {
       "fecha": "2026-08-01",
       "conteo_real": true,
@@ -4495,14 +4507,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-08-01T22:00:05.530749"
+      "verificado_en": "2026-08-02T00:00:07.159022"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-08-01T23:49:54.941385",
+        "ultimo_heartbeat": "2026-08-02T00:00:06.773049",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

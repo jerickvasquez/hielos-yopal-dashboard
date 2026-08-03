@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-08-03T10:20:04.516336",
+  "generado_en": "2026-08-03T10:22:38.019132",
   "dias": [
     {
       "fecha": "2026-08-03",
@@ -8,7 +8,7 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 20
+          "unidades": 24
         }
       ],
       "despachos": [
@@ -61,21 +61,31 @@
           "por_revisar": false,
           "gap_anterior_seg": 1059.6,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-03T10:22:31.241472",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "gap_anterior_seg": 430.5,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
         {
           "planta": "desconocida",
-          "despachos": 5,
-          "bloques": 20
+          "despachos": 6,
+          "bloques": 24
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_grande",
           "etiqueta": "Grande",
-          "despachos": 5,
-          "bloques": 20
+          "despachos": 6,
+          "bloques": 24
         }
       ],
       "anomalia": {
@@ -4756,7 +4766,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-08-03T10:19:49.837198",
+        "ultimo_heartbeat": "2026-08-03T10:22:21.099197",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

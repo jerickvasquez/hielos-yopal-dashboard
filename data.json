@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-08-03T13:58:55.869259",
+  "generado_en": "2026-08-03T14:42:39.273799",
   "dias": [
     {
       "fecha": "2026-08-03",
@@ -8,7 +8,7 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 72
+          "unidades": 80
         }
       ],
       "despachos": [
@@ -191,21 +191,41 @@
           "por_revisar": false,
           "gap_anterior_seg": 1342.4,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-03T14:02:25.591002",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "gap_anterior_seg": 1474.3,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-03T14:32:05.767276",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "gap_anterior_seg": 1780.2,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
         {
           "planta": "desconocida",
-          "despachos": 18,
-          "bloques": 72
+          "despachos": 20,
+          "bloques": 80
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_grande",
           "etiqueta": "Grande",
-          "despachos": 18,
-          "bloques": 72
+          "despachos": 20,
+          "bloques": 80
         }
       ],
       "anomalia": {
@@ -4885,8 +4905,8 @@
       {
         "planta": "desconocida",
         "ok": false,
-        "mensaje": "Heartbeat viejo (1279s).",
-        "ultimo_heartbeat": "2026-08-03T13:37:36.406532",
+        "mensaje": "Heartbeat viejo (635s).",
+        "ultimo_heartbeat": "2026-08-03T14:32:04.026835",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

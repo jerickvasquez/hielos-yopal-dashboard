@@ -1,13 +1,43 @@
 {
-  "generado_en": "2026-08-03T08:10:04.425969",
+  "generado_en": "2026-08-03T08:10:27.461395",
   "dias": [
     {
       "fecha": "2026-08-03",
       "conteo_real": true,
-      "consolidado": [],
-      "despachos": [],
-      "por_planta": [],
-      "por_clase": [],
+      "consolidado": [
+        {
+          "canal": "0",
+          "clase": "bloque_grande",
+          "unidades": 4
+        }
+      ],
+      "despachos": [
+        {
+          "hora": "2026-08-03T08:10:18.491487",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
+        }
+      ],
+      "por_planta": [
+        {
+          "planta": "desconocida",
+          "despachos": 1,
+          "bloques": 4
+        }
+      ],
+      "por_clase": [
+        {
+          "clase": "bloque_grande",
+          "etiqueta": "Grande",
+          "despachos": 1,
+          "bloques": 4
+        }
+      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "Dentro del rango habitual (84.4 +/- 44.9)."
@@ -4686,7 +4716,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-08-03T08:09:43.238954",
+        "ultimo_heartbeat": "2026-08-03T08:10:13.698891",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

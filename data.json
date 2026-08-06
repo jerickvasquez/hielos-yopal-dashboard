@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-08-05T19:50:04.724245",
+  "generado_en": "2026-08-05T20:00:08.068592",
   "dias": [
     {
       "fecha": "2026-08-05",
@@ -5363,15 +5363,15 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-08-05T18:00:06.684289"
+      "verificado_en": "2026-08-05T20:00:05.853685"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
-        "ok": true,
-        "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-08-05T19:49:49.870534",
-        "fraccion_baja_confianza_reciente": 0.01
+        "ok": false,
+        "mensaje": "53% de predicciones recientes de baja confianza.",
+        "ultimo_heartbeat": "2026-08-05T19:59:56.761539",
+        "fraccion_baja_confianza_reciente": 0.53
       }
     ],
     "procesamiento_diario": {

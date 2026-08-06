@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-08-05T20:00:08.068592",
+  "generado_en": "2026-08-05T20:10:26.318497",
   "dias": [
     {
       "fecha": "2026-08-05",
@@ -197,7 +197,7 @@
           "clase": "bloque_grande",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "gap_anterior_seg": 14458.5,
           "gap_sospechoso": false
@@ -5368,10 +5368,10 @@
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
-        "ok": false,
-        "mensaje": "53% de predicciones recientes de baja confianza.",
-        "ultimo_heartbeat": "2026-08-05T19:59:56.761539",
-        "fraccion_baja_confianza_reciente": 0.53
+        "ok": true,
+        "mensaje": "Operando normal.",
+        "ultimo_heartbeat": "2026-08-05T20:10:03.298229",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {

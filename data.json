@@ -1,6 +1,18 @@
 {
-  "generado_en": "2026-08-06T23:50:25.722885",
+  "generado_en": "2026-08-07T00:00:57.944127",
   "dias": [
+    {
+      "fecha": "2026-08-07",
+      "conteo_real": true,
+      "consolidado": [],
+      "despachos": [],
+      "por_planta": [],
+      "por_clase": [],
+      "anomalia": {
+        "es_anomalia": true,
+        "motivo": "Total de hoy (0) muy por debajo del promedio de los ultimos 24 dias con datos (83.0 +/- 40.6, z=-2.05)."
+      }
+    },
     {
       "fecha": "2026-08-06",
       "conteo_real": true,
@@ -5735,14 +5747,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-08-06T22:00:19.141311"
+      "verificado_en": "2026-08-07T00:00:55.008507"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-08-06T23:50:21.880194",
+        "ultimo_heartbeat": "2026-08-07T00:00:28.408148",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

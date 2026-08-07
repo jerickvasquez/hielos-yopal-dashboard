@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-08-07T06:50:04.865485",
+  "generado_en": "2026-08-07T07:00:04.890122",
   "dias": [
     {
       "fecha": "2026-08-07",
@@ -5779,10 +5779,10 @@
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
-        "ok": true,
-        "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-08-07T06:49:42.927540",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ok": false,
+        "mensaje": "66% de predicciones recientes de baja confianza.",
+        "ultimo_heartbeat": "2026-08-07T06:59:49.232924",
+        "fraccion_baja_confianza_reciente": 0.66
       }
     ],
     "procesamiento_diario": {

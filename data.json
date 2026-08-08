@@ -1,16 +1,246 @@
 {
-  "generado_en": "2026-08-08T06:30:09.368671",
+  "generado_en": "2026-08-08T12:24:10.088358",
   "dias": [
     {
       "fecha": "2026-08-08",
       "conteo_real": true,
-      "consolidado": [],
-      "despachos": [],
-      "por_planta": [],
-      "por_clase": [],
+      "consolidado": [
+        {
+          "canal": "0",
+          "clase": "bloque_grande",
+          "unidades": 84
+        }
+      ],
+      "despachos": [
+        {
+          "hora": "2026-08-08T08:32:50.945029",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T08:38:24.681951",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 333.7,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T08:44:41.311785",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 376.6,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T08:57:27.684698",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 766.4,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T09:01:55.948961",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 268.3,
+          "gap_sospechoso": true
+        },
+        {
+          "hora": "2026-08-08T09:07:43.077136",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 347.1,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T09:12:18.519090",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 275.4,
+          "gap_sospechoso": true
+        },
+        {
+          "hora": "2026-08-08T09:31:30.966252",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 1152.4,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T09:37:17.688458",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 346.7,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T10:15:07.226619",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 2269.5,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T10:23:14.387895",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 487.2,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T10:39:56.848602",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 1002.5,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T11:00:50.759400",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 1253.9,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T11:08:49.721166",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 479.0,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T11:19:54.256375",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 664.5,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T11:27:58.424590",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 484.2,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T11:40:46.251197",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 767.8,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T11:48:23.120791",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 456.9,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T11:55:54.114134",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 451.0,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T12:02:14.751271",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "gap_anterior_seg": 380.6,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-08-08T12:23:55.348664",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "gap_anterior_seg": 1300.6,
+          "gap_sospechoso": false
+        }
+      ],
+      "por_planta": [
+        {
+          "planta": "desconocida",
+          "despachos": 21,
+          "bloques": 84
+        }
+      ],
+      "por_clase": [
+        {
+          "clase": "bloque_grande",
+          "etiqueta": "Grande",
+          "despachos": 21,
+          "bloques": 84
+        }
+      ],
       "anomalia": {
-        "es_anomalia": true,
-        "motivo": "Total de hoy (0) muy por debajo del promedio de los ultimos 25 dias con datos (81.4 +/- 40.5, z=-2.01)."
+        "es_anomalia": false,
+        "motivo": "Dentro del rango habitual (81.4 +/- 40.5)."
       }
     },
     {
@@ -5889,14 +6119,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-08-08T06:00:07.872861"
+      "verificado_en": "2026-08-08T12:01:03.304697"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-08-08T06:30:06.507263",
+        "ultimo_heartbeat": "2026-08-08T12:23:41.509295",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],

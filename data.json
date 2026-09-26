@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-26T14:22:34.826384",
-  "generado_en_epoch": 1790450554,
+  "generado_en": "2026-09-26T14:26:00.794385",
+  "generado_en_epoch": 1790450760,
   "dias": [
     {
       "fecha": "2026-09-26",
@@ -240,21 +240,21 @@
         "motivo": "Dentro del rango habitual (70.3 +/- 30.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 244,
-        "minutos_esperados": 247,
+        "minutos_cubiertos": 247,
+        "minutos_esperados": 250,
         "porcentaje": 98.8,
         "huecos": []
       },
       "validacion": {
         "estado": "sin_registro",
-        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 64 bloques.",
+        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 76 bloques.",
         "reportado": 0,
-        "sistema": 64,
+        "sistema": 76,
         "tandas": 0,
         "tandas_ok": 0,
-        "despachos_sin_reportar": 16,
-        "bloques_sin_reportar": 64,
-        "sin_reportar_confirmados": 15,
+        "despachos_sin_reportar": 19,
+        "bloques_sin_reportar": 76,
+        "sin_reportar_confirmados": 18,
         "errores_llenado": 0
       }
     },
@@ -17594,7 +17594,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-26T14:22:17.101228",
+        "ultimo_heartbeat": "2026-09-26T14:25:49.427058",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -17607,15 +17607,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 437.6,
+        "libre_gb": 437.4,
         "total_gb": 984.1,
-        "mensaje": "438 GB libres de 984 GB."
+        "mensaje": "437 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-26T14:22:25.866304"
+        "actualizado_en": "2026-09-26T14:22:42.380748"
       },
       "mantenimiento": {
         "ok": true,
@@ -17624,8 +17624,8 @@
       },
       "informes": {
         "ok": true,
-        "mensaje": "Informe(s) 2026-09-25, 2026-09-26 publicados; 60 informes disponibles para descargar.",
-        "actualizado_en": "2026-09-26T12:20:26.801685"
+        "mensaje": "Informe(s) 2026-07-29, 2026-07-30, 2026-07-31, 2026-08-01, 2026-08-02, 2026-08-03, 2026-08-04, 2026-08-05, 2026-08-06, 2026-08-07, 2026-08-08, 2026-08-09, 2026-08-10, 2026-08-11, 2026-08-12, 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-16, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-22, 2026-08-23, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-28, 2026-08-29, 2026-08-30, 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-05, 2026-09-06, 2026-09-07, 2026-09-08, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-12, 2026-09-13, 2026-09-14, 2026-09-15, 2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-20, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25, 2026-09-26 publicados; 60 informes disponibles para descargar.",
+        "actualizado_en": "2026-09-26T14:25:52.247495"
       },
       "clips": {
         "ok": false,

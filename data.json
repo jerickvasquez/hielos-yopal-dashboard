@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-26T18:10:20.398657",
-  "generado_en_epoch": 1790464220,
+  "generado_en": "2026-09-26T18:21:27.257038",
+  "generado_en_epoch": 1790464887,
   "dias": [
     {
       "fecha": "2026-09-26",
@@ -361,21 +361,21 @@
         "motivo": "Dentro del rango habitual (70.3 +/- 30.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 454,
-        "minutos_esperados": 475,
-        "porcentaje": 95.6,
+        "minutos_cubiertos": 466,
+        "minutos_esperados": 486,
+        "porcentaje": 95.9,
         "huecos": []
       },
       "validacion": {
         "estado": "inconsistencias",
-        "mensaje": "2 de 2 tandas no cuadran; 5 despacho(s) (20 bloques) que nadie anotó.",
-        "reportado": 112,
-        "sistema": 112,
-        "tandas": 2,
-        "tandas_ok": 0,
-        "despachos_sin_reportar": 5,
-        "bloques_sin_reportar": 20,
-        "sin_reportar_confirmados": 4,
+        "mensaje": "2 de 3 tandas no cuadran; 1 despacho(s) (4 bloques) que nadie anotó.",
+        "reportado": 136,
+        "sistema": 116,
+        "tandas": 3,
+        "tandas_ok": 1,
+        "despachos_sin_reportar": 1,
+        "bloques_sin_reportar": 4,
+        "sin_reportar_confirmados": 0,
         "errores_llenado": 0
       }
     },
@@ -17715,7 +17715,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-26T18:09:56.375853",
+        "ultimo_heartbeat": "2026-09-26T18:21:04.224078",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -17736,7 +17736,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-26T18:00:36.172073"
+        "actualizado_en": "2026-09-26T18:10:27.537775"
       },
       "mantenimiento": {
         "ok": true,
@@ -17744,9 +17744,9 @@
         "actualizado_en": "2026-09-26T16:21:41.452870"
       },
       "informes": {
-        "ok": true,
-        "mensaje": "Informe(s) 2026-07-29, 2026-07-30, 2026-07-31, 2026-08-01, 2026-08-02, 2026-08-03, 2026-08-04, 2026-08-05, 2026-08-06, 2026-08-07, 2026-08-08, 2026-08-09, 2026-08-10, 2026-08-11, 2026-08-12, 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-16, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-22, 2026-08-23, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-28, 2026-08-29, 2026-08-30, 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-05, 2026-09-06, 2026-09-07, 2026-09-08, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-12, 2026-09-13, 2026-09-14, 2026-09-15, 2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-20, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25, 2026-09-26 publicados; 60 informes disponibles para descargar.",
-        "actualizado_en": "2026-09-26T14:25:52.247495"
+        "ok": false,
+        "mensaje": "No se pudo generar/publicar el informe: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/jerickvasquez/hielos-yopal-dashboard/git/commits/ad6b488b7be713162eda61ff202fb03444c8d655 (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.github.com', port=443) at 0x1887a171bd0>, 'Connection to api.github.com timed out. (connect timeout=90)'))",
+        "actualizado_en": "2026-09-26T18:21:19.097623"
       },
       "clips": {
         "ok": false,
@@ -17756,12 +17756,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-26T18:10:12.230048"
+        "actualizado_en": "2026-09-26T18:20:03.416064"
       },
       "planilla": {
         "ok": true,
-        "mensaje": "Planilla leída: 2 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-09-26T16:22:01.626200"
+        "mensaje": "Planilla leída: 3 tandas anotadas, 0 fila(s) mal llenadas.",
+        "actualizado_en": "2026-09-26T18:20:48.234673"
       }
     }
   }

@@ -1,0 +1,169 @@
+# Vigilante externo de Hielos Yopal.
+#
+# Corre en los servidores de GitHub, NO en el servidor de la fabrica: por eso
+# puede avisar justamente cuando el servidor se cae, se queda sin internet o
+# pierde permiso para publicar (el 9 de agosto de 2026 vencio el token y la
+# pagina quedo congelada 48 dias sin que nadie se enterara).
+#
+# Si encuentra un problema, el "run" falla y GitHub manda un correo al dueno
+# de la cuenta. Para pausarlo: pestana Actions -> Vigilante -> "Disable workflow".
+name: Vigilante Hielos Yopal
+
+on:
+  schedule:
+    - cron: "23 * * * *"   # cada hora: caidas criticas
+    - cron: "7 13 * * *"   # 8:07 a. m. Colombia: resumen diario de avisos
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  actions: read   # para saber si la corrida anterior estaba bien (avisar solo en el cambio)
+
+jobs:
+  vigilar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Revisar el estado que publica el servidor
+        env:
+          MODO: ${{ (github.event_name == 'workflow_dispatch' || github.event.schedule == '7 13 * * *') && 'diario' || 'horario' }}
+          DATA_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/data.json
+          PAGINA: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: |
+          python3 - <<'PYEOF'
+          import json, os, sys, time, urllib.request
+          from datetime import datetime, timedelta, timezone
+
+          COL = timezone(timedelta(hours=-5))  # Colombia, sin horario de verano
+          MODO = os.environ["MODO"]
+          MAX_MIN_SIN_PUBLICAR = 45
+          problemas, avisos = [], []
+
+          try:
+              url = os.environ["DATA_URL"] + "?t=" + str(int(time.time()))
+              datos = json.load(urllib.request.urlopen(url, timeout=30))
+          except Exception as exc:
+              problemas.append(f"No se pudo leer data.json de la pagina ({exc}).")
+              datos = {}
+
+          def local(iso):
+              return datetime.fromisoformat(iso).replace(tzinfo=COL) if iso else None
+
+          ahora = datetime.now(timezone.utc)
+          if datos:
+              epoch = datos.get("generado_en_epoch")
+              generado = (datetime.fromtimestamp(epoch, timezone.utc) if epoch
+                          else local(datos.get("generado_en")))
+              minutos = (ahora - generado).total_seconds() / 60 if generado else None
+              if minutos is None or minutos > MAX_MIN_SIN_PUBLICAR:
+                  horas = f"{minutos / 60:.1f} horas" if minutos else "un tiempo desconocido"
+                  problemas.append(
+                      f"La pagina NO se actualiza desde hace {horas}. El servidor de la fabrica "
+                      "puede estar apagado, sin internet, o su token de GitHub vencio.")
+              else:
+                  estado = datos.get("estado") or {}
+                  for p in estado.get("conteo_en_vivo") or []:
+                      if p.get("ok") is False:
+                          problemas.append(f"Conteo en vivo (planta {p.get('planta')}): {p.get('mensaje')}")
+                  dvr = estado.get("dvr") or {}
+                  if dvr.get("ok") is False:
+                      problemas.append(f"Grabador (DVR): {dvr.get('mensaje')}")
+                  sistema = estado.get("sistema") or {}
+                  disco = sistema.get("disco") or {}
+                  if disco.get("ok") is False:
+                      problemas.append(f"Disco del servidor: {disco.get('mensaje')}")
+                  mant = sistema.get("mantenimiento") or {}
+                  if mant.get("ok") is False and "CRITICO" in (mant.get("mensaje") or ""):
+                      problemas.append(f"Mantenimiento: {mant.get('mensaje')}")
+
+                  if MODO == "diario":
+                      nombres = {"publicacion": "Publicacion / token de GitHub",
+                                 "informes": "Informe diario (Excel)",
+                                 "mantenimiento": "Mantenimiento automatico",
+                                 "clips": "Videos en la pagina", "vigia": "Vigia de actividad"}
+                      for clave, nombre in nombres.items():
+                          item = sistema.get(clave) or {}
+                          if clave == "mantenimiento" and "CRITICO" in (item.get("mensaje") or ""):
+                              continue  # ya se reporta arriba como problema critico
+                          if item.get("ok") is False:
+                              avisos.append(f"{nombre}: {item.get('mensaje')}")
+                      ayer = (ahora.astimezone(COL) - timedelta(days=1)).date().isoformat()
+                      dia = next((d for d in datos.get("dias") or [] if d.get("fecha") == ayer), None)
+                      cob = (dia or {}).get("cobertura")
+                      if cob and cob.get("porcentaje") is not None and cob["porcentaje"] < 95:
+                          huecos = ", ".join(f"{h['inicio']}-{h['fin']}" for h in cob.get("huecos") or [])
+                          avisos.append(f"Ayer ({ayer}) el conteo en vivo solo vigilo el "
+                                        f"{cob['porcentaje']:.0f}% del dia. Sin vigilancia: {huecos}.")
+
+          todo = problemas + avisos
+          resumen = os.environ.get("GITHUB_STEP_SUMMARY")
+          with open(resumen, "a", encoding="utf-8") if resumen else open(os.devnull, "w") as f:
+              f.write(f"## Vigilante Hielos Yopal ({MODO})\n\n")
+              f.write(f"Pagina: {os.environ['PAGINA']}\n\n")
+              if todo:
+                  f.write("### Requiere atencion\n\n" + "\n".join(f"- {t}" for t in todo) + "\n")
+              else:
+                  f.write("Todo en orden.\n")
+          with open(os.path.join(os.environ["RUNNER_TEMP"], "problemas.txt"), "w", encoding="utf-8") as f:
+              f.write("\n".join(todo))
+          for t in todo:
+              print(f"::error::{t}")
+          if not todo:
+              print("Todo en orden.")
+          sys.exit(1 if todo else 0)
+          PYEOF
+
+      # Correo a los destinatarios del negocio (no solo al dueno de la cuenta
+      # de GitHub). Solo si hay secretos configurados (Settings -> Secrets ->
+      # Actions: SMTP_USUARIO, SMTP_PASSWORD, AVISO_DESTINATARIOS). Para no
+      # llenar la bandeja: avisa cuando algo PASA de bien a mal, y en el
+      # resumen diario de las 8 a. m. mientras siga mal.
+      - name: Avisar por correo
+        if: failure()
+        env:
+          MODO: ${{ (github.event_name == 'workflow_dispatch' || github.event.schedule == '7 13 * * *') && 'diario' || 'horario' }}
+          SMTP_USUARIO: ${{ secrets.SMTP_USUARIO }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          AVISO_DESTINATARIOS: ${{ secrets.AVISO_DESTINATARIOS }}
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+          PAGINA: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: |
+          python3 - <<'PYEOF'
+          import json, os, smtplib, urllib.request
+          from email.mime.text import MIMEText
+
+          usuario, clave = os.environ.get("SMTP_USUARIO"), os.environ.get("SMTP_PASSWORD", "").replace(" ", "")
+          destinos = [d.strip() for d in os.environ.get("AVISO_DESTINATARIOS", "").split(",") if d.strip()]
+          if not (usuario and clave and destinos):
+              print("Sin secretos de correo configurados; solo aviso de GitHub al dueno de la cuenta.")
+              raise SystemExit(0)
+
+          enviar = os.environ["MODO"] == "diario"
+          if not enviar:
+              url = (f"https://api.github.com/repos/{os.environ['REPO']}/actions/workflows/"
+                     "vigilante.yml/runs?status=completed&per_page=5")
+              req = urllib.request.Request(url, headers={"Authorization": f"Bearer {os.environ['GH_TOKEN']}"})
+              corridas = [r for r in json.load(urllib.request.urlopen(req, timeout=30))["workflow_runs"]
+                          if str(r["id"]) != os.environ["RUN_ID"]]
+              enviar = not corridas or corridas[0]["conclusion"] == "success"
+          if not enviar:
+              print("El problema ya se aviso (la corrida anterior tambien fallo); no se repite el correo.")
+              raise SystemExit(0)
+
+          problemas = open(os.path.join(os.environ["RUNNER_TEMP"], "problemas.txt"), encoding="utf-8").read()
+          lineas = ["El vigilante automatico de Hielos Yopal encontro problemas:", ""]
+          lineas += [f"- {p}" for p in problemas.splitlines()]
+          lineas += ["", f"Pagina: {os.environ['PAGINA']}",
+                     "Este aviso llega cuando algo deja de funcionar, y un resumen cada manana mientras siga asi."]
+          cuerpo = chr(10).join(lineas)
+          msg = MIMEText(cuerpo, "plain", "utf-8")
+          msg["Subject"] = "[Hielos Yopal] Atencion: el sistema de conteo necesita revision"
+          msg["From"], msg["To"] = usuario, ", ".join(destinos)
+          with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as smtp:
+              smtp.starttls()
+              smtp.login(usuario, clave)
+              smtp.sendmail(usuario, destinos, msg.as_string())
+          print(f"Correo enviado a {len(destinos)} destinatario(s).")
+          PYEOF

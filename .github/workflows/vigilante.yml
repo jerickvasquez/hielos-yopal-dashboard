@@ -94,6 +94,14 @@ jobs:
                           huecos = ", ".join(f"{h['inicio']}-{h['fin']}" for h in cob.get("huecos") or [])
                           avisos.append(f"Ayer ({ayer}) el conteo en vivo solo vigilo el "
                                         f"{cob['porcentaje']:.0f}% del dia. Sin vigilancia: {huecos}.")
+                      # Cruce con la planilla de los trabajadores (si esta configurada).
+                      val = (dia or {}).get("validacion")
+                      if val and val.get("estado") == "inconsistencias":
+                          avisos.append(f"Ayer ({ayer}), planilla de los trabajadores vs sistema: "
+                                        f"{val.get('mensaje')} Detalle en el Excel del dia (hoja Validacion).")
+                      elif val and val.get("estado") == "sin_registro" and (val.get("sistema") or 0) > 0:
+                          avisos.append(f"Ayer ({ayer}) nadie anoto en la planilla de los trabajadores, "
+                                        f"y el sistema conto {val['sistema']} bloques.")
 
           todo = problemas + avisos
           resumen = os.environ.get("GITHUB_STEP_SUMMARY")

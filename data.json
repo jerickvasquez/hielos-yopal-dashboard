@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-26T11:10:14.808650",
-  "generado_en_epoch": 1790439014,
+  "generado_en": "2026-09-26T11:20:23.038070",
+  "generado_en_epoch": 1790439623,
   "dias": [
     {
       "fecha": "2026-09-26",
@@ -166,24 +166,24 @@
         {
           "hora": "2026-09-26T11:05:19.658979",
           "clase": "bloque_grande",
-          "planta": "desconocida",
+          "planta": "4",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
-          "gap_anterior_seg": 1016.5,
+          "gap_anterior_seg": 394.8,
           "gap_sospechoso": false
         }
       ],
       "por_planta": [
         {
           "planta": "4",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 3,
+          "bloques": 12
         },
         {
           "planta": "desconocida",
-          "despachos": 13,
-          "bloques": 52
+          "despachos": 12,
+          "bloques": 48
         }
       ],
       "por_clase": [
@@ -199,9 +199,9 @@
         "motivo": "Dentro del rango habitual (70.3 +/- 30.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 54,
-        "minutos_esperados": 55,
-        "porcentaje": 98.2,
+        "minutos_cubiertos": 62,
+        "minutos_esperados": 65,
+        "porcentaje": 95.4,
         "huecos": []
       }
     },
@@ -17466,7 +17466,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-26T11:09:47.727011",
+        "ultimo_heartbeat": "2026-09-26T11:20:07.526614",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -17479,7 +17479,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 436.8,
+        "libre_gb": 436.5,
         "total_gb": 984.1,
         "mensaje": "437 GB libres de 984 GB."
       },
@@ -17487,7 +17487,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-26T11:05:40.102975"
+        "actualizado_en": "2026-09-26T11:10:22.517092"
       },
       "mantenimiento": {
         "ok": true,
@@ -17502,7 +17502,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-26T11:10:05.631965"
+        "actualizado_en": "2026-09-26T11:20:12.152817"
       }
     }
   }

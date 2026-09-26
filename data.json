@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-26T11:58:06.744034",
-  "generado_en_epoch": 1790441886,
+  "generado_en": "2026-09-26T12:00:25.319749",
+  "generado_en_epoch": 1790442025,
   "dias": [
     {
       "fecha": "2026-09-26",
@@ -210,8 +210,8 @@
         "motivo": "Dentro del rango habitual (70.3 +/- 30.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 99,
-        "minutos_esperados": 102,
+        "minutos_cubiertos": 102,
+        "minutos_esperados": 105,
         "porcentaje": 97.1,
         "huecos": []
       },
@@ -450,18 +450,7 @@
         "motivo": "Dentro del rango habitual (70.1 +/- 30.8)."
       },
       "cobertura": null,
-      "validacion": {
-        "estado": "sin_registro",
-        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 76 bloques.",
-        "reportado": 0,
-        "sistema": 76,
-        "tandas": 0,
-        "tandas_ok": 0,
-        "despachos_sin_reportar": 19,
-        "bloques_sin_reportar": 76,
-        "sin_reportar_confirmados": 19,
-        "errores_llenado": 0
-      }
+      "validacion": null
     },
     {
       "fecha": "2026-09-24",
@@ -17568,14 +17557,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-09-26T10:00:04.262874"
+      "verificado_en": "2026-09-26T12:00:05.494141"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-26T11:58:01.974659",
+        "ultimo_heartbeat": "2026-09-26T12:00:03.088950",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -17596,7 +17585,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-26T11:50:20.599708"
+        "actualizado_en": "2026-09-26T11:58:13.951714"
       },
       "mantenimiento": {
         "ok": true,
@@ -17608,15 +17597,20 @@
         "mensaje": "Informe(s) 2026-09-25, 2026-09-26 publicados; 2 informes disponibles para descargar.",
         "actualizado_en": "2026-09-26T11:39:04.777994"
       },
+      "clips": {
+        "ok": false,
+        "mensaje": "Pendiente: configurar Backblaze B2 (HIELOS_B2_* en .env) para ver los videos en la pagina.",
+        "actualizado_en": "2026-09-26T12:00:06.062516"
+      },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-26T11:50:03.528781"
+        "actualizado_en": "2026-09-26T12:00:06.033134"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 0 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-09-26T11:38:52.271304"
+        "actualizado_en": "2026-09-26T11:58:17.713480"
       }
     }
   }

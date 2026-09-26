@@ -235,6 +235,9 @@
   .banner.alerta { border-color: color-mix(in srgb, #d0342c 45%, var(--border)); }
   .banner.critico { border: 2px solid #d0342c; background: color-mix(in srgb, #d0342c 10%, var(--glass)); }
   .banner.critico strong { color: #d0342c; }
+  .banner.ok { border-color: color-mix(in srgb, var(--status-good) 50%, var(--border)); }
+  .banner.ok strong { color: var(--status-good); }
+  .banner.aviso { border-color: color-mix(in srgb, var(--status-warning) 50%, var(--border)); }
   .tile.problema { border-color: color-mix(in srgb, #d0342c 45%, var(--glass-brd)); }
   .tile.problema::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: #d0342c; }
   .tile.problema .value { color: #d0342c; }
@@ -311,6 +314,7 @@
 
   <div class="tiles" id="tiles-dia"></div>
   <div class="banner alerta" id="banner-cobertura" style="display:none;"></div>
+  <div class="banner" id="banner-validacion" style="display:none;"></div>
 
   <section id="seccion-informe" style="display:none;">
     <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13l3 4M11 13l-3 4M14 17h3"/></svg></span>Informe en Excel</h2>
@@ -596,7 +600,7 @@ function renderEstado(estado) {
   const sistema = (estado && estado.sistema) || {};
   const nombres = { disco: 'Disco del servidor', publicacion: 'Publicación de esta página',
     mantenimiento: 'Mantenimiento automático', informes: 'Informe diario (Excel)',
-    clips: 'Videos en la página', vigia: 'Vigía de actividad' };
+    clips: 'Videos en la página', vigia: 'Vigía de actividad', planilla: 'Planilla de los trabajadores' };
   Object.keys(nombres).forEach(k => {
     if (sistema[k]) items.push(estadoItem(nombres[k], sistema[k].ok, sistema[k].mensaje, sistema[k].actualizado_en));
   });
@@ -678,6 +682,7 @@ function renderDia(dia) {
     ${tileCobertura(dia.cobertura)}
   `;
   renderCobertura(dia);
+  renderValidacion(dia);
   renderInforme();
 
   renderDespachosPorHora(despachos, dia.conteo_real);
@@ -701,6 +706,24 @@ function renderCobertura(dia) {
   const lista = cob.huecos.map(h => `${h.inicio}–${h.fin} (${h.minutos >= 60 ? (h.minutos / 60).toFixed(1).replace('.0', '') + ' h' : h.minutos + ' min'})`).join(', ');
   el.style.display = '';
   el.innerHTML = `<span class="banner-ico">${ICO.alerta}</span><span><strong>Tiempo sin vigilancia el ${dia.fecha}:</strong> ${lista}. En esos tramos el conteo en vivo estaba caído y un despacho pudo no contarse.</span>`;
+}
+
+// Cruce con la planilla que llenan los trabajadores (solo cifras, sin
+// nombres: el detalle por tanda va en el Excel protegido del dia).
+function renderValidacion(dia) {
+  const el = document.getElementById('banner-validacion');
+  const v = dia.validacion;
+  if (!v) { el.style.display = 'none'; return; }
+  const estilos = { ok: 'ok', inconsistencias: 'alerta', sin_registro: 'aviso' };
+  const titulos = { ok: '✔ Todo cuadra con la planilla de los trabajadores.',
+    inconsistencias: '✖ Hay inconsistencias con la planilla de los trabajadores.',
+    sin_registro: 'Nadie anotó este día en la planilla.' };
+  el.className = 'banner ' + (estilos[v.estado] || '');
+  el.style.display = '';
+  const detalle = v.estado === 'sin_registro' ? '' :
+    ` Anotado: ${v.reportado} bloques · Sistema: ${v.sistema} · Tandas que coinciden: ${v.tandas_ok} de ${v.tandas}` +
+    (v.bloques_sin_reportar ? ` · Sin reportar: ${v.bloques_sin_reportar} bloques` : '') + '.';
+  el.innerHTML = `<span class="banner-ico">${v.estado === 'ok' ? ICO.info : ICO.alerta}</span><span><strong>${titulos[v.estado] || ''}</strong> ${v.mensaje}${detalle} El detalle por tanda está en el Excel del día (hoja «Validación»).</span>`;
 }
 
 function renderAnalisis(dia) {

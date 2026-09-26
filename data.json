@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-26T16:18:54.809320",
-  "generado_en_epoch": 1790457534,
+  "generado_en": "2026-09-26T16:20:12.935550",
+  "generado_en_epoch": 1790457612,
   "dias": [
     {
       "fecha": "2026-09-26",
@@ -331,21 +331,21 @@
         "motivo": "Dentro del rango habitual (70.3 +/- 30.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 342,
-        "minutos_esperados": 363,
+        "minutos_cubiertos": 344,
+        "minutos_esperados": 365,
         "porcentaje": 94.2,
         "huecos": []
       },
       "validacion": {
-        "estado": "sin_registro",
-        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 76 bloques.",
-        "reportado": 0,
-        "sistema": 76,
-        "tandas": 0,
+        "estado": "inconsistencias",
+        "mensaje": "2 de 2 tandas no cuadran; 3 despacho(s) (12 bloques) que nadie anotó.",
+        "reportado": 112,
+        "sistema": 104,
+        "tandas": 2,
         "tandas_ok": 0,
-        "despachos_sin_reportar": 19,
-        "bloques_sin_reportar": 76,
-        "sin_reportar_confirmados": 18,
+        "despachos_sin_reportar": 3,
+        "bloques_sin_reportar": 12,
+        "sin_reportar_confirmados": 2,
         "errores_llenado": 0
       }
     },
@@ -17685,7 +17685,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-26T16:17:57.197282",
+        "ultimo_heartbeat": "2026-09-26T16:19:59.504982",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -17706,7 +17706,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-26T16:10:57.703774"
+        "actualizado_en": "2026-09-26T16:19:02.470715"
       },
       "mantenimiento": {
         "ok": true,
@@ -17726,12 +17726,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-26T16:10:11.116358"
+        "actualizado_en": "2026-09-26T16:20:03.612254"
       },
       "planilla": {
         "ok": true,
-        "mensaje": "Planilla leída: 0 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-09-26T14:22:29.995111"
+        "mensaje": "Planilla leída: 2 tandas anotadas, 0 fila(s) mal llenadas.",
+        "actualizado_en": "2026-09-26T16:19:06.637316"
       }
     }
   }

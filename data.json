@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-26T10:45:29.001929",
-  "generado_en_epoch": 1790437529,
+  "generado_en": "2026-09-26T10:48:35.428957",
+  "generado_en_epoch": 1790437715,
   "dias": [
     {
       "fecha": "2026-09-26",
@@ -9,7 +9,7 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 48
+          "unidades": 52
         }
       ],
       "despachos": [
@@ -132,21 +132,31 @@
           "por_revisar": false,
           "gap_anterior_seg": 750.6,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-09-26T10:48:23.158209",
+          "clase": "bloque_grande",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "gap_anterior_seg": 693.0,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
         {
           "planta": "desconocida",
-          "despachos": 11,
-          "bloques": 44
+          "despachos": 12,
+          "bloques": 48
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_grande",
           "etiqueta": "Grande",
-          "despachos": 11,
-          "bloques": 44
+          "despachos": 12,
+          "bloques": 48
         }
       ],
       "anomalia": {
@@ -154,9 +164,9 @@
         "motivo": "Dentro del rango habitual (70.3 +/- 30.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 29,
-        "minutos_esperados": 30,
-        "porcentaje": 96.7,
+        "minutos_cubiertos": 32,
+        "minutos_esperados": 33,
+        "porcentaje": 97.0,
         "huecos": []
       }
     },
@@ -17421,7 +17431,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-26T10:45:23.162015",
+        "ultimo_heartbeat": "2026-09-26T10:47:54.966361",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -17442,7 +17452,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-26T10:43:22.341485"
+        "actualizado_en": "2026-09-26T10:45:36.343011"
       },
       "mantenimiento": {
         "ok": true,

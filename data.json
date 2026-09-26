@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-26T15:52:20.091166",
-  "generado_en_epoch": 1790455940,
+  "generado_en": "2026-09-26T16:00:25.367655",
+  "generado_en_epoch": 1790456425,
   "dias": [
     {
       "fecha": "2026-09-26",
@@ -321,9 +321,9 @@
         "motivo": "Dentro del rango habitual (70.3 +/- 30.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 321,
-        "minutos_esperados": 337,
-        "porcentaje": 95.3,
+        "minutos_cubiertos": 330,
+        "minutos_esperados": 345,
+        "porcentaje": 95.7,
         "huecos": []
       },
       "validacion": {
@@ -17668,14 +17668,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-09-26T14:00:05.454175"
+      "verificado_en": "2026-09-26T16:00:05.401809"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-26T15:51:58.079110",
+        "ultimo_heartbeat": "2026-09-26T16:00:02.558685",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -17688,15 +17688,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 435.0,
+        "libre_gb": 434.4,
         "total_gb": 984.1,
-        "mensaje": "435 GB libres de 984 GB."
+        "mensaje": "434 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-26T15:50:48.505018"
+        "actualizado_en": "2026-09-26T15:52:28.078181"
       },
       "mantenimiento": {
         "ok": true,
@@ -17716,7 +17716,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-26T15:50:31.266783"
+        "actualizado_en": "2026-09-26T16:00:05.868841"
       },
       "planilla": {
         "ok": true,

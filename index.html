@@ -600,7 +600,8 @@ function renderEstado(estado) {
   const sistema = (estado && estado.sistema) || {};
   const nombres = { disco: 'Disco del servidor', publicacion: 'Publicación de esta página',
     mantenimiento: 'Mantenimiento automático', informes: 'Informe diario (Excel)',
-    clips: 'Videos en la página', vigia: 'Vigía de actividad', planilla: 'Planilla de los trabajadores' };
+    clips: 'Videos en la página', vigia: 'Vigía de actividad', planilla: 'Planilla de los trabajadores',
+    atribucion: 'Planta de despachos anteriores' };
   Object.keys(nombres).forEach(k => {
     if (sistema[k]) items.push(estadoItem(nombres[k], sistema[k].ok, sistema[k].mensaje, sistema[k].actualizado_en));
   });
@@ -733,10 +734,10 @@ function renderAnalisis(dia) {
   // Si todo cae en "desconocida", la atribucion por color aun no esta activa.
   const soloDesconocida = planta.length > 0 && planta.every(p => p.planta === 'desconocida');
   nota.innerHTML = soloDesconocida
-    ? 'Producción del día por planta y tamaño. <strong>La planta y el tamaño se calibran con el color de la barra del molde</strong> — mientras se termina de pintar, aparecen como "por calibrar".'
+    ? 'Producción del día por planta y tamaño, según el <strong>color de la barra del molde</strong>. Este día todavía no tiene planta identificada: los despachos anteriores al 26 de septiembre se procesan de a poco cada noche.'
     : 'Producción del día desglosada por planta de origen y por tamaño de bloque (grande / pequeño).';
   renderBarrasH('chart-planta', planta.map(p => ({
-    etiqueta: p.planta === 'desconocida' ? 'Por calibrar' : 'Planta ' + p.planta,
+    etiqueta: p.planta === 'desconocida' ? 'Sin identificar' : 'Planta ' + p.planta,
     valor: p.bloques, sub: p.despachos, cls: p.planta === 'desconocida' ? 'desc' : 'plt' + p.planta,
   })));
   renderBarrasH('chart-clase', clase.map(c => ({
@@ -802,8 +803,9 @@ function renderDespachosLista(despachos, conteoReal) {
     cont.innerHTML = `<div class="empty-state">Sin despachos confirmados para este día.</div>`;
     return;
   }
-  const etiquetas = { bloque_grande: 'Bloque grande', bloque_pequeno: 'Bloque pequeño' };
+  const etiquetas = { bloque_grande: 'Bloque grande', bloque_pequeno: 'Bloque pequeño', sin_identificar: 'Sin identificar' };
   cont.innerHTML = despachos.map((d, i) => {
+    const planta = (!d.planta || d.planta === 'desconocida') ? 'Planta sin identificar' : 'Planta ' + d.planta;
     const video = d.evidencia
       ? `<button type="button" class="despacho-ev con" onclick="reproducirDespacho('${d.hora}')" title="Ver respaldo en video">${ICO.play} video</button>`
       : `<span class="despacho-ev sin" title="Sin clip">—</span>`;
@@ -820,7 +822,7 @@ function renderDespachosLista(despachos, conteoReal) {
       <span class="despacho-hora">${horaCorta(d.hora)}</span>
       <span class="despacho-info">
         <span class="despacho-bloques">${d.bloques} bloques</span>
-        <span class="despacho-clase">${etiquetas[d.clase] || d.clase}</span>
+        <span class="despacho-clase">${planta} · ${etiquetas[d.clase] || d.clase}</span>
         ${d.por_revisar ? '<span class="despacho-revisar">madrugada · por revisar</span>' : ''}
         ${gapAviso}
       </span>
@@ -853,7 +855,7 @@ function renderConsolidado(dia) {
     return;
   }
   const colores = { bloque_grande: 'var(--series-1)', bloque_pequeno: 'var(--series-2)' };
-  const etiquetas = { bloque_grande: 'Bloque grande', bloque_pequeno: 'Bloque pequeño' };
+  const etiquetas = { bloque_grande: 'Bloque grande', bloque_pequeno: 'Bloque pequeño', sin_identificar: 'Sin identificar' };
   const max = Math.max(...dia.consolidado.map(c => c.unidades), 1);
 
   card.innerHTML = `

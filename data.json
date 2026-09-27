@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-27T02:50:31.642913",
-  "generado_en_epoch": 1790495431,
+  "generado_en": "2026-09-27T03:00:33.656069",
+  "generado_en_epoch": 1790496033,
   "dias": [
     {
       "fecha": "2026-09-27",
@@ -31,8 +31,8 @@
         "motivo": "Total de hoy (4) muy por debajo del promedio de los ultimos 29 dias con datos (71.0 +/- 31.8, z=-2.11)."
       },
       "cobertura": {
-        "minutos_cubiertos": 170,
-        "minutos_esperados": 170,
+        "minutos_cubiertos": 180,
+        "minutos_esperados": 180,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -4640,8 +4640,13 @@
       "consolidado": [
         {
           "canal": "0",
+          "clase": "bloque_pequeno",
+          "unidades": 40
+        },
+        {
+          "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 88
+          "unidades": 48
         }
       ],
       "despachos": [
@@ -4657,18 +4662,18 @@
         },
         {
           "hora": "2026-09-04T09:29:10.073374",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
-          "gap_anterior_seg": 13352.9,
+          "gap_anterior_seg": null,
           "gap_sospechoso": false
         },
         {
           "hora": "2026-09-04T09:35:47.508303",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
@@ -4677,8 +4682,8 @@
         },
         {
           "hora": "2026-09-04T09:43:24.621607",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
@@ -4687,8 +4692,8 @@
         },
         {
           "hora": "2026-09-04T09:47:26.776862",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
@@ -4697,8 +4702,8 @@
         },
         {
           "hora": "2026-09-04T09:51:38.441705",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
@@ -4707,8 +4712,8 @@
         },
         {
           "hora": "2026-09-04T10:02:00.405966",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
@@ -4717,8 +4722,8 @@
         },
         {
           "hora": "2026-09-04T10:08:03.803065",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
@@ -4727,8 +4732,8 @@
         },
         {
           "hora": "2026-09-04T10:14:30.002078",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
@@ -4737,8 +4742,8 @@
         },
         {
           "hora": "2026-09-04T10:23:04.764335",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
@@ -4747,8 +4752,8 @@
         },
         {
           "hora": "2026-09-04T11:06:49.153717",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
@@ -4762,7 +4767,7 @@
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
-          "gap_anterior_seg": 12279.0,
+          "gap_anterior_seg": 31491.0,
           "gap_sospechoso": false
         },
         {
@@ -4868,17 +4873,28 @@
       ],
       "por_planta": [
         {
+          "planta": "2",
+          "despachos": 10,
+          "bloques": 40
+        },
+        {
           "planta": "desconocida",
-          "despachos": 21,
-          "bloques": 84
+          "despachos": 11,
+          "bloques": 44
         }
       ],
       "por_clase": [
         {
+          "clase": "bloque_pequeno",
+          "etiqueta": "Pequeño",
+          "despachos": 10,
+          "bloques": 40
+        },
+        {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 21,
-          "bloques": 84
+          "despachos": 11,
+          "bloques": 44
         }
       ],
       "anomalia": {
@@ -18173,7 +18189,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-27T02:50:23.083750",
+        "ultimo_heartbeat": "2026-09-27T03:00:28.655243",
         "fraccion_baja_confianza_reciente": 0.025
       }
     ],
@@ -18186,20 +18202,20 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 429.2,
+        "libre_gb": 430.6,
         "total_gb": 984.1,
-        "mensaje": "429 GB libres de 984 GB."
+        "mensaje": "431 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-27T02:40:34.762348"
+        "actualizado_en": "2026-09-27T02:50:39.477993"
       },
       "mantenimiento": {
         "ok": true,
-        "mensaje": "434 GB libres de 984 GB. evidencia 546 GB (1203 clips).",
-        "actualizado_en": "2026-09-26T16:21:41.452870"
+        "mensaje": "431 GB libres de 984 GB. evidencia 549 GB (1207 clips). 1 clips viejos borrados (1.5 GB liberados).",
+        "actualizado_en": "2026-09-27T03:00:11.300376"
       },
       "informes": {
         "ok": true,
@@ -18214,7 +18230,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-27T02:50:11.002159"
+        "actualizado_en": "2026-09-27T03:00:10.817993"
       },
       "planilla": {
         "ok": true,

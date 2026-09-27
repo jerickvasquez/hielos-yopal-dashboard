@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-27T17:50:17.707869",
-  "generado_en_epoch": 1790549417,
+  "generado_en": "2026-09-27T18:00:27.717004",
+  "generado_en_epoch": 1790550027,
   "dias": [
     {
       "fecha": "2026-09-27",
@@ -170,8 +170,8 @@
         "motivo": "Dentro del rango habitual (71.0 +/- 31.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 1068,
-        "minutos_esperados": 1070,
+        "minutos_cubiertos": 1078,
+        "minutos_esperados": 1080,
         "porcentaje": 99.8,
         "huecos": []
       },
@@ -24526,16 +24526,16 @@
   ],
   "estado": {
     "dvr": {
-      "ok": true,
-      "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-09-27T16:00:04.917113"
+      "ok": false,
+      "mensaje": "ATENCION: la grabacion del DVR estaba APAGADA y se reactivo automaticamente (Enable=True, franjas activas 7/8). Alguien con acceso de admin la desactivo -- revisar el equipo.",
+      "verificado_en": "2026-09-27T18:00:06.325042"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-27T17:50:17.083554",
+        "ultimo_heartbeat": "2026-09-27T18:00:23.974060",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24556,7 +24556,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-27T17:40:25.719816"
+        "actualizado_en": "2026-09-27T17:50:25.680256"
       },
       "mantenimiento": {
         "ok": true,
@@ -24576,7 +24576,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-27T17:50:04.247192"
+        "actualizado_en": "2026-09-27T18:00:06.619291"
       },
       "planilla": {
         "ok": true,

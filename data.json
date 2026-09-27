@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-27T00:20:25.817304",
-  "generado_en_epoch": 1790486425,
+  "generado_en": "2026-09-27T00:20:39.484399",
+  "generado_en_epoch": 1790486439,
   "dias": [
     {
       "fecha": "2026-09-27",
@@ -19,7 +19,18 @@
         "porcentaje": 100.0,
         "huecos": []
       },
-      "validacion": null
+      "validacion": {
+        "estado": "sin_registro",
+        "mensaje": "Sin producción anotada ni contada.",
+        "reportado": 0,
+        "sistema": 0,
+        "tandas": 0,
+        "tandas_ok": 0,
+        "despachos_sin_reportar": 0,
+        "bloques_sin_reportar": 0,
+        "sin_reportar_confirmados": 0,
+        "errores_llenado": 0
+      }
     },
     {
       "fecha": "2026-09-26",
@@ -407,14 +418,14 @@
       },
       "validacion": {
         "estado": "inconsistencias",
-        "mensaje": "2 de 3 tandas no cuadran; 1 despacho(s) (4 bloques) que nadie anotó.",
+        "mensaje": "2 de 3 tandas no cuadran; 3 despacho(s) (12 bloques) que nadie anotó.",
         "reportado": 136,
-        "sistema": 116,
+        "sistema": 124,
         "tandas": 3,
         "tandas_ok": 1,
-        "despachos_sin_reportar": 1,
-        "bloques_sin_reportar": 4,
-        "sin_reportar_confirmados": 0,
+        "despachos_sin_reportar": 3,
+        "bloques_sin_reportar": 12,
+        "sin_reportar_confirmados": 2,
         "errores_llenado": 0
       }
     },
@@ -17865,7 +17876,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-27T00:20:03.159467",
+        "ultimo_heartbeat": "2026-09-27T00:20:33.556153",
         "fraccion_baja_confianza_reciente": 0.325
       }
     ],
@@ -17886,7 +17897,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-27T00:10:31.925561"
+        "actualizado_en": "2026-09-27T00:20:33.166428"
       },
       "mantenimiento": {
         "ok": true,
@@ -17894,9 +17905,9 @@
         "actualizado_en": "2026-09-26T16:21:41.452870"
       },
       "informes": {
-        "ok": false,
-        "mensaje": "No se pudo generar/publicar el informe: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/jerickvasquez/hielos-yopal-dashboard/git/commits/ad6b488b7be713162eda61ff202fb03444c8d655 (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.github.com', port=443) at 0x1887a171bd0>, 'Connection to api.github.com timed out. (connect timeout=90)'))",
-        "actualizado_en": "2026-09-26T18:21:19.097623"
+        "ok": true,
+        "mensaje": "Informe(s) 2026-09-26, 2026-09-27 publicados; 61 informes disponibles para descargar.",
+        "actualizado_en": "2026-09-27T00:20:26.963388"
       },
       "clips": {
         "ok": false,

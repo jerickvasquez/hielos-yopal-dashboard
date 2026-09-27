@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-27T06:20:13.640973",
-  "generado_en_epoch": 1790508013,
+  "generado_en": "2026-09-27T06:20:34.201295",
+  "generado_en_epoch": 1790508034,
   "dias": [
     {
       "fecha": "2026-09-27",
@@ -31,20 +31,20 @@
         "motivo": "Total de hoy (4) muy por debajo del promedio de los ultimos 29 dias con datos (71.0 +/- 31.8, z=-2.11)."
       },
       "cobertura": {
-        "minutos_cubiertos": 380,
+        "minutos_cubiertos": 381,
         "minutos_esperados": 380,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "sin_registro",
-        "mensaje": "Sin producción anotada ni contada.",
+        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 4 bloques.",
         "reportado": 0,
-        "sistema": 0,
+        "sistema": 4,
         "tandas": 0,
         "tandas_ok": 0,
-        "despachos_sin_reportar": 0,
-        "bloques_sin_reportar": 0,
+        "despachos_sin_reportar": 1,
+        "bloques_sin_reportar": 4,
         "sin_reportar_confirmados": 0,
         "errores_llenado": 0
       }
@@ -18532,7 +18532,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-27T06:10:24.739909"
+        "actualizado_en": "2026-09-27T06:20:21.016224"
       },
       "mantenimiento": {
         "ok": true,
@@ -18542,7 +18542,7 @@
       "informes": {
         "ok": true,
         "mensaje": "Informe(s) 2026-09-26, 2026-09-27 publicados; 61 informes disponibles para descargar.",
-        "actualizado_en": "2026-09-27T00:20:26.963388"
+        "actualizado_en": "2026-09-27T06:20:25.291632"
       },
       "clips": {
         "ok": false,

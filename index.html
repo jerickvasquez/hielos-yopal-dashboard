@@ -420,7 +420,7 @@
     <div class="roadmap">
       <div class="road-item"><span class="badge done"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Conteo automático de despachos</p><p class="road-desc">Cada salida de molde por la rampa se cuenta con hora exacta y video de respaldo, con la cámara real de producción.</p></div></div>
       <div class="road-item"><span class="badge done"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Operación 24/7 vigilada</p><p class="road-desc">Conteo en vivo con reinicio automático, mantenimiento diario del disco, informe Excel diario y un vigilante externo que avisa por correo si esta página deja de actualizarse.</p></div></div>
-      <div class="road-item"><span class="badge progress"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En ajuste</span><div><p class="road-title">Confiabilidad a toda hora</p><p class="road-desc">De día el conteo pierde moldes cuando llegan seguidos; de noche (desde las 7:00 p. m.) y de madrugada está en ajuste. Se está probando contar por la presencia del molde, que corrige las dos cosas.</p></div></div>
+      <div class="road-item"><span class="badge progress"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En validación</span><div><p class="road-title">Contar por la presencia del molde</p><p class="road-desc">Cada vez que un molde llega a la rampa es un despacho. Probado con la grabación del 26 de septiembre: contó los 44 moldes del día, sin dobles ni falsos, de día y de noche (el conteo anterior contó 31). La madrugada, antes de las 7:00 a. m., sigue por revisar hasta verla con despachos reales.</p></div></div>
       <div class="road-item"><span class="badge progress"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En validación</span><div><p class="road-title">Planta de origen y tamaño</p><p class="road-desc">Por el color de la barra del molde (rojo, planta 2; amarillo, planta 4; rosado, planta 1; morado o naranja, planta 3) y, como segunda confirmación, por la forma del molde.</p></div></div>
     </div>
   </details>
@@ -898,7 +898,8 @@ function renderDespachosLista(despachos, conteoReal) {
   }
   cont.innerHTML = despachos.map((d, i) => {
     const planta = (!d.planta || d.planta === 'desconocida') ? 'Planta sin identificar'
-      : 'Planta ' + d.planta + (d.planta_deducida ? ' (deducida por el tamaño)' : '');
+      : 'Planta ' + d.planta + (!d.planta_deducida ? ''
+          : d.planta_fuente === 'vecinos' ? ' (probable, por los despachos vecinos)' : ' (deducida por el tamaño)');
     const clase = { bloque_grande: 'bloque grande', bloque_pequeno: 'bloque pequeño' }[d.clase];
     const notas = [];
     if (d.por_revisar) notas.push(`<span class="nota-aviso">${d.motivo_revision === 'noche' ? 'De noche' : 'De madrugada'}: por revisar en video</span>`);

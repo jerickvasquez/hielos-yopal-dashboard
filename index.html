@@ -4,93 +4,102 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#edf1f2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0c1417" media="(prefers-color-scheme: dark)">
-<script>try{var t=localStorage.getItem("hy-tema");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<title>Hielos Yopal — producción diaria</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<title>Hielos Yopal — Conteo automático de producción</title>
 <style>
-  /* Hielos Yopal - "camara fria": grises de acero inoxidable, tinta de
-     salmuera y, como UNICO color fuerte, los colores reales de la barra de
-     los moldes (rojo P2, amarillo P4, rosado P1, morado P3). El color en esta
-     pagina siempre significa algo. */
   :root {
-    --page: #edf1f2; --surface: #ffffff; --surface-2: #f5f8f8;
-    --ink: #0f2a33; --ink-2: #4b5d64; --ink-3: #5f7075;
-    --line: #d3dbde; --line-2: #e3e9eb;
-    --accent: #23707f; --accent-ink: #ffffff;
-    --ok: #267a50; --warn: #94600b; --bad: #c23b2e;
-    --p1: #cf4b97; --p2: #d2372a; --p3: #7a4fc9; --p4: #d69700; --p0: #a3aeb2;
-    --noche: rgba(15,42,51,0.075);
-    /* alias para el codigo que aun los usa */
-    --text-primary: var(--ink); --text-secondary: var(--ink-2); --text-muted: var(--ink-3);
-    --status-good: var(--ok); --status-warning: var(--warn); --status-critical: var(--bad);
-    --series-1: var(--accent); --border: var(--line); --surface-1: var(--surface);
-    color-scheme: light;
+    /* Tema hielo — claro (escarcha diurna) */
+    --surface-1: #ffffff; --surface-2: #f2f8fd; --page: #e9f2fa;
+    --text-primary: #0a1b2e; --text-secondary: #42586f; --text-muted: #8298ad;
+    --gridline: #d3e3f0; --border: rgba(10,27,46,0.11);
+    --accent: #0e7ec9; --accent-2: #10a7bd;
+    --series-1: #0e7ec9; --series-2: #10a7bd;
+    --status-good: #0f9d58; --status-warning: #c07d09; --status-pending: #8298ad;
+    --status-critical: #d0342c;
+    --glass: rgba(255,255,255,0.72); --glass-brd: rgba(255,255,255,0.6);
+    --halo-1: rgba(56,182,255,0.16); --halo-2: rgba(16,167,189,0.13);
+    --hielo-linea: rgba(14,126,201,0.30);
   }
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --page: #0c1417; --surface: #121d21; --surface-2: #16242a;
-      --ink: #e3ecee; --ink-2: #a3b3b8; --ink-3: #7d8f96;
-      --line: #26363c; --line-2: #1c2a2f;
-      --accent: #5db4c4; --accent-ink: #0c1417;
-      --ok: #4cc08a; --warn: #e0a43a; --bad: #ef6a5c;
-      --p1: #e46bb0; --p2: #ef5a4b; --p3: #9c7be0; --p4: #edb52e; --p0: #6f7f85;
-      --noche: rgba(227,236,238,0.06);
-      color-scheme: dark;
+    :root {
+      /* Tema hielo — oscuro (glaciar nocturno) */
+      --surface-1: #0f1d2e; --surface-2: #12233a; --page: #060d17;
+      --text-primary: #eaf4ff; --text-secondary: #a7c0d8; --text-muted: #6c8399;
+      --gridline: #1c2f45; --border: rgba(120,190,255,0.13);
+      --accent: #38b6ff; --accent-2: #4fd6e0;
+      --series-1: #38b6ff; --series-2: #4fd6e0;
+      --status-good: #22c079; --status-warning: #f2b43a; --status-pending: #6c8399;
+      --status-critical: #ff6a5a;
+      --glass: rgba(15,29,46,0.62); --glass-brd: rgba(120,190,255,0.14);
+      --halo-1: rgba(56,182,255,0.20); --halo-2: rgba(79,214,224,0.14);
+      --hielo-linea: rgba(56,182,255,0.34);
     }
   }
-  :root[data-theme="dark"] {
-    --page: #0c1417; --surface: #121d21; --surface-2: #16242a;
-    --ink: #e3ecee; --ink-2: #a3b3b8; --ink-3: #7d8f96;
-    --line: #26363c; --line-2: #1c2a2f;
-    --accent: #5db4c4; --accent-ink: #0c1417;
-    --ok: #4cc08a; --warn: #e0a43a; --bad: #ef6a5c;
-    --p1: #e46bb0; --p2: #ef5a4b; --p3: #9c7be0; --p4: #edb52e; --p0: #6f7f85;
-    --noche: rgba(227,236,238,0.06);
-    color-scheme: dark;
+  :root[data-theme="light"] {
+    --surface-1: #ffffff; --surface-2: #f2f8fd; --page: #e9f2fa;
+    --text-primary: #0a1b2e; --text-secondary: #42586f; --text-muted: #8298ad;
+    --gridline: #d3e3f0; --border: rgba(10,27,46,0.11);
+    --accent: #0e7ec9; --accent-2: #10a7bd; --series-1: #0e7ec9; --series-2: #10a7bd;
+    --status-good: #0f9d58; --status-warning: #c07d09; --status-pending: #8298ad; --status-critical: #d0342c;
+    --glass: rgba(255,255,255,0.72); --glass-brd: rgba(255,255,255,0.6);
+    --halo-1: rgba(56,182,255,0.16); --halo-2: rgba(16,167,189,0.13); --hielo-linea: rgba(14,126,201,0.30);
   }
-
+  :root[data-theme="dark"] {
+    --surface-1: #0f1d2e; --surface-2: #12233a; --page: #060d17;
+    --text-primary: #eaf4ff; --text-secondary: #a7c0d8; --text-muted: #6c8399;
+    --gridline: #1c2f45; --border: rgba(120,190,255,0.13);
+    --accent: #38b6ff; --accent-2: #4fd6e0; --series-1: #38b6ff; --series-2: #4fd6e0;
+    --status-good: #22c079; --status-warning: #f2b43a; --status-pending: #6c8399; --status-critical: #ff6a5a;
+    --glass: rgba(15,29,46,0.62); --glass-brd: rgba(120,190,255,0.14);
+    --halo-1: rgba(56,182,255,0.20); --halo-2: rgba(79,214,224,0.14); --hielo-linea: rgba(56,182,255,0.34);
+  }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    margin: 0; background: var(--page); color: var(--ink);
-    font-family: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-size: 15px; line-height: 1.5; font-stretch: 100%;
-    -webkit-font-smoothing: antialiased; font-variant-numeric: tabular-nums;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--page); color: var(--text-primary); margin: 0;
+    -webkit-font-smoothing: antialiased; position: relative; min-height: 100vh;
   }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
-  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  h1, h2 { text-wrap: balance; }
-  .nota-sec, .dia-detalle, .banner, .road-desc { text-wrap: pretty; }
-  button, summary, select, a { touch-action: manipulation; -webkit-tap-highlight-color: rgba(35,112,127,0.18); }
-  .saltar { position: absolute; left: 16px; top: -64px; z-index: 10; padding: 8px 14px; border-radius: 7px;
-    background: var(--ink); color: var(--page); font-weight: 600; text-decoration: none; }
-  .saltar:focus-visible { top: 12px; }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 22px 16px 64px; }
-  @media (min-width: 760px) { .wrap { padding: 30px 28px 80px; } }
 
-  /* --- Cabecera --- */
-  .cabecera { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
-  .marca { display: flex; align-items: center; gap: 11px; }
-  .marca svg { width: 38px; height: 26px; color: var(--ink); flex: none; }
-  .marca h1 { font-size: 18px; font-weight: 720; font-stretch: 112%; margin: 0; line-height: 1.1; letter-spacing: -0.005em; }
-  .marca p { font-size: 13px; color: var(--ink-3); margin: 1px 0 0; }
-  .herramientas { display: flex; align-items: center; gap: 8px; }
+  /* --- Fondo de hielo con parallax (fijo detrás de todo) --- */
+  .bg-hielo { position: fixed; inset: 0; z-index: -2; overflow: hidden; pointer-events: none; }
+  .bg-halo {
+    position: absolute; border-radius: 50%; filter: blur(60px); will-change: transform;
+  }
+  .bg-halo.h1 { width: 55vw; height: 55vw; top: -14vw; left: -10vw; background: radial-gradient(circle, var(--halo-1), transparent 68%); }
+  .bg-halo.h2 { width: 48vw; height: 48vw; top: 32vh; right: -14vw; background: radial-gradient(circle, var(--halo-2), transparent 68%); }
+  .bg-halo.h3 { width: 42vw; height: 42vw; bottom: -12vw; left: 22vw; background: radial-gradient(circle, var(--halo-1), transparent 70%); }
+  #copos { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    #copos { display: none; }
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 34px 20px 72px; }
+  .topbar { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 26px; }
+  .brand-row { display: flex; align-items: center; gap: 11px; margin: 0 0 12px; }
+  .brand-mark { flex: none; width: 34px; height: 34px; display: grid; place-items: center;
+    border-radius: 10px; color: #fff;
+    background: linear-gradient(140deg, var(--accent), var(--accent-2));
+    box-shadow: 0 6px 18px -6px var(--halo-1); }
+  .brand-mark svg { width: 21px; height: 21px; }
+  .eyebrow { font-size: 11.5px; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase;
+    color: var(--accent); margin: 0; }
+  h1 { font-size: 27px; font-weight: 720; margin: 0 0 8px; line-height: 1.18; letter-spacing: -0.018em; text-wrap: balance; }
+  .subtitle { color: var(--text-secondary); font-size: 14.5px; line-height: 1.55; max-width: 620px; margin: 0; }
+  .topbar-tools { display: flex; align-items: center; gap: 10px; }
   select#selector-fecha {
-    font: inherit; font-size: 14px; font-weight: 600; font-stretch: 95%;
-    padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line);
-    background: var(--surface); color: var(--ink); cursor: pointer; max-width: 58vw;
+    font-family: inherit; font-size: 14px; font-weight: 650; padding: 9px 14px;
+    border-radius: 10px; border: 1px solid var(--border); background: var(--glass);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    color: var(--text-primary); cursor: pointer;
   }
   .theme-toggle {
-    flex: none; width: 38px; height: 38px; display: grid; place-items: center; cursor: pointer;
-    border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2);
+    flex: none; width: 40px; height: 40px; display: grid; place-items: center; cursor: pointer;
+    border-radius: 10px; border: 1px solid var(--border); background: var(--glass);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); color: var(--text-secondary);
+    transition: color 0.15s, border-color 0.15s;
   }
-  .theme-toggle:hover { color: var(--ink); border-color: var(--ink-3); }
-  .theme-toggle svg { width: 18px; height: 18px; }
+  .theme-toggle:hover { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+  .theme-toggle svg { width: 19px; height: 19px; }
   .theme-toggle .icon-luna { display: none; }
   :root[data-theme="dark"] .theme-toggle .icon-sol { display: none; }
   :root[data-theme="dark"] .theme-toggle .icon-luna { display: block; }
@@ -98,334 +107,296 @@
     :root:not([data-theme="light"]) .theme-toggle .icon-sol { display: none; }
     :root:not([data-theme="light"]) .theme-toggle .icon-luna { display: block; }
   }
-
-  /* --- Estado del sistema: una linea, detalle desplegable --- */
-  .sistema { margin: 18px 0 0; }
-  .sistema > details > summary {
-    list-style: none; cursor: pointer; display: flex; align-items: flex-start; gap: 9px;
-    font-size: 14px; color: var(--ink-2); padding: 9px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-  }
-  .sistema > details > summary::-webkit-details-marker { display: none; }
-  #estado-resumen { flex: 1; min-width: 0; }
-  .sistema summary .punto { margin-top: 6px; }
-  .sistema summary .ver { flex: none; white-space: nowrap; margin-top: 1px; color: var(--accent); font-weight: 600; font-size: 13px; }
-  .sistema summary .ver::after { content: "Ver detalle"; }
-  .sistema details[open] summary .ver::after { content: "Ocultar"; }
-  .sistema summary:hover .ver, details.proyecto > summary:hover, .clip-player .clip-player-head button:hover { text-decoration: underline; text-underline-offset: 3px; }
-  .punto { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--ink-3); }
-  .punto.ok { background: var(--ok); } .punto.mal { background: var(--bad); } .punto.aviso { background: var(--warn); }
-  #estado-resumen strong { color: var(--ink); font-weight: 650; }
-  .sistema .nota-sec { margin: 12px 0 8px; }
-  .estado-panel { display: grid; gap: 0; }
-  .estado-item { display: grid; grid-template-columns: 10px 1fr auto; gap: 10px; align-items: start; padding: 10px 0; border-bottom: 1px solid var(--line-2); }
-  .estado-item .estado-dot { width: 9px; height: 9px; border-radius: 50%; margin-top: 6px; background: var(--ink-3); }
-  .estado-item.ok .estado-dot { background: var(--ok); }
-  .estado-item.problema .estado-dot { background: var(--bad); }
-  .estado-item .estado-titulo { font-size: 14px; font-weight: 650; margin: 0; }
-  .estado-item .estado-mensaje { font-size: 13px; color: var(--ink-2); margin: 1px 0 0; word-break: break-word;
-    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .estado-badge { font-size: 12px; font-weight: 600; margin-left: 8px; color: var(--ink-3); }
-  .estado-item.problema .estado-badge { color: var(--bad); }
-  .estado-item.ok .estado-badge { color: var(--ok); }
-  .estado-item .estado-cuando { font-size: 12px; color: var(--ink-3); white-space: nowrap; margin-top: 2px; }
-
-  /* --- Avisos (una regla de color a la izquierda: el color dice el tipo) --- */
   .banner {
-    display: flex; gap: 10px; align-items: flex-start; margin: 14px 0 0;
-    padding: 11px 14px; background: var(--surface); border: 1px solid var(--line);
-    border-left: 4px solid var(--ink-3); border-radius: 4px 8px 8px 4px;
-    font-size: 14px; line-height: 1.5; color: var(--ink-2);
+    background: var(--glass); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-brd); border-radius: 13px;
+    padding: 15px 17px; font-size: 13.5px; color: var(--text-secondary); line-height: 1.55;
+    margin: 0 0 28px; display: flex; gap: 11px; align-items: flex-start;
   }
-  .banner strong { color: var(--ink); }
-  .banner .banner-ico { flex: none; margin-top: 2px; color: var(--ink-3); }
-  .banner .banner-ico svg { width: 17px; height: 17px; display: block; }
-  .banner.ok { border-left-color: var(--ok); } .banner.ok .banner-ico { color: var(--ok); }
-  .banner.aviso { border-left-color: var(--warn); } .banner.aviso .banner-ico { color: var(--warn); }
-  .banner.alerta { border-left-color: var(--bad); } .banner.alerta .banner-ico, .banner.alerta strong { color: var(--bad); }
-  .banner.critico { border: 2px solid var(--bad); border-left-width: 6px; background: color-mix(in srgb, var(--bad) 7%, var(--surface)); margin-top: 16px; }
-  .banner.critico strong, .banner.critico .banner-ico { color: var(--bad); }
+  .banner .banner-ico { flex: none; margin-top: 1px; color: var(--accent); }
+  .banner .banner-ico svg { width: 18px; height: 18px; display: block; }
+  .banner strong { color: var(--text-primary); }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 13px; margin-bottom: 30px; }
+  @media (max-width: 680px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+  .tile {
+    position: relative; overflow: hidden;
+    background: var(--glass); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-brd); border-radius: 14px; padding: 16px 17px;
+    box-shadow: 0 10px 30px -22px rgba(10,27,46,0.5);
+  }
+  .tile .tile-head { display: flex; align-items: center; gap: 7px; margin: 0 0 10px; }
+  .tile .tile-ico { color: var(--text-muted); display: grid; place-items: center; }
+  .tile .tile-ico svg { width: 15px; height: 15px; display: block; }
+  .tile.destacada { border-color: color-mix(in srgb, var(--accent) 45%, var(--glass-brd)); }
+  .tile.destacada::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: linear-gradient(var(--accent), var(--accent-2)); }
+  .tile.destacada .value { color: var(--accent); } .tile.destacada .tile-ico { color: var(--accent); }
+  .tile.aviso { border-color: color-mix(in srgb, var(--status-warning) 45%, var(--glass-brd)); }
+  .tile.aviso::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--status-warning); }
+  .tile.aviso .value { color: var(--status-warning); } .tile.aviso .tile-ico { color: var(--status-warning); }
+  .tile .label { font-size: 12px; color: var(--text-secondary); margin: 0; font-weight: 600; }
+  .tile .value { font-size: 28px; font-weight: 720; margin: 0; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; line-height: 1.1; }
+  .tile .unit { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-left: 4px; }
 
-  /* --- El dia: la cifra como frase --- */
-  .dia { margin: 30px 0 6px; max-width: 46rem; }
-  .dia-fecha { font-size: 15px; color: var(--ink-2); margin: 0 0 6px; font-weight: 500; }
-  .dia-fecha::first-letter { text-transform: uppercase; }
-  .dia-cifra {
-    margin: 0; font-size: clamp(29px, 6.4vw, 50px); line-height: 1.06; font-weight: 640;
-    font-stretch: 118%; letter-spacing: -0.018em; text-wrap: balance;
+  .despachos-lista { display: flex; flex-direction: column; gap: 6px; }
+  .despacho-row { display: flex; align-items: center; gap: 14px; background: var(--glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-brd); border-radius: 11px; padding: 10px 15px; transition: border-color 0.15s, transform 0.12s; }
+  .despacho-row:hover { border-color: color-mix(in srgb, var(--accent) 30%, var(--glass-brd)); }
+  .despacho-num { flex: none; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; font-size: 11.5px; font-weight: 700; color: var(--text-muted); background: color-mix(in srgb, var(--text-muted) 14%, transparent); border-radius: 6px; }
+  .despacho-hora { flex: none; font-size: 15px; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; min-width: 78px; }
+  .despacho-info { flex: 1; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; min-width: 0; }
+  .despacho-bloques { font-size: 13.5px; font-weight: 600; }
+  .despacho-clase { font-size: 12px; color: var(--text-muted); }
+  .despacho-revisar { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; color: var(--status-warning); background: color-mix(in srgb, var(--status-warning) 15%, transparent); padding: 2px 8px; border-radius: 100px; }
+  .despacho-row.revisar { border-color: color-mix(in srgb, var(--status-warning) 35%, var(--border)); }
+  .despacho-tamano { font-size: 10.5px; font-weight: 700; letter-spacing: 0.02em; padding: 2px 8px; border-radius: 100px; }
+  .despacho-tamano.ok { color: var(--status-good); background: color-mix(in srgb, var(--status-good) 14%, transparent); }
+  .despacho-tamano.mal { color: var(--status-critical); background: color-mix(in srgb, var(--status-critical) 14%, transparent); }
+  .despacho-tamano.forma { color: var(--text-muted); background: color-mix(in srgb, var(--text-muted) 12%, transparent); }
+  .despacho-gap { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; color: var(--status-critical); background: color-mix(in srgb, var(--status-critical) 14%, transparent); padding: 2px 8px; border-radius: 100px; }
+  .despacho-row.gap-corto { border-color: color-mix(in srgb, var(--status-critical) 35%, var(--border)); }
+  .despacho-ev { flex: none; display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 650; padding: 5px 12px; border-radius: 100px; font-family: inherit; }
+  .despacho-ev svg { width: 13px; height: 13px; }
+  button.despacho-ev.con { color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2)); border: none; cursor: pointer; transition: filter 0.15s, transform 0.1s; }
+  button.despacho-ev.con:hover { filter: brightness(1.08); }
+  button.despacho-ev.con:active { transform: scale(0.96); }
+  .despacho-ev.sin { color: var(--text-muted); }
+  section { margin-bottom: 34px; }
+  h2 { font-size: 16px; font-weight: 700; margin: 0 0 5px; letter-spacing: -0.01em; display: flex; align-items: center; gap: 8px; }
+  h2 .h2-ico { color: var(--accent); display: inline-grid; place-items: center; }
+  h2 .h2-ico svg { width: 17px; height: 17px; display: block; }
+  .section-note { font-size: 13px; color: var(--text-secondary); margin: 0 0 14px; line-height: 1.5; }
+  .chart-card {
+    background: var(--glass); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-brd); border-radius: 14px; padding: 22px 22px 10px;
+    box-shadow: 0 10px 30px -24px rgba(10,27,46,0.5);
   }
-  .dia-cifra .num { font-weight: 800; }
-  .dia-detalle { margin: 12px 0 0; font-size: 16px; color: var(--ink-2); line-height: 1.5; max-width: 40rem; }
+  .legend { display: flex; gap: 16px; margin-bottom: 12px; font-size: 12.5px; color: var(--text-secondary); }
+  .legend .key { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .dot { width: 10px; height: 10px; border-radius: 3px; }
+  .bars { display: flex; align-items: flex-end; gap: 4px; height: 160px; padding: 0 4px; }
+  .bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; position: relative; min-width: 0; }
+  .bar { width: 100%; max-width: 40px; border-radius: 6px 6px 2px 2px; position: relative; cursor: default; transition: opacity 0.15s, filter 0.15s; background: linear-gradient(var(--accent), var(--accent-2)); box-shadow: 0 2px 10px -4px var(--halo-1); }
+  .bar:hover { filter: brightness(1.08); }
+  .bar.vacia { background: var(--gridline); opacity: 0.55; box-shadow: none; }
+  .bar.vacia:hover { filter: none; }
+  .bar.revisar { background: linear-gradient(var(--status-warning), color-mix(in srgb, var(--status-warning) 70%, #000)); }
+  .bars-tendencia { height: 120px; }
+  .bars-tendencia .bar { max-width: 48px; }
+  .bar-col .x-label { font-size: 10.5px; color: var(--text-muted); margin-top: 6px; white-space: nowrap; }
+  .bar .bar-value { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 4px; font-size: 12px; font-weight: 700; color: var(--text-primary); white-space: nowrap; }
+  .bar .tooltip {
+    position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(-6px);
+    background: var(--text-primary); color: var(--page); font-size: 11.5px; font-weight: 600;
+    padding: 4px 7px; border-radius: 5px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.12s;
+  }
+  .bar:hover .tooltip { opacity: 1; }
+  .empty-state { padding: 28px 16px; text-align: center; color: var(--text-secondary); font-size: 13.5px; }
+  .analisis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 680px) { .analisis-grid { grid-template-columns: 1fr; } }
+  .mini-titulo { font-size: 12.5px; font-weight: 650; color: var(--text-secondary); margin: 0 0 12px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .barras-h { display: flex; flex-direction: column; gap: 9px; }
+  .barra-h { display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 10px; }
+  .barra-h .etq { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .barra-h .via { background: color-mix(in srgb, var(--series-1) 12%, transparent); border-radius: 5px; height: 22px; overflow: hidden; }
+  .barra-h .fill { height: 100%; background: var(--series-1); border-radius: 5px; min-width: 3px; transition: width 0.3s; }
+  .barra-h .val { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 58px; text-align: right; }
+  .barra-h.plt2 .fill { background: #d0342c; } .barra-h.plt1 .fill { background: #c026a8; }
+  .barra-h.plt3 .fill { background: #7c3aed; } .barra-h.plt4 .fill { background: #d99a0a; }
+  .barra-h.desc .fill { background: var(--text-muted); }
+  table.data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 12px; }
+  .table-wrap { overflow-x: auto; }
+  table.data-table th, table.data-table td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--gridline); font-variant-numeric: tabular-nums; }
+  table.data-table th { color: var(--text-secondary); font-weight: 600; font-size: 12px; }
+  details.table-toggle { margin-top: 10px; }
+  details.table-toggle summary { cursor: pointer; font-size: 12.5px; color: var(--series-1); font-weight: 600; }
+  .roadmap { display: flex; flex-direction: column; gap: 10px; }
+  .road-item { display: flex; align-items: flex-start; gap: 13px; background: var(--glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-brd); border-radius: 13px; padding: 13px 17px; }
+  .badge { flex: none; display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 100px; white-space: nowrap; margin-top: 1px; }
+  .badge svg { width: 12px; height: 12px; }
+  .badge.done { color: var(--status-good); background: color-mix(in srgb, var(--status-good) 14%, transparent); }
+  .badge.progress { color: var(--status-warning); background: color-mix(in srgb, var(--status-warning) 16%, transparent); }
+  .badge.pending { color: var(--status-pending); background: color-mix(in srgb, var(--status-pending) 16%, transparent); }
+  .road-title { font-size: 14px; font-weight: 650; margin: 0 0 2px; }
+  .road-desc { font-size: 13px; color: var(--text-secondary); margin: 0; line-height: 1.5; }
+  footer { border-top: 1px solid var(--border); padding-top: 18px; margin-top: 44px; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
 
-  /* --- Secciones --- */
-  section { margin-top: 40px; }
-  .seccion-cab { margin-bottom: 14px; max-width: 44rem; }
-  h2 { font-size: 19px; font-weight: 680; font-stretch: 108%; margin: 0 0 4px; letter-spacing: -0.005em; }
-  .nota-sec { font-size: 14px; color: var(--ink-2); margin: 0; line-height: 1.5; }
-  .empty-state { padding: 22px 0; color: var(--ink-2); font-size: 14px; }
+  .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--status-good); margin-right: 6px; vertical-align: middle; animation: pulse 1.8s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
-  /* --- La rampa en 24 horas: cada cuadro es un molde, en el color de su barra --- */
-  .rampa { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 12px 8px; }
-  .rampa-cols { display: grid; grid-template-columns: repeat(24, 1fr); height: 150px; position: relative; }
-  @media (max-width: 560px) { .rampa-cols { height: 118px; } .rampa { padding: 12px 6px 6px; } }
-  .rampa-col { display: flex; flex-direction: column-reverse; align-items: center; gap: 3px; padding-top: 4px; border-right: 1px solid var(--line-2); }
-  .rampa-col:last-child { border-right: none; }
-  .rampa-col.noche {
-    background: repeating-linear-gradient(135deg, var(--noche) 0 5px, transparent 5px 10px);
-  }
-  button.molde {
-    all: unset; box-sizing: border-box; cursor: pointer; flex: none;
-    width: min(76%, 28px); height: clamp(5px, calc((100% - 4px - (var(--n, 1) - 1) * 3px) / var(--n, 1)), 16px);
-    border-radius: 2.5px; background: var(--c, var(--p0));
-    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.14);
-  }
-  button.molde.revisar { background: repeating-linear-gradient(135deg, var(--c, var(--p0)) 0 3px, color-mix(in srgb, var(--c, var(--p0)) 45%, var(--surface)) 3px 6px); outline: 1px dashed var(--warn); outline-offset: 1px; }
-  button.molde:hover { filter: brightness(1.12); }
-  button.molde:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
-  .rampa.entrando button.molde { animation: caer 0.42s cubic-bezier(.2,.8,.3,1.2) both; animation-delay: calc(var(--i, 0) * 22ms); transform-origin: bottom; }
-  @keyframes caer { from { transform: translateY(-26px); opacity: 0; } to { transform: none; opacity: 1; } }
-  @media (prefers-reduced-motion: reduce) { .rampa.entrando button.molde { animation: none; } }
-  .rampa-base { position: relative; height: 4px; background: var(--line); border-radius: 2px; margin-top: 1px; }
-  .rampa-base .hueco { position: absolute; top: -1px; height: 6px; background: var(--bad); border-radius: 2px; }
-  .rampa-horas { position: relative; height: 18px; margin-top: 4px; font-size: 12px; color: var(--ink-3); font-stretch: 90%; }
-  .rampa-horas span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
-  .rampa-horas span:first-child { transform: none; }
-  .rampa-vacia { position: absolute; inset: 16px 12px 30px; display: grid; place-items: center; color: var(--ink-2); font-size: 14px; text-align: center; padding: 0 12px; }
+  .estado-panel { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+  .estado-item { display: flex; align-items: flex-start; gap: 11px; background: var(--glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-brd); border-radius: 12px; padding: 11px 15px; }
+  .estado-item .estado-dot { flex: none; width: 9px; height: 9px; border-radius: 50%; margin-top: 5px; }
+  .estado-item.ok .estado-dot { background: var(--status-good); }
+  .estado-item.problema .estado-dot { background: #d0342c; }
+  .estado-item.pendiente .estado-dot { background: var(--status-pending); }
+  .estado-item .estado-texto { flex: 1; min-width: 0; }
+  .estado-item .estado-titulo { font-size: 13.5px; font-weight: 650; margin: 0 0 2px; }
+  .estado-item .estado-mensaje { font-size: 12.5px; color: var(--text-secondary); margin: 0; line-height: 1.4; word-break: break-word; }
+  .estado-badge { font-size: 10.5px; font-weight: 700; padding: 1px 7px; border-radius: 100px; margin-left: 6px; vertical-align: middle; }
+  .estado-item.ok .estado-badge { color: var(--status-good); background: color-mix(in srgb, var(--status-good) 14%, transparent); }
+  .estado-item.problema .estado-badge { color: #d0342c; background: color-mix(in srgb, #d0342c 14%, transparent); }
+  .estado-item.pendiente .estado-badge { color: var(--status-pending); background: color-mix(in srgb, var(--status-pending) 16%, transparent); }
+  .estado-item .estado-cuando { flex: none; font-size: 11.5px; color: var(--text-muted); white-space: nowrap; margin-top: 2px; }
+  .banner.alerta { border-color: color-mix(in srgb, #d0342c 45%, var(--border)); }
+  .banner.critico { border: 2px solid #d0342c; background: color-mix(in srgb, #d0342c 10%, var(--glass)); }
+  .banner.critico strong { color: #d0342c; }
+  .banner.ok { border-color: color-mix(in srgb, var(--status-good) 50%, var(--border)); }
+  .banner.ok strong { color: var(--status-good); }
+  .banner.aviso { border-color: color-mix(in srgb, var(--status-warning) 50%, var(--border)); }
+  .tile.problema { border-color: color-mix(in srgb, #d0342c 45%, var(--glass-brd)); }
+  .tile.problema::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: #d0342c; }
+  .tile.problema .value { color: #d0342c; }
+  .informe-card .informe-acciones { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .informe-card .informe-meta { font-size: 12px; color: var(--text-muted); margin: 0; flex-basis: 100%; }
+  .banner.alerta strong { color: #d0342c; }
 
-  .leyenda { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 12px 2px 0; font-size: 14px; color: var(--ink-2); }
-  .leyenda .item { display: inline-flex; align-items: center; gap: 8px; }
-  .leyenda .muestra { width: 13px; height: 13px; border-radius: 2.5px; background: var(--c, var(--p0)); flex: none; }
-  .leyenda .muestra.rayada { background: repeating-linear-gradient(135deg, var(--ink-3) 0 3px, transparent 3px 6px); outline: 1px dashed var(--warn); }
-  .leyenda .muestra.hueco { background: var(--bad); height: 5px; border-radius: 2px; }
-  .leyenda strong { color: var(--ink); font-weight: 650; }
-
-  /* --- Despachos: una fila por molde --- */
-  ol.despachos { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-  .despacho {
-    display: grid; grid-template-columns: 76px 12px 1fr auto; align-items: center; gap: 4px 14px;
-    padding: 11px 4px; border-bottom: 1px solid var(--line);
-    transition: background-color 0.6s;
-  }
-  .despacho.resaltado { background: color-mix(in srgb, var(--accent) 14%, transparent); transition: none; }
-  .d-hora { font-size: 16px; font-weight: 620; font-stretch: 92%; }
-  .d-molde { width: 12px; height: 26px; border-radius: 2px; background: var(--c, var(--p0)); }
-  .despacho.revisar .d-molde { background: repeating-linear-gradient(135deg, var(--c, var(--p0)) 0 3px, color-mix(in srgb, var(--c, var(--p0)) 40%, var(--surface)) 3px 6px); }
-  .d-texto { min-width: 0; }
-  .d-que { font-size: 15px; font-weight: 560; margin: 0; }
-  .d-notas { display: flex; flex-wrap: wrap; gap: 2px 14px; margin: 2px 0 0; font-size: 13px; color: var(--ink-2); }
-  .d-notas span { display: inline-flex; align-items: center; gap: 6px; }
-  .d-notas span::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; }
-  .nota-ok { color: var(--ok); } .nota-mal { color: var(--bad); } .nota-aviso { color: var(--warn); } .nota-neutra { color: var(--ink-3); }
-  .d-video {
-    font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap;
-    padding: 7px 13px; border-radius: 7px; border: 1px solid var(--accent); background: transparent; color: var(--accent);
-  }
-  .d-video:hover { background: var(--accent); color: var(--accent-ink); }
-  .d-sin { font-size: 13px; color: var(--ink-3); padding: 0 6px; }
-  @media (max-width: 560px) {
-    .despacho { grid-template-columns: 12px 1fr auto; }
-    .d-hora { grid-column: 2; grid-row: 1; }
-    .d-molde { grid-column: 1; grid-row: 1 / span 2; height: 100%; min-height: 34px; }
-    .d-texto { grid-column: 2 / span 2; grid-row: 2; }
-    .d-video, .d-sin { grid-column: 3; grid-row: 1; justify-self: end; }
-  }
-
-  /* --- Ultimos dias --- */
-  .tendencia { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); align-items: end; gap: 6px; height: 128px; }
-  .tend-col { all: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; min-width: 0; }
-  .tend-barra { width: 100%; max-width: 38px; background: var(--line); border-radius: 3px 3px 1px 1px; min-height: 3px; }
-  .tend-col:hover .tend-barra { background: var(--ink-3); }
-  .tend-col.sel .tend-barra { background: var(--ink); }
-  .tend-num { font-size: 12px; font-weight: 650; color: var(--ink-2); margin-bottom: 3px; }
-  .tend-col.sel .tend-num { color: var(--ink); }
-  .tend-dia { font-size: 12px; color: var(--ink-3); margin-top: 5px; white-space: nowrap; font-stretch: 88%; }
-  .tend-col:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-
-  /* --- Informe y videos --- */
-  .utiles { display: grid; gap: 28px; margin-top: 44px; }
-  .clips-resumen { font-size: 14px; color: var(--ink-2); margin: 12px 0 0; }
-  .clip-estado-global { font-size: 13px; color: var(--ink-2); margin: 8px 0 0; }
-  .clip-estado-global:empty { display: none; }
-  @media (min-width: 860px) { .utiles.dos { grid-template-columns: 1fr 1fr; } }
-  .utiles section { margin-top: 0; }
-  .clips-gate {
-    display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
-    background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px;
-  }
-  .clips-gate p { margin: 0; font-size: 14px; color: var(--ink-2); flex: 1 1 240px; }
-  .clips-gate input[type="password"] {
-    font: inherit; font-size: 14px; padding: 8px 11px; border-radius: 7px; border: 1px solid var(--line);
-    background: var(--page); color: var(--ink); min-width: 170px; flex: 1 1 170px;
-  }
-  .clips-gate button, .clip-row button {
-    display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 14px; font-weight: 600;
-    padding: 8px 14px; border-radius: 7px; border: none; background: var(--accent); color: var(--accent-ink); cursor: pointer;
-  }
+  .clips-gate { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: var(--glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-brd); border-radius: 12px; padding: 14px 16px; margin-bottom: 14px; }
+  .clips-gate p { margin: 0; font-size: 13px; color: var(--text-secondary); flex: 1 1 260px; min-width: 200px; }
+  .clips-gate input[type="password"] { font-family: inherit; font-size: 13.5px; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--page); color: var(--text-primary); min-width: 160px; }
+  .clips-gate button, .clip-row button { display: inline-flex; align-items: center; gap: 6px; font-family: inherit; font-size: 12.5px; font-weight: 650; padding: 8px 14px; border-radius: 9px; border: none; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; cursor: pointer; transition: filter 0.15s; }
   .clips-gate button:hover, .clip-row button:hover { filter: brightness(1.08); }
   .clip-row button svg, .clips-gate button svg { width: 13px; height: 13px; }
-  .clips-gate .clips-error { color: var(--bad); font-size: 13px; margin: 0; flex-basis: 100%; }
-  .clips-gate .clips-ok { color: var(--ok); font-size: 13px; margin: 0; flex-basis: 100%; }
-  .informe-card .informe-acciones { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; flex: 1 1 100%; }
-  .informe-card .informe-meta { font-size: 12.5px; color: var(--ink-3); margin: 0; flex-basis: 100%; }
-  .clips-lista { display: grid; margin-top: 10px; }
-  .clips-lista .clip-row:first-of-type { border-top: 1px solid var(--line); }
-  .clip-row { display: flex; align-items: center; gap: 10px; padding: 9px 2px; border-bottom: 1px solid var(--line); }
+  .despacho-gap svg, .despacho-revisar svg { width: 11px; height: 11px; vertical-align: -1px; }
+  .clips-gate .clips-error { color: #d0342c; font-size: 12.5px; margin: 0; flex-basis: 100%; }
+  .clips-gate .clips-ok { color: var(--status-good); font-size: 12.5px; margin: 0; flex-basis: 100%; }
+  .clips-lista { display: flex; flex-direction: column; gap: 6px; }
+  .clip-row { display: flex; align-items: center; gap: 10px; background: var(--glass); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-brd); border-radius: 11px; padding: 10px 15px; }
   .clip-row .clip-info { flex: 1; min-width: 0; }
-  .clip-row .clip-titulo { font-size: 14px; font-weight: 600; margin: 0; overflow-wrap: anywhere; }
-  .clip-row .clip-detalle { font-size: 13px; color: var(--ink-2); margin: 1px 0 0; }
-  .clip-row .clip-tag { font-size: 12px; font-weight: 600; color: var(--accent); margin-right: 8px; }
+  .clip-row .clip-titulo { font-size: 13px; font-weight: 600; margin: 0; }
+  .clip-row .clip-detalle { font-size: 12px; color: var(--text-secondary); margin: 1px 0 0; }
+  .clip-row .clip-tag { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; padding: 2px 7px; border-radius: 100px; color: var(--series-1); background: color-mix(in srgb, var(--series-1) 14%, transparent); margin-right: 6px; vertical-align: middle; }
   .clip-row button:disabled { opacity: 0.45; cursor: not-allowed; }
-  .clip-row .clip-estado { font-size: 12px; color: var(--ink-3); min-width: 80px; text-align: right; }
-  .clip-player { margin-top: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
-  .clip-player video { width: 100%; border-radius: 6px; background: #000; display: block; }
-  .clip-player .clip-player-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
-  .clip-player .clip-player-head button { font: inherit; background: none; border: none; color: var(--accent); font-size: 14px; cursor: pointer; padding: 2px 6px; }
-
-  /* --- Estado del proyecto (al final, plegado) --- */
-  details.proyecto { margin-top: 44px; border-top: 1px solid var(--line); }
-  details.proyecto > summary { cursor: pointer; padding: 12px 0; font-size: 16px; font-weight: 650; font-stretch: 105%; }
-  .roadmap { display: grid; gap: 0; }
-  .road-item { display: grid; grid-template-columns: 112px 1fr; gap: 12px; padding: 11px 0; border-top: 1px solid var(--line-2); }
-  .badge { font-size: 13px; font-weight: 650; display: inline-flex; align-items: center; gap: 6px; }
-  .badge svg { width: 14px; height: 14px; }
-  .badge.done { color: var(--ok); } .badge.progress { color: var(--warn); } .badge.pending { color: var(--ink-3); }
-  .road-title { font-size: 15px; font-weight: 620; margin: 0 0 2px; }
-  .road-desc { font-size: 14px; color: var(--ink-2); margin: 0; line-height: 1.5; max-width: 42rem; }
-  @media (max-width: 560px) { .road-item { grid-template-columns: 1fr; gap: 3px; } }
-
-  footer { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 36px; font-size: 13px; color: var(--ink-3); }
-  #banner-dia:empty { display: none; }
-  .leyenda .tamanos { color: var(--ink-2); }
-  @media (max-width: 560px) { .tend-dia .sem { display: none; } }
+  .clip-row .clip-estado { font-size: 11.5px; color: var(--text-muted); min-width: 90px; text-align: right; }
+  .clip-player { margin-top: 12px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+  .clip-player video { width: 100%; border-radius: 8px; background: #000; display: block; }
+  .clip-player .clip-player-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 13px; font-weight: 600; }
+  .clip-player .clip-player-head button { background: none; border: none; color: var(--text-secondary); font-size: 13px; cursor: pointer; padding: 2px 6px; }
 </style>
 </head>
 <body>
-<a class="saltar" href="#contenido">Saltar al conteo del día</a>
+<div class="bg-hielo" aria-hidden="true">
+  <div class="bg-halo h1"></div>
+  <div class="bg-halo h2"></div>
+  <div class="bg-halo h3"></div>
+</div>
+<canvas id="copos" aria-hidden="true"></canvas>
 <div class="wrap">
 
-  <header class="cabecera">
-    <div class="marca">
-      <!-- un molde visto de frente: cuatro compartimientos, cuatro bloques -->
-      <svg viewBox="0 0 38 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="1.5" width="35" height="23" rx="2"/><path d="M10.25 1.5v23M19 1.5v23M27.75 1.5v23"/></svg>
-      <div>
-        <h1 translate="no">Hielos Yopal</h1>
-        <p>Producción de bloques de hielo</p>
+  <div class="topbar">
+    <div>
+      <div class="brand-row">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M12 2l-3 3M12 2l3 3M12 22l-3-3M12 22l3-3M2.7 7l17.6 10M2.7 7l4.1.1M2.7 7 2.8 11M20.3 17l-4.1-.1M20.3 17l-.1-4M2.7 17 20.3 7M2.7 17l.1-4M2.7 17l4.1-.1M20.3 7l-4.1.1M20.3 7l-.1 4"/></svg></span>
+        <p class="eyebrow">Hielos Yopal SAS</p>
       </div>
+      <h1>Conteo automático de producción</h1>
+      <p class="subtitle">Registro diario de despachos de bloques de hielo con hora real y respaldo en video, generado automáticamente cada noche.</p>
     </div>
-    <div class="herramientas">
-      <select id="selector-fecha" aria-label="Elegir el día"></select>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar entre tema claro y oscuro" title="Cambiar tema">
-        <svg class="icon-sol" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2 12h2.2M19.8 12H22M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
-        <svg class="icon-luna" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.2 6.2 0 0 0 10.5 10.5z"/></svg>
+    <div class="topbar-tools">
+      <select id="selector-fecha" aria-label="Elegir fecha"></select>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema">
+        <svg class="icon-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2 12h2.2M19.8 12H22M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+        <svg class="icon-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.2 6.2 0 0 0 10.5 10.5z"/></svg>
       </button>
     </div>
-  </header>
-
-  <main id="contenido">
+  </div>
 
   <div class="banner critico" id="banner-desactualizado" style="display:none;"></div>
 
-  <div class="sistema">
-    <details id="detalle-estado">
-      <summary><span class="punto" id="estado-punto" aria-hidden="true"></span><span id="estado-resumen">Estado del sistema: revisando…</span><span class="ver" aria-hidden="true"></span></summary>
-      <p class="nota-sec">Estado del sistema: grabador, conteo en vivo, disco del servidor, publicación de esta página, informes y mantenimiento. Se revisa sola cada 25 segundos.</p>
-      <div class="estado-panel" id="panel-estado"></div>
-    </details>
-  </div>
+  <section>
+    <h2><span class="live-dot" aria-hidden="true"></span>Estado del sistema</h2>
+    <p class="section-note">Se actualiza sola cada ~25 segundos. Grabador, conteo en vivo, disco del servidor, publicación, informes y mantenimiento automático.</p>
+    <div class="estado-panel" id="panel-estado"></div>
+  </section>
 
-  <section class="dia" id="hero-dia" aria-live="polite">
-    <p class="dia-fecha" id="dia-fecha"></p>
-    <p class="dia-cifra" id="dia-cifra">Cargando…</p>
-    <p class="dia-detalle" id="dia-detalle"></p>
+  <section id="seccion-tendencia" style="display:none;">
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span>Producción por día</h2>
+    <p class="section-note">Bloques confirmados por día (sin la madrugada por revisar). Toca una barra para ver el detalle de ese día.</p>
+    <div class="chart-card"><div class="bars bars-tendencia" id="chart-tendencia"></div></div>
   </section>
 
   <div class="banner" id="banner-dia"></div>
   <div class="banner alerta" id="banner-anomalia" style="display:none;"></div>
+
+  <div class="tiles" id="tiles-dia"></div>
   <div class="banner alerta" id="banner-cobertura" style="display:none;"></div>
   <div class="banner" id="banner-validacion" style="display:none;"></div>
 
-  <section aria-labelledby="titulo-rampa">
-    <div class="seccion-cab">
-      <h2 id="titulo-rampa">El día en la rampa</h2>
-      <p class="nota-sec">Cada cuadro es un molde (unos 4 bloques) que salió por la rampa, en el color de la barra de su planta. El despacho no tiene horario fijo: puede ocurrir a cualquier hora. Toca un cuadro para ver ese despacho.</p>
+  <section id="seccion-informe" style="display:none;">
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13l3 4M11 13l-3 4M14 17h3"/></svg></span>Informe en Excel</h2>
+    <p class="section-note">Resumen, despachos, actividad por hora, cobertura y acumulado del mes. Protegido con la misma contraseña de los clips.</p>
+    <div class="clips-gate informe-card" id="informe-card">
+      <p id="informe-texto"></p>
+      <div class="informe-acciones">
+        <input type="password" id="informe-password" placeholder="Contraseña" autocomplete="off" style="display:none;">
+        <button type="button" id="informe-descargar">Descargar Excel</button>
+      </div>
+      <p class="clips-error" id="informe-error" style="display:none;"></p>
+      <p class="informe-meta" id="informe-meta"></p>
     </div>
-    <div class="rampa" id="rampa">
-      <div class="rampa-cols" id="rampa-cols" role="group" aria-label="Moldes por hora del día"></div>
-      <div class="rampa-base" id="rampa-base"></div>
-      <div class="rampa-horas" aria-hidden="true"><span style="left:0">0 h</span><span style="left:25%">6 h</span><span style="left:50%">12 h</span><span style="left:75%">18 h</span><span style="left:100%;transform:translateX(-100%)">24 h</span></div>
-    </div>
-    <div class="leyenda" id="leyenda-plantas"></div>
   </section>
 
-  <section aria-labelledby="titulo-despachos">
-    <div class="seccion-cab">
-      <h2 id="titulo-despachos">Despachos del día</h2>
-      <p class="nota-sec">Uno por fila, en orden. “Ver video” abre el respaldo (pide la contraseña de los videos).</p>
+  <section>
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Despachos del día — <span id="titulo-fecha-actividad"></span></h2>
+    <p class="section-note">Cada despacho es la salida de un molde completo (≈4 bloques) por la rampa, con hora exacta. El despacho no tiene horario fijo — puede ocurrir en cualquier momento. Las barras muestran cuántos despachos cayeron en cada hora.</p>
+    <div class="chart-card" id="card-despachos">
+      <div class="bars" id="chart-despachos"></div>
     </div>
-    <ol class="despachos" id="despachos-lista"></ol>
   </section>
 
-  <section id="seccion-tendencia" style="display:none;" aria-labelledby="titulo-tendencia">
-    <div class="seccion-cab">
-      <h2 id="titulo-tendencia">Últimos días</h2>
-      <p class="nota-sec">Bloques confirmados por día, sin la noche y madrugada por revisar. Toca un día para verlo.</p>
+  <section id="seccion-analisis">
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>Análisis por planta y presentación</h2>
+    <p class="section-note" id="nota-analisis">Producción del día desglosada por planta de origen y por tamaño de bloque (grande / pequeño).</p>
+    <div class="analisis-grid">
+      <div class="chart-card">
+        <h3 class="mini-titulo">Bloques por planta</h3>
+        <div id="chart-planta" class="barras-h"></div>
+      </div>
+      <div class="chart-card">
+        <h3 class="mini-titulo">Bloques por presentación</h3>
+        <div id="chart-clase" class="barras-h"></div>
+      </div>
     </div>
-    <div class="tendencia" id="chart-tendencia"></div>
   </section>
 
-  <div class="utiles dos" id="utiles">
-    <section id="seccion-informe" style="display:none;" aria-labelledby="titulo-informe">
-      <div class="seccion-cab">
-        <h2 id="titulo-informe">Informe en Excel</h2>
-        <p class="nota-sec">Resumen, despachos, hora por hora, cobertura y acumulado del mes. Pide la misma contraseña de los videos.</p>
-      </div>
-      <div class="clips-gate informe-card" id="informe-card">
-        <p id="informe-texto"></p>
-        <div class="informe-acciones">
-          <label class="sr-only" for="informe-password">Contraseña del informe (la misma de los videos)</label>
-          <input type="password" id="informe-password" name="contrasena-informe" placeholder="Contraseña" autocomplete="off" style="display:none;">
-          <button type="button" id="informe-descargar">Descargar Excel</button>
-        </div>
-        <p class="clips-error" id="informe-error" aria-live="polite" style="display:none;"></p>
-        <p class="informe-meta" id="informe-meta"></p>
-      </div>
-    </section>
+  <section>
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></span>Detalle de cada despacho</h2>
+    <p class="section-note">Uno por fila, en orden. El botón indica si hay respaldo en video (más abajo, protegido con contraseña).</p>
+    <div class="despachos-lista" id="despachos-lista"></div>
+    <details class="table-toggle" id="toggle-consolidado">
+      <summary>Ver total por presentación</summary>
+      <div class="chart-card" id="card-consolidado" style="margin-top:10px;"></div>
+    </details>
+  </section>
 
-    <section id="seccion-clips" style="display:none;" aria-labelledby="titulo-clips">
-      <div class="seccion-cab">
-        <h2 id="titulo-clips">Videos de respaldo</h2>
-        <p class="nota-sec">Protegidos con contraseña. Pídesela a quien administra el sistema.</p>
+  <section id="seccion-clips" style="display:none;">
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="12" rx="2"/><path d="M15 10l6-3v10l-6-3z"/></svg></span>Clips de video</h2>
+    <p class="section-note">Respaldo en video de los despachos y tramos de actividad recientes. Protegidos con contraseña — pídesela a quien administra el sistema si la necesitas.</p>
+    <div class="clips-gate" id="clips-gate">
+      <p>Ingresa la contraseña para poder reproducir los clips.</p>
+      <input type="password" id="clips-password" placeholder="Contraseña" autocomplete="off">
+      <button id="clips-desbloquear" type="button">Desbloquear</button>
+      <p class="clips-error" id="clips-error" style="display:none;"></p>
+      <p class="clips-ok" id="clips-ok" style="display:none;">Contraseña lista — toca "Reproducir" en cualquier clip.</p>
+    </div>
+    <div class="clips-lista" id="clips-lista"></div>
+    <div class="clip-player" id="clip-player" style="display:none;">
+      <div class="clip-player-head">
+        <span id="clip-player-titulo"></span>
+        <button type="button" id="clip-player-cerrar">Cerrar</button>
       </div>
-      <div class="clips-gate" id="clips-gate">
-        <p>Escribe la contraseña para reproducir los videos.</p>
-        <label class="sr-only" for="clips-password">Contraseña de los videos</label>
-        <input type="password" id="clips-password" name="contrasena-videos" placeholder="Contraseña" autocomplete="off">
-        <button id="clips-desbloquear" type="button">Desbloquear videos</button>
-        <p class="clips-error" id="clips-error" aria-live="polite" style="display:none;"></p>
-        <p class="clips-ok" id="clips-ok" aria-live="polite" style="display:none;">Listo. Toca “Ver video” en cualquier despacho.</p>
-      </div>
-      <p class="clip-estado-global" id="clip-estado-global" aria-live="polite"></p>
-      <div class="clips-lista" id="clips-lista"></div>
-      <div class="clip-player" id="clip-player" style="display:none;">
-        <div class="clip-player-head">
-          <span id="clip-player-titulo"></span>
-          <button type="button" id="clip-player-cerrar">Cerrar video</button>
-        </div>
-        <video id="clip-player-video" controls></video>
-      </div>
-    </section>
-  </div>
+      <video id="clip-player-video" controls></video>
+    </div>
+  </section>
 
-  <details class="proyecto">
-    <summary>Estado del proyecto</summary>
+  <section>
+    <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></span>Estado del proyecto</h2>
+    <p class="section-note">Qué ya funciona y qué falta.</p>
     <div class="roadmap">
-      <div class="road-item"><span class="badge done"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Conteo automático de despachos</p><p class="road-desc">Cada salida de molde por la rampa se cuenta con hora exacta y video de respaldo, con la cámara real de producción.</p></div></div>
-      <div class="road-item"><span class="badge done"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Operación 24/7 vigilada</p><p class="road-desc">Conteo en vivo con reinicio automático, mantenimiento diario del disco, informe Excel diario y un vigilante externo que avisa por correo si esta página deja de actualizarse.</p></div></div>
-      <div class="road-item"><span class="badge progress"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En ajuste</span><div><p class="road-title">Confiabilidad a toda hora</p><p class="road-desc">De día el conteo pierde moldes cuando llegan seguidos; de noche (desde las 7:00 p. m.) y de madrugada está en ajuste. Se está probando contar por la presencia del molde, que corrige las dos cosas.</p></div></div>
-      <div class="road-item"><span class="badge progress"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En validación</span><div><p class="road-title">Planta de origen y tamaño</p><p class="road-desc">Por el color de la barra del molde (rojo, planta 2; amarillo, planta 4; rosado, planta 1; morado o naranja, planta 3) y, como segunda confirmación, por la forma del molde.</p></div></div>
+      <div class="road-item"><span class="badge done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Conteo automático de despachos</p><p class="road-desc">Cada salida de molde por la rampa se cuenta con hora exacta y clip de respaldo en video, sobre la cámara real de producción.</p></div></div>
+      <div class="road-item"><span class="badge done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Operación 24/7 vigilada</p><p class="road-desc">Conteo en vivo con reinicio automático, mantenimiento diario del disco, informe Excel diario y un vigilante externo que avisa por correo si la página deja de actualizarse.</p></div></div>
+      <div class="road-item"><span class="badge progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En ajuste</span><div><p class="road-title">Confiabilidad en toda hora</p><p class="road-desc">El conteo de día está validado; las horas de madrugada y atardecer siguen en ajuste — se revisan a mano antes de darlas por firmes.</p></div></div>
+      <div class="road-item"><span class="badge progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En validación</span><div><p class="road-title">Tipo de bloque y planta de origen</p><p class="road-desc">Por el color de la barra del molde: rojo = planta 2, amarillo = planta 4, rosado = planta 1, morado/naranja = planta 3. Calibrado con 2 meses de video real; el morado aún no se ha visto en cámara.</p></div></div>
     </div>
-  </details>
-
-  </main>
+  </section>
 
   <footer id="footer-info">Cargando…</footer>
 
@@ -436,7 +407,7 @@ const INTERVALO_REFRESCO_MS = 25000;
 let datosActuales = null;
 
 // --- Iconos SVG (inline, sin dependencias externas) ---
-const _svg = (d, extra) => `<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"${extra || ''}>${d}</svg>`;
+const _svg = (d, extra) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"${extra || ''}>${d}</svg>`;
 const ICO = {
   cubo: _svg('<path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/>'),
   molde: _svg('<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M9 6v12M15 6v12"/>'),
@@ -451,11 +422,6 @@ const ICO = {
 function aplicarTema(t) {
   if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
   else document.documentElement.removeAttribute('data-theme');
-  // La barra del navegador (celular) con el mismo fondo de la pagina.
-  const fondos = { light: '#edf1f2', dark: '#0c1417' };
-  document.querySelectorAll('meta[name="theme-color"]').forEach(m => {
-    m.content = fondos[t] || (m.media.includes('dark') ? fondos.dark : fondos.light);
-  });
 }
 (function initTema() {
   try { aplicarTema(localStorage.getItem('hy-tema')); } catch (e) {}
@@ -468,25 +434,47 @@ function toggleTema() {
   try { localStorage.setItem('hy-tema', nuevo); } catch (e) {}
 }
 
-// Formatos colombianos con Intl (coma decimal, 24 h, espacio duro antes de la unidad).
-const NBSP = ' ';
-const NUM1 = new Intl.NumberFormat('es-CO', { maximumFractionDigits: 1 });
-const FMT_HORA = new Intl.DateTimeFormat('es-CO', { hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' });
-const FMT_HORA_MIN = new Intl.DateTimeFormat('es-CO', { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
-const FMT_FECHA_HORA = new Intl.DateTimeFormat('es-CO', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' });
-const RTF = new Intl.RelativeTimeFormat('es', { style: 'short' });
+// --- Copos de hielo a la deriva + parallax suave del fondo ---
+function initFondoHielo() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const canvas = document.getElementById('copos');
+  const ctx = canvas.getContext('2d');
+  let ancho = 0, alto = 0, copos = [];
+  function redimensionar() {
+    ancho = canvas.width = innerWidth; alto = canvas.height = innerHeight;
+    const n = Math.min(70, Math.round(ancho * alto / 26000));
+    copos = Array.from({ length: n }, () => ({
+      x: Math.random() * ancho, y: Math.random() * alto,
+      r: 0.7 + Math.random() * 2.1, vy: 0.15 + Math.random() * 0.5,
+      vx: -0.25 + Math.random() * 0.5, op: 0.25 + Math.random() * 0.5,
+    }));
+  }
+  function color() {
+    return getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#38b6ff';
+  }
+  function dibujar() {
+    ctx.clearRect(0, 0, ancho, alto);
+    const c = color();
+    for (const f of copos) {
+      f.y += f.vy; f.x += f.vx;
+      if (f.y > alto + 4) { f.y = -4; f.x = Math.random() * ancho; }
+      if (f.x < -4) f.x = ancho + 4; if (f.x > ancho + 4) f.x = -4;
+      ctx.globalAlpha = f.op; ctx.fillStyle = c;
+      ctx.beginPath(); ctx.arc(f.x, f.y, f.r, 0, 6.2832); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(dibujar);
+  }
+  addEventListener('resize', redimensionar);
+  redimensionar(); dibujar();
 
-// Desplazamiento suave solo si la persona no pidio reducir el movimiento.
-function desplazarA(el, block) {
-  if (!el) return;
-  const reducir = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  el.scrollIntoView({ behavior: reducir ? 'auto' : 'smooth', block: block || 'start' });
+  // parallax: los halos se desplazan un poco al hacer scroll
+  const halos = document.querySelectorAll('.bg-halo');
+  addEventListener('scroll', () => {
+    const y = scrollY;
+    halos.forEach((h, i) => { h.style.transform = 'translateY(' + (y * (0.04 + i * 0.03)) + 'px)'; });
+  }, { passive: true });
 }
-
-// La cifra del dia es una region aria-live: el refresco cada 25 s solo
-// escribe si cambio, para que el lector de pantalla no la repita.
-function ponerTexto(el, texto) { if (el.textContent !== texto) el.textContent = texto; }
-function ponerHTML(el, html) { if (el.dataset.html !== html) { el.innerHTML = html; el.dataset.html = html; } }
 
 async function cargarDatos() {
   const resp = await fetch('./data.json', { cache: 'no-store' });
@@ -501,15 +489,13 @@ async function main() {
   try {
     datosActuales = await cargarDatos();
   } catch (e) {
-    document.getElementById('banner-dia').innerHTML = '<strong>No se pudieron cargar los datos.</strong> Revisa la conexión a internet y recarga la página. Si abriste el archivo directamente en el computador, ábrelo desde la dirección publicada.';
-    document.getElementById('dia-cifra').textContent = 'Sin datos por ahora.';
+    document.getElementById('banner-dia').innerHTML = '<strong>No se pudo cargar data.json.</strong> Si estás abriendo este archivo localmente (file://), abrilo desde un servidor o desde la URL publicada.';
     document.getElementById('footer-info').textContent = '';
     return;
   }
 
-  // Los videos publicados se conocen antes de dibujar la lista (el boton
-  // "Ver video" solo aparece si el video de ese despacho esta en la pagina).
-  await Promise.all([cargarManifestClips(), cargarManifestInformes()]);
+  cargarManifestClips();
+  cargarManifestInformes();
   renderDesactualizado(datosActuales);
   renderEstado(datosActuales.estado);
 
@@ -518,26 +504,19 @@ async function main() {
   const footer = document.getElementById('footer-info');
 
   if (dias.length === 0) {
-    document.getElementById('banner-dia').innerHTML = '<strong>Todavía no hay conteos publicados.</strong> La página se actualiza sola en cuanto el servidor publique el primero.';
-    document.getElementById('dia-cifra').textContent = 'Sin conteos todavía.';
+    document.getElementById('banner-dia').innerHTML = '<strong>Todavía no hay datos procesados.</strong> Esta página se actualiza sola apenas corra la primera corrida diaria.';
     selector.style.display = 'none';
-    footer.textContent = textoFooter(datosActuales);
+    footer.textContent = 'Generado: ' + (datosActuales.generado_en || '—') + ' · se refresca sola cada 25s.';
     setInterval(refrescar, INTERVALO_REFRESCO_MS);
     return;
   }
 
-  selector.innerHTML = dias.map(d => `<option value="${d.fecha}">${etiquetaFecha(d.fecha)}</option>`).join('');
-  selector.addEventListener('change', () => {
-    const dia = ordenarDias(datosActuales.dias).find(d => d.fecha === selector.value);
-    if (dia) { renderDia(dia); ponerDiaEnUrl(dia.fecha); }
-  });
-  const pedido = new URLSearchParams(location.search).get('dia');
-  const inicial = dias.find(d => d.fecha === pedido) || dias[0];
-  selector.value = inicial.fecha;
+  selector.innerHTML = dias.map(d => `<option value="${d.fecha}">${d.fecha}</option>`).join('');
+  selector.addEventListener('change', () => renderDia(dias.find(d => d.fecha === selector.value)));
   renderTendencia(dias);
-  renderDia(inicial);
+  renderDia(dias[0]);
 
-  footer.textContent = textoFooter(datosActuales);
+  footer.textContent = 'Última actualización: ' + (datosActuales.generado_en || '—') + ' · la página se refresca sola cada 25s.';
   setInterval(refrescar, INTERVALO_REFRESCO_MS);
 }
 
@@ -545,31 +524,12 @@ function seleccionarFecha(fecha) {
   const selector = document.getElementById('selector-fecha');
   selector.value = fecha;
   const dia = ordenarDias(datosActuales.dias).find(d => d.fecha === fecha);
-  if (dia) { renderDia(dia); ponerDiaEnUrl(fecha); }
-  desplazarA(document.getElementById('hero-dia'), 'start');
+  if (dia) renderDia(dia);
+  document.getElementById('tiles-dia').scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-// El dia elegido queda en la direccion para poder compartir el enlace de un
-// dia; el dia mas reciente no lleva parametro (asi un marcador siempre abre hoy).
-function ponerDiaEnUrl(fecha) {
-  try {
-    const dias = ordenarDias(datosActuales.dias);
-    const url = new URL(location.href);
-    if (dias.length && dias[0].fecha === fecha) url.searchParams.delete('dia');
-    else url.searchParams.set('dia', fecha);
-    history.replaceState(null, '', url);
-  } catch (e) {}
-}
-
-function textoFooter(datos) {
-  const cuando = datos && datos.generado_en ? FMT_FECHA_HORA.format(new Date(datos.generado_en)) : 'sin dato';
-  return `Datos publicados por el servidor de la planta: ${cuando}. La página se actualiza sola cada 25 segundos.`;
-}
-
-// Ultimos 14 dias: una barra por dia con los bloques confirmados (sin la
-// noche/madrugada por revisar). Tocar una barra abre ese dia.
 function renderTendencia(dias) {
-  const reales = dias.filter(d => d.conteo_real).slice(0, 14).reverse();  // cronologico
+  const reales = dias.filter(d => d.conteo_real).slice(0, 14).reverse();  // hasta 14 dias, cronologico
   const seccion = document.getElementById('seccion-tendencia');
   if (reales.length < 2) { seccion.style.display = 'none'; return; }
   seccion.style.display = '';
@@ -578,14 +538,15 @@ function renderTendencia(dias) {
   const maxV = Math.max(...totales, 1);
   document.getElementById('chart-tendencia').innerHTML = reales.map((d, i) => {
     const v = totales[i];
-    const f = new Date(d.fecha + 'T12:00:00');
-    const sem = f.toLocaleDateString('es-CO', { weekday: 'short' }).replace('.', '');
-    const sel = d.fecha === fechaSeleccionada;
-    return `<button type="button" class="tend-col ${sel ? 'sel' : ''}" data-fecha="${d.fecha}" aria-pressed="${sel}" aria-label="${fechaLarga(d.fecha)}: ${v} bloques confirmados" onclick="seleccionarFecha('${d.fecha}')">
-      <span class="tend-num">${v}</span>
-      <span class="tend-barra" style="height:${v === 0 ? 0 : Math.max(4, v / maxV * 100)}%"></span>
-      <span class="tend-dia"><span class="sem">${sem} </span>${f.getDate()}</span>
-    </button>`;
+    const alt = v === 0 ? 2 : Math.max((v / maxV) * 100, 6);
+    const dm = d.fecha.slice(5);  // MM-DD
+    return `<div class="bar-col" onclick="seleccionarFecha('${d.fecha}')" style="cursor:pointer">
+      <div class="bar ${v === 0 ? 'vacia' : ''}" style="height:${alt}%">
+        ${v > 0 ? `<span class="bar-value">${v}</span>` : ''}
+        <span class="tooltip">${d.fecha} — ${v} bloques</span>
+      </div>
+      <span class="x-label">${dm}</span>
+    </div>`;
   }).join('');
 }
 
@@ -605,7 +566,7 @@ async function refrescar() {
   if (dias.length === 0) return;
 
   const seleccionActual = selector.value;
-  selector.innerHTML = dias.map(d => `<option value="${d.fecha}">${etiquetaFecha(d.fecha)}</option>`).join('');
+  selector.innerHTML = dias.map(d => `<option value="${d.fecha}">${d.fecha}</option>`).join('');
   const diaAMostrar = dias.find(d => d.fecha === seleccionActual) || dias[0];
   selector.value = diaAMostrar.fecha;
   selector.style.display = '';
@@ -613,7 +574,7 @@ async function refrescar() {
   renderDia(diaAMostrar);
 
   document.getElementById('footer-info').textContent =
-    textoFooter(datosActuales);
+    'Última actualización: ' + (datosActuales.generado_en || '—') + ' · la página se refresca sola cada 25s.';
 }
 
 // Si el servidor deja de publicar, la pagina queda congelada con datos
@@ -625,29 +586,28 @@ function renderDesactualizado(datos) {
   const min = epoch ? (Date.now() / 1000 - epoch) / 60 : null;
   if (min === null || min <= MAX_MIN_SIN_ACTUALIZAR) { el.style.display = 'none'; return; }
   el.style.display = '';
-  el.innerHTML = `<span class="banner-ico">${ICO.alerta}</span><span><strong>Esta página no se actualiza desde el ${FMT_FECHA_HORA.format(new Date(epoch * 1000))}.</strong> El servidor puede estar apagado, sin internet o sin permiso para publicar. Los datos de abajo pueden estar desactualizados.</span>`;
+  el.innerHTML = `<span class="banner-ico">${ICO.alerta}</span><span><strong>Esta página no se actualiza desde hace ${tiempoRelativo(new Date(epoch * 1000).toISOString()).replace('hace ', '')}.</strong> El servidor puede estar apagado, sin internet o sin permiso para publicar. Los datos de abajo pueden estar desactualizados.</span>`;
 }
 
 function renderEstado(estado) {
   const cont = document.getElementById('panel-estado');
-  const items = [];  // {titulo, ok, mensaje, cuando}
+  const items = [];
 
   if (estado && estado.dvr) {
-    items.push({ titulo: 'Grabador (DVR)', ok: estado.dvr.ok, mensaje: estado.dvr.mensaje, cuando: estado.dvr.verificado_en });
+    items.push(estadoItem('Grabador (DVR)', estado.dvr.ok, estado.dvr.mensaje, estado.dvr.verificado_en));
   }
   if (estado && estado.conteo_en_vivo) {
     estado.conteo_en_vivo.forEach(p => {
-      const titulo = (!p.planta || p.planta === 'desconocida') ? 'Conteo en vivo' : 'Conteo en vivo, planta ' + p.planta;
-      items.push({ titulo, ok: p.ok, mensaje: p.mensaje, cuando: p.ultimo_heartbeat });
+      items.push(estadoItem('Conteo en vivo — Planta ' + p.planta, p.ok, p.mensaje, p.ultimo_heartbeat));
     });
   }
   const sistema = (estado && estado.sistema) || {};
   const nombres = { disco: 'Disco del servidor', publicacion: 'Publicación de esta página',
-    mantenimiento: 'Mantenimiento automático', informes: 'Informe diario en Excel',
+    mantenimiento: 'Mantenimiento automático', informes: 'Informe diario (Excel)',
     clips: 'Videos en la página', vigia: 'Vigía de actividad', planilla: 'Planilla de los trabajadores',
     atribucion: 'Planta de despachos anteriores' };
   Object.keys(nombres).forEach(k => {
-    if (sistema[k]) items.push({ titulo: nombres[k], ok: sistema[k].ok, mensaje: sistema[k].mensaje, cuando: sistema[k].actualizado_en });
+    if (sistema[k]) items.push(estadoItem(nombres[k], sistema[k].ok, sistema[k].mensaje, sistema[k].actualizado_en));
   });
   // La corrida por lote (procesar-diario) esta apagada en el servidor: su
   // ultimo resultado viejo solo confunde. Se muestra solo si es reciente.
@@ -657,39 +617,23 @@ function renderEstado(estado) {
     const pd = estado.procesamiento_diario;
     // El estado que persiste procesar-diario es 'completado' / 'error' (no 'ok').
     const corridaOk = pd.estado === 'completado' || pd.estado === 'ok';
-    items.push({ titulo: 'Última corrida diaria (' + pd.fecha + ')', ok: corridaOk, mensaje: pd.mensaje, cuando: pd.actualizado_en });
+    items.push(estadoItem('Última corrida diaria (' + pd.fecha + ')', corridaOk, pd.mensaje, pd.actualizado_en));
   }
 
   cont.innerHTML = items.length
-    ? items.map(x => estadoItem(x.titulo, x.ok, x.mensaje, x.cuando)).join('')
-    : '<div class="empty-state">Todavía no hay chequeos registrados.</div>';
-
-  // Una sola linea arriba: todo bien, o que hay que atender (el detalle se abre aparte).
-  const problemas = items.filter(x => x.ok === false);
-  const resumen = document.getElementById('estado-resumen');
-  const punto = document.getElementById('estado-punto');
-  if (!items.length) {
-    resumen.textContent = 'Estado del sistema: sin chequeos todavía';
-    punto.className = 'punto';
-  } else if (problemas.length === 0) {
-    resumen.innerHTML = 'Estado del sistema: <strong>todo funciona</strong>';
-    punto.className = 'punto ok';
-  } else {
-    const nombresMal = problemas.map(x => x.titulo.charAt(0).toLowerCase() + x.titulo.slice(1)).join(', ');
-    resumen.innerHTML = `Estado del sistema: <strong>${plural(problemas.length, 'cosa por atender', 'cosas por atender')}</strong> (${nombresMal})`;
-    punto.className = 'punto mal';
-  }
+    ? items.join('')
+    : '<div class="empty-state">Todavía no hay chequeos registrados (verificar-dahua / verificar-conteo-en-vivo / procesar-diario).</div>';
 }
 
 function estadoItem(titulo, ok, mensaje, cuando) {
   const clase = ok === true ? 'ok' : ok === false ? 'problema' : 'pendiente';
-  const textoBadge = ok === true ? 'Bien' : ok === false ? 'Atención' : 'Pendiente';
+  const textoBadge = ok === true ? 'OK' : ok === false ? 'Alerta' : 'Pendiente';
   return `
     <div class="estado-item ${clase}">
       <span class="estado-dot"></span>
       <div class="estado-texto">
         <p class="estado-titulo">${titulo}<span class="estado-badge">${textoBadge}</span></p>
-        <p class="estado-mensaje">${mensaje || 'Sin detalle.'}</p>
+        <p class="estado-mensaje">${mensaje || '—'}</p>
       </div>
       <span class="estado-cuando">${cuando ? tiempoRelativo(cuando) : ''}</span>
     </div>`;
@@ -697,94 +641,76 @@ function estadoItem(titulo, ok, mensaje, cuando) {
 
 function tiempoRelativo(iso) {
   const segs = Math.max(0, Math.round((Date.now() - new Date(iso).getTime()) / 1000));
-  if (segs < 60) return RTF.format(-segs, 'second');
-  if (segs < 3600) return RTF.format(-Math.round(segs / 60), 'minute');
-  if (segs < 86400) return RTF.format(-Math.round(segs / 3600), 'hour');
-  return RTF.format(-Math.round(segs / 86400), 'day');
+  if (segs < 60) return 'hace ' + segs + 's';
+  if (segs < 3600) return 'hace ' + Math.round(segs / 60) + 'min';
+  if (segs < 86400) return 'hace ' + Math.round(segs / 3600) + 'h';
+  return 'hace ' + Math.round(segs / 86400) + 'd';
 }
-
-// --- Fechas en palabras ---
-function fechaLarga(f) {
-  return new Date(f + 'T12:00:00').toLocaleDateString('es-CO', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-}
-function etiquetaFecha(f) {
-  return new Date(f + 'T12:00:00').toLocaleDateString('es-CO', { weekday: 'short', day: 'numeric', month: 'short' });
-}
-function hoyISO() { return new Date().toLocaleDateString('sv-SE'); }
-
-// Color de la barra del molde de cada planta (la pintura real).
-const COLOR_PLANTA = { '1': 'var(--p1)', '2': 'var(--p2)', '3': 'var(--p3)', '4': 'var(--p4)' };
-function colorPlanta(p) { return COLOR_PLANTA[p] || 'var(--p0)'; }
-function plural(n, uno, varios) { return n + ' ' + (n === 1 ? uno : varios); }
-
-let ultimaFechaRampa = null;
 
 function renderDia(dia) {
+  document.getElementById('titulo-fecha-actividad').textContent = dia.fecha;
   fechaSeleccionada = dia.fecha;
   renderListaClips();  // los clips se filtran por el dia que se esta viendo
-  document.getElementById('banner-dia').innerHTML = '';
 
   const despachos = dia.despachos || [];
   const confiables = despachos.filter(d => !d.por_revisar);
   const porRevisar = despachos.filter(d => d.por_revisar);
-  const bloquesConf = confiables.reduce((a, d) => a + d.bloques, 0);
-  const bloquesRev = porRevisar.reduce((a, d) => a + d.bloques, 0);
-  const esHoy = dia.fecha === hoyISO();
+  const bloquesConfiables = confiables.reduce((a, d) => a + d.bloques, 0);
+  const bloquesRevisar = porRevisar.reduce((a, d) => a + d.bloques, 0);
+  const primero = confiables.length ? horaCorta(confiables[0].hora).slice(0, 5) : '—';
+  const ultimo = confiables.length ? horaCorta(confiables[confiables.length - 1].hora).slice(0, 5) : '—';
 
-  ponerTexto(document.getElementById('dia-fecha'), fechaLarga(dia.fecha) + (esHoy ? ', en curso' : ''));
-  const cifra = document.getElementById('dia-cifra');
-  const partes = [];
+  const banner = document.getElementById('banner-dia');
+  let bannerTexto;
   if (!dia.conteo_real) {
-    ponerHTML(cifra, 'Este día el conteo por despacho todavía estaba en calibración.');
-  } else if (despachos.length === 0) {
-    ponerHTML(cifra, esHoy ? 'Todavía no ha salido ningún molde hoy.' : 'Ese día no salió ningún molde.');
-  } else if (confiables.length === 0) {
-    ponerHTML(cifra, 'Ningún bloque confirmado todavía.');
+    bannerTexto = `<strong>${dia.fecha}</strong> — el conteo por despacho para este día todavía está en calibración (ver "Estado del proyecto" más abajo); los horarios de actividad sí son reales.`;
+  } else if (porRevisar.length) {
+    bannerTexto = `<strong>${dia.fecha}</strong> — ${bloquesConfiables} bloques confirmados. ${bloquesRevisar} bloques (${porRevisar.length} despacho${porRevisar.length > 1 ? 's' : ''}) cayeron en madrugada y están <strong>por revisar</strong>: esa franja todavía no es confiable, no se suma al total confirmado.`;
   } else {
-    ponerHTML(cifra, `<span class="num">${bloquesConf}</span> ${bloquesConf === 1 ? 'bloque confirmado' : 'bloques confirmados'} en ${plural(confiables.length, 'molde', 'moldes')}.`);
+    bannerTexto = `<strong>${dia.fecha}</strong> — ${bloquesConfiables} bloques confirmados en ${confiables.length} despacho${confiables.length === 1 ? '' : 's'}, con hora exacta y respaldo en video.`;
   }
-  if (confiables.length) {
-    const primero = horaMin(confiables[0].hora);
-    const ultimo = horaMin(confiables[confiables.length - 1].hora);
-    partes.push(confiables.length === 1 ? `Salió a las ${primero}.` : `El primero salió a las ${primero} y el último a las ${ultimo}.`);
-  }
-  if (porRevisar.length) {
-    partes.push(`${confiables.length ? 'Además, ' : ''}${plural(bloquesRev, 'bloque', 'bloques')} (${plural(porRevisar.length, 'molde', 'moldes')}) ${porRevisar.length === 1 ? 'salió' : 'salieron'} de noche o de madrugada: ${porRevisar.length === 1 ? 'está' : 'están'} por revisar en video, porque el conteo de esas horas está en ajuste.`);
-  }
-  const cob = dia.cobertura;
-  if (cob && cob.porcentaje != null) {
-    partes.push(`La cámara estuvo contando el ${Math.round(cob.porcentaje)}${NBSP}% del día${esHoy ? ' hasta ahora' : ''}.`);
-  }
-  ponerTexto(document.getElementById('dia-detalle'), partes.join(' '));
+  banner.innerHTML = `<span class="banner-ico">${ICO.info}</span><span>${bannerTexto}</span>`;
 
   const bannerAnomalia = document.getElementById('banner-anomalia');
-  if (dia.anomalia && dia.anomalia.es_anomalia && !esHoy) {
+  if (dia.anomalia && dia.anomalia.es_anomalia) {
     bannerAnomalia.style.display = '';
-    bannerAnomalia.innerHTML = `<span class="banner-ico">${ICO.alerta}</span><span><strong>Volumen fuera de lo normal.</strong> ${dia.anomalia.motivo}</span>`;
+    bannerAnomalia.innerHTML = `<strong>Volumen inusual el ${dia.fecha}.</strong> ${dia.anomalia.motivo}`;
   } else {
     bannerAnomalia.style.display = 'none';
   }
 
+  document.getElementById('tiles-dia').innerHTML = `
+    <div class="tile destacada"><div class="tile-head"><span class="tile-ico">${ICO.cubo}</span><p class="label">Bloques confirmados</p></div><p class="value">${dia.conteo_real ? bloquesConfiables : '—'}<span class="unit">bloques</span></p></div>
+    <div class="tile"><div class="tile-head"><span class="tile-ico">${ICO.molde}</span><p class="label">Despachos confirmados</p></div><p class="value">${dia.conteo_real ? confiables.length : '—'}<span class="unit">moldes</span></p></div>
+    <div class="tile ${bloquesRevisar > 0 ? 'aviso' : ''}"><div class="tile-head"><span class="tile-ico">${ICO.luna}</span><p class="label">Por revisar (madrugada)</p></div><p class="value">${dia.conteo_real ? bloquesRevisar : '—'}<span class="unit">bloques</span></p></div>
+    <div class="tile"><div class="tile-head"><span class="tile-ico">${ICO.reloj}</span><p class="label">Rango del día</p></div><p class="value" style="font-size:20px;">${primero}${confiables.length ? '–' + ultimo : ''}</p></div>
+    ${tileCobertura(dia.cobertura)}
+  `;
   renderCobertura(dia);
   renderValidacion(dia);
   renderInforme();
-  renderRampa(dia);
-  renderLeyenda(dia);
+
+  renderDespachosPorHora(despachos, dia.conteo_real);
   renderDespachosLista(despachos, dia.conteo_real);
-  document.querySelectorAll('.tend-col').forEach(c => {
-    const sel = c.dataset.fecha === dia.fecha;
-    c.classList.toggle('sel', sel);
-    c.setAttribute('aria-pressed', sel ? 'true' : 'false');
-  });
+  renderAnalisis(dia);
+  renderConsolidado(dia);
+}
+
+function tileCobertura(cob) {
+  if (!cob || cob.porcentaje == null) {
+    return `<div class="tile"><div class="tile-head"><span class="tile-ico">${ICO.info}</span><p class="label">Tiempo vigilado</p></div><p class="value" style="font-size:20px;">—</p></div>`;
+  }
+  const clase = cob.porcentaje >= 98 ? '' : cob.porcentaje >= 90 ? 'aviso' : 'problema';
+  return `<div class="tile ${clase}" title="Porcentaje del día en que el conteo en vivo estuvo funcionando"><div class="tile-head"><span class="tile-ico">${ICO.info}</span><p class="label">Tiempo vigilado</p></div><p class="value">${cob.porcentaje.toFixed(0)}<span class="unit">%</span></p></div>`;
 }
 
 function renderCobertura(dia) {
   const el = document.getElementById('banner-cobertura');
   const cob = dia.cobertura;
   if (!cob || !cob.huecos || cob.huecos.length === 0) { el.style.display = 'none'; return; }
-  const lista = cob.huecos.map(h => `de ${h.inicio} a ${h.fin} (${h.minutos >= 60 ? NUM1.format(h.minutos / 60) + NBSP + 'h' : h.minutos + NBSP + 'min'})`).join(', ');
+  const lista = cob.huecos.map(h => `${h.inicio}–${h.fin} (${h.minutos >= 60 ? (h.minutos / 60).toFixed(1).replace('.0', '') + ' h' : h.minutos + ' min'})`).join(', ');
   el.style.display = '';
-  el.innerHTML = `<span class="banner-ico">${ICO.alerta}</span><span><strong>La cámara no estuvo contando</strong> ${lista}. Un despacho en esos tramos pudo no quedar registrado; en la rampa se marcan en rojo sobre la línea de horas.</span>`;
+  el.innerHTML = `<span class="banner-ico">${ICO.alerta}</span><span><strong>Tiempo sin vigilancia el ${dia.fecha}:</strong> ${lista}. En esos tramos el conteo en vivo estaba caído y un despacho pudo no contarse.</span>`;
 }
 
 // Cruce con la planilla que llenan los trabajadores (solo cifras, sin
@@ -793,162 +719,182 @@ function renderValidacion(dia) {
   const el = document.getElementById('banner-validacion');
   const v = dia.validacion;
   if (!v) { el.style.display = 'none'; return; }
-  const estilos = { ok: 'ok', inconsistencias: 'alerta', sin_registro: 'aviso', revisar: 'aviso' };
-  const titulos = { ok: 'Todo cuadra con la planilla de los trabajadores.',
-    inconsistencias: 'Hay diferencias con la planilla de los trabajadores.',
-    revisar: 'Lo que se puede verificar cuadra con la planilla; hay tandas por revisar en video.',
+  const estilos = { ok: 'ok', inconsistencias: 'alerta', sin_registro: 'aviso' };
+  const titulos = { ok: '✔ Todo cuadra con la planilla de los trabajadores.',
+    inconsistencias: '✖ Hay inconsistencias con la planilla de los trabajadores.',
     sin_registro: 'Nadie anotó este día en la planilla.' };
   el.className = 'banner ' + (estilos[v.estado] || '');
   el.style.display = '';
   const detalle = v.estado === 'sin_registro' ? '' :
-    ` Anotado: ${v.reportado} bloques. Contado: ${v.sistema}. Tandas que coinciden: ${v.tandas_ok} de ${v.tandas}.` +
-    (v.bloques_sin_reportar ? ` Sin anotar: ${v.bloques_sin_reportar} bloques.` : '');
-  el.innerHTML = `<span class="banner-ico">${v.estado === 'ok' ? ICO.info : ICO.alerta}</span><span><strong>${titulos[v.estado] || ''}</strong> ${v.mensaje}${detalle} El detalle por tanda está en el Excel del día, hoja «Validación».</span>`;
+    ` Anotado: ${v.reportado} bloques · Sistema: ${v.sistema} · Tandas que coinciden: ${v.tandas_ok} de ${v.tandas}` +
+    (v.bloques_sin_reportar ? ` · Sin reportar: ${v.bloques_sin_reportar} bloques` : '') + '.';
+  el.innerHTML = `<span class="banner-ico">${v.estado === 'ok' ? ICO.info : ICO.alerta}</span><span><strong>${titulos[v.estado] || ''}</strong> ${v.mensaje}${detalle} El detalle por tanda está en el Excel del día (hoja «Validación»).</span>`;
 }
 
-// La rampa en 24 horas: una columna por hora y, dentro, un cuadro por molde
-// en el color de la barra de su planta. La noche va rayada (conteo en ajuste)
-// y los cortes de vigilancia se marcan en rojo sobre la linea de horas.
-function renderRampa(dia) {
-  const rampa = document.getElementById('rampa');
-  const cols = document.getElementById('rampa-cols');
-  const base = document.getElementById('rampa-base');
-  const despachos = dia.conteo_real ? (dia.despachos || []) : [];
-  const porHora = Array.from({ length: 24 }, () => []);
-  despachos.forEach((d, i) => porHora[new Date(d.hora).getHours()].push({ d, i }));
-  cols.style.setProperty('--n', Math.max(1, ...porHora.map(x => x.length)));  // alto de cada cuadro: CSS
-  let orden = 0;
-  cols.innerHTML = porHora.map((lista, hora) => {
-    const noche = hora < 7 || hora >= 19;
-    const moldes = lista.map(({ d, i }) => {
-      const planta = (!d.planta || d.planta === 'desconocida') ? 'planta sin identificar' : 'planta ' + d.planta;
-      const etiqueta = `${horaMin(d.hora)}, ${planta}, ${d.bloques} bloques${d.por_revisar ? ', por revisar' : ''}`;
-      return `<button type="button" class="molde ${d.por_revisar ? 'revisar' : ''}" style="--c:${colorPlanta(d.planta)};--i:${orden++}" aria-label="${etiqueta}" title="${etiqueta}" onclick="irADespacho(${i})"></button>`;
-    }).join('');
-    return `<div class="rampa-col ${noche ? 'noche' : ''}">${moldes}</div>`;
-  }).join('');
-  const vacia = rampa.querySelector('.rampa-vacia');
-  if (vacia) vacia.remove();
-  if (!dia.conteo_real || despachos.length === 0) {
-    const aviso = document.createElement('div');
-    aviso.className = 'rampa-vacia';
-    aviso.textContent = !dia.conteo_real ? 'Conteo por despacho en calibración este día.' : 'Sin moldes registrados este día.';
-    rampa.appendChild(aviso);
-  }
-  const huecos = (dia.cobertura && dia.cobertura.huecos) || [];
-  const aMin = t => { const [a, b] = t.split(':').map(Number); return a * 60 + b; };
-  base.innerHTML = huecos.map(x => {
-    const ini = aMin(x.inicio), fin = Math.max(aMin(x.fin), ini + 1);
-    return `<span class="hueco" style="left:${ini / 14.4}%;width:${(fin - ini) / 14.4}%" title="Sin vigilancia de ${x.inicio} a ${x.fin}"></span>`;
-  }).join('');
-  // Los cuadros caen una sola vez por dia elegido, no en cada refresco.
-  // (los cuadros son nodos nuevos: basta con que la clase este puesta)
-  if (ultimaFechaRampa !== dia.fecha) {
-    rampa.classList.add('entrando');
-    ultimaFechaRampa = dia.fecha;
-  } else {
-    rampa.classList.remove('entrando');  // el refresco cada 25 s no repite la animacion
-  }
+function renderAnalisis(dia) {
+  const planta = dia.por_planta || [];
+  const clase = dia.por_clase || [];
+  const nota = document.getElementById('nota-analisis');
+  // Si todo cae en "desconocida", la atribucion por color aun no esta activa.
+  const soloDesconocida = planta.length > 0 && planta.every(p => p.planta === 'desconocida');
+  nota.innerHTML = soloDesconocida
+    ? 'Producción del día por planta y tamaño, según el <strong>color de la barra del molde</strong>. Este día todavía no tiene planta identificada: los despachos anteriores al 26 de septiembre se procesan de a poco cada noche.'
+    : 'Producción del día desglosada por planta de origen y por tamaño de bloque (grande / pequeño).';
+  renderBarrasH('chart-planta', planta.map(p => ({
+    etiqueta: p.planta === 'desconocida' ? 'Sin identificar' : 'Planta ' + p.planta,
+    valor: p.bloques, sub: p.despachos, cls: p.planta === 'desconocida' ? 'desc' : 'plt' + p.planta,
+  })));
+  renderBarrasH('chart-clase', clase.map(c => ({
+    etiqueta: c.etiqueta, valor: c.bloques, sub: c.despachos, cls: '',
+  })));
 }
 
-function renderLeyenda(dia) {
-  const el = document.getElementById('leyenda-plantas');
-  const despachos = dia.conteo_real ? (dia.despachos || []) : [];
-  const conf = despachos.filter(d => !d.por_revisar);
-  const rev = despachos.filter(d => d.por_revisar);
-  const porPlanta = {};
-  conf.forEach(d => {
-    const p = (!d.planta || d.planta === 'desconocida') ? '' : d.planta;
-    porPlanta[p] = porPlanta[p] || { moldes: 0, bloques: 0 };
-    porPlanta[p].moldes += 1; porPlanta[p].bloques += d.bloques;
+function renderBarrasH(id, filas) {
+  const cont = document.getElementById(id);
+  if (!filas.length) { cont.innerHTML = '<div class="empty-state">Sin datos confirmados este día.</div>'; return; }
+  const max = Math.max(...filas.map(f => f.valor), 1);
+  cont.innerHTML = filas.map(f => `
+    <div class="barra-h ${f.cls}">
+      <span class="etq" title="${f.etiqueta}">${f.etiqueta}</span>
+      <span class="via"><span class="fill" style="width:${Math.round(f.valor / max * 100)}%"></span></span>
+      <span class="val">${f.valor} <span style="font-weight:500;color:var(--text-muted)">(${f.sub})</span></span>
+    </div>`).join('');
+}
+
+function renderDespachosPorHora(despachos, conteoReal) {
+  const el = document.getElementById('chart-despachos');
+  if (!conteoReal) {
+    el.innerHTML = `<div class="empty-state">Conteo por despacho en calibración para este día — ver "Estado del proyecto".</div>`;
+    return;
+  }
+  if (despachos.length === 0) {
+    el.innerHTML = `<div class="empty-state">Sin despachos detectados este día.</div>`;
+    return;
+  }
+  // Distribucion sobre las 24h, para que la forma del dia sea legible aunque
+  // haya horas vacias en el medio. Las horas de madrugada (por revisar) se
+  // pintan distinto para no leerlas como produccion confirmada.
+  const porHora = {}, bloquesHora = {}, revisarHora = {};
+  despachos.forEach(d => {
+    const h = new Date(d.hora).getHours();
+    porHora[h] = (porHora[h] || 0) + 1;
+    bloquesHora[h] = (bloquesHora[h] || 0) + d.bloques;
+    if (d.por_revisar) revisarHora[h] = true;
   });
-  const items = Object.keys(porPlanta).sort((a, b) => (a || '9').localeCompare(b || '9')).map(p => {
-    const x = porPlanta[p];
-    return `<span class="item"><span class="muestra" style="--c:${colorPlanta(p)}"></span><span><strong>${p ? 'Planta ' + p : 'Sin color identificado'}</strong> ${x.bloques} bloques en ${plural(x.moldes, 'molde', 'moldes')}</span></span>`;
-  });
-  if (rev.length) {
-    items.push(`<span class="item"><span class="muestra rayada"></span><span><strong>Por revisar</strong> ${rev.reduce((a, d) => a + d.bloques, 0)} bloques de noche o madrugada</span></span>`);
+  const hMin = Math.min(...Object.keys(porHora).map(Number));
+  const hMax = Math.max(...Object.keys(porHora).map(Number));
+  const maxV = Math.max(...Object.values(porHora));
+  let cols = '';
+  for (let h = hMin; h <= hMax; h++) {
+    const v = porHora[h] || 0;
+    const alt = v === 0 ? 2 : Math.max((v / maxV) * 100, 8);
+    const clase = v === 0 ? 'vacia' : (revisarHora[h] ? 'revisar' : '');
+    const nota = revisarHora[h] ? ' · por revisar' : '';
+    cols += `<div class="bar-col">
+      <div class="bar ${clase}" style="height:${alt}%">
+        ${v > 0 ? `<span class="bar-value">${v}</span>` : ''}
+        ${v > 0 ? `<span class="tooltip">${String(h).padStart(2,'0')}:00 — ${v} despacho(s) · ${bloquesHora[h]} bloques${nota}</span>` : ''}
+      </div>
+      <span class="x-label">${String(h).padStart(2,'0')}h</span>
+    </div>`;
   }
-  if ((dia.cobertura && dia.cobertura.huecos || []).length) {
-    items.push(`<span class="item"><span class="muestra hueco"></span><span>Cámara sin contar</span></span>`);
-  }
-  // Tamaño de los bloques confirmados (por el color de la barra y/o la forma del molde).
-  const porClase = {};
-  conf.forEach(d => { porClase[d.clase] = (porClase[d.clase] || 0) + d.bloques; });
-  const tamanos = ['bloque_grande', 'bloque_pequeno', 'sin_identificar'].filter(k => porClase[k])
-    .map(k => ({ bloque_grande: `${porClase[k]} grandes`, bloque_pequeno: `${porClase[k]} pequeños`, sin_identificar: `${porClase[k]} sin tamaño identificado` })[k]);
-  if (tamanos.length) items.push(`<span class="item tamanos">Tamaño: ${tamanos.join(', ')}.</span>`);
-  el.innerHTML = items.join('');
-}
-
-// Toca un cuadro de la rampa -> baja a su fila y la resalta un momento.
-function irADespacho(i) {
-  const fila = document.getElementById('despacho-' + i);
-  if (!fila) return;
-  desplazarA(fila, 'center');
-  fila.classList.add('resaltado');
-  setTimeout(() => fila.classList.remove('resaltado'), 1400);
+  el.innerHTML = cols;
 }
 
 function renderDespachosLista(despachos, conteoReal) {
   const cont = document.getElementById('despachos-lista');
   if (!conteoReal || despachos.length === 0) {
-    cont.innerHTML = `<li class="empty-state">${conteoReal ? 'Sin despachos este día.' : 'Conteo por despacho en calibración este día.'}</li>`;
+    cont.innerHTML = `<div class="empty-state">Sin despachos confirmados para este día.</div>`;
     return;
   }
+  const etiquetas = { bloque_grande: 'Bloque grande', bloque_pequeno: 'Bloque pequeño', sin_identificar: 'Sin identificar' };
   cont.innerHTML = despachos.map((d, i) => {
     const planta = (!d.planta || d.planta === 'desconocida') ? 'Planta sin identificar'
-      : 'Planta ' + d.planta + (d.planta_deducida ? ' (deducida por el tamaño)' : '');
-    const clase = { bloque_grande: 'bloque grande', bloque_pequeno: 'bloque pequeño' }[d.clase];
-    const notas = [];
-    if (d.por_revisar) notas.push(`<span class="nota-aviso">${d.motivo_revision === 'noche' ? 'De noche' : 'De madrugada'}: por revisar en video</span>`);
+      : 'Planta ' + d.planta + (d.planta_deducida ? ' (deducida)' : '');
     // Como se decidio el tamano: color de la barra y/o forma del molde
     // (analytics/despachos.py, combinar_color_y_forma).
-    if (d.tamano === 'color_y_forma') notas.push('<span class="nota-ok">Color y forma del molde coinciden</span>');
-    if (d.tamano === 'discrepancia') notas.push('<span class="nota-mal">El color y la forma del molde no coinciden: revisar el video</span>');
-    if (d.tamano === 'solo_forma') notas.push('<span class="nota-neutra">Sin color visible: tamaño por la forma del molde</span>');
-    // Muy seguido del anterior: puede ser el MISMO molde contado dos veces
-    // (ver analytics/despachos.GAP_SOSPECHOSO_SEG). Solo marca cual mirar.
-    if (d.gap_sospechoso) notas.push(`<span class="nota-mal">Solo ${minutos(d.gap_anterior_seg)} después del anterior: puede estar contado dos veces</span>`);
-    const video = !d.evidencia ? `<span class="d-sin">Sin video</span>`
-      : clipDelDespacho(d.hora) >= 0
-        ? `<button type="button" class="d-video" onclick="reproducirDespacho('${d.hora}')">Ver video</button>`
-        : `<span class="d-sin">Video en el servidor</span>`;
+    const tamanoAviso = {
+      color_y_forma: `<span class="despacho-tamano ok" title="El color de la barra y la forma del molde dicen lo mismo">✓ color y forma</span>`,
+      discrepancia: `<span class="despacho-tamano mal" title="El color de la barra y la forma del molde no coinciden: se muestra lo que dice el color. Revisar el video.">color y forma no coinciden</span>`,
+      solo_forma: `<span class="despacho-tamano forma" title="No se vio la barra de color: el tamaño sale de la forma del molde${d.planta_deducida ? ' y la planta, de que solo esa planta produce ese tamaño' : ''}">por la forma del molde</span>`,
+    }[d.tamano] || '';
+    const video = d.evidencia
+      ? `<button type="button" class="despacho-ev con" onclick="reproducirDespacho('${d.hora}')" title="Ver respaldo en video">${ICO.play} video</button>`
+      : `<span class="despacho-ev sin" title="Sin clip">—</span>`;
+    // Gap corto respecto al despacho anterior: probablemente el MISMO molde
+    // contado dos veces porque el operario tuvo que entrar a ayudar con un
+    // hielo pegado (ver data_export.GAP_SOSPECHOSO_SEG). Solo marca cual
+    // conviene mirar primero; el numero no se descuenta solo.
+    const gapAviso = d.gap_sospechoso
+      ? `<span class="despacho-gap" title="Solo ${minutos(d.gap_anterior_seg)} despues del anterior: puede ser el mismo molde contado dos veces. Revisar el video.">${ICO.alerta} ${minutos(d.gap_anterior_seg)} tras el anterior</span>`
+      : '';
     return `
-    <li class="despacho ${d.por_revisar ? 'revisar' : ''}" id="despacho-${i}">
-      <span class="d-hora">${horaCorta(d.hora)}</span>
-      <span class="d-molde" style="--c:${colorPlanta(d.planta)}" aria-hidden="true"></span>
-      <div class="d-texto">
-        <p class="d-que">${planta}${clase ? ', ' + clase : ''} <span class="nota-sec">(${d.bloques} bloques)</span></p>
-        ${notas.length ? `<p class="d-notas">${notas.join('')}</p>` : ''}
-      </div>
+    <div class="despacho-row ${d.por_revisar ? 'revisar' : ''} ${d.gap_sospechoso ? 'gap-corto' : ''}">
+      <span class="despacho-num">${i + 1}</span>
+      <span class="despacho-hora">${horaCorta(d.hora)}</span>
+      <span class="despacho-info">
+        <span class="despacho-bloques">${d.bloques} bloques</span>
+        <span class="despacho-clase">${planta} · ${etiquetas[d.clase] || d.clase}</span>
+        ${tamanoAviso}
+        ${d.por_revisar ? '<span class="despacho-revisar">madrugada · por revisar</span>' : ''}
+        ${gapAviso}
+      </span>
       ${video}
-    </li>`;
+    </div>`;
   }).join('');
 }
 
 // Conecta un despacho (de data.json) con su clip de evidencia (de clips.json)
 // por hora exacta -- el clip de evidencia se guarda con hora = timestamp del
 // evento (ver clips_publish.py). Reusa el reproductor cifrado ya existente.
-function clipDelDespacho(hora) {
-  if (!manifestClips || !manifestClips.clips) return -1;
-  return manifestClips.clips.findIndex(c => c.tipo === 'evidencia' && c.hora === hora);
+function reproducirDespacho(hora) {
+  if (!manifestClips || !manifestClips.clips) {
+    alert('Los clips todavía no están disponibles en esta página.');
+    return;
+  }
+  const idx = manifestClips.clips.findIndex(c => c.tipo === 'evidencia' && c.hora === hora);
+  if (idx < 0) {
+    alert('El video de este despacho no está publicado (los clips cubren solo los días más recientes).');
+    return;
+  }
+  document.getElementById('seccion-clips').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  reproducirClip(idx);
 }
 
-function reproducirDespacho(hora) {
-  const idx = clipDelDespacho(hora);
-  if (idx < 0) return;  // sin video publicado la fila no muestra el boton
-  desplazarA(document.getElementById('seccion-clips'), 'start');
-  reproducirClip(idx);
+function renderConsolidado(dia) {
+  const card = document.getElementById('card-consolidado');
+  if (!dia.conteo_real || dia.consolidado.length === 0) {
+    card.innerHTML = `<div class="empty-state">Conteo por presentación en calibración para este día — ver "Estado del proyecto".</div>`;
+    return;
+  }
+  const colores = { bloque_grande: 'var(--series-1)', bloque_pequeno: 'var(--series-2)' };
+  const etiquetas = { bloque_grande: 'Bloque grande', bloque_pequeno: 'Bloque pequeño', sin_identificar: 'Sin identificar' };
+  const max = Math.max(...dia.consolidado.map(c => c.unidades), 1);
+
+  card.innerHTML = `
+    <div class="legend">${dia.consolidado.map(c => `<span class="key"><span class="dot" style="background:${colores[c.clase] || 'var(--text-muted)'}"></span>${etiquetas[c.clase] || c.clase}</span>`).join('')}</div>
+    <div class="bars">
+      ${dia.consolidado.map(c => `
+        <div class="bar-col">
+          <div class="bar" style="height:${(c.unidades / max) * 100}%; background:${colores[c.clase] || 'var(--text-muted)'}">
+            <span class="bar-value">${c.unidades}</span>
+            <span class="tooltip">${etiquetas[c.clase] || c.clase}: ${c.unidades}</span>
+          </div>
+          <span class="x-label">${etiquetas[c.clase] || c.clase}</span>
+        </div>`).join('')}
+    </div>`;
 }
 
 function minutos(seg) {
   if (seg == null) return '';
-  return seg < 90 ? Math.round(seg) + NBSP + 's' : NUM1.format(seg / 60) + NBSP + 'min';
+  return seg < 90 ? Math.round(seg) + ' s' : (seg / 60).toFixed(1).replace('.0', '') + ' min';
 }
 
-function horaCorta(iso) { return iso ? FMT_HORA.format(new Date(iso)) : '—'; }
-function horaMin(iso) { return iso ? FMT_HORA_MIN.format(new Date(iso)) : '—'; }
+function horaCorta(iso) {
+  if (!iso) return '—';
+  const d = new Date(iso);
+  return d.toTimeString().slice(0, 8);
+}
 
 // --- Clips: password-protegidos, cifrados en reposo (ver clips_crypto.py) ---
 // La contraseña nunca sale de este navegador: se deriva una clave AES-256
@@ -1006,18 +952,16 @@ function renderInforme() {
   document.getElementById('informe-error').style.display = 'none';
   input.style.display = passwordCompartida ? 'none' : '';
   if (!inf) {
-    document.getElementById('informe-texto').textContent = 'Todavía no hay informe publicado para este día.';
+    document.getElementById('informe-texto').textContent = `Todavía no hay informe publicado para el ${fechaSeleccionada || 'día seleccionado'}.`;
     document.getElementById('informe-meta').textContent = '';
     boton.disabled = true;
     return;
   }
   boton.disabled = false;
   document.getElementById('informe-texto').textContent = inf.parcial
-    ? 'Informe parcial: el día sigue en curso y el archivo se actualiza cada 6 horas.'
-    : `Informe completo del ${fechaLarga(inf.fecha)}.`;
-  document.getElementById('informe-meta').textContent = inf.generado_en
-    ? 'Generado el ' + FMT_FECHA_HORA.format(new Date(inf.generado_en)) + '.'
-    : '';
+    ? `Informe parcial del ${inf.fecha} (día en curso). Se actualiza cada pocas horas.`
+    : `Informe completo del ${inf.fecha}.`;
+  document.getElementById('informe-meta').textContent = 'Generado: ' + (inf.generado_en || '—').replace('T', ' ');
 }
 
 async function descargarInforme() {
@@ -1034,7 +978,6 @@ async function descargarInforme() {
   const boton = document.getElementById('informe-descargar');
   const textoOriginal = boton.textContent;
   boton.textContent = 'Descargando…';
-  boton.disabled = true;  // un clic = una descarga
   try {
     const resp = await fetch('./' + inf.archivo, { cache: 'no-store' });
     if (!resp.ok) throw new Error('no se pudo descargar');
@@ -1052,11 +995,10 @@ async function descargarInforme() {
     passwordCompartida = null; claveClipsDerivada = null;
     Object.keys(clavesPorSalt).forEach(k => delete clavesPorSalt[k]);
     input.value = ''; input.style.display = '';
-    error.textContent = 'No se pudo abrir el informe: la contraseña no es correcta o el archivo llegó dañado. Escríbela de nuevo; si sigue fallando, pide el Excel a quien administra el sistema.';
+    error.textContent = 'Contraseña incorrecta o archivo dañado.';
     error.style.display = '';
   } finally {
     boton.textContent = textoOriginal;
-    boton.disabled = false;
   }
 }
 
@@ -1075,16 +1017,10 @@ async function cargarManifestClips() {
   }
 }
 
-function tituloClip(c) {
-  return c.tipo === 'evidencia'
-    ? 'Despacho de las ' + horaCorta(c.hora)
-    : 'De ' + horaCorta(c.hora_inicio) + ' a ' + horaCorta(c.hora_fin);
-}
-
 function renderListaClips() {
   const cont = document.getElementById('clips-lista');
   if (!manifestClips || manifestClips.clips.length === 0) {
-    cont.innerHTML = '<div class="empty-state">Todavía no hay videos publicados.</div>';
+    cont.innerHTML = '<div class="empty-state">No hay clips en la ventana publicada.</div>';
     return;
   }
   // Solo los clips del dia que se esta viendo -- si estoy en el 20, no
@@ -1095,27 +1031,22 @@ function renderListaClips() {
     .filter(x => !fechaSeleccionada || x.c.fecha === fechaSeleccionada);
 
   if (delDia.length === 0) {
-    cont.innerHTML = `<div class="empty-state">No hay videos de este día. Se publican solo los de los días más recientes.</div>`;
+    cont.innerHTML = `<div class="empty-state">No hay clips de video para el ${fechaSeleccionada || 'día seleccionado'}. Los clips cubren solo los días más recientes.</div>`;
     return;
   }
-  const nEvidencia = delDia.filter(x => x.c.tipo === 'evidencia').length;
-  const otros = delDia.filter(x => x.c.tipo !== 'evidencia');
-  const resumen = nEvidencia
-    ? `<p class="clips-resumen">${plural(nEvidencia, 'video de despacho', 'videos de despachos')} de este día. Se abren con “Ver video” en la lista de despachos.</p>`
-    : '';
-  cont.innerHTML = resumen + otros.map(({ c, i }) => {
+  cont.innerHTML = delDia.map(({ c, i }) => {
     const esEvidencia = c.tipo === 'evidencia';
-    const titulo = tituloClip(c);
+    const etiqueta = esEvidencia ? 'Evidencia' : 'Tramo';
     const detalle = esEvidencia
-      ? ((!c.planta || c.planta === 'desconocida') ? 'Planta sin identificar' : 'Planta ' + c.planta)
-      : 'Movimiento en la rampa';
+      ? `${c.fecha} ${horaCorta(c.hora)} · Planta ${c.planta || '—'} · ${c.clase || '—'}`
+      : `${c.fecha} ${horaCorta(c.hora_inicio)}–${horaCorta(c.hora_fin)}`;
     return `
       <div class="clip-row">
         <div class="clip-info">
-          <p class="clip-titulo">${titulo}</p>
+          <p class="clip-titulo"><span class="clip-tag">${etiqueta}</span>${c.id}</p>
           <p class="clip-detalle">${detalle}</p>
         </div>
-        <span class="clip-estado" id="clip-estado-${i}" aria-live="polite"></span>
+        <span class="clip-estado" id="clip-estado-${i}"></span>
         <button type="button" onclick="reproducirClip(${i})">${ICO.play} Reproducir</button>
       </div>`;
   }).join('');
@@ -1147,16 +1078,16 @@ async function desbloquearClips() {
     renderInforme();
   } catch (e) {
     passwordCompartida = null; claveClipsDerivada = null;
-    error.textContent = 'Este navegador no pudo preparar la contraseña. Ábrela en Chrome, Edge o Firefox actualizados.';
+    error.textContent = 'No se pudo preparar la contraseña en este navegador.';
     error.style.display = '';
   }
 }
 
 async function reproducirClip(indice) {
   const clip = manifestClips.clips[indice];
-  const estadoEl = document.getElementById('clip-estado-' + indice) || document.getElementById('clip-estado-global');
+  const estadoEl = document.getElementById('clip-estado-' + indice);
   if (!claveClipsDerivada) {
-    estadoEl.textContent = 'Primero escribe la contraseña de los videos y toca «Desbloquear videos».';
+    estadoEl.textContent = 'Ingresa la contraseña arriba';
     document.getElementById('clips-password').focus();
     return;
   }
@@ -1179,15 +1110,15 @@ async function reproducirClip(indice) {
     if (video.src) URL.revokeObjectURL(video.src);
     video.src = url;
     document.getElementById('clip-player-titulo').textContent =
-      tituloClip(clip) + ', ' + fechaLarga(clip.fecha);
+      clip.id + ' — ' + (clip.tipo === 'evidencia' ? 'Evidencia' : 'Tramo') + ' — ' + clip.fecha;
     jugador.style.display = '';
-    desplazarA(jugador, 'center');
+    jugador.scrollIntoView({ behavior: 'smooth', block: 'center' });
     video.play().catch(() => {});
     estadoEl.textContent = '';
   } catch (e) {
     // AES-GCM falla la verificacion de integridad con la clave incorrecta
     // (no reproduce video corrupto/basura, simplemente no descifra).
-    estadoEl.textContent = 'No se pudo abrir el video: revisa la contraseña en «Desbloquear videos» y vuelve a intentarlo.';
+    estadoEl.textContent = 'Contraseña incorrecta o clip dañado';
   }
 }
 
@@ -1209,6 +1140,7 @@ document.getElementById('informe-password').addEventListener('keydown', e => {
   if (e.key === 'Enter') descargarInforme();
 });
 
+initFondoHielo();
 main();
 setInterval(() => { if (datosActuales) renderDesactualizado(datosActuales); }, 60000);
 </script>

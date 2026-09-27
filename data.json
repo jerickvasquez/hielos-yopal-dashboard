@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-27T14:28:24.533870",
-  "generado_en_epoch": 1790537304,
+  "generado_en": "2026-09-27T14:30:12.400662",
+  "generado_en_epoch": 1790537412,
   "dias": [
     {
       "fecha": "2026-09-27",
@@ -170,23 +170,23 @@
         "motivo": "Dentro del rango habitual (71.0 +/- 31.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 868,
-        "minutos_esperados": 868,
+        "minutos_cubiertos": 870,
+        "minutos_esperados": 870,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "inconsistencias",
-        "mensaje": "8 despacho(s) (32 bloques) que nadie anotó; 1 fila(s) mal llenadas; 1 despacho(s) de noche/madrugada sin anotar por revisar en video.",
-        "reportado": 0,
+        "mensaje": "1 de 1 tandas no cuadran; 1 despacho(s) de noche/madrugada sin anotar por revisar en video.",
+        "reportado": 24,
         "sistema": 36,
-        "tandas": 0,
+        "tandas": 1,
         "tandas_ok": 0,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 9,
-        "bloques_sin_reportar": 36,
-        "sin_reportar_confirmados": 8,
-        "errores_llenado": 1
+        "despachos_sin_reportar": 1,
+        "bloques_sin_reportar": 4,
+        "sin_reportar_confirmados": 0,
+        "errores_llenado": 0
       }
     },
     {
@@ -24535,7 +24535,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-27T14:27:50.272808",
+        "ultimo_heartbeat": "2026-09-27T14:29:56.129237",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24556,7 +24556,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-27T14:20:22.134796"
+        "actualizado_en": "2026-09-27T14:28:32.420247"
       },
       "mantenimiento": {
         "ok": true,
@@ -24575,13 +24575,13 @@
       },
       "vigia": {
         "ok": true,
-        "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-27T14:20:03.654631"
+        "mensaje": "El vigia de actividad estaba caido y se relanzo automaticamente.",
+        "actualizado_en": "2026-09-27T14:30:04.438275"
       },
       "planilla": {
         "ok": true,
-        "mensaje": "Planilla leída: 4 tandas anotadas, 1 fila(s) mal llenadas.",
-        "actualizado_en": "2026-09-27T13:07:41.813700"
+        "mensaje": "Planilla leída: 5 tandas anotadas, 0 fila(s) mal llenadas.",
+        "actualizado_en": "2026-09-27T14:28:36.601819"
       },
       "atribucion": {
         "ok": true,

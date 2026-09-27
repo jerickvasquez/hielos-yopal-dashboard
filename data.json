@@ -1,7 +1,26 @@
 {
-  "generado_en": "2026-09-26T23:50:24.051141",
-  "generado_en_epoch": 1790484624,
+  "generado_en": "2026-09-27T00:00:29.986934",
+  "generado_en_epoch": 1790485229,
   "dias": [
+    {
+      "fecha": "2026-09-27",
+      "conteo_real": true,
+      "consolidado": [],
+      "despachos": [],
+      "por_planta": [],
+      "por_clase": [],
+      "anomalia": {
+        "es_anomalia": true,
+        "motivo": "Total de hoy (0) muy por debajo del promedio de los ultimos 29 dias con datos (71.0 +/- 31.8, z=-2.24)."
+      },
+      "cobertura": {
+        "minutos_cubiertos": 0,
+        "minutos_esperados": 0,
+        "porcentaje": null,
+        "huecos": []
+      },
+      "validacion": null
+    },
     {
       "fecha": "2026-09-26",
       "conteo_real": true,
@@ -381,9 +400,9 @@
         "motivo": "Dentro del rango habitual (70.3 +/- 30.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 794,
-        "minutos_esperados": 815,
-        "porcentaje": 97.4,
+        "minutos_cubiertos": 804,
+        "minutos_esperados": 825,
+        "porcentaje": 97.5,
         "huecos": []
       },
       "validacion": {
@@ -1201,8 +1220,13 @@
       "consolidado": [
         {
           "canal": "0",
+          "clase": "bloque_pequeno",
+          "unidades": 12
+        },
+        {
+          "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 60
+          "unidades": 48
         }
       ],
       "despachos": [
@@ -1218,18 +1242,18 @@
         },
         {
           "hora": "2026-09-22T07:45:07.611734",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "1",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
-          "gap_anterior_seg": 23610.7,
+          "gap_anterior_seg": null,
           "gap_sospechoso": false
         },
         {
           "hora": "2026-09-22T08:02:39.748642",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "1",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
@@ -1238,8 +1262,8 @@
         },
         {
           "hora": "2026-09-22T08:19:48.621190",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "1",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
@@ -1253,7 +1277,7 @@
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
-          "gap_anterior_seg": 5690.3,
+          "gap_anterior_seg": 31382.0,
           "gap_sospechoso": false
         },
         {
@@ -1359,17 +1383,28 @@
       ],
       "por_planta": [
         {
+          "planta": "1",
+          "despachos": 3,
+          "bloques": 12
+        },
+        {
           "planta": "desconocida",
-          "despachos": 14,
-          "bloques": 56
+          "despachos": 11,
+          "bloques": 44
         }
       ],
       "por_clase": [
         {
+          "clase": "bloque_pequeno",
+          "etiqueta": "Pequeño",
+          "despachos": 3,
+          "bloques": 12
+        },
+        {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 14,
-          "bloques": 56
+          "despachos": 11,
+          "bloques": 44
         }
       ],
       "anomalia": {
@@ -17802,15 +17837,15 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-09-26T22:00:03.986206"
+      "verificado_en": "2026-09-27T00:00:14.197674"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-26T23:50:13.037349",
-        "fraccion_baja_confianza_reciente": 0.22
+        "ultimo_heartbeat": "2026-09-27T00:00:19.766242",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -17830,7 +17865,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-26T23:40:32.679448"
+        "actualizado_en": "2026-09-26T23:50:31.701924"
       },
       "mantenimiento": {
         "ok": true,
@@ -17845,12 +17880,12 @@
       "clips": {
         "ok": false,
         "mensaje": "Pendiente: configurar Backblaze B2 (HIELOS_B2_* en .env) para ver los videos en la pagina.",
-        "actualizado_en": "2026-09-26T18:00:20.583416"
+        "actualizado_en": "2026-09-27T00:00:14.998735"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-26T23:50:10.669647"
+        "actualizado_en": "2026-09-27T00:00:14.613172"
       },
       "planilla": {
         "ok": true,

@@ -309,7 +309,7 @@
 
   <section id="seccion-tendencia" style="display:none;">
     <h2><span class="h2-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span>Producción por día</h2>
-    <p class="section-note">Bloques confirmados por día (sin la noche y madrugada por revisar). Toca una barra para ver el detalle de ese día.</p>
+    <p class="section-note">Bloques confirmados por día (sin la madrugada por revisar). Toca una barra para ver el detalle de ese día.</p>
     <div class="chart-card"><div class="bars bars-tendencia" id="chart-tendencia"></div></div>
   </section>
 
@@ -393,7 +393,7 @@
     <div class="roadmap">
       <div class="road-item"><span class="badge done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Conteo automático de despachos</p><p class="road-desc">Cada salida de molde por la rampa se cuenta con hora exacta y clip de respaldo en video, sobre la cámara real de producción.</p></div></div>
       <div class="road-item"><span class="badge done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Operación 24/7 vigilada</p><p class="road-desc">Conteo en vivo con reinicio automático, mantenimiento diario del disco, informe Excel diario y un vigilante externo que avisa por correo si la página deja de actualizarse.</p></div></div>
-      <div class="road-item"><span class="badge progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En ajuste</span><div><p class="road-title">Confiabilidad en toda hora</p><p class="road-desc">El conteo de día funciona pero pierde moldes cuando llegan seguidos; de noche (desde las 19:00) y de madrugada está en ajuste. Se está probando contar por la presencia del molde, que corrige ambas cosas.</p></div></div>
+      <div class="road-item"><span class="badge progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En ajuste</span><div><p class="road-title">Confiabilidad en toda hora</p><p class="road-desc">El conteo de día está validado; las horas de madrugada y atardecer siguen en ajuste — se revisan a mano antes de darlas por firmes.</p></div></div>
       <div class="road-item"><span class="badge progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En validación</span><div><p class="road-title">Tipo de bloque y planta de origen</p><p class="road-desc">Por el color de la barra del molde: rojo = planta 2, amarillo = planta 4, rosado = planta 1, morado/naranja = planta 3. Calibrado con 2 meses de video real; el morado aún no se ha visto en cámara.</p></div></div>
     </div>
   </section>
@@ -665,7 +665,7 @@ function renderDia(dia) {
   if (!dia.conteo_real) {
     bannerTexto = `<strong>${dia.fecha}</strong> — el conteo por despacho para este día todavía está en calibración (ver "Estado del proyecto" más abajo); los horarios de actividad sí son reales.`;
   } else if (porRevisar.length) {
-    bannerTexto = `<strong>${dia.fecha}</strong> — ${bloquesConfiables} bloques confirmados. ${bloquesRevisar} bloques (${porRevisar.length} despacho${porRevisar.length > 1 ? 's' : ''}) cayeron de noche o madrugada y están <strong>por revisar</strong>: el conteo de esas horas está en ajuste (puede contar de menos o marcar despachos falsos), no se suma al total confirmado ni sirve para confrontar al personal sin revisar el video.`;
+    bannerTexto = `<strong>${dia.fecha}</strong> — ${bloquesConfiables} bloques confirmados. ${bloquesRevisar} bloques (${porRevisar.length} despacho${porRevisar.length > 1 ? 's' : ''}) cayeron en madrugada y están <strong>por revisar</strong>: esa franja todavía no es confiable, no se suma al total confirmado.`;
   } else {
     bannerTexto = `<strong>${dia.fecha}</strong> — ${bloquesConfiables} bloques confirmados en ${confiables.length} despacho${confiables.length === 1 ? '' : 's'}, con hora exacta y respaldo en video.`;
   }
@@ -682,7 +682,7 @@ function renderDia(dia) {
   document.getElementById('tiles-dia').innerHTML = `
     <div class="tile destacada"><div class="tile-head"><span class="tile-ico">${ICO.cubo}</span><p class="label">Bloques confirmados</p></div><p class="value">${dia.conteo_real ? bloquesConfiables : '—'}<span class="unit">bloques</span></p></div>
     <div class="tile"><div class="tile-head"><span class="tile-ico">${ICO.molde}</span><p class="label">Despachos confirmados</p></div><p class="value">${dia.conteo_real ? confiables.length : '—'}<span class="unit">moldes</span></p></div>
-    <div class="tile ${bloquesRevisar > 0 ? 'aviso' : ''}"><div class="tile-head"><span class="tile-ico">${ICO.luna}</span><p class="label">Por revisar (noche y madrugada)</p></div><p class="value">${dia.conteo_real ? bloquesRevisar : '—'}<span class="unit">bloques</span></p></div>
+    <div class="tile ${bloquesRevisar > 0 ? 'aviso' : ''}"><div class="tile-head"><span class="tile-ico">${ICO.luna}</span><p class="label">Por revisar (madrugada)</p></div><p class="value">${dia.conteo_real ? bloquesRevisar : '—'}<span class="unit">bloques</span></p></div>
     <div class="tile"><div class="tile-head"><span class="tile-ico">${ICO.reloj}</span><p class="label">Rango del día</p></div><p class="value" style="font-size:20px;">${primero}${confiables.length ? '–' + ultimo : ''}</p></div>
     ${tileCobertura(dia.cobertura)}
   `;
@@ -719,10 +719,9 @@ function renderValidacion(dia) {
   const el = document.getElementById('banner-validacion');
   const v = dia.validacion;
   if (!v) { el.style.display = 'none'; return; }
-  const estilos = { ok: 'ok', inconsistencias: 'alerta', sin_registro: 'aviso', revisar: 'aviso' };
+  const estilos = { ok: 'ok', inconsistencias: 'alerta', sin_registro: 'aviso' };
   const titulos = { ok: '✔ Todo cuadra con la planilla de los trabajadores.',
     inconsistencias: '✖ Hay inconsistencias con la planilla de los trabajadores.',
-    revisar: 'Cuadra lo que se puede verificar; hay tandas por revisar en video.',
     sin_registro: 'Nadie anotó este día en la planilla.' };
   el.className = 'banner ' + (estilos[v.estado] || '');
   el.style.display = '';
@@ -837,7 +836,7 @@ function renderDespachosLista(despachos, conteoReal) {
         <span class="despacho-bloques">${d.bloques} bloques</span>
         <span class="despacho-clase">${planta} · ${etiquetas[d.clase] || d.clase}</span>
         ${tamanoAviso}
-        ${d.por_revisar ? `<span class="despacho-revisar">${d.motivo_revision || 'madrugada'} · por revisar</span>` : ''}
+        ${d.por_revisar ? '<span class="despacho-revisar">madrugada · por revisar</span>' : ''}
         ${gapAviso}
       </span>
       ${video}

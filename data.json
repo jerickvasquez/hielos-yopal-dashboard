@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-27T18:30:23.252176",
-  "generado_en_epoch": 1790551823,
+  "generado_en": "2026-09-27T18:40:17.877220",
+  "generado_en_epoch": 1790552417,
   "dias": [
     {
       "fecha": "2026-09-27",
@@ -170,8 +170,8 @@
         "motivo": "Dentro del rango habitual (71.0 +/- 31.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 1108,
-        "minutos_esperados": 1110,
+        "minutos_cubiertos": 1118,
+        "minutos_esperados": 1120,
         "porcentaje": 99.8,
         "huecos": []
       },
@@ -24535,7 +24535,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-27T18:30:14.417899",
+        "ultimo_heartbeat": "2026-09-27T18:39:51.235594",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24548,7 +24548,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 432.8,
+        "libre_gb": 433.1,
         "total_gb": 984.1,
         "mensaje": "433 GB libres de 984 GB."
       },
@@ -24556,7 +24556,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-27T18:10:31.998497"
+        "actualizado_en": "2026-09-27T18:30:31.036616"
       },
       "mantenimiento": {
         "ok": true,
@@ -24569,14 +24569,14 @@
         "actualizado_en": "2026-09-27T18:21:04.005163"
       },
       "clips": {
-        "ok": false,
-        "mensaje": "Pendiente: configurar Backblaze B2 (HIELOS_B2_* en .env) para ver los videos en la pagina.",
-        "actualizado_en": "2026-09-27T12:00:06.956963"
+        "ok": true,
+        "mensaje": "80 clips disponibles en la pagina (40 nuevos), 404 en cola para las proximas corridas. Espacio: 1.1 de 9 GB.",
+        "actualizado_en": "2026-09-27T18:38:02.575715"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-27T18:30:05.217814"
+        "actualizado_en": "2026-09-27T18:40:04.450308"
       },
       "planilla": {
         "ok": true,

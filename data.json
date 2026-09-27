@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-27T06:00:27.637810",
-  "generado_en_epoch": 1790506827,
+  "generado_en": "2026-09-27T06:10:17.340527",
+  "generado_en_epoch": 1790507417,
   "dias": [
     {
       "fecha": "2026-09-27",
@@ -31,8 +31,8 @@
         "motivo": "Total de hoy (4) muy por debajo del promedio de los ultimos 29 dias con datos (71.0 +/- 31.8, z=-2.11)."
       },
       "cobertura": {
-        "minutos_cubiertos": 360,
-        "minutos_esperados": 360,
+        "minutos_cubiertos": 371,
+        "minutos_esperados": 370,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -435,14 +435,14 @@
       },
       "validacion": {
         "estado": "inconsistencias",
-        "mensaje": "2 de 3 tandas no cuadran; 3 despacho(s) (12 bloques) que nadie anotó.",
-        "reportado": 136,
+        "mensaje": "3 de 4 tandas no cuadran; 2 despacho(s) (8 bloques) que nadie anotó.",
+        "reportado": 176,
         "sistema": 124,
-        "tandas": 3,
+        "tandas": 4,
         "tandas_ok": 1,
-        "despachos_sin_reportar": 3,
-        "bloques_sin_reportar": 12,
-        "sin_reportar_confirmados": 2,
+        "despachos_sin_reportar": 2,
+        "bloques_sin_reportar": 8,
+        "sin_reportar_confirmados": 1,
         "errores_llenado": 0
       }
     },
@@ -8179,12 +8179,12 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 48
+          "unidades": 52
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 20
+          "unidades": 16
         }
       ],
       "despachos": [
@@ -8490,12 +8490,12 @@
         },
         {
           "hora": "2026-08-22T21:16:44.271618",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "1",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
-          "gap_anterior_seg": 2025.0,
+          "gap_anterior_seg": 16972.9,
           "gap_sospechoso": false
         },
         {
@@ -8505,15 +8505,15 @@
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
-          "gap_anterior_seg": 4348.4,
+          "gap_anterior_seg": 6373.5,
           "gap_sospechoso": false
         }
       ],
       "por_planta": [
         {
           "planta": "1",
-          "despachos": 8,
-          "bloques": 32
+          "despachos": 9,
+          "bloques": 36
         },
         {
           "planta": "2",
@@ -8527,8 +8527,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 4,
-          "bloques": 16
+          "despachos": 3,
+          "bloques": 12
         }
       ],
       "por_clase": [
@@ -8541,14 +8541,14 @@
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 12,
-          "bloques": 48
+          "despachos": 13,
+          "bloques": 52
         },
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 4,
-          "bloques": 16
+          "despachos": 3,
+          "bloques": 12
         }
       ],
       "anomalia": {
@@ -18511,7 +18511,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-27T06:00:26.691444",
+        "ultimo_heartbeat": "2026-09-27T06:10:03.379585",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -18532,7 +18532,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-27T05:50:32.149461"
+        "actualizado_en": "2026-09-27T06:00:35.357632"
       },
       "mantenimiento": {
         "ok": true,
@@ -18552,12 +18552,17 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-27T06:00:11.820148"
+        "actualizado_en": "2026-09-27T06:10:08.294234"
       },
       "planilla": {
         "ok": true,
-        "mensaje": "Planilla leída: 3 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-09-27T00:20:14.312094"
+        "mensaje": "Planilla leída: 4 tandas anotadas, 0 fila(s) mal llenadas.",
+        "actualizado_en": "2026-09-27T06:03:18.522633"
+      },
+      "atribucion": {
+        "ok": true,
+        "mensaje": "Despachos anteriores: 641 de 1195 clips revisados (380 con planta identificada en esta corrida); faltan 554, siguen la próxima noche.",
+        "actualizado_en": "2026-09-27T06:03:11.810159"
       }
     }
   }

@@ -796,7 +796,7 @@ function renderValidacion(dia) {
   const estilos = { ok: 'ok', inconsistencias: 'alerta', sin_registro: 'aviso', revisar: 'aviso' };
   const titulos = { ok: 'Todo cuadra con la planilla de los trabajadores.',
     inconsistencias: 'Hay diferencias con la planilla de los trabajadores.',
-    revisar: 'Lo que se puede verificar cuadra con la planilla; hay tandas por revisar en video.',
+    revisar: 'Lo que se puede verificar cuadra con la planilla; hay puntos pendientes.',
     sin_registro: 'Nadie anotó este día en la planilla.' };
   el.className = 'banner ' + (estilos[v.estado] || '');
   el.style.display = '';

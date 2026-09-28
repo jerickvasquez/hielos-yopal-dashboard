@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T03:50:22.840558",
-  "generado_en_epoch": 1790585422,
+  "generado_en": "2026-09-28T04:00:25.937447",
+  "generado_en_epoch": 1790586025,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -14,8 +14,8 @@
         "motivo": "Dentro del rango habitual (74.3 +/- 49.6)."
       },
       "cobertura": {
-        "minutos_cubiertos": 230,
-        "minutos_esperados": 230,
+        "minutos_cubiertos": 240,
+        "minutos_esperados": 240,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -7015,7 +7015,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 383.9,
@@ -7029,7 +7029,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 507.2,
@@ -7043,7 +7043,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 365.1,
@@ -7057,7 +7057,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 369.0,
@@ -7085,9 +7085,9 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "solo_forma",
           "planta_deducida": true,
-          "planta_fuente": "vecinos",
+          "planta_fuente": "tamano",
           "gap_anterior_seg": 351.4,
           "gap_sospechoso": false
         },
@@ -7099,7 +7099,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 521.5,
@@ -7113,9 +7113,9 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "solo_forma",
           "planta_deducida": true,
-          "planta_fuente": "vecinos",
+          "planta_fuente": "tamano",
           "gap_anterior_seg": 405.7,
           "gap_sospechoso": false
         },
@@ -7141,9 +7141,9 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "solo_forma",
           "planta_deducida": true,
-          "planta_fuente": "vecinos",
+          "planta_fuente": "tamano",
           "gap_anterior_seg": 327.3,
           "gap_sospechoso": false
         },
@@ -7155,7 +7155,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 361.5,
@@ -7169,7 +7169,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 331.0,
@@ -7183,7 +7183,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 385.4,
@@ -7197,7 +7197,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 292.7,
@@ -7211,7 +7211,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": null,
@@ -7225,7 +7225,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 585.3,
@@ -7239,7 +7239,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 720.0,
@@ -24608,14 +24608,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-09-28T02:00:05.739924"
+      "verificado_en": "2026-09-28T04:00:04.689537"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T03:49:52.771168",
+        "ultimo_heartbeat": "2026-09-28T03:59:59.184536",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24628,15 +24628,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 429.1,
+        "libre_gb": 428.3,
         "total_gb": 984.1,
-        "mensaje": "429 GB libres de 984 GB."
+        "mensaje": "428 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T03:40:32.507346"
+        "actualizado_en": "2026-09-28T03:50:32.316755"
       },
       "mantenimiento": {
         "ok": true,
@@ -24656,7 +24656,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-28T03:50:05.122186"
+        "actualizado_en": "2026-09-28T04:00:05.079860"
       },
       "planilla": {
         "ok": true,

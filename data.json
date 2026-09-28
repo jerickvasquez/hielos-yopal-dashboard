@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T15:20:14.453695",
-  "generado_en_epoch": 1790626814,
+  "generado_en": "2026-09-28T15:20:42.730938",
+  "generado_en_epoch": 1790626842,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -285,22 +285,26 @@
         "huecos": []
       },
       "validacion": {
-        "estado": "inconsistencias",
-        "mensaje": "1 fila(s) mal llenadas; 2 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
-        "reportado": 40,
-        "sistema": 48,
-        "tandas": 1,
+        "estado": "revisar",
+        "mensaje": "Lo que se puede verificar cuadra; 6 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso); 1 tanda(s) de noche/madrugada no se pueden verificar todavía (el conteo de noche está en ajuste).",
+        "reportado": 64,
+        "sistema": 64,
+        "tandas": 2,
         "tandas_ok": 1,
-        "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 2,
-        "bloques_sin_reportar": 8,
+        "tandas_no_verificables": 1,
+        "despachos_sin_reportar": 6,
+        "bloques_sin_reportar": 24,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 2,
+        "por_anotar": 6,
         "horas_por_anotar": [
           "2026-09-28T14:18:08.526441",
-          "2026-09-28T14:23:09.813320"
+          "2026-09-28T14:23:09.813320",
+          "2026-09-28T14:31:46.371732",
+          "2026-09-28T14:35:24.509813",
+          "2026-09-28T14:41:59.502338",
+          "2026-09-28T14:47:42.948397"
         ],
-        "errores_llenado": 1
+        "errores_llenado": 0
       }
     },
     {
@@ -25067,7 +25071,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T15:20:01.503696",
+        "ultimo_heartbeat": "2026-09-28T15:20:31.861971",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -25088,7 +25092,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T15:10:24.208414"
+        "actualizado_en": "2026-09-28T15:20:23.808207"
       },
       "mantenimiento": {
         "ok": true,
@@ -25098,7 +25102,7 @@
       "informes": {
         "ok": true,
         "mensaje": "Informe(s) 2026-09-27, 2026-09-28 publicados; 62 informes disponibles para descargar.",
-        "actualizado_en": "2026-09-28T14:20:20.300558"
+        "actualizado_en": "2026-09-28T15:20:31.939173"
       },
       "clips": {
         "ok": true,

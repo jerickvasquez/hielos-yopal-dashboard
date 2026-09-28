@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T04:30:22.872057",
-  "generado_en_epoch": 1790587822,
+  "generado_en": "2026-09-28T04:40:23.511616",
+  "generado_en_epoch": 1790588423,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -14,8 +14,8 @@
         "motivo": "Dentro del rango habitual (74.3 +/- 49.6)."
       },
       "cobertura": {
-        "minutos_cubiertos": 270,
-        "minutos_esperados": 270,
+        "minutos_cubiertos": 280,
+        "minutos_esperados": 280,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -7959,12 +7959,12 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 60
+          "unidades": 72
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 16
+          "unidades": 4
         }
       ],
       "despachos": [
@@ -8054,27 +8054,27 @@
         },
         {
           "hora": "2026-08-29T09:04:47.388811",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "planta": "desconocida",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "solo_forma",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": null,
-          "gap_sospechoso": false
+          "gap_anterior_seg": 223.5,
+          "gap_sospechoso": true
         },
         {
           "hora": "2026-08-29T09:10:57.415807",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "planta": "desconocida",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "solo_forma",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": 370.0,
@@ -8082,13 +8082,13 @@
         },
         {
           "hora": "2026-08-29T09:14:33.695900",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "planta": "desconocida",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "solo_forma",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": 216.3,
@@ -8102,7 +8102,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": null,
@@ -8116,7 +8116,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 315.0,
@@ -8130,7 +8130,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 515.3,
@@ -8144,7 +8144,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 283.1,
@@ -8158,7 +8158,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 487.4,
@@ -8172,7 +8172,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 277.4,
@@ -8186,7 +8186,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 264.0,
@@ -8200,7 +8200,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 815.4,
@@ -8214,7 +8214,7 @@
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 246.6,
@@ -8228,7 +8228,7 @@
           "evidencia": true,
           "por_revisar": true,
           "motivo_revision": "noche",
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": null,
@@ -8242,7 +8242,7 @@
           "evidencia": true,
           "por_revisar": true,
           "motivo_revision": "noche",
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 1793.8,
@@ -8256,7 +8256,7 @@
           "evidencia": true,
           "por_revisar": true,
           "motivo_revision": "noche",
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 706.2,
@@ -8270,7 +8270,7 @@
           "evidencia": true,
           "por_revisar": true,
           "motivo_revision": "noche",
-          "tamano": "solo_color",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 3214.1,
@@ -8315,7 +8315,7 @@
           "tamano": "sin_dato",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": 49177.3,
+          "gap_anterior_seg": null,
           "gap_sospechoso": false
         },
         {
@@ -8363,14 +8363,8 @@
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 15,
-          "bloques": 60
-        },
-        {
-          "clase": "sin_identificar",
-          "etiqueta": "Sin identificar",
-          "despachos": 3,
-          "bloques": 12
+          "despachos": 18,
+          "bloques": 72
         }
       ],
       "anomalia": {
@@ -24609,7 +24603,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T04:30:19.192922",
+        "ultimo_heartbeat": "2026-09-28T04:39:54.803119",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24622,15 +24616,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 425.9,
+        "libre_gb": 425.1,
         "total_gb": 984.1,
-        "mensaje": "426 GB libres de 984 GB."
+        "mensaje": "425 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T04:20:32.239512"
+        "actualizado_en": "2026-09-28T04:30:31.335754"
       },
       "mantenimiento": {
         "ok": true,
@@ -24650,7 +24644,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-28T04:30:05.400171"
+        "actualizado_en": "2026-09-28T04:40:05.569229"
       },
       "planilla": {
         "ok": true,

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T14:18:29.134288",
-  "generado_en_epoch": 1790623109,
+  "generado_en": "2026-09-28T14:20:18.933957",
+  "generado_en_epoch": 1790623218,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -163,7 +163,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -204,8 +204,8 @@
         "motivo": "Dentro del rango habitual (70.1 +/- 32.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 854,
-        "minutos_esperados": 858,
+        "minutos_cubiertos": 856,
+        "minutos_esperados": 860,
         "porcentaje": 99.5,
         "huecos": []
       },
@@ -24989,8 +24989,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T14:17:39.484780",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-09-28T14:20:12.699831",
+        "fraccion_baja_confianza_reciente": 0.015
       }
     ],
     "procesamiento_diario": {
@@ -25002,7 +25002,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 420.7,
+        "libre_gb": 420.6,
         "total_gb": 984.1,
         "mensaje": "421 GB libres de 984 GB."
       },
@@ -25010,7 +25010,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T14:10:22.801775"
+        "actualizado_en": "2026-09-28T14:18:41.565447"
       },
       "mantenimiento": {
         "ok": true,
@@ -25030,12 +25030,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-28T14:10:03.198136"
+        "actualizado_en": "2026-09-28T14:20:04.984792"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 7 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-09-28T13:20:05.955574"
+        "actualizado_en": "2026-09-28T14:20:06.685250"
       },
       "atribucion": {
         "ok": true,

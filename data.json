@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T14:20:18.933957",
-  "generado_en_epoch": 1790623218,
+  "generado_en": "2026-09-28T14:20:33.742923",
+  "generado_en_epoch": 1790623233,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -9,12 +9,12 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 36
+          "unidades": 40
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 8
+          "unidades": 4
         }
       ],
       "despachos": [
@@ -160,16 +160,16 @@
         },
         {
           "hora": "2026-09-28T14:18:08.526441",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "planta": "desconocida",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "solo_forma",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": 16917.7,
+          "gap_anterior_seg": 15863.8,
           "gap_sospechoso": false
         }
       ],
@@ -189,14 +189,14 @@
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 9,
-          "bloques": 36
+          "despachos": 10,
+          "bloques": 40
         },
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "anomalia": {
@@ -204,24 +204,26 @@
         "motivo": "Dentro del rango habitual (70.1 +/- 32.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 856,
+        "minutos_cubiertos": 857,
         "minutos_esperados": 860,
-        "porcentaje": 99.5,
+        "porcentaje": 99.7,
         "huecos": []
       },
       "validacion": {
-        "estado": "ok",
-        "mensaje": "Todo cuadra: 40 bloques anotados y 40 contados; 1 de 1 tandas coinciden.",
+        "estado": "revisar",
+        "mensaje": "Lo que se puede verificar cuadra; 1 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 40,
-        "sistema": 40,
+        "sistema": 44,
         "tandas": 1,
         "tandas_ok": 1,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 0,
-        "bloques_sin_reportar": 0,
+        "despachos_sin_reportar": 1,
+        "bloques_sin_reportar": 4,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 0,
-        "horas_por_anotar": [],
+        "por_anotar": 1,
+        "horas_por_anotar": [
+          "2026-09-28T14:18:08.526441"
+        ],
         "errores_llenado": 0
       }
     },
@@ -25010,7 +25012,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T14:18:41.565447"
+        "actualizado_en": "2026-09-28T14:20:27.136995"
       },
       "mantenimiento": {
         "ok": true,
@@ -25020,7 +25022,7 @@
       "informes": {
         "ok": true,
         "mensaje": "Informe(s) 2026-09-27, 2026-09-28 publicados; 62 informes disponibles para descargar.",
-        "actualizado_en": "2026-09-28T13:20:32.834878"
+        "actualizado_en": "2026-09-28T14:20:20.300558"
       },
       "clips": {
         "ok": true,

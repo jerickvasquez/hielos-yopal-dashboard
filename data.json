@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T11:30:13.363311",
-  "generado_en_epoch": 1790613013,
+  "generado_en": "2026-09-28T11:34:03.269745",
+  "generado_en_epoch": 1790613243,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -190,9 +190,9 @@
         "motivo": "Dentro del rango habitual (70.1 +/- 32.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 686,
-        "minutos_esperados": 690,
-        "porcentaje": 99.4,
+        "minutos_cubiertos": 690,
+        "minutos_esperados": 693,
+        "porcentaje": 99.6,
         "huecos": []
       },
       "validacion": {
@@ -24930,7 +24930,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T11:30:06.804165",
+        "ultimo_heartbeat": "2026-09-28T11:34:01.975642",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24943,20 +24943,20 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 415.0,
+        "libre_gb": 418.9,
         "total_gb": 984.1,
-        "mensaje": "415 GB libres de 984 GB."
+        "mensaje": "419 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T11:20:22.653563"
+        "actualizado_en": "2026-09-28T11:30:22.644476"
       },
       "mantenimiento": {
         "ok": true,
-        "mensaje": "430 GB libres de 984 GB. evidencia 549 GB (1209 clips). 5 clips viejos borrados (3.5 GB liberados).",
-        "actualizado_en": "2026-09-28T03:00:07.082172"
+        "mensaje": "419 GB libres de 984 GB. evidencia 561 GB (1248 clips). 14 clips viejos borrados (3.9 GB liberados).",
+        "actualizado_en": "2026-09-28T11:33:53.105420"
       },
       "informes": {
         "ok": true,

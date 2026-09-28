@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T09:27:20.174408",
-  "generado_en_epoch": 1790605640,
+  "generado_en": "2026-09-28T09:30:13.375849",
+  "generado_en_epoch": 1790605813,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -9,12 +9,7 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 12
-        },
-        {
-          "canal": "0",
-          "clase": "sin_identificar",
-          "unidades": 4
+          "unidades": 16
         }
       ],
       "despachos": [
@@ -62,52 +57,41 @@
         },
         {
           "hora": "2026-09-28T09:27:07.442765",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": null,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 701.6,
           "gap_sospechoso": false
         }
       ],
       "por_planta": [
         {
           "planta": "2",
-          "despachos": 3,
-          "bloques": 12
-        },
-        {
-          "planta": "desconocida",
-          "despachos": 1,
-          "bloques": 4
+          "despachos": 4,
+          "bloques": 16
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 3,
-          "bloques": 12
-        },
-        {
-          "clase": "sin_identificar",
-          "etiqueta": "Sin identificar",
-          "despachos": 1,
-          "bloques": 4
+          "despachos": 4,
+          "bloques": 16
         }
       ],
       "anomalia": {
         "es_anomalia": false,
-        "motivo": "Dentro del rango habitual (75.6 +/- 49.9)."
+        "motivo": "Dentro del rango habitual (70.1 +/- 32.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 567,
-        "minutos_esperados": 567,
+        "minutos_cubiertos": 571,
+        "minutos_esperados": 570,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -397,7 +381,7 @@
       ],
       "anomalia": {
         "es_anomalia": false,
-        "motivo": "Dentro del rango habitual (77.0 +/- 51.2)."
+        "motivo": "Dentro del rango habitual (72.7 +/- 35.5)."
       },
       "cobertura": {
         "minutos_cubiertos": 1438,
@@ -1076,7 +1060,7 @@
       ],
       "anomalia": {
         "es_anomalia": true,
-        "motivo": "Total de hoy (296) muy por encima del promedio de los ultimos 29 dias con datos (70.3 +/- 30.8, z=7.33)."
+        "motivo": "Total de hoy (172) muy por encima del promedio de los ultimos 29 dias con datos (70.3 +/- 30.8, z=3.30)."
       },
       "cobertura": {
         "minutos_cubiertos": 1440,
@@ -24846,8 +24830,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T09:26:55.102387",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-09-28T09:30:01.099610",
+        "fraccion_baja_confianza_reciente": 0.16
       }
     ],
     "procesamiento_diario": {
@@ -24859,15 +24843,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 417.5,
+        "libre_gb": 417.4,
         "total_gb": 984.1,
-        "mensaje": "418 GB libres de 984 GB."
+        "mensaje": "417 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T09:20:22.951046"
+        "actualizado_en": "2026-09-28T09:27:29.377025"
       },
       "mantenimiento": {
         "ok": true,
@@ -24887,7 +24871,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-28T09:20:04.008998"
+        "actualizado_en": "2026-09-28T09:30:03.608778"
       },
       "planilla": {
         "ok": true,

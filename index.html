@@ -597,6 +597,7 @@ async function refrescar() {
     return; // se mantiene lo ultimo que se pudo cargar, se reintenta en el proximo ciclo
   }
   datosActuales = nuevosDatos;
+  if (Date.now() - ultimaCargaClips > INTERVALO_CLIPS_MS) await cargarManifestClips();
   renderDesactualizado(datosActuales);
   renderEstado(datosActuales.estado);
 
@@ -1061,14 +1062,19 @@ async function descargarInforme() {
   }
 }
 
+// Los videos se suben a los pocos minutos de cada despacho: la lista se
+// vuelve a leer en el refresco, como mucho una vez por minuto.
+let ultimaCargaClips = 0;
+const INTERVALO_CLIPS_MS = 60000;
+
 async function cargarManifestClips() {
+  ultimaCargaClips = Date.now();
   try {
     const resp = await fetch('./clips.json', { cache: 'no-store' });
     if (!resp.ok) throw new Error('sin clips.json');
     manifestClips = await resp.json();
   } catch (e) {
-    manifestClips = null;
-    return;
+    return; // se mantiene la ultima lista que se pudo leer
   }
   if (manifestClips && manifestClips.clips && manifestClips.clips.length > 0) {
     document.getElementById('seccion-clips').style.display = '';

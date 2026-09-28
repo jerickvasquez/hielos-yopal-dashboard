@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T11:34:03.269745",
-  "generado_en_epoch": 1790613243,
+  "generado_en": "2026-09-28T11:37:57.155089",
+  "generado_en_epoch": 1790613477,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -190,22 +190,35 @@
         "motivo": "Dentro del rango habitual (70.1 +/- 32.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 690,
-        "minutos_esperados": 693,
+        "minutos_cubiertos": 694,
+        "minutos_esperados": 697,
         "porcentaje": 99.6,
         "huecos": []
       },
       "validacion": {
         "estado": "sin_registro",
-        "mensaje": "Sin producción anotada ni contada.",
+        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 40 bloques.",
         "reportado": 0,
-        "sistema": 0,
+        "sistema": 40,
         "tandas": 0,
         "tandas_ok": 0,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 0,
-        "bloques_sin_reportar": 0,
+        "despachos_sin_reportar": 10,
+        "bloques_sin_reportar": 40,
         "sin_reportar_confirmados": 0,
+        "por_anotar": 10,
+        "horas_por_anotar": [
+          "2026-09-28T09:05:27.805856",
+          "2026-09-28T09:11:18.317271",
+          "2026-09-28T09:15:25.803920",
+          "2026-09-28T09:27:07.442765",
+          "2026-09-28T09:36:10.806142",
+          "2026-09-28T09:42:08.406304",
+          "2026-09-28T09:53:44.773647",
+          "2026-09-28T10:03:13.393374",
+          "2026-09-28T10:09:08.802359",
+          "2026-09-28T10:13:26.245015"
+        ],
         "errores_llenado": 0
       }
     },
@@ -491,7 +504,7 @@
       },
       "validacion": {
         "estado": "revisar",
-        "mensaje": "Lo que se puede verificar cuadra; 1 despacho(s) de noche/madrugada sin anotar por revisar en video (el conteo de noche está en ajuste).",
+        "mensaje": "Lo que se puede verificar cuadra; 1 despacho(s) de noche/madrugada sin anotar por revisar en video.",
         "reportado": 64,
         "sistema": 68,
         "tandas": 2,
@@ -500,6 +513,8 @@
         "despachos_sin_reportar": 1,
         "bloques_sin_reportar": 4,
         "sin_reportar_confirmados": 0,
+        "por_anotar": 0,
+        "horas_por_anotar": [],
         "errores_llenado": 0
       }
     },
@@ -1179,6 +1194,8 @@
         "despachos_sin_reportar": 0,
         "bloques_sin_reportar": 0,
         "sin_reportar_confirmados": 0,
+        "por_anotar": 0,
+        "horas_por_anotar": [],
         "errores_llenado": 0
       }
     },
@@ -24930,7 +24947,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T11:34:01.975642",
+        "ultimo_heartbeat": "2026-09-28T11:37:34.692890",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24951,7 +24968,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T11:30:22.644476"
+        "actualizado_en": "2026-09-28T11:34:12.505483"
       },
       "mantenimiento": {
         "ok": true,
@@ -24960,8 +24977,8 @@
       },
       "informes": {
         "ok": true,
-        "mensaje": "Informe(s) 2026-09-26, 2026-09-27 publicados; 62 informes disponibles para descargar.",
-        "actualizado_en": "2026-09-28T11:14:45.420082"
+        "mensaje": "Informe(s) 2026-07-31, 2026-08-01, 2026-08-02, 2026-08-03, 2026-08-04, 2026-08-05, 2026-08-06, 2026-08-07, 2026-08-08, 2026-08-09, 2026-08-10, 2026-08-11, 2026-08-12, 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-16, 2026-08-17, 2026-08-18, 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-22, 2026-08-23, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-28, 2026-08-29, 2026-08-30, 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-05, 2026-09-06, 2026-09-07, 2026-09-08, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-12, 2026-09-13, 2026-09-14, 2026-09-15, 2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-20, 2026-09-21, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27, 2026-09-28 publicados; 62 informes disponibles para descargar.",
+        "actualizado_en": "2026-09-28T11:37:48.245893"
       },
       "clips": {
         "ok": true,
@@ -24976,7 +24993,7 @@
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 6 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-09-28T11:14:31.645751"
+        "actualizado_en": "2026-09-28T11:34:16.302404"
       },
       "atribucion": {
         "ok": true,

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-27T21:00:27.990446",
-  "generado_en_epoch": 1790560827,
+  "generado_en": "2026-09-27T21:10:22.563287",
+  "generado_en_epoch": 1790561422,
   "dias": [
     {
       "fecha": "2026-09-27",
@@ -233,7 +233,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -274,8 +274,8 @@
         "motivo": "Dentro del rango habitual (71.0 +/- 31.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 1258,
-        "minutos_esperados": 1260,
+        "minutos_cubiertos": 1268,
+        "minutos_esperados": 1270,
         "porcentaje": 99.8,
         "huecos": []
       },
@@ -24639,8 +24639,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-27T21:00:05.479694",
-        "fraccion_baja_confianza_reciente": 0.04
+        "ultimo_heartbeat": "2026-09-27T21:10:10.897751",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -24652,15 +24652,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 426.6,
+        "libre_gb": 426.3,
         "total_gb": 984.1,
-        "mensaje": "427 GB libres de 984 GB."
+        "mensaje": "426 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-27T20:58:34.445434"
+        "actualizado_en": "2026-09-27T21:00:36.677657"
       },
       "mantenimiento": {
         "ok": true,
@@ -24680,7 +24680,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-27T21:00:04.702611"
+        "actualizado_en": "2026-09-27T21:10:05.850588"
       },
       "planilla": {
         "ok": true,

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T00:20:31.444562",
-  "generado_en_epoch": 1790572831,
+  "generado_en": "2026-09-28T00:20:50.514240",
+  "generado_en_epoch": 1790572850,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -14,12 +14,24 @@
         "motivo": "Total de hoy (0) muy por debajo del promedio de los ultimos 29 dias con datos (68.4 +/- 28.6, z=-2.39)."
       },
       "cobertura": {
-        "minutos_cubiertos": 20,
+        "minutos_cubiertos": 21,
         "minutos_esperados": 20,
         "porcentaje": 100.0,
         "huecos": []
       },
-      "validacion": null
+      "validacion": {
+        "estado": "sin_registro",
+        "mensaje": "Sin producción anotada ni contada.",
+        "reportado": 0,
+        "sistema": 0,
+        "tandas": 0,
+        "tandas_ok": 0,
+        "tandas_no_verificables": 0,
+        "despachos_sin_reportar": 0,
+        "bloques_sin_reportar": 0,
+        "sin_reportar_confirmados": 0,
+        "errores_llenado": 0
+      }
     },
     {
       "fecha": "2026-09-27",
@@ -302,12 +314,12 @@
         "huecos": []
       },
       "validacion": {
-        "estado": "inconsistencias",
-        "mensaje": "1 de 1 tandas no cuadran; 1 despacho(s) de noche/madrugada sin anotar por revisar en video.",
-        "reportado": 24,
-        "sistema": 36,
-        "tandas": 1,
-        "tandas_ok": 0,
+        "estado": "revisar",
+        "mensaje": "Lo que se puede verificar cuadra; 1 despacho(s) de noche/madrugada sin anotar por revisar en video (el conteo de noche está en ajuste).",
+        "reportado": 64,
+        "sistema": 68,
+        "tandas": 2,
+        "tandas_ok": 2,
         "tandas_no_verificables": 0,
         "despachos_sin_reportar": 1,
         "bloques_sin_reportar": 4,
@@ -24655,7 +24667,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T00:20:13.469572",
+        "ultimo_heartbeat": "2026-09-28T00:20:43.775111",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24676,7 +24688,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T00:10:38.472991"
+        "actualizado_en": "2026-09-28T00:20:40.164803"
       },
       "mantenimiento": {
         "ok": true,

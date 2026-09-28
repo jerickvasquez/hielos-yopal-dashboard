@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T09:15:38.795432",
-  "generado_en_epoch": 1790604938,
+  "generado_en": "2026-09-28T09:20:13.687644",
+  "generado_en_epoch": 1790605213,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -9,12 +9,7 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 8
-        },
-        {
-          "canal": "0",
-          "clase": "sin_identificar",
-          "unidades": 4
+          "unidades": 12
         }
       ],
       "despachos": [
@@ -48,52 +43,41 @@
         },
         {
           "hora": "2026-09-28T09:15:25.803920",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": null,
-          "gap_sospechoso": false
+          "planta_fuente": "color",
+          "gap_anterior_seg": 247.5,
+          "gap_sospechoso": true
         }
       ],
       "por_planta": [
         {
           "planta": "2",
-          "despachos": 2,
-          "bloques": 8
-        },
-        {
-          "planta": "desconocida",
-          "despachos": 1,
-          "bloques": 4
+          "despachos": 3,
+          "bloques": 12
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 2,
-          "bloques": 8
-        },
-        {
-          "clase": "sin_identificar",
-          "etiqueta": "Sin identificar",
-          "despachos": 1,
-          "bloques": 4
+          "despachos": 3,
+          "bloques": 12
         }
       ],
       "anomalia": {
         "es_anomalia": false,
-        "motivo": "Dentro del rango habitual (75.6 +/- 49.9)."
+        "motivo": "Dentro del rango habitual (70.1 +/- 32.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 556,
-        "minutos_esperados": 555,
+        "minutos_cubiertos": 560,
+        "minutos_esperados": 560,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -383,7 +367,7 @@
       ],
       "anomalia": {
         "es_anomalia": false,
-        "motivo": "Dentro del rango habitual (77.0 +/- 51.2)."
+        "motivo": "Dentro del rango habitual (72.7 +/- 35.5)."
       },
       "cobertura": {
         "minutos_cubiertos": 1438,
@@ -1062,7 +1046,7 @@
       ],
       "anomalia": {
         "es_anomalia": true,
-        "motivo": "Total de hoy (296) muy por encima del promedio de los ultimos 29 dias con datos (70.3 +/- 30.8, z=7.33)."
+        "motivo": "Total de hoy (172) muy por encima del promedio de los ultimos 29 dias con datos (70.3 +/- 30.8, z=3.30)."
       },
       "cobertura": {
         "minutos_cubiertos": 1440,
@@ -24832,7 +24816,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T09:15:14.589698",
+        "ultimo_heartbeat": "2026-09-28T09:19:50.903753",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24845,7 +24829,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 417.7,
+        "libre_gb": 417.5,
         "total_gb": 984.1,
         "mensaje": "418 GB libres de 984 GB."
       },
@@ -24853,7 +24837,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T09:11:42.878007"
+        "actualizado_en": "2026-09-28T09:15:47.771875"
       },
       "mantenimiento": {
         "ok": true,
@@ -24873,7 +24857,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-28T09:10:03.675356"
+        "actualizado_en": "2026-09-28T09:20:04.008998"
       },
       "planilla": {
         "ok": true,

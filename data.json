@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T09:05:43.332525",
-  "generado_en_epoch": 1790604343,
+  "generado_en": "2026-09-28T09:10:13.328263",
+  "generado_en_epoch": 1790604613,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -8,48 +8,48 @@
       "consolidado": [
         {
           "canal": "0",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "unidades": 4
         }
       ],
       "despachos": [
         {
           "hora": "2026-09-28T09:05:27.805856",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
+          "planta_fuente": "color",
           "gap_anterior_seg": null,
           "gap_sospechoso": false
         }
       ],
       "por_planta": [
         {
-          "planta": "desconocida",
+          "planta": "2",
           "despachos": 1,
           "bloques": 4
         }
       ],
       "por_clase": [
         {
-          "clase": "sin_identificar",
-          "etiqueta": "Sin identificar",
+          "clase": "bloque_pequeno",
+          "etiqueta": "Pequeño",
           "despachos": 1,
           "bloques": 4
         }
       ],
       "anomalia": {
-        "es_anomalia": false,
-        "motivo": "Dentro del rango habitual (75.6 +/- 49.9)."
+        "es_anomalia": true,
+        "motivo": "Total de hoy (4) muy por debajo del promedio de los ultimos 29 dias con datos (70.1 +/- 32.8, z=-2.01)."
       },
       "cobertura": {
-        "minutos_cubiertos": 546,
-        "minutos_esperados": 545,
+        "minutos_cubiertos": 550,
+        "minutos_esperados": 550,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -339,7 +339,7 @@
       ],
       "anomalia": {
         "es_anomalia": false,
-        "motivo": "Dentro del rango habitual (77.0 +/- 51.2)."
+        "motivo": "Dentro del rango habitual (72.7 +/- 35.5)."
       },
       "cobertura": {
         "minutos_cubiertos": 1438,
@@ -1018,7 +1018,7 @@
       ],
       "anomalia": {
         "es_anomalia": true,
-        "motivo": "Total de hoy (296) muy por encima del promedio de los ultimos 29 dias con datos (70.3 +/- 30.8, z=7.33)."
+        "motivo": "Total de hoy (172) muy por encima del promedio de los ultimos 29 dias con datos (70.3 +/- 30.8, z=3.30)."
       },
       "cobertura": {
         "minutos_cubiertos": 1440,
@@ -24788,7 +24788,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T09:05:15.323564",
+        "ultimo_heartbeat": "2026-09-28T09:09:57.592562",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24801,7 +24801,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 418.0,
+        "libre_gb": 417.8,
         "total_gb": 984.1,
         "mensaje": "418 GB libres de 984 GB."
       },
@@ -24809,7 +24809,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T09:00:22.379587"
+        "actualizado_en": "2026-09-28T09:05:53.433690"
       },
       "mantenimiento": {
         "ok": true,
@@ -24829,7 +24829,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-28T09:00:03.731746"
+        "actualizado_en": "2026-09-28T09:10:03.675356"
       },
       "planilla": {
         "ok": true,

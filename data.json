@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T09:20:13.687644",
-  "generado_en_epoch": 1790605213,
+  "generado_en": "2026-09-28T09:27:20.174408",
+  "generado_en_epoch": 1790605640,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -10,6 +10,11 @@
           "canal": "0",
           "clase": "bloque_pequeno",
           "unidades": 12
+        },
+        {
+          "canal": "0",
+          "clase": "sin_identificar",
+          "unidades": 4
         }
       ],
       "despachos": [
@@ -54,6 +59,20 @@
           "planta_fuente": "color",
           "gap_anterior_seg": 247.5,
           "gap_sospechoso": true
+        },
+        {
+          "hora": "2026-09-28T09:27:07.442765",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
@@ -61,6 +80,11 @@
           "planta": "2",
           "despachos": 3,
           "bloques": 12
+        },
+        {
+          "planta": "desconocida",
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "por_clase": [
@@ -69,15 +93,21 @@
           "etiqueta": "Pequeño",
           "despachos": 3,
           "bloques": 12
+        },
+        {
+          "clase": "sin_identificar",
+          "etiqueta": "Sin identificar",
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "anomalia": {
         "es_anomalia": false,
-        "motivo": "Dentro del rango habitual (70.1 +/- 32.8)."
+        "motivo": "Dentro del rango habitual (75.6 +/- 49.9)."
       },
       "cobertura": {
-        "minutos_cubiertos": 560,
-        "minutos_esperados": 560,
+        "minutos_cubiertos": 567,
+        "minutos_esperados": 567,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -367,7 +397,7 @@
       ],
       "anomalia": {
         "es_anomalia": false,
-        "motivo": "Dentro del rango habitual (72.7 +/- 35.5)."
+        "motivo": "Dentro del rango habitual (77.0 +/- 51.2)."
       },
       "cobertura": {
         "minutos_cubiertos": 1438,
@@ -1046,7 +1076,7 @@
       ],
       "anomalia": {
         "es_anomalia": true,
-        "motivo": "Total de hoy (172) muy por encima del promedio de los ultimos 29 dias con datos (70.3 +/- 30.8, z=3.30)."
+        "motivo": "Total de hoy (296) muy por encima del promedio de los ultimos 29 dias con datos (70.3 +/- 30.8, z=7.33)."
       },
       "cobertura": {
         "minutos_cubiertos": 1440,
@@ -24816,7 +24846,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T09:19:50.903753",
+        "ultimo_heartbeat": "2026-09-28T09:26:55.102387",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24837,7 +24867,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T09:15:47.771875"
+        "actualizado_en": "2026-09-28T09:20:22.951046"
       },
       "mantenimiento": {
         "ok": true,

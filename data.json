@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T14:23:32.294172",
-  "generado_en_epoch": 1790623412,
+  "generado_en": "2026-09-28T14:26:24.343087",
+  "generado_en_epoch": 1790623584,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -177,7 +177,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -218,8 +218,8 @@
         "motivo": "Dentro del rango habitual (70.1 +/- 32.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 859,
-        "minutos_esperados": 863,
+        "minutos_cubiertos": 862,
+        "minutos_esperados": 866,
         "porcentaje": 99.5,
         "huecos": []
       },
@@ -25005,8 +25005,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T14:22:44.970774",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-09-28T14:25:42.644852",
+        "fraccion_baja_confianza_reciente": 0.03
       }
     ],
     "procesamiento_diario": {
@@ -25018,20 +25018,20 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 420.6,
+        "libre_gb": 420.5,
         "total_gb": 984.1,
-        "mensaje": "421 GB libres de 984 GB."
+        "mensaje": "420 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T14:20:43.198541"
+        "actualizado_en": "2026-09-28T14:23:40.659133"
       },
       "mantenimiento": {
         "ok": true,
-        "mensaje": "421 GB libres de 984 GB. evidencia 559 GB (1241 clips).",
-        "actualizado_en": "2026-09-28T12:37:30.054979"
+        "mensaje": "420 GB libres de 984 GB. evidencia 559 GB (1243 clips).",
+        "actualizado_en": "2026-09-28T14:26:13.655140"
       },
       "informes": {
         "ok": true,

@@ -179,6 +179,8 @@
     box-shadow: inset 0 -2px 0 rgba(0,0,0,0.14);
   }
   button.molde.revisar { background: repeating-linear-gradient(135deg, var(--c, var(--p0)) 0 3px, color-mix(in srgb, var(--c, var(--p0)) 45%, var(--surface)) 3px 6px); outline: 1px dashed var(--warn); outline-offset: 1px; }
+  /* Pasada la medianoche, siguiendo la tanda de la noche: va al final del dia. */
+  button.molde.siguiente { outline: 1.5px dashed var(--ink-2); outline-offset: 1px; }
   button.molde:hover { filter: brightness(1.12); }
   button.molde:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
   .rampa.entrando button.molde { animation: caer 0.42s cubic-bezier(.2,.8,.3,1.2) both; animation-delay: calc(var(--i, 0) * 22ms); transform-origin: bottom; }
@@ -196,6 +198,7 @@
   .leyenda .muestra { width: 13px; height: 13px; border-radius: 2.5px; background: var(--c, var(--p0)); flex: none; }
   .leyenda .muestra.rayada { background: repeating-linear-gradient(135deg, var(--ink-3) 0 3px, transparent 3px 6px); outline: 1px dashed var(--warn); }
   .leyenda .muestra.hueco { background: var(--bad); height: 5px; border-radius: 2px; }
+  .leyenda .muestra.siguiente { background: transparent; outline: 1.5px dashed var(--ink-2); outline-offset: -1px; }
   .leyenda strong { color: var(--ink); font-weight: 650; }
 
   /* --- Despachos: una fila por molde --- */
@@ -746,7 +749,8 @@ function renderDia(dia) {
   }
   if (confiables.length) {
     const primero = horaMin(confiables[0].hora);
-    const ultimo = horaMin(confiables[confiables.length - 1].hora);
+    const fin = confiables[confiables.length - 1];
+    const ultimo = horaMin(fin.hora) + (fin.continuacion ? ' (pasada la medianoche)' : '');
     partes.push(confiables.length === 1 ? `Salió a las ${primero}.` : `El primero salió a las ${primero} y el último a las ${ultimo}.`);
   }
   if (porRevisar.length) {
@@ -816,15 +820,18 @@ function renderRampa(dia) {
   const base = document.getElementById('rampa-base');
   const despachos = dia.conteo_real ? (dia.despachos || []) : [];
   const porHora = Array.from({ length: 24 }, () => []);
-  despachos.forEach((d, i) => porHora[new Date(d.hora).getHours()].push({ d, i }));
+  // Pasada la medianoche siguiendo la tanda de la noche: al final del dia
+  // (ultima columna), marcado aparte, no en las 0 h de este dia.
+  despachos.forEach((d, i) => porHora[d.continuacion ? 23 : new Date(d.hora).getHours()].push({ d, i }));
   cols.style.setProperty('--n', Math.max(1, ...porHora.map(x => x.length)));  // alto de cada cuadro: CSS
   let orden = 0;
   cols.innerHTML = porHora.map((lista, hora) => {
     const noche = hora < 7 || hora >= 19;
     const moldes = lista.map(({ d, i }) => {
       const planta = (!d.planta || d.planta === 'desconocida') ? 'planta sin identificar' : 'planta ' + d.planta;
-      const etiqueta = `${horaMin(d.hora)}, ${planta}, ${d.bloques} bloques${d.por_revisar ? ', por revisar' : ''}`;
-      return `<button type="button" class="molde ${d.por_revisar ? 'revisar' : ''}" style="--c:${colorPlanta(d.planta)};--i:${orden++}" aria-label="${etiqueta}" title="${etiqueta}" onclick="irADespacho(${i})"></button>`;
+      const etiqueta = `${horaMin(d.hora)}${d.continuacion ? ' (pasada la medianoche)' : ''}, ${planta}, ${d.bloques} bloques${d.por_revisar ? ', por revisar' : ''}`;
+      const clases = ['molde', d.por_revisar ? 'revisar' : '', d.continuacion ? 'siguiente' : ''].join(' ').trim();
+      return `<button type="button" class="${clases}" style="--c:${colorPlanta(d.planta)};--i:${orden++}" aria-label="${etiqueta}" title="${etiqueta}" onclick="irADespacho(${i})"></button>`;
     }).join('');
     return `<div class="rampa-col ${noche ? 'noche' : ''}">${moldes}</div>`;
   }).join('');
@@ -873,6 +880,10 @@ function renderLeyenda(dia) {
   if ((dia.cobertura && dia.cobertura.huecos || []).length) {
     items.push(`<span class="item"><span class="muestra hueco"></span><span>Cámara sin contar</span></span>`);
   }
+  const siguientes = despachos.filter(d => d.continuacion);
+  if (siguientes.length) {
+    items.push(`<span class="item"><span class="muestra siguiente"></span><span><strong>Pasada la medianoche</strong> ${plural(siguientes.length, 'molde', 'moldes')} que siguió la tanda de la noche</span></span>`);
+  }
   // Tamaño de los bloques confirmados (por el color de la barra y/o la forma del molde).
   const porClase = {};
   conf.forEach(d => { porClase[d.clase] = (porClase[d.clase] || 0) + d.bloques; });
@@ -903,6 +914,7 @@ function renderDespachosLista(despachos, conteoReal) {
           : d.planta_fuente === 'vecinos' ? ' (probable, por los despachos vecinos)' : ' (deducida por el tamaño)');
     const clase = { bloque_grande: 'bloque grande', bloque_pequeno: 'bloque pequeño' }[d.clase];
     const notas = [];
+    if (d.continuacion) notas.push('<span class="nota-neutra">Pasada la medianoche: sigue la tanda de la noche, cuenta en este día</span>');
     if (d.por_revisar) notas.push(`<span class="nota-aviso">${d.motivo_revision === 'noche' ? 'De noche' : 'De madrugada'}: por revisar en video</span>`);
     // Como se decidio el tamano: color de la barra y/o forma del molde
     // (analytics/despachos.py, combinar_color_y_forma).

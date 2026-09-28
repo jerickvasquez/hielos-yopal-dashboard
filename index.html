@@ -646,12 +646,12 @@ function renderEstado(estado) {
     });
   }
   const sistema = (estado && estado.sistema) || {};
-  const nombres = { disco: 'Disco del servidor', publicacion: 'Publicación de esta página',
+  const nombres = { camara: 'Cámara', disco: 'Disco del servidor', publicacion: 'Publicación de esta página',
     mantenimiento: 'Mantenimiento automático', informes: 'Informe diario en Excel',
     clips: 'Videos en la página', vigia: 'Vigía de actividad', planilla: 'Planilla de los trabajadores',
     atribucion: 'Planta de despachos anteriores' };
   Object.keys(nombres).forEach(k => {
-    if (sistema[k]) items.push({ titulo: nombres[k], ok: sistema[k].ok, mensaje: sistema[k].mensaje, cuando: sistema[k].actualizado_en });
+    if (sistema[k]) items.push({ titulo: nombres[k], ok: sistema[k].ok, mensaje: sistema[k].mensaje, cuando: sistema[k].actualizado_en, etiqueta: sistema[k].etiqueta });
   });
   // La corrida por lote (procesar-diario) esta apagada en el servidor: su
   // ultimo resultado viejo solo confunde. Se muestra solo si es reciente.
@@ -665,7 +665,7 @@ function renderEstado(estado) {
   }
 
   cont.innerHTML = items.length
-    ? items.map(x => estadoItem(x.titulo, x.ok, x.mensaje, x.cuando)).join('')
+    ? items.map(x => estadoItem(x.titulo, x.ok, x.mensaje, x.cuando, x.etiqueta)).join('')
     : '<div class="empty-state">Todavía no hay chequeos registrados.</div>';
 
   // Una sola linea arriba: todo bien, o que hay que atender (el detalle se abre aparte).
@@ -685,9 +685,9 @@ function renderEstado(estado) {
   }
 }
 
-function estadoItem(titulo, ok, mensaje, cuando) {
+function estadoItem(titulo, ok, mensaje, cuando, etiqueta) {
   const clase = ok === true ? 'ok' : ok === false ? 'problema' : 'pendiente';
-  const textoBadge = ok === true ? 'Bien' : ok === false ? 'Atención' : 'Pendiente';
+  const textoBadge = etiqueta || (ok === true ? 'Bien' : ok === false ? 'Atención' : 'Pendiente');
   return `
     <div class="estado-item ${clase}">
       <span class="estado-dot"></span>

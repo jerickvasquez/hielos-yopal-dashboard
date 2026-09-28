@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T06:26:44.424825",
-  "generado_en_epoch": 1790594804,
+  "generado_en": "2026-09-28T06:27:26.964778",
+  "generado_en_epoch": 1790594846,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -14,8 +14,8 @@
         "motivo": "Total de hoy (0) muy por debajo del promedio de los ultimos 29 dias con datos (70.1 +/- 32.8, z=-2.13)."
       },
       "cobertura": {
-        "minutos_cubiertos": 387,
-        "minutos_esperados": 386,
+        "minutos_cubiertos": 388,
+        "minutos_esperados": 387,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -994,14 +994,14 @@
       },
       "validacion": {
         "estado": "inconsistencias",
-        "mensaje": "2 de 4 tandas no cuadran; 1 tanda(s) de noche/madrugada no se pueden verificar todavía; 2 despacho(s) de noche/madrugada sin anotar por revisar en video.",
+        "mensaje": "1 de 4 tandas no cuadran.",
         "reportado": 176,
-        "sistema": 124,
+        "sistema": 172,
         "tandas": 4,
-        "tandas_ok": 1,
-        "tandas_no_verificables": 1,
-        "despachos_sin_reportar": 2,
-        "bloques_sin_reportar": 8,
+        "tandas_ok": 3,
+        "tandas_no_verificables": 0,
+        "despachos_sin_reportar": 0,
+        "bloques_sin_reportar": 0,
         "sin_reportar_confirmados": 0,
         "errores_llenado": 0
       }
@@ -24754,7 +24754,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T06:26:30.130040",
+        "ultimo_heartbeat": "2026-09-28T06:27:00.544537",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24775,7 +24775,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T06:20:55.886266"
+        "actualizado_en": "2026-09-28T06:26:54.687091"
       },
       "mantenimiento": {
         "ok": true,
@@ -24784,8 +24784,8 @@
       },
       "informes": {
         "ok": true,
-        "mensaje": "Informe(s) 2026-09-27, 2026-09-28 publicados; 62 informes disponibles para descargar.",
-        "actualizado_en": "2026-09-28T06:20:29.369582"
+        "mensaje": "Informe(s) 2026-09-27, 2026-09-26 publicados; 62 informes disponibles para descargar.",
+        "actualizado_en": "2026-09-28T06:27:14.499323"
       },
       "clips": {
         "ok": true,
@@ -24800,7 +24800,7 @@
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 6 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-09-28T06:20:09.964620"
+        "actualizado_en": "2026-09-28T06:27:00.292456"
       },
       "atribucion": {
         "ok": true,

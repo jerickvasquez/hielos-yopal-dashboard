@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-27T19:10:19.772731",
-  "generado_en_epoch": 1790554219,
+  "generado_en": "2026-09-27T19:20:15.845799",
+  "generado_en_epoch": 1790554815,
   "dias": [
     {
       "fecha": "2026-09-27",
@@ -170,8 +170,8 @@
         "motivo": "Dentro del rango habitual (71.0 +/- 31.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 1148,
-        "minutos_esperados": 1150,
+        "minutos_cubiertos": 1158,
+        "minutos_esperados": 1160,
         "porcentaje": 99.8,
         "huecos": []
       },
@@ -24535,7 +24535,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-27T19:10:11.863576",
+        "ultimo_heartbeat": "2026-09-27T19:19:47.482944",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -24548,15 +24548,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 430.9,
+        "libre_gb": 430.1,
         "total_gb": 984.1,
-        "mensaje": "431 GB libres de 984 GB."
+        "mensaje": "430 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-27T19:00:35.542211"
+        "actualizado_en": "2026-09-27T19:10:27.663402"
       },
       "mantenimiento": {
         "ok": true,
@@ -24576,7 +24576,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-27T19:10:04.766191"
+        "actualizado_en": "2026-09-27T19:20:04.062195"
       },
       "planilla": {
         "ok": true,

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-29T12:00:09.475713",
-  "generado_en_epoch": 1790701209,
+  "generado_en": "2026-09-29T12:10:05.332653",
+  "generado_en_epoch": 1790701805,
   "dias": [
     {
       "fecha": "2026-09-29",
@@ -403,8 +403,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 720,
-        "minutos_esperados": 720,
+        "minutos_cubiertos": 730,
+        "minutos_esperados": 730,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -25900,7 +25900,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-29T11:59:43.849428",
+        "ultimo_heartbeat": "2026-09-29T12:09:50.540383",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -25921,7 +25921,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-29T11:50:16.558318"
+        "actualizado_en": "2026-09-29T12:00:19.010829"
       },
       "mantenimiento": {
         "ok": true,
@@ -25941,7 +25941,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-29T12:00:04.641245"
+        "actualizado_en": "2026-09-29T12:10:02.873479"
       },
       "planilla": {
         "ok": true,
@@ -25949,15 +25949,15 @@
         "actualizado_en": "2026-09-29T11:20:06.270403"
       },
       "atribucion": {
-        "ok": true,
-        "mensaje": "Despachos anteriores: 1252 de 1834 clips revisados (0 con planta identificada en esta corrida, 496 con tamaño por la forma del molde); faltan 582, siguen la próxima noche.",
+        "ok": false,
+        "mensaje": "No corre desde hace tiempo (tarea programada detenida?). Ultimo: Despachos anteriores: 1252 de 1834 clips revisados (0 con planta identificada en esta corrida, 496 con tamaño por la forma del molde); faltan 582, siguen la próxima noche.",
         "actualizado_en": "2026-09-28T06:01:05.294691"
       },
       "camara": {
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-09-29T11:55:28"
+        "actualizado_en": "2026-09-29T12:05:29"
       }
     }
   }

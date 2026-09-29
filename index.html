@@ -387,7 +387,7 @@
         <p id="informe-texto"></p>
         <div class="informe-acciones">
           <label class="sr-only" for="informe-password">Contraseña del informe (la misma de los videos)</label>
-          <input type="password" id="informe-password" name="contrasena-informe" placeholder="Contraseña" autocomplete="off" style="display:none;">
+          <input type="password" id="informe-password" name="contrasena-informe" placeholder="Contraseña" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" style="display:none;">
           <button type="button" id="informe-descargar">Descargar Excel</button>
         </div>
         <p class="clips-error" id="informe-error" aria-live="polite" style="display:none;"></p>
@@ -403,7 +403,7 @@
       <div class="clips-gate" id="clips-gate">
         <p>Escribe la contraseña para reproducir los videos.</p>
         <label class="sr-only" for="clips-password">Contraseña de los videos</label>
-        <input type="password" id="clips-password" name="contrasena-videos" placeholder="Contraseña" autocomplete="off">
+        <input type="password" id="clips-password" name="contrasena-videos" placeholder="Contraseña" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
         <button id="clips-desbloquear" type="button">Desbloquear videos</button>
         <p class="clips-error" id="clips-error" aria-live="polite" style="display:none;"></p>
         <p class="clips-ok" id="clips-ok" aria-live="polite" style="display:none;">Listo. Toca “Ver video” en cualquier despacho.</p>
@@ -983,12 +983,57 @@ let passwordCompartida = null;  // solo en memoria; clips e informes usan la mis
 const clavesPorSalt = {};
 let fechaSeleccionada = null;
 
-async function claveParaSalt(saltB64, iteraciones) {
-  if (!passwordCompartida) throw new Error('sin contraseña');
-  const id = saltB64 + ':' + iteraciones;
+// El celular a veces agrega un espacio al final o escribe las tildes de otra
+// forma: se prueba primero la contraseña limpia y, si no abre, tal cual se
+// escribio (2026-09-28: "al colocar las contraseñas esta fallando").
+function candidatosPassword() {
+  const p = passwordCompartida || '';
+  const limpia = p.trim().normalize('NFC');
+  return limpia === p ? [p] : [limpia, p];
+}
+
+function webCryptoDisponible() {
+  return !!(window.crypto && window.crypto.subtle && window.TextEncoder);
+}
+
+// Por que no se pudo abrir un archivo protegido: 'navegador', 'descarga' o 'contrasena'.
+function motivoFalla(e) {
+  if (!webCryptoDisponible()) return 'navegador';
+  if (e && e.motivo) return e.motivo;
+  return 'contrasena';
+}
+
+async function bajarCifrado(url) {
+  let resp;
+  try {
+    resp = await fetch(url, { cache: 'no-store' });
+  } catch (e) {
+    throw Object.assign(new Error('sin conexion'), { motivo: 'descarga' });
+  }
+  if (!resp.ok) throw Object.assign(new Error('HTTP ' + resp.status), { motivo: 'descarga' });
+  return resp.arrayBuffer();
+}
+
+async function descifrarArchivo(cifrado, ivB64, saltB64, iteraciones) {
+  let ultimo = null;
+  for (const pw of candidatosPassword()) {
+    try {
+      const clave = await claveParaSalt(saltB64, iteraciones, pw);
+      return await crypto.subtle.decrypt({ name: 'AES-GCM', iv: base64ABuffer(ivB64) }, clave, cifrado);
+    } catch (e) {
+      ultimo = e;
+    }
+  }
+  throw ultimo || new Error('sin contraseña');
+}
+
+async function claveParaSalt(saltB64, iteraciones, password) {
+  const pw = password == null ? candidatosPassword()[0] : password;
+  if (!pw) throw new Error('sin contraseña');
+  const id = saltB64 + ':' + iteraciones + ':' + pw;
   if (!clavesPorSalt[id]) {
     const material = await crypto.subtle.importKey(
-      'raw', new TextEncoder().encode(passwordCompartida), 'PBKDF2', false, ['deriveKey']
+      'raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveKey']
     );
     clavesPorSalt[id] = await crypto.subtle.deriveKey(
       { name: 'PBKDF2', salt: base64ABuffer(saltB64), iterations: iteraciones || 200000, hash: 'SHA-256' },
@@ -1057,11 +1102,8 @@ async function descargarInforme() {
   boton.textContent = 'Descargando…';
   boton.disabled = true;  // un clic = una descarga
   try {
-    const resp = await fetch('./' + inf.archivo, { cache: 'no-store' });
-    if (!resp.ok) throw new Error('no se pudo descargar');
-    const cifrado = await resp.arrayBuffer();
-    const clave = await claveParaSalt(inf.salt, manifestInformes.iteraciones);
-    const plano = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: base64ABuffer(inf.iv) }, clave, cifrado);
+    const cifrado = await bajarCifrado('./' + inf.archivo);
+    const plano = await descifrarArchivo(cifrado, inf.iv, inf.salt, manifestInformes.iteraciones);
     const url = URL.createObjectURL(new Blob([plano], {
       type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }));
     const a = document.createElement('a');
@@ -1070,10 +1112,17 @@ async function descargarInforme() {
     setTimeout(() => URL.revokeObjectURL(url), 5000);
     input.style.display = 'none';
   } catch (e) {
-    passwordCompartida = null; claveClipsDerivada = null;
-    Object.keys(clavesPorSalt).forEach(k => delete clavesPorSalt[k]);
-    input.value = ''; input.style.display = '';
-    error.textContent = 'No se pudo abrir el informe: la contraseña no es correcta o el archivo llegó dañado. Escríbela de nuevo; si sigue fallando, pide el Excel a quien administra el sistema.';
+    const motivo = motivoFalla(e);
+    if (motivo === 'contrasena') {
+      passwordCompartida = null; claveClipsDerivada = null;
+      Object.keys(clavesPorSalt).forEach(k => delete clavesPorSalt[k]);
+      input.value = ''; input.style.display = '';
+    }
+    error.textContent = {
+      contrasena: 'Esa contraseña no abre el informe. Revisa mayúsculas y tildes y escríbela de nuevo; si sigue fallando, pide la contraseña actual a quien administra el sistema.',
+      descarga: 'No se pudo descargar el informe (sin internet o la página se estaba actualizando). Inténtalo de nuevo en un momento.',
+      navegador: 'Este navegador no puede abrir archivos protegidos. Abre la página en Chrome, Edge, Firefox o Safari actualizados (no dentro de otra aplicación).',
+    }[motivo];
     error.style.display = '';
   } finally {
     boton.textContent = textoOriginal;
@@ -1190,13 +1239,9 @@ async function reproducirClip(indice) {
   try {
     // Desde 2026-09-26 los videos viven en Backblaze B2 (clip.url, con
     // autorizacion de descarga incluida); los viejos, en este mismo repo.
-    const resp = await fetch(clip.url || ('./' + clip.archivo), { cache: 'no-store' });
-    if (!resp.ok) throw new Error('no se pudo descargar el archivo');
-    const cifrado = await resp.arrayBuffer();
+    const cifrado = await bajarCifrado(clip.url || ('./' + clip.archivo));
     estadoEl.textContent = 'Descifrando…';
-    const iv = base64ABuffer(clip.iv);
-    const clave = await claveParaSalt(clip.salt || manifestClips.salt, manifestClips.iteraciones);
-    const plano = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, clave, cifrado);
+    const plano = await descifrarArchivo(cifrado, clip.iv, clip.salt || manifestClips.salt, manifestClips.iteraciones);
 
     const blob = new Blob([plano], { type: 'video/mp4' });
     const url = URL.createObjectURL(blob);
@@ -1215,7 +1260,11 @@ async function reproducirClip(indice) {
   } catch (e) {
     // AES-GCM falla la verificacion de integridad con la clave incorrecta
     // (no reproduce video corrupto/basura, simplemente no descifra).
-    estadoEl.textContent = 'No se pudo abrir el video: revisa la contraseña en «Desbloquear videos» y vuelve a intentarlo.';
+    estadoEl.textContent = {
+      contrasena: 'Esa contraseña no abre este video. Escríbela de nuevo en «Desbloquear videos» (revisa mayúsculas y tildes).',
+      descarga: 'No se pudo descargar el video (sin internet o el enlace venció). Recarga la página y vuelve a intentarlo.',
+      navegador: 'Este navegador no puede abrir videos protegidos. Abre la página en Chrome, Edge, Firefox o Safari actualizados.',
+    }[motivoFalla(e)];
   }
 }
 

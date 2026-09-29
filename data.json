@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T22:08:22.792170",
-  "generado_en_epoch": 1790651302,
+  "generado_en": "2026-09-28T22:10:14.042688",
+  "generado_en_epoch": 1790651414,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -9,7 +9,7 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 16
+          "unidades": 20
         },
         {
           "canal": "0",
@@ -19,7 +19,7 @@
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 8
+          "unidades": 4
         }
       ],
       "despachos": [
@@ -375,16 +375,16 @@
         },
         {
           "hora": "2026-09-28T22:08:06.526158",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "solo_color",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": 6431.5,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 1363.2,
           "gap_sospechoso": false
         }
       ],
@@ -406,21 +406,21 @@
         },
         {
           "planta": "4",
-          "despachos": 4,
-          "bloques": 16
+          "despachos": 5,
+          "bloques": 20
         },
         {
           "planta": "desconocida",
-          "despachos": 3,
-          "bloques": 12
+          "despachos": 2,
+          "bloques": 8
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_grande",
           "etiqueta": "Grande",
-          "despachos": 4,
-          "bloques": 16
+          "despachos": 5,
+          "bloques": 20
         },
         {
           "clase": "bloque_pequeno",
@@ -431,8 +431,8 @@
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "anomalia": {
@@ -440,8 +440,8 @@
         "motivo": "Dentro del rango habitual (70.1 +/- 32.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 1310,
-        "minutos_esperados": 1328,
+        "minutos_cubiertos": 1312,
+        "minutos_esperados": 1330,
         "porcentaje": 98.6,
         "huecos": []
       },
@@ -25243,8 +25243,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T22:07:46.504546",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-09-28T22:10:03.976076",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -25256,7 +25256,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 417.7,
+        "libre_gb": 417.6,
         "total_gb": 984.1,
         "mensaje": "418 GB libres de 984 GB."
       },
@@ -25264,7 +25264,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T22:00:31.370485"
+        "actualizado_en": "2026-09-28T22:08:32.645161"
       },
       "mantenimiento": {
         "ok": true,
@@ -25278,13 +25278,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "234 clips disponibles en la pagina (2 nuevos), 270 en cola para las proximas corridas. Espacio: 3.0 de 9 GB.",
-        "actualizado_en": "2026-09-28T22:03:58.767068"
+        "mensaje": "235 clips disponibles en la pagina (1 nuevos), 270 en cola para las proximas corridas. Espacio: 3.0 de 9 GB.",
+        "actualizado_en": "2026-09-28T22:09:53.416369"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-28T22:00:04.470643"
+        "actualizado_en": "2026-09-28T22:10:03.818363"
       },
       "planilla": {
         "ok": true,

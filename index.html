@@ -280,8 +280,10 @@
   .clip-row .clip-estado { font-size: 12px; color: var(--ink-3); min-width: 80px; text-align: right; }
   .clip-player { margin-top: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
   .clip-player video { width: 100%; border-radius: 6px; background: #000; display: block; }
-  .clip-player .clip-player-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
-  .clip-player .clip-player-head button { font: inherit; background: none; border: none; color: var(--accent); font-size: 14px; cursor: pointer; padding: 2px 6px; }
+  .clip-player .clip-player-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 12px; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+  .clip-player .clip-player-acciones { display: flex; flex-wrap: wrap; gap: 2px 6px; margin-left: auto; }
+  .clip-player .clip-player-head button { font: inherit; background: none; border: none; color: var(--accent); font-size: 14px; cursor: pointer; padding: 6px 6px; min-height: 40px; }
+  .clip-player .clip-player-nota { font-size: 12px; color: var(--ink-3); margin: 8px 0 0; }
 
   /* --- Estado del proyecto (al final, plegado) --- */
   details.proyecto { margin-top: 44px; border-top: 1px solid var(--line); }
@@ -362,7 +364,7 @@
   <section aria-labelledby="titulo-despachos">
     <div class="seccion-cab">
       <h2 id="titulo-despachos">Despachos del día</h2>
-      <p class="nota-sec">Uno por fila, en orden. “Ver video” abre el respaldo (pide la contraseña de los videos).</p>
+      <p class="nota-sec">Uno por fila, en orden. “Ver video” abre el respaldo (pide la contraseña de los videos); desde ahí se puede descargar.</p>
     </div>
     <ol class="despachos" id="despachos-lista"></ol>
   </section>
@@ -411,9 +413,14 @@
       <div class="clip-player" id="clip-player" style="display:none;">
         <div class="clip-player-head">
           <span id="clip-player-titulo"></span>
-          <button type="button" id="clip-player-cerrar">Cerrar video</button>
+          <div class="clip-player-acciones">
+            <button type="button" id="clip-player-descargar">Descargar</button>
+            <button type="button" id="clip-player-compartir" hidden>Compartir</button>
+            <button type="button" id="clip-player-cerrar">Cerrar video</button>
+          </div>
         </div>
-        <video id="clip-player-video" controls></video>
+        <video id="clip-player-video" controls playsinline></video>
+        <p class="clip-player-nota">El video descargado ya no pide contraseña: guárdalo o envíalo solo a quien corresponda.</p>
       </div>
     </section>
   </div>
@@ -1197,8 +1204,10 @@ async function reproducirClip(indice) {
     const video = document.getElementById('clip-player-video');
     if (video.src) URL.revokeObjectURL(video.src);
     video.src = url;
-    document.getElementById('clip-player-titulo').textContent =
-      tituloClip(clip) + ', ' + fechaLarga(clip.fecha);
+    const titulo = tituloClip(clip) + ', ' + fechaLarga(clip.fecha);
+    document.getElementById('clip-player-titulo').textContent = titulo;
+    videoActual = { blob, nombre: nombreDescargaClip(clip), titulo };
+    document.getElementById('clip-player-compartir').hidden = !PUEDE_COMPARTIR_VIDEO;
     jugador.style.display = '';
     desplazarA(jugador, 'center');
     video.play().catch(() => {});
@@ -1210,6 +1219,51 @@ async function reproducirClip(indice) {
   }
 }
 
+// --- Guardar el video en el computador o el celular ---
+// El video ya esta descifrado en memoria (el que se esta viendo): se guarda
+// tal cual, sin volver a bajarlo. En el celular, "Compartir" abre el menu del
+// telefono: "Guardar video" (iPhone, a Fotos), WhatsApp, Drive, etc.
+let videoActual = null;  // { blob, nombre, titulo } del video abierto
+
+const PUEDE_COMPARTIR_VIDEO = (() => {
+  try {
+    return !!(navigator.canShare &&
+      navigator.canShare({ files: [new File([new Uint8Array(1)], 'prueba.mp4', { type: 'video/mp4' })] }));
+  } catch (e) {
+    return false;
+  }
+})();
+
+function nombreDescargaClip(clip) {
+  // hielos-yopal_2026-09-26_14-22-05_planta-2.mp4 (la hora que se ve en el video)
+  const hora = (clip.hora || clip.hora_inicio || '').slice(11, 19).replace(/:/g, '-');
+  const planta = clip.planta && clip.planta !== 'desconocida' ? '_planta-' + clip.planta : '';
+  return 'hielos-yopal_' + clip.fecha + (hora ? '_' + hora : '') + planta + '.mp4';
+}
+
+function descargarVideo() {
+  if (!videoActual) return;
+  const url = URL.createObjectURL(videoActual.blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = videoActual.nombre;
+  document.body.appendChild(a); a.click(); a.remove();
+  // Tiempo de sobra para que el telefono termine de guardarlo.
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+}
+
+async function compartirVideo() {
+  if (!videoActual) return;
+  const archivo = new File([videoActual.blob], videoActual.nombre, { type: 'video/mp4' });
+  try {
+    await navigator.share({ files: [archivo], title: videoActual.titulo });
+  } catch (e) {
+    if (e && e.name === 'AbortError') return;  // cerro el menu sin elegir nada
+    descargarVideo();  // si el telefono no lo deja compartir, se descarga
+  }
+}
+
+document.getElementById('clip-player-descargar').addEventListener('click', descargarVideo);
+document.getElementById('clip-player-compartir').addEventListener('click', compartirVideo);
 document.getElementById('clips-desbloquear').addEventListener('click', desbloquearClips);
 document.getElementById('clips-password').addEventListener('keydown', e => {
   if (e.key === 'Enter') desbloquearClips();
@@ -1220,6 +1274,7 @@ document.getElementById('clip-player-cerrar').addEventListener('click', () => {
   video.pause();
   if (video.src) URL.revokeObjectURL(video.src);
   video.removeAttribute('src');
+  videoActual = null;
   jugador.style.display = 'none';
 });
 document.getElementById('theme-toggle').addEventListener('click', toggleTema);

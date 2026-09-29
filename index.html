@@ -238,6 +238,10 @@
   .tend-barra { width: 100%; max-width: 38px; background: var(--line); border-radius: 3px 3px 1px 1px; min-height: 3px; }
   .tend-col:hover .tend-barra { background: var(--ink-3); }
   .tend-col.sel .tend-barra { background: var(--ink); }
+  .tend-col.anterior .tend-barra { background: transparent; border: 1.5px dashed var(--ink-3); }
+  .tend-col.anterior.sel .tend-barra { border-color: var(--ink); }
+  .nota-tend { font-size: 13px; color: var(--ink-2); margin: 10px 0 0; display: flex; gap: 8px; align-items: baseline; }
+  .nota-tend .muestra-anterior { flex: none; width: 12px; height: 12px; border: 1.5px dashed var(--ink-3); border-radius: 2px; transform: translateY(1px); }
   .tend-num { font-size: 12px; font-weight: 650; color: var(--ink-2); margin-bottom: 3px; }
   .tend-col.sel .tend-num { color: var(--ink); }
   .tend-dia { font-size: 12px; color: var(--ink-3); margin-top: 5px; white-space: nowrap; font-stretch: 88%; }
@@ -372,9 +376,10 @@
   <section id="seccion-tendencia" style="display:none;" aria-labelledby="titulo-tendencia">
     <div class="seccion-cab">
       <h2 id="titulo-tendencia">Últimos días</h2>
-      <p class="nota-sec">Bloques confirmados por día, sin la noche y madrugada por revisar. Toca un día para verlo.</p>
+      <p class="nota-sec">Bloques confirmados por día, sin lo que queda por revisar. Toca un día para verlo.</p>
     </div>
     <div class="tendencia" id="chart-tendencia"></div>
+    <p class="nota-tend" id="nota-tendencia" style="display:none;"><span class="muestra-anterior" aria-hidden="true"></span>Barras punteadas: días contados con el método anterior, que perdía moldes (el 26 de septiembre contó 31 de 44). Esas cifras son menores que la realidad.</p>
   </section>
 
   <div class="utiles dos" id="utiles">
@@ -430,8 +435,8 @@
     <div class="roadmap">
       <div class="road-item"><span class="badge done"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Conteo automático de despachos</p><p class="road-desc">Cada salida de molde por la rampa se cuenta con hora exacta y video de respaldo, con la cámara real de producción.</p></div></div>
       <div class="road-item"><span class="badge done"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Operación 24/7 vigilada</p><p class="road-desc">Conteo en vivo con reinicio automático, mantenimiento diario del disco, informe Excel diario y un vigilante externo que avisa por correo si esta página deja de actualizarse.</p></div></div>
-      <div class="road-item"><span class="badge progress"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En validación</span><div><p class="road-title">Contar por la presencia del molde</p><p class="road-desc">Cada vez que un molde llega a la rampa es un despacho. Probado con la grabación del 26 de septiembre: contó los 44 moldes del día, sin dobles ni falsos, de día y de noche (el conteo anterior contó 31). La madrugada, antes de las 7:00 a. m., sigue por revisar hasta verla con despachos reales.</p></div></div>
-      <div class="road-item"><span class="badge progress"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En validación</span><div><p class="road-title">Planta de origen y tamaño</p><p class="road-desc">Por el color de la barra del molde (rojo, planta 2; amarillo, planta 4; rosado, planta 1; morado o naranja, planta 3) y, como segunda confirmación, por la forma del molde.</p></div></div>
+      <div class="road-item"><span class="badge done"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Listo</span><div><p class="road-title">Contar por la presencia del molde</p><p class="road-desc">En uso desde el 27 de septiembre. Cada vez que un molde llega a la rampa es un despacho. Verificado con la grabación del 26 de septiembre: 44 de 44 moldes, sin dobles ni falsos, de día y de noche (el conteo anterior contó 31), y la misma cifra que la planilla de los trabajadores. La madrugada, antes de las 7:00 a. m., sigue por revisar hasta verla con despachos reales.</p></div></div>
+      <div class="road-item"><span class="badge progress"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>En validación</span><div><p class="road-title">Planta de origen y tamaño</p><p class="road-desc">Por el color de la barra del molde (rojo, planta 2; amarillo, planta 4; rosado, planta 1; morado o naranja, planta 3), calibrado con los moldes verificados, y por la forma del molde (el grande es de la planta 4). Si el color y la forma no coinciden, no se adivina la planta. De noche el morado de la planta 3 casi no se ve: repintarlo con un color más fuerte ayudaría.</p></div></div>
     </div>
   </details>
 
@@ -591,12 +596,14 @@ function renderTendencia(dias) {
     const f = new Date(d.fecha + 'T12:00:00');
     const sem = f.toLocaleDateString('es-CO', { weekday: 'short' }).replace('.', '');
     const sel = d.fecha === fechaSeleccionada;
-    return `<button type="button" class="tend-col ${sel ? 'sel' : ''}" data-fecha="${d.fecha}" aria-pressed="${sel}" aria-label="${fechaLarga(d.fecha)}: ${v} bloques confirmados" onclick="seleccionarFecha('${d.fecha}')">
+    const anterior = d.metodo === 'anterior';
+    return `<button type="button" class="tend-col ${sel ? 'sel' : ''} ${anterior ? 'anterior' : ''}" data-fecha="${d.fecha}" aria-pressed="${sel}" aria-label="${fechaLarga(d.fecha)}: ${v} bloques confirmados${anterior ? ' (método anterior, cifra menor que la real)' : ''}" onclick="seleccionarFecha('${d.fecha}')">
       <span class="tend-num">${v}</span>
       <span class="tend-barra" style="height:${v === 0 ? 0 : Math.max(4, v / maxV * 100)}%"></span>
       <span class="tend-dia"><span class="sem">${sem} </span>${f.getDate()}</span>
     </button>`;
   }).join('');
+  document.getElementById('nota-tendencia').style.display = reales.some(d => d.metodo === 'anterior') ? '' : 'none';
 }
 
 async function refrescar() {
@@ -769,6 +776,12 @@ function renderDia(dia) {
   }
   ponerTexto(document.getElementById('dia-detalle'), partes.join(' '));
 
+  // Dias contados con el metodo anterior (antes del 26-27 sep): perdia
+  // moldes; la cifra se muestra, pero avisando que es menor que la real.
+  if (dia.metodo === 'anterior') {
+    document.getElementById('banner-dia').innerHTML = `<span class="banner-ico">${ICO.info}</span><span><strong>Conteo con el método anterior.</strong> Este día se contó antes del conteo por presencia del molde; ese método perdía moldes (el 26 de septiembre contó 31 de 44), así que la cifra es menor que la real.</span>`;
+  }
+
   const bannerAnomalia = document.getElementById('banner-anomalia');
   if (dia.anomalia && dia.anomalia.es_anomalia && !esHoy) {
     bannerAnomalia.style.display = '';
@@ -804,7 +817,8 @@ function renderCobertura(dia) {
 function renderValidacion(dia) {
   const el = document.getElementById('banner-validacion');
   const v = dia.validacion;
-  if (!v) { el.style.display = 'none'; return; }
+  // Nada anotado ni contado (p. ej. el dia en curso a primera hora): nada que decir.
+  if (!v || (v.estado === 'ok' && !v.sistema && !v.reportado)) { el.style.display = 'none'; return; }
   const estilos = { ok: 'ok', inconsistencias: 'alerta', sin_registro: 'aviso', revisar: 'aviso' };
   const titulos = { ok: 'Todo cuadra con la planilla de los trabajadores.',
     inconsistencias: 'Hay diferencias con la planilla de los trabajadores.',
@@ -833,7 +847,9 @@ function renderRampa(dia) {
   cols.style.setProperty('--n', Math.max(1, ...porHora.map(x => x.length)));  // alto de cada cuadro: CSS
   let orden = 0;
   cols.innerHTML = porHora.map((lista, hora) => {
-    const noche = hora < 7 || hora >= 19;
+    // Rayado = horas en que lo contado queda por revisar: con el conteo por
+    // presencia del molde, solo la madrugada; con el metodo anterior, tambien la noche.
+    const noche = hora < 7 || (dia.metodo !== 'presencia' && hora >= 19);
     const moldes = lista.map(({ d, i }) => {
       const planta = (!d.planta || d.planta === 'desconocida') ? 'planta sin identificar' : 'planta ' + d.planta;
       const etiqueta = `${horaMin(d.hora)}${d.continuacion ? ' (pasada la medianoche)' : ''}, ${planta}, ${d.bloques} bloques${d.por_revisar ? ', por revisar' : ''}`;
@@ -928,6 +944,7 @@ function renderDespachosLista(despachos, conteoReal) {
     if (d.tamano === 'color_y_forma') notas.push('<span class="nota-ok">Color y forma del molde coinciden</span>');
     if (d.tamano === 'discrepancia') notas.push('<span class="nota-mal">El color y la forma del molde no coinciden: no se adivina la planta (revisar el video)</span>');
     if (d.tamano === 'solo_forma') notas.push('<span class="nota-neutra">Sin color visible: tamaño por la forma del molde</span>');
+    if (d.tamano === 'color_sin_confirmar') notas.push('<span class="nota-mal">Barra amarilla sin confirmar por la forma del molde: no se adivina la planta (revisar el video)</span>');
     // Muy seguido del anterior: puede ser el MISMO molde contado dos veces
     // (ver analytics/despachos.GAP_SOSPECHOSO_SEG). Solo marca cual mirar.
     if (d.gap_sospechoso) notas.push(`<span class="nota-mal">Solo ${minutos(d.gap_anterior_seg)} después del anterior: puede estar contado dos veces</span>`);
@@ -1079,7 +1096,7 @@ function renderInforme() {
   }
   boton.disabled = false;
   document.getElementById('informe-texto').textContent = inf.parcial
-    ? 'Informe parcial: el día sigue en curso y el archivo se actualiza cada 6 horas.'
+    ? 'Informe parcial: el día sigue en curso y el archivo se actualiza cada hora.'
     : `Informe completo del ${fechaLarga(inf.fecha)}.`;
   document.getElementById('informe-meta').textContent = inf.generado_en
     ? 'Generado el ' + FMT_FECHA_HORA.format(new Date(inf.generado_en)) + '.'

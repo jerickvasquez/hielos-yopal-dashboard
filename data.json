@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T21:51:26.019900",
-  "generado_en_epoch": 1790650286,
+  "generado_en": "2026-09-28T22:00:22.949199",
+  "generado_en_epoch": 1790650822,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -426,8 +426,8 @@
         "motivo": "Dentro del rango habitual (70.1 +/- 32.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 1293,
-        "minutos_esperados": 1311,
+        "minutos_cubiertos": 1302,
+        "minutos_esperados": 1320,
         "porcentaje": 98.6,
         "huecos": []
       },
@@ -25222,14 +25222,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-09-28T20:00:08.619917"
+      "verificado_en": "2026-09-28T22:00:03.740312"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T21:50:55.015684",
+        "ultimo_heartbeat": "2026-09-28T22:00:10.500901",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -25242,7 +25242,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 418.1,
+        "libre_gb": 417.8,
         "total_gb": 984.1,
         "mensaje": "418 GB libres de 984 GB."
       },
@@ -25250,7 +25250,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T21:50:22.641280"
+        "actualizado_en": "2026-09-28T21:51:34.952862"
       },
       "mantenimiento": {
         "ok": true,
@@ -25270,7 +25270,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-28T21:50:03.820655"
+        "actualizado_en": "2026-09-28T22:00:04.470643"
       },
       "planilla": {
         "ok": true,
@@ -25286,7 +25286,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-09-28T21:47:14"
+        "actualizado_en": "2026-09-28T21:57:14"
       }
     }
   }

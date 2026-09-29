@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T20:20:49.862149",
-  "generado_en_epoch": 1790644849,
+  "generado_en": "2026-09-28T20:21:24.767335",
+  "generado_en_epoch": 1790644884,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -10,6 +10,11 @@
           "canal": "0",
           "clase": "bloque_pequeno",
           "unidades": 64
+        },
+        {
+          "canal": "0",
+          "clase": "sin_identificar",
+          "unidades": 4
         }
       ],
       "despachos": [
@@ -236,6 +241,20 @@
           "planta_fuente": "color",
           "gap_anterior_seg": 343.4,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-09-28T20:20:54.990522",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
@@ -248,6 +267,11 @@
           "planta": "2",
           "despachos": 10,
           "bloques": 40
+        },
+        {
+          "planta": "desconocida",
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "por_clase": [
@@ -256,6 +280,12 @@
           "etiqueta": "Pequeño",
           "despachos": 16,
           "bloques": 64
+        },
+        {
+          "clase": "sin_identificar",
+          "etiqueta": "Sin identificar",
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "anomalia": {
@@ -264,8 +294,8 @@
       },
       "cobertura": {
         "minutos_cubiertos": 1203,
-        "minutos_esperados": 1220,
-        "porcentaje": 98.6,
+        "minutos_esperados": 1221,
+        "porcentaje": 98.5,
         "huecos": []
       },
       "validacion": {
@@ -25096,7 +25126,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T20:20:27.457083"
+        "actualizado_en": "2026-09-28T20:20:57.944735"
       },
       "mantenimiento": {
         "ok": true,

@@ -926,7 +926,7 @@ function renderDespachosLista(despachos, conteoReal) {
     // Como se decidio el tamano: color de la barra y/o forma del molde
     // (analytics/despachos.py, combinar_color_y_forma).
     if (d.tamano === 'color_y_forma') notas.push('<span class="nota-ok">Color y forma del molde coinciden</span>');
-    if (d.tamano === 'discrepancia') notas.push('<span class="nota-mal">El color y la forma del molde no coinciden: revisar el video</span>');
+    if (d.tamano === 'discrepancia') notas.push('<span class="nota-mal">El color y la forma del molde no coinciden: no se adivina la planta (revisar el video)</span>');
     if (d.tamano === 'solo_forma') notas.push('<span class="nota-neutra">Sin color visible: tamaño por la forma del molde</span>');
     // Muy seguido del anterior: puede ser el MISMO molde contado dos veces
     // (ver analytics/despachos.GAP_SOSPECHOSO_SEG). Solo marca cual mirar.

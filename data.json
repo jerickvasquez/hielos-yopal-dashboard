@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T23:10:17.426533",
-  "generado_en_epoch": 1790655017,
+  "generado_en": "2026-09-28T23:20:17.812357",
+  "generado_en_epoch": 1790655617,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -440,8 +440,8 @@
         "motivo": "Dentro del rango habitual (70.1 +/- 32.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 1372,
-        "minutos_esperados": 1390,
+        "minutos_cubiertos": 1382,
+        "minutos_esperados": 1400,
         "porcentaje": 98.7,
         "huecos": []
       },
@@ -2780,27 +2780,32 @@
       "consolidado": [
         {
           "canal": "0",
+          "clase": "bloque_grande",
+          "unidades": 4
+        },
+        {
+          "canal": "0",
           "clase": "bloque_pequeno",
           "unidades": 24
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 12
+          "unidades": 8
         }
       ],
       "despachos": [
         {
           "hora": "2026-09-21T00:58:21.773704",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": true,
           "motivo_revision": "madrugada",
-          "tamano": "sin_dato",
+          "tamano": "solo_color",
           "planta_deducida": false,
-          "planta_fuente": null,
+          "planta_fuente": "color",
           "gap_anterior_seg": null,
           "gap_sospechoso": false
         },
@@ -2899,7 +2904,7 @@
           "tamano": "sin_dato",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": 61483.3,
+          "gap_anterior_seg": null,
           "gap_sospechoso": false
         },
         {
@@ -2961,27 +2966,32 @@
       "consolidado": [
         {
           "canal": "0",
+          "clase": "bloque_grande",
+          "unidades": 4
+        },
+        {
+          "canal": "0",
           "clase": "bloque_pequeno",
           "unidades": 48
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 8
+          "unidades": 4
         }
       ],
       "despachos": [
         {
           "hora": "2026-09-20T01:08:46.057944",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": true,
           "motivo_revision": "madrugada",
-          "tamano": "sin_dato",
+          "tamano": "solo_color",
           "planta_deducida": false,
-          "planta_fuente": null,
+          "planta_fuente": "color",
           "gap_anterior_seg": null,
           "gap_sospechoso": false
         },
@@ -2996,7 +3006,7 @@
           "tamano": "sin_dato",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": 631.3,
+          "gap_anterior_seg": null,
           "gap_sospechoso": false
         },
         {
@@ -25268,7 +25278,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T23:10:14.131790",
+        "ultimo_heartbeat": "2026-09-28T23:19:50.521947",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -25289,7 +25299,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T23:00:30.703809"
+        "actualizado_en": "2026-09-28T23:10:24.809130"
       },
       "mantenimiento": {
         "ok": true,
@@ -25309,12 +25319,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-28T23:10:04.334379"
+        "actualizado_en": "2026-09-28T23:20:03.892961"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 8 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-09-28T22:20:05.379991"
+        "actualizado_en": "2026-09-28T23:20:06.862397"
       },
       "atribucion": {
         "ok": true,
@@ -25325,7 +25335,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-09-28T23:07:20"
+        "actualizado_en": "2026-09-28T23:17:21"
       }
     }
   }

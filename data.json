@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-28T22:10:14.042688",
-  "generado_en_epoch": 1790651414,
+  "generado_en": "2026-09-28T22:20:13.664470",
+  "generado_en_epoch": 1790652013,
   "dias": [
     {
       "fecha": "2026-09-28",
@@ -440,9 +440,9 @@
         "motivo": "Dentro del rango habitual (70.1 +/- 32.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 1312,
-        "minutos_esperados": 1330,
-        "porcentaje": 98.6,
+        "minutos_cubiertos": 1322,
+        "minutos_esperados": 1340,
+        "porcentaje": 98.7,
         "huecos": []
       },
       "validacion": {
@@ -25243,8 +25243,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-28T22:10:03.976076",
-        "fraccion_baja_confianza_reciente": 0.005
+        "ultimo_heartbeat": "2026-09-28T22:20:11.121543",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -25264,7 +25264,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-28T22:08:32.645161"
+        "actualizado_en": "2026-09-28T22:10:22.080690"
       },
       "mantenimiento": {
         "ok": true,
@@ -25284,12 +25284,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-28T22:10:03.818363"
+        "actualizado_en": "2026-09-28T22:20:03.257076"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 8 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-09-28T21:20:06.144275"
+        "actualizado_en": "2026-09-28T22:20:05.379991"
       },
       "atribucion": {
         "ok": true,
@@ -25300,7 +25300,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-09-28T22:07:16"
+        "actualizado_en": "2026-09-28T22:17:16"
       }
     }
   }

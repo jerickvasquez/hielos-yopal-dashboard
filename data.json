@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-29T08:10:07.465155",
-  "generado_en_epoch": 1790687407,
+  "generado_en": "2026-09-29T08:20:08.055622",
+  "generado_en_epoch": 1790688008,
   "dias": [
     {
       "fecha": "2026-09-29",
@@ -10,7 +10,7 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 24
+          "unidades": 28
         }
       ],
       "despachos": [
@@ -97,21 +97,35 @@
           "planta_fuente": "color",
           "gap_anterior_seg": 542.0,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-09-29T08:13:14.942322",
+          "clase": "bloque_grande",
+          "planta": "4",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "color_y_forma",
+          "planta_deducida": false,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 362.0,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
         {
           "planta": "4",
-          "despachos": 6,
-          "bloques": 24
+          "despachos": 7,
+          "bloques": 28
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_grande",
           "etiqueta": "Grande",
-          "despachos": 6,
-          "bloques": 24
+          "despachos": 7,
+          "bloques": 28
         }
       ],
       "anomalia": {
@@ -119,24 +133,32 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 490,
-        "minutos_esperados": 490,
+        "minutos_cubiertos": 500,
+        "minutos_esperados": 500,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "inconsistencias",
-        "mensaje": "1 fila(s) mal llenadas.",
+        "mensaje": "1 fila(s) mal llenadas; 7 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 0,
-        "sistema": 0,
+        "sistema": 28,
         "tandas": 0,
         "tandas_ok": 0,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 0,
-        "bloques_sin_reportar": 0,
+        "despachos_sin_reportar": 7,
+        "bloques_sin_reportar": 28,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 0,
-        "horas_por_anotar": [],
+        "por_anotar": 7,
+        "horas_por_anotar": [
+          "2026-09-29T07:26:57.216495",
+          "2026-09-29T07:35:21.203023",
+          "2026-09-29T07:41:41.470841",
+          "2026-09-29T07:49:03.481659",
+          "2026-09-29T07:58:10.952704",
+          "2026-09-29T08:07:12.945237",
+          "2026-09-29T08:13:14.942322"
+        ],
         "errores_llenado": 1
       }
     },
@@ -25609,8 +25631,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-29T08:09:41.744438",
-        "fraccion_baja_confianza_reciente": 0.01
+        "ultimo_heartbeat": "2026-09-29T08:19:44.748957",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -25622,7 +25644,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 421.7,
+        "libre_gb": 421.6,
         "total_gb": 984.1,
         "mensaje": "422 GB libres de 984 GB."
       },
@@ -25630,7 +25652,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-29T08:07:36.906809"
+        "actualizado_en": "2026-09-29T08:10:16.045456"
       },
       "mantenimiento": {
         "ok": true,
@@ -25644,18 +25666,18 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "334 clips disponibles en la pagina (1 nuevos), 152 en cola para las proximas corridas. Espacio: 4.4 de 9 GB.",
-        "actualizado_en": "2026-09-29T08:09:50.017046"
+        "mensaje": "335 clips disponibles en la pagina (1 nuevos), 152 en cola para las proximas corridas. Espacio: 4.4 de 9 GB.",
+        "actualizado_en": "2026-09-29T08:15:59.839052"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-29T08:10:04.294690"
+        "actualizado_en": "2026-09-29T08:20:04.459064"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 9 tandas anotadas, 1 fila(s) mal llenadas.",
-        "actualizado_en": "2026-09-29T07:20:05.981986"
+        "actualizado_en": "2026-09-29T08:20:06.750999"
       },
       "atribucion": {
         "ok": true,
@@ -25666,7 +25688,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-09-29T08:05:14"
+        "actualizado_en": "2026-09-29T08:15:14"
       }
     }
   }

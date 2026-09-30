@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-30T01:20:07.361011",
-  "generado_en_epoch": 1790749207,
+  "generado_en": "2026-09-30T01:20:27.741408",
+  "generado_en_epoch": 1790749227,
   "dias": [
     {
       "fecha": "2026-09-30",
@@ -16688,12 +16688,12 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 36
+          "unidades": 40
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 44
+          "unidades": 40
         }
       ],
       "despachos": [
@@ -16839,16 +16839,16 @@
         },
         {
           "hora": "2026-08-12T11:42:57.677151",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": 18509.6,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 1823.0,
           "gap_sospechoso": false
         },
         {
@@ -16862,7 +16862,7 @@
           "tamano": "sin_dato",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": 429.3,
+          "gap_anterior_seg": 18938.9,
           "gap_sospechoso": false
         },
         {
@@ -16981,27 +16981,27 @@
       "por_planta": [
         {
           "planta": "4",
-          "despachos": 9,
-          "bloques": 36
+          "despachos": 10,
+          "bloques": 40
         },
         {
           "planta": "desconocida",
-          "despachos": 7,
-          "bloques": 28
+          "despachos": 6,
+          "bloques": 24
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_grande",
           "etiqueta": "Grande",
-          "despachos": 9,
-          "bloques": 36
+          "despachos": 10,
+          "bloques": 40
         },
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 7,
-          "bloques": 28
+          "despachos": 6,
+          "bloques": 24
         }
       ],
       "anomalia": {
@@ -26188,7 +26188,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-30T01:10:16.060345"
+        "actualizado_en": "2026-09-30T01:20:15.839025"
       },
       "mantenimiento": {
         "ok": true,
@@ -26198,7 +26198,7 @@
       "informes": {
         "ok": true,
         "mensaje": "Informe(s) 2026-09-29, 2026-09-30 publicados; 64 informes disponibles para descargar.",
-        "actualizado_en": "2026-09-30T00:20:25.099004"
+        "actualizado_en": "2026-09-30T01:20:24.887069"
       },
       "clips": {
         "ok": true,

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-30T01:10:07.483809",
-  "generado_en_epoch": 1790748607,
+  "generado_en": "2026-09-30T01:20:07.361011",
+  "generado_en_epoch": 1790749207,
   "dias": [
     {
       "fecha": "2026-09-30",
@@ -15,8 +15,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 70,
-        "minutos_esperados": 70,
+        "minutos_cubiertos": 81,
+        "minutos_esperados": 80,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -16234,12 +16234,12 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 28
+          "unidades": 36
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 24
+          "unidades": 16
         }
       ],
       "despachos": [
@@ -16609,27 +16609,27 @@
         },
         {
           "hora": "2026-08-13T21:18:38.593452",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "planta": "desconocida",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": true,
           "motivo_revision": "noche",
-          "tamano": "sin_dato",
+          "tamano": "discrepancia",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": 37877.7,
+          "gap_anterior_seg": 1808.4,
           "gap_sospechoso": false
         },
         {
           "hora": "2026-08-13T22:00:31.034412",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "planta": "desconocida",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": true,
           "motivo_revision": "noche",
-          "tamano": "sin_dato",
+          "tamano": "discrepancia",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": 2512.4,
@@ -16687,8 +16687,13 @@
       "consolidado": [
         {
           "canal": "0",
+          "clase": "bloque_grande",
+          "unidades": 36
+        },
+        {
+          "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 80
+          "unidades": 44
         }
       ],
       "despachos": [
@@ -16708,127 +16713,127 @@
         },
         {
           "hora": "2026-08-12T08:21:11.287047",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": 6403.2,
+          "planta_fuente": "color",
+          "gap_anterior_seg": null,
           "gap_sospechoso": false
         },
         {
           "hora": "2026-08-12T08:52:48.435156",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
+          "planta_fuente": "color",
           "gap_anterior_seg": 1897.1,
           "gap_sospechoso": false
         },
         {
           "hora": "2026-08-12T09:13:03.150536",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
+          "planta_fuente": "color",
           "gap_anterior_seg": 1214.7,
           "gap_sospechoso": false
         },
         {
           "hora": "2026-08-12T09:28:58.341190",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
+          "planta_fuente": "color",
           "gap_anterior_seg": 955.2,
           "gap_sospechoso": false
         },
         {
           "hora": "2026-08-12T09:39:48.022739",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
+          "planta_fuente": "color",
           "gap_anterior_seg": 649.7,
           "gap_sospechoso": false
         },
         {
           "hora": "2026-08-12T10:43:02.901065",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
+          "planta_fuente": "color",
           "gap_anterior_seg": 3794.9,
           "gap_sospechoso": false
         },
         {
           "hora": "2026-08-12T11:00:15.545072",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
+          "planta_fuente": "color",
           "gap_anterior_seg": 1032.6,
           "gap_sospechoso": false
         },
         {
           "hora": "2026-08-12T11:04:11.560044",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
+          "planta_fuente": "color",
           "gap_anterior_seg": 236.0,
           "gap_sospechoso": true
         },
         {
           "hora": "2026-08-12T11:12:34.651178",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
+          "planta_fuente": "color",
           "gap_anterior_seg": 503.1,
           "gap_sospechoso": false
         },
@@ -16843,7 +16848,7 @@
           "tamano": "sin_dato",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": 1823.0,
+          "gap_anterior_seg": 18509.6,
           "gap_sospechoso": false
         },
         {
@@ -16975,17 +16980,28 @@
       ],
       "por_planta": [
         {
+          "planta": "4",
+          "despachos": 9,
+          "bloques": 36
+        },
+        {
           "planta": "desconocida",
-          "despachos": 16,
-          "bloques": 64
+          "despachos": 7,
+          "bloques": 28
         }
       ],
       "por_clase": [
         {
+          "clase": "bloque_grande",
+          "etiqueta": "Grande",
+          "despachos": 9,
+          "bloques": 36
+        },
+        {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 16,
-          "bloques": 64
+          "despachos": 7,
+          "bloques": 28
         }
       ],
       "anomalia": {
@@ -26151,7 +26167,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-30T01:09:57.343634",
+        "ultimo_heartbeat": "2026-09-30T01:20:03.608937",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -26172,7 +26188,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-30T01:00:18.768566"
+        "actualizado_en": "2026-09-30T01:10:16.060345"
       },
       "mantenimiento": {
         "ok": true,
@@ -26192,12 +26208,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-09-30T01:10:04.059369"
+        "actualizado_en": "2026-09-30T01:20:04.035974"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 12 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-09-30T00:20:06.333677"
+        "actualizado_en": "2026-09-30T01:20:06.037870"
       },
       "atribucion": {
         "ok": false,
@@ -26208,7 +26224,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-09-30T01:06:23"
+        "actualizado_en": "2026-09-30T01:16:24"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-30T02:20:07.920657",
-  "generado_en_epoch": 1790752807,
+  "generado_en": "2026-09-30T02:20:32.679102",
+  "generado_en_epoch": 1790752832,
   "dias": [
     {
       "fecha": "2026-09-30",
@@ -15,7 +15,7 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 140,
+        "minutos_cubiertos": 141,
         "minutos_esperados": 140,
         "porcentaje": 100.0,
         "huecos": []
@@ -17411,12 +17411,12 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 8
+          "unidades": 12
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 8
+          "unidades": 4
         }
       ],
       "despachos": [
@@ -17702,16 +17702,16 @@
         },
         {
           "hora": "2026-08-09T23:24:27.297894",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "planta": "desconocida",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": true,
           "motivo_revision": "noche",
-          "tamano": "sin_dato",
+          "tamano": "discrepancia",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": 39401.9,
+          "gap_anterior_seg": 1410.2,
           "gap_sospechoso": false
         }
       ],
@@ -26197,7 +26197,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-30T02:19:45.104387",
+        "ultimo_heartbeat": "2026-09-30T02:20:15.484994",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -26218,7 +26218,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-30T02:10:15.070267"
+        "actualizado_en": "2026-09-30T02:20:17.299780"
       },
       "mantenimiento": {
         "ok": true,
@@ -26228,7 +26228,7 @@
       "informes": {
         "ok": true,
         "mensaje": "Informe(s) 2026-09-29, 2026-09-30 publicados; 64 informes disponibles para descargar.",
-        "actualizado_en": "2026-09-30T01:20:24.887069"
+        "actualizado_en": "2026-09-30T02:20:29.850991"
       },
       "clips": {
         "ok": true,

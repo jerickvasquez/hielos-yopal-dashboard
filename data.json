@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-09-30T22:43:38.941810",
-  "generado_en_epoch": 1790826218,
+  "generado_en": "2026-09-30T22:49:45.678224",
+  "generado_en_epoch": 1790826585,
   "dias": [
     {
       "fecha": "2026-09-30",
@@ -10,7 +10,7 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 40
+          "unidades": 44
         },
         {
           "canal": "0",
@@ -148,19 +148,33 @@
         {
           "hora": "2026-09-30T22:39:29.089643",
           "clase": "bloque_pequeno",
-          "planta": "desconocida",
+          "planta": "3",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "discrepancia",
-          "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": null,
+          "planta_deducida": true,
+          "planta_fuente": "vecinos",
+          "gap_anterior_seg": 925.6,
           "gap_sospechoso": false
         },
         {
           "hora": "2026-09-30T22:43:28.853025",
+          "clase": "bloque_pequeno",
+          "planta": "3",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "color_y_forma",
+          "planta_deducida": false,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 239.8,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-09-30T22:49:36.464020",
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
@@ -187,21 +201,21 @@
         },
         {
           "planta": "3",
-          "despachos": 3,
-          "bloques": 12
+          "despachos": 5,
+          "bloques": 20
         },
         {
           "planta": "desconocida",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 10,
-          "bloques": 40
+          "despachos": 11,
+          "bloques": 44
         },
         {
           "clase": "sin_identificar",
@@ -215,8 +229,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1364,
-        "minutos_esperados": 1363,
+        "minutos_cubiertos": 1370,
+        "minutos_esperados": 1369,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -26551,7 +26565,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-09-30T22:43:20.699933",
+        "ultimo_heartbeat": "2026-09-30T22:49:24.727059",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -26564,7 +26578,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 425.1,
+        "libre_gb": 424.9,
         "total_gb": 984.1,
         "mensaje": "425 GB libres de 984 GB."
       },
@@ -26572,7 +26586,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-09-30T22:40:14.238135"
+        "actualizado_en": "2026-09-30T22:43:46.924352"
       },
       "mantenimiento": {
         "ok": true,
@@ -26586,8 +26600,8 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "515 clips disponibles en la pagina (1 nuevos). Espacio: 6.7 de 9 GB.",
-        "actualizado_en": "2026-09-30T22:41:17.504463"
+        "mensaje": "516 clips disponibles en la pagina (1 nuevos). Espacio: 6.7 de 9 GB.",
+        "actualizado_en": "2026-09-30T22:48:24.770537"
       },
       "vigia": {
         "ok": true,
@@ -26608,7 +26622,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-09-30T22:42:51"
+        "actualizado_en": "2026-09-30T22:47:51"
       }
     }
   }

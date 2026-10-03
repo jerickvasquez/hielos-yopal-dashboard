@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-03T08:30:06.028691",
-  "generado_en_epoch": 1791034206,
+  "generado_en": "2026-10-03T08:31:43.081867",
+  "generado_en_epoch": 1791034303,
   "dias": [
     {
       "fecha": "2026-10-03",
@@ -15,6 +15,11 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
+          "unidades": 4
+        },
+        {
+          "canal": "0",
+          "clase": "sin_identificar",
           "unidades": 4
         }
       ],
@@ -60,6 +65,20 @@
           "planta_fuente": "color",
           "gap_anterior_seg": null,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-10-03T08:31:33.171454",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
@@ -72,6 +91,11 @@
           "planta": "4",
           "despachos": 2,
           "bloques": 8
+        },
+        {
+          "planta": "desconocida",
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "por_clase": [
@@ -86,6 +110,12 @@
           "etiqueta": "Pequeño",
           "despachos": 1,
           "bloques": 4
+        },
+        {
+          "clase": "sin_identificar",
+          "etiqueta": "Sin identificar",
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "anomalia": {
@@ -93,8 +123,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 510,
-        "minutos_esperados": 510,
+        "minutos_cubiertos": 512,
+        "minutos_esperados": 511,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -27347,7 +27377,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-03T08:29:42.482521",
+        "ultimo_heartbeat": "2026-10-03T08:31:13.723069",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -27368,7 +27398,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-03T08:27:10.657262"
+        "actualizado_en": "2026-10-03T08:30:14.821206"
       },
       "mantenimiento": {
         "ok": true,

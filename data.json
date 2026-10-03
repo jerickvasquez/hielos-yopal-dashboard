@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-03T11:40:06.862288",
-  "generado_en_epoch": 1791045606,
+  "generado_en": "2026-10-03T11:50:06.260642",
+  "generado_en_epoch": 1791046206,
   "dias": [
     {
       "fecha": "2026-10-03",
@@ -387,8 +387,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 700,
-        "minutos_esperados": 700,
+        "minutos_cubiertos": 711,
+        "minutos_esperados": 710,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -27663,7 +27663,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-03T11:39:53.762310",
+        "ultimo_heartbeat": "2026-10-03T11:50:00.289989",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -27684,7 +27684,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-03T11:30:14.379182"
+        "actualizado_en": "2026-10-03T11:40:14.827267"
       },
       "mantenimiento": {
         "ok": true,
@@ -27698,13 +27698,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "525 clips disponibles en la pagina (1 nuevos). Espacio: 6.6 de 9 GB.",
-        "actualizado_en": "2026-10-03T10:48:00.793989"
+        "mensaje": "525 clips disponibles en la pagina (0 nuevos). Espacio: 6.6 de 9 GB.",
+        "actualizado_en": "2026-10-03T11:40:07.239231"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-03T11:40:04.249170"
+        "actualizado_en": "2026-10-03T11:50:03.638119"
       },
       "planilla": {
         "ok": true,
@@ -27720,7 +27720,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-03T11:37:30"
+        "actualizado_en": "2026-10-03T11:47:31"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-03T07:10:06.334457",
-  "generado_en_epoch": 1791029406,
+  "generado_en": "2026-10-03T07:20:06.822480",
+  "generado_en_epoch": 1791030006,
   "dias": [
     {
       "fecha": "2026-10-03",
@@ -15,8 +15,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 430,
-        "minutos_esperados": 430,
+        "minutos_cubiertos": 440,
+        "minutos_esperados": 440,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -27266,7 +27266,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-03T07:09:48.227665",
+        "ultimo_heartbeat": "2026-10-03T07:19:54.398278",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -27287,7 +27287,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-03T07:00:15.463114"
+        "actualizado_en": "2026-10-03T07:10:14.660033"
       },
       "mantenimiento": {
         "ok": true,
@@ -27307,12 +27307,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-03T07:10:03.770207"
+        "actualizado_en": "2026-10-03T07:20:04.183840"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 18 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-03T06:20:05.769414"
+        "actualizado_en": "2026-10-03T07:20:05.765503"
       },
       "atribucion": {
         "ok": true,
@@ -27323,7 +27323,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-03T07:06:51"
+        "actualizado_en": "2026-10-03T07:16:52"
       }
     }
   }

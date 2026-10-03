@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-02T20:19:31.219153",
-  "generado_en_epoch": 1790990371,
+  "generado_en": "2026-10-02T20:20:06.669643",
+  "generado_en_epoch": 1790990406,
   "dias": [
     {
       "fecha": "2026-10-02",
@@ -178,23 +178,27 @@
       },
       "cobertura": {
         "minutos_cubiertos": 1220,
-        "minutos_esperados": 1219,
+        "minutos_esperados": 1220,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
-        "estado": "ok",
-        "mensaje": "Todo cuadra: 24 bloques anotados y 24 contados; 1 de 1 tandas coinciden.",
+        "estado": "revisar",
+        "mensaje": "Lo que se puede verificar cuadra; 3 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 24,
-        "sistema": 24,
+        "sistema": 36,
         "tandas": 1,
         "tandas_ok": 1,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 0,
-        "bloques_sin_reportar": 0,
+        "despachos_sin_reportar": 3,
+        "bloques_sin_reportar": 12,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 0,
-        "horas_por_anotar": [],
+        "por_anotar": 3,
+        "horas_por_anotar": [
+          "2026-10-02T19:48:15.051081",
+          "2026-10-02T20:10:05.756523",
+          "2026-10-02T20:19:20.922633"
+        ],
         "errores_llenado": 0
       }
     },
@@ -27129,7 +27133,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-02T20:19:06.067786",
+        "ultimo_heartbeat": "2026-10-02T20:19:39.802359",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -27150,7 +27154,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-02T20:10:44.666662"
+        "actualizado_en": "2026-10-02T20:19:39.631328"
       },
       "mantenimiento": {
         "ok": true,
@@ -27170,12 +27174,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-02T20:10:03.335539"
+        "actualizado_en": "2026-10-02T20:20:04.034122"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 17 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-02T19:20:05.719606"
+        "actualizado_en": "2026-10-02T20:20:06.008206"
       },
       "atribucion": {
         "ok": true,

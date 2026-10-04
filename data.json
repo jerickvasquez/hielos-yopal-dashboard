@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-04T03:38:01.454207",
-  "generado_en_epoch": 1791103081,
+  "generado_en": "2026-10-04T03:40:07.033715",
+  "generado_en_epoch": 1791103207,
   "dias": [
     {
       "fecha": "2026-10-04",
@@ -9,20 +9,20 @@
       "consolidado": [
         {
           "canal": "0",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "unidades": 4
         }
       ],
       "despachos": [
         {
           "hora": "2026-10-04T03:37:48.821573",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": true,
           "motivo_revision": "madrugada",
-          "tamano": "sin_dato",
+          "tamano": "discrepancia",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": null,
@@ -36,8 +36,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 218,
-        "minutos_esperados": 218,
+        "minutos_cubiertos": 220,
+        "minutos_esperados": 220,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -27843,8 +27843,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-04T03:37:32.821936",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-04T03:39:41.220424",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -27864,7 +27864,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-04T03:30:14.585156"
+        "actualizado_en": "2026-10-04T03:38:09.895186"
       },
       "mantenimiento": {
         "ok": true,
@@ -27878,13 +27878,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "513 clips disponibles en la pagina (0 nuevos). Espacio: 6.5 de 9 GB.",
-        "actualizado_en": "2026-10-04T02:40:07.626830"
+        "mensaje": "514 clips disponibles en la pagina (0 nuevos). Espacio: 6.5 de 9 GB.",
+        "actualizado_en": "2026-10-04T03:40:06.822721"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-04T03:30:03.940350"
+        "actualizado_en": "2026-10-04T03:40:04.333655"
       },
       "planilla": {
         "ok": true,
@@ -27900,7 +27900,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-04T03:33:36"
+        "actualizado_en": "2026-10-04T03:38:36"
       }
     }
   }

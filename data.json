@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-04T10:00:09.264512",
-  "generado_en_epoch": 1791126009,
+  "generado_en": "2026-10-04T10:10:07.671799",
+  "generado_en_epoch": 1791126607,
   "dias": [
     {
       "fecha": "2026-10-04",
@@ -164,7 +164,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -205,8 +205,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 601,
-        "minutos_esperados": 600,
+        "minutos_cubiertos": 610,
+        "minutos_esperados": 610,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -28015,7 +28015,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-04T10:00:02.168997",
+        "ultimo_heartbeat": "2026-10-04T10:09:38.911303",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -28028,7 +28028,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 445.4,
+        "libre_gb": 445.0,
         "total_gb": 984.1,
         "mensaje": "445 GB libres de 984 GB."
       },
@@ -28036,7 +28036,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-04T09:50:14.336397"
+        "actualizado_en": "2026-10-04T10:00:17.738908"
       },
       "mantenimiento": {
         "ok": true,
@@ -28056,7 +28056,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-04T10:00:05.064079"
+        "actualizado_en": "2026-10-04T10:10:04.426329"
       },
       "planilla": {
         "ok": true,
@@ -28072,7 +28072,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-04T09:59:19"
+        "actualizado_en": "2026-10-04T10:09:20"
       }
     }
   }

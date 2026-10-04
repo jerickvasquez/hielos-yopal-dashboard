@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-04T10:28:39.041128",
-  "generado_en_epoch": 1791127719,
+  "generado_en": "2026-10-04T10:30:06.654699",
+  "generado_en_epoch": 1791127806,
   "dias": [
     {
       "fecha": "2026-10-04",
@@ -206,7 +206,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -247,8 +247,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 629,
-        "minutos_esperados": 628,
+        "minutos_cubiertos": 630,
+        "minutos_esperados": 630,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -28062,8 +28062,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-04T10:28:06.280625",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-04T10:29:48.256894",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -28077,13 +28077,13 @@
         "ok": true,
         "libre_gb": 444.5,
         "total_gb": 984.1,
-        "mensaje": "445 GB libres de 984 GB."
+        "mensaje": "444 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-04T10:20:47.790537"
+        "actualizado_en": "2026-10-04T10:28:47.655519"
       },
       "mantenimiento": {
         "ok": true,
@@ -28103,7 +28103,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-04T10:20:04.299334"
+        "actualizado_en": "2026-10-04T10:30:04.046389"
       },
       "planilla": {
         "ok": true,
@@ -28119,7 +28119,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-04T10:24:20"
+        "actualizado_en": "2026-10-04T10:29:21"
       }
     }
   }

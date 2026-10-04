@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-04T00:10:06.465691",
-  "generado_en_epoch": 1791090606,
+  "generado_en": "2026-10-04T00:20:06.943684",
+  "generado_en_epoch": 1791091206,
   "dias": [
     {
       "fecha": "2026-10-04",
@@ -15,12 +15,26 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 10,
-        "minutos_esperados": 10,
+        "minutos_cubiertos": 20,
+        "minutos_esperados": 20,
         "porcentaje": 100.0,
         "huecos": []
       },
-      "validacion": null
+      "validacion": {
+        "estado": "ok",
+        "mensaje": "Sin producción: nada anotado ni contado.",
+        "reportado": 0,
+        "sistema": 0,
+        "tandas": 0,
+        "tandas_ok": 0,
+        "tandas_no_verificables": 0,
+        "despachos_sin_reportar": 0,
+        "bloques_sin_reportar": 0,
+        "sin_reportar_confirmados": 0,
+        "por_anotar": 0,
+        "horas_por_anotar": [],
+        "errores_llenado": 0
+      }
     },
     {
       "fecha": "2026-10-03",
@@ -27808,7 +27822,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-04T00:09:47.090128",
+        "ultimo_heartbeat": "2026-10-04T00:19:53.649534",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -27829,7 +27843,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-04T00:00:17.958864"
+        "actualizado_en": "2026-10-04T00:10:14.779594"
       },
       "mantenimiento": {
         "ok": true,
@@ -27849,12 +27863,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-04T00:10:03.777036"
+        "actualizado_en": "2026-10-04T00:20:04.264495"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 21 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-03T23:20:05.763369"
+        "actualizado_en": "2026-10-04T00:20:06.215471"
       },
       "atribucion": {
         "ok": true,
@@ -27865,7 +27879,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-04T00:08:21"
+        "actualizado_en": "2026-10-04T00:18:22"
       }
     }
   }

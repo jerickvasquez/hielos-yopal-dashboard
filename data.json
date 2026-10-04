@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-03T20:20:06.893670",
-  "generado_en_epoch": 1791076806,
+  "generado_en": "2026-10-03T20:20:37.618386",
+  "generado_en_epoch": 1791076837,
   "dias": [
     {
       "fecha": "2026-10-03",
@@ -537,7 +537,7 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1220,
+        "minutos_cubiertos": 1221,
         "minutos_esperados": 1220,
         "porcentaje": 100.0,
         "huecos": []
@@ -27788,8 +27788,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-03T20:19:46.461280",
-        "fraccion_baja_confianza_reciente": 0.005
+        "ultimo_heartbeat": "2026-10-03T20:20:16.543387",
+        "fraccion_baja_confianza_reciente": 0.025
       }
     ],
     "procesamiento_diario": {
@@ -27809,7 +27809,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-03T20:10:15.668830"
+        "actualizado_en": "2026-10-03T20:20:16.175660"
       },
       "mantenimiento": {
         "ok": true,
@@ -27817,9 +27817,9 @@
         "actualizado_en": "2026-10-03T03:00:05.873471"
       },
       "informes": {
-        "ok": true,
-        "mensaje": "Informe(s) 2026-10-02, 2026-10-03 publicados; 67 informes disponibles para descargar.",
-        "actualizado_en": "2026-10-03T19:20:23.939047"
+        "ok": false,
+        "mensaje": "No se pudo generar/publicar el informe: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/jerickvasquez/hielos-yopal-dashboard/git/commits/78be3b23549ff633c378cfa4056cd84afa10863f (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.github.com', port=443) at 0x20fd4325d10>, 'Connection to api.github.com timed out. (connect timeout=90)'))",
+        "actualizado_en": "2026-10-03T20:20:35.020302"
       },
       "clips": {
         "ok": true,

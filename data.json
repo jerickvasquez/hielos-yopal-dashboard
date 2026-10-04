@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-04T09:50:06.319057",
-  "generado_en_epoch": 1791125406,
+  "generado_en": "2026-10-04T10:00:09.264512",
+  "generado_en_epoch": 1791126009,
   "dias": [
     {
       "fecha": "2026-10-04",
@@ -205,8 +205,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 590,
-        "minutos_esperados": 590,
+        "minutos_cubiertos": 601,
+        "minutos_esperados": 600,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -28008,15 +28008,15 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-10-04T08:00:04.810676"
+      "verificado_en": "2026-10-04T10:00:04.625595"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-04T09:49:56.488468",
-        "fraccion_baja_confianza_reciente": 0.005
+        "ultimo_heartbeat": "2026-10-04T10:00:02.168997",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -28028,15 +28028,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 446.0,
+        "libre_gb": 445.4,
         "total_gb": 984.1,
-        "mensaje": "446 GB libres de 984 GB."
+        "mensaje": "445 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-04T09:49:56.279794"
+        "actualizado_en": "2026-10-04T09:50:14.336397"
       },
       "mantenimiento": {
         "ok": true,
@@ -28056,7 +28056,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-04T09:50:03.677307"
+        "actualizado_en": "2026-10-04T10:00:05.064079"
       },
       "planilla": {
         "ok": true,
@@ -28072,7 +28072,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-04T09:49:18"
+        "actualizado_en": "2026-10-04T09:59:19"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-03T21:20:06.831597",
-  "generado_en_epoch": 1791080406,
+  "generado_en": "2026-10-03T21:20:26.354397",
+  "generado_en_epoch": 1791080426,
   "dias": [
     {
       "fecha": "2026-10-03",
@@ -27809,7 +27809,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-03T21:10:14.736197"
+        "actualizado_en": "2026-10-03T21:20:14.654763"
       },
       "mantenimiento": {
         "ok": true,
@@ -27817,9 +27817,9 @@
         "actualizado_en": "2026-10-03T03:00:05.873471"
       },
       "informes": {
-        "ok": false,
-        "mensaje": "No se pudo generar/publicar el informe: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/jerickvasquez/hielos-yopal-dashboard/git/commits/78be3b23549ff633c378cfa4056cd84afa10863f (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.github.com', port=443) at 0x20fd4325d10>, 'Connection to api.github.com timed out. (connect timeout=90)'))",
-        "actualizado_en": "2026-10-03T20:20:35.020302"
+        "ok": true,
+        "mensaje": "Informe(s) 2026-10-02, 2026-10-03 publicados; 67 informes disponibles para descargar.",
+        "actualizado_en": "2026-10-03T21:20:23.775543"
       },
       "clips": {
         "ok": true,

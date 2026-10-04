@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-04T10:18:22.437622",
-  "generado_en_epoch": 1791127102,
+  "generado_en": "2026-10-04T10:20:38.910923",
+  "generado_en_epoch": 1791127238,
   "dias": [
     {
       "fecha": "2026-10-04",
@@ -233,26 +233,31 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 618,
-        "minutos_esperados": 618,
+        "minutos_cubiertos": 621,
+        "minutos_esperados": 620,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "revisar",
-        "mensaje": "Lo que se puede verificar cuadra; 2 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
+        "mensaje": "Lo que se puede verificar cuadra; 7 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 24,
-        "sistema": 32,
+        "sistema": 52,
         "tandas": 1,
         "tandas_ok": 1,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 2,
-        "bloques_sin_reportar": 8,
+        "despachos_sin_reportar": 7,
+        "bloques_sin_reportar": 28,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 2,
+        "por_anotar": 7,
         "horas_por_anotar": [
           "2026-10-04T09:07:57.883763",
-          "2026-10-04T09:18:25.285526"
+          "2026-10-04T09:18:25.285526",
+          "2026-10-04T09:23:58.166601",
+          "2026-10-04T09:30:37.284068",
+          "2026-10-04T09:49:37.519012",
+          "2026-10-04T10:13:30.420233",
+          "2026-10-04T10:17:59.676815"
         ],
         "errores_llenado": 0
       }
@@ -28043,7 +28048,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-04T10:17:51.420676",
+        "ultimo_heartbeat": "2026-10-04T10:20:31.718625",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -28056,7 +28061,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 444.9,
+        "libre_gb": 444.8,
         "total_gb": 984.1,
         "mensaje": "445 GB libres de 984 GB."
       },
@@ -28064,7 +28069,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-04T10:13:49.577073"
+        "actualizado_en": "2026-10-04T10:18:30.717918"
       },
       "mantenimiento": {
         "ok": true,
@@ -28072,9 +28077,9 @@
         "actualizado_en": "2026-10-04T03:00:06.076233"
       },
       "informes": {
-        "ok": true,
-        "mensaje": "Informe(s) 2026-10-03, 2026-10-04 publicados; 68 informes disponibles para descargar.",
-        "actualizado_en": "2026-10-04T09:20:23.076183"
+        "ok": false,
+        "mensaje": "No se pudo generar/publicar el informe: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+        "actualizado_en": "2026-10-04T10:20:36.306205"
       },
       "clips": {
         "ok": true,
@@ -28084,12 +28089,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-04T10:10:04.426329"
+        "actualizado_en": "2026-10-04T10:20:04.299334"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 22 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-04T09:20:06.092708"
+        "actualizado_en": "2026-10-04T10:20:05.883334"
       },
       "atribucion": {
         "ok": true,
@@ -28100,7 +28105,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-04T10:14:20"
+        "actualizado_en": "2026-10-04T10:19:20"
       }
     }
   }

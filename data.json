@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-05T07:28:47.614022",
-  "generado_en_epoch": 1791203327,
+  "generado_en": "2026-10-05T07:30:06.647953",
+  "generado_en_epoch": 1791203406,
   "dias": [
     {
       "fecha": "2026-10-05",
@@ -9,20 +9,20 @@
       "consolidado": [
         {
           "canal": "0",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "unidades": 4
         }
       ],
       "despachos": [
         {
           "hora": "2026-10-05T07:28:30.387341",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "solo_forma",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": null,
@@ -38,8 +38,8 @@
       ],
       "por_clase": [
         {
-          "clase": "sin_identificar",
-          "etiqueta": "Sin identificar",
+          "clase": "bloque_pequeno",
+          "etiqueta": "Pequeño",
           "despachos": 1,
           "bloques": 4
         }
@@ -49,8 +49,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 449,
-        "minutos_esperados": 448,
+        "minutos_cubiertos": 450,
+        "minutos_esperados": 450,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -28563,7 +28563,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-05T07:28:28.085110",
+        "ultimo_heartbeat": "2026-10-05T07:29:59.086490",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -28576,7 +28576,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 446.5,
+        "libre_gb": 446.4,
         "total_gb": 984.1,
         "mensaje": "446 GB libres de 984 GB."
       },
@@ -28584,7 +28584,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-05T07:20:37.046350"
+        "actualizado_en": "2026-10-05T07:28:56.981649"
       },
       "mantenimiento": {
         "ok": true,
@@ -28604,7 +28604,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-05T07:20:03.791905"
+        "actualizado_en": "2026-10-05T07:30:03.656818"
       },
       "planilla": {
         "ok": true,

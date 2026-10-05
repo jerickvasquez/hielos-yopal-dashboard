@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-05T00:10:05.672516",
-  "generado_en_epoch": 1791177005,
+  "generado_en": "2026-10-05T00:20:06.608036",
+  "generado_en_epoch": 1791177606,
   "dias": [
     {
       "fecha": "2026-10-05",
@@ -15,12 +15,26 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 10,
-        "minutos_esperados": 10,
+        "minutos_cubiertos": 20,
+        "minutos_esperados": 20,
         "porcentaje": 100.0,
         "huecos": []
       },
-      "validacion": null
+      "validacion": {
+        "estado": "ok",
+        "mensaje": "Sin producción: nada anotado ni contado.",
+        "reportado": 0,
+        "sistema": 0,
+        "tandas": 0,
+        "tandas_ok": 0,
+        "tandas_no_verificables": 0,
+        "despachos_sin_reportar": 0,
+        "bloques_sin_reportar": 0,
+        "sin_reportar_confirmados": 0,
+        "por_anotar": 0,
+        "horas_por_anotar": [],
+        "errores_llenado": 0
+      }
     },
     {
       "fecha": "2026-10-04",
@@ -714,37 +728,18 @@
         "huecos": []
       },
       "validacion": {
-        "estado": "revisar",
-        "mensaje": "Lo que se puede verificar cuadra; 18 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
-        "reportado": 104,
+        "estado": "ok",
+        "mensaje": "Todo cuadra: 176 bloques anotados y 176 contados; 4 de 4 tandas coinciden.",
+        "reportado": 176,
         "sistema": 176,
-        "tandas": 3,
-        "tandas_ok": 3,
+        "tandas": 4,
+        "tandas_ok": 4,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 18,
-        "bloques_sin_reportar": 72,
+        "despachos_sin_reportar": 0,
+        "bloques_sin_reportar": 0,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 18,
-        "horas_por_anotar": [
-          "2026-10-04T19:05:42.296478",
-          "2026-10-04T19:14:59.520165",
-          "2026-10-04T19:28:52.984178",
-          "2026-10-04T19:42:00.411098",
-          "2026-10-04T19:59:05.543818",
-          "2026-10-04T20:20:48.893375",
-          "2026-10-04T20:34:58.158294",
-          "2026-10-04T20:54:45.980420",
-          "2026-10-04T21:00:59.901113",
-          "2026-10-04T21:31:46.384646",
-          "2026-10-04T21:49:03.545627",
-          "2026-10-04T22:09:05.887974",
-          "2026-10-04T22:16:29.713907",
-          "2026-10-04T22:42:16.694406",
-          "2026-10-04T22:48:20.103502",
-          "2026-10-04T23:01:52.154830",
-          "2026-10-04T23:13:17.326537",
-          "2026-10-04T23:18:44.110035"
-        ],
+        "por_anotar": 0,
+        "horas_por_anotar": [],
         "errores_llenado": 0
       }
     },
@@ -28534,7 +28529,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-05T00:09:46.450490",
+        "ultimo_heartbeat": "2026-10-05T00:19:52.975762",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -28555,7 +28550,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-05T00:00:19.123066"
+        "actualizado_en": "2026-10-05T00:10:13.946421"
       },
       "mantenimiento": {
         "ok": true,
@@ -28575,12 +28570,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-05T00:10:03.026773"
+        "actualizado_en": "2026-10-05T00:20:03.873890"
       },
       "planilla": {
         "ok": true,
-        "mensaje": "Planilla leída: 24 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-04T23:20:05.503179"
+        "mensaje": "Planilla leída: 25 tandas anotadas, 0 fila(s) mal llenadas.",
+        "actualizado_en": "2026-10-05T00:20:05.551141"
       },
       "atribucion": {
         "ok": true,
@@ -28591,7 +28586,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-05T00:05:36"
+        "actualizado_en": "2026-10-05T00:15:37"
       }
     }
   }

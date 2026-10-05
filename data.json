@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-05T08:25:55.627129",
-  "generado_en_epoch": 1791206755,
+  "generado_en": "2026-10-05T08:30:05.979248",
+  "generado_en_epoch": 1791207005,
   "dias": [
     {
       "fecha": "2026-10-05",
@@ -210,8 +210,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 506,
-        "minutos_esperados": 505,
+        "minutos_cubiertos": 510,
+        "minutos_esperados": 510,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -28735,8 +28735,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-05T08:25:35.038978",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-05T08:29:37.300956",
+        "fraccion_baja_confianza_reciente": 0.01
       }
     ],
     "procesamiento_diario": {
@@ -28748,15 +28748,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 444.6,
+        "libre_gb": 444.3,
         "total_gb": 984.1,
-        "mensaje": "445 GB libres de 984 GB."
+        "mensaje": "444 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-05T08:20:37.243906"
+        "actualizado_en": "2026-10-05T08:26:05.624615"
       },
       "mantenimiento": {
         "ok": true,
@@ -28776,7 +28776,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-05T08:20:03.945666"
+        "actualizado_en": "2026-10-05T08:30:03.309841"
       },
       "planilla": {
         "ok": true,
@@ -28792,7 +28792,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-05T08:21:08"
+        "actualizado_en": "2026-10-05T08:26:08"
       }
     }
   }

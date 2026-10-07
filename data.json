@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-07T07:32:29.417088",
-  "generado_en_epoch": 1791376349,
+  "generado_en": "2026-10-07T07:40:07.077741",
+  "generado_en_epoch": 1791376807,
   "dias": [
     {
       "fecha": "2026-10-07",
@@ -10,12 +10,12 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 4
+          "unidades": 8
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 8
+          "unidades": 4
         }
       ],
       "despachos": [
@@ -49,43 +49,43 @@
         },
         {
           "hora": "2026-10-07T07:32:12.480773",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "1",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": 1261.4,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 972.6,
           "gap_sospechoso": false
         }
       ],
       "por_planta": [
         {
           "planta": "1",
-          "despachos": 1,
-          "bloques": 4
+          "despachos": 2,
+          "bloques": 8
         },
         {
           "planta": "desconocida",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 1,
-          "bloques": 4
+          "despachos": 2,
+          "bloques": 8
         },
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "anomalia": {
@@ -93,8 +93,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 453,
-        "minutos_esperados": 452,
+        "minutos_cubiertos": 460,
+        "minutos_esperados": 460,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -29615,7 +29615,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-07T07:32:01.648638",
+        "ultimo_heartbeat": "2026-10-07T07:39:43.049462",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -29628,7 +29628,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 459.4,
+        "libre_gb": 459.1,
         "total_gb": 984.1,
         "mensaje": "459 GB libres de 984 GB."
       },
@@ -29636,7 +29636,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-07T07:30:14.706497"
+        "actualizado_en": "2026-10-07T07:32:38.203939"
       },
       "mantenimiento": {
         "ok": true,
@@ -29650,13 +29650,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "592 clips disponibles en la pagina (1 nuevos). Espacio: 7.3 de 9 GB.",
-        "actualizado_en": "2026-10-07T07:20:01.069570"
+        "mensaje": "593 clips disponibles en la pagina (0 nuevos). Espacio: 7.3 de 9 GB.",
+        "actualizado_en": "2026-10-07T07:40:07.024699"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-07T07:30:03.311351"
+        "actualizado_en": "2026-10-07T07:40:04.314118"
       },
       "planilla": {
         "ok": true,
@@ -29672,7 +29672,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-07T07:29:54"
+        "actualizado_en": "2026-10-07T07:39:55"
       }
     }
   }

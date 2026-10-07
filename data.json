@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-07T00:20:07.123512",
-  "generado_en_epoch": 1791350407,
+  "generado_en": "2026-10-07T00:20:28.353279",
+  "generado_en_epoch": 1791350428,
   "dias": [
     {
       "fecha": "2026-10-07",
@@ -15,12 +15,26 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 20,
+        "minutos_cubiertos": 21,
         "minutos_esperados": 20,
         "porcentaje": 100.0,
         "huecos": []
       },
-      "validacion": null
+      "validacion": {
+        "estado": "ok",
+        "mensaje": "Sin producción: nada anotado ni contado.",
+        "reportado": 0,
+        "sistema": 0,
+        "tandas": 0,
+        "tandas_ok": 0,
+        "tandas_no_verificables": 0,
+        "despachos_sin_reportar": 0,
+        "bloques_sin_reportar": 0,
+        "sin_reportar_confirmados": 0,
+        "por_anotar": 0,
+        "horas_por_anotar": [],
+        "errores_llenado": 0
+      }
     },
     {
       "fecha": "2026-10-06",
@@ -29520,7 +29534,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-07T00:19:41.105650",
+        "ultimo_heartbeat": "2026-10-07T00:20:11.703853",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -29541,7 +29555,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-07T00:10:14.115890"
+        "actualizado_en": "2026-10-07T00:20:15.638506"
       },
       "mantenimiento": {
         "ok": true,
@@ -29550,8 +29564,8 @@
       },
       "informes": {
         "ok": true,
-        "mensaje": "Informe(s) 2026-10-05, 2026-10-06 publicados; 70 informes disponibles para descargar.",
-        "actualizado_en": "2026-10-06T23:20:25.018052"
+        "mensaje": "Informe(s) 2026-10-06, 2026-10-07 publicados; 71 informes disponibles para descargar.",
+        "actualizado_en": "2026-10-07T00:20:25.666488"
       },
       "clips": {
         "ok": true,

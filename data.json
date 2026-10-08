@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-08T10:28:31.273476",
-  "generado_en_epoch": 1791473311,
+  "generado_en": "2026-10-08T10:30:05.569820",
+  "generado_en_epoch": 1791473405,
   "dias": [
     {
       "fecha": "2026-10-08",
@@ -380,9 +380,9 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 624,
-        "minutos_esperados": 628,
-        "porcentaje": 99.4,
+        "minutos_cubiertos": 625,
+        "minutos_esperados": 630,
+        "porcentaje": 99.2,
         "huecos": []
       },
       "validacion": {
@@ -30212,8 +30212,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-08T10:28:16.710413",
-        "fraccion_baja_confianza_reciente": 0.015
+        "ultimo_heartbeat": "2026-10-08T10:29:47.883997",
+        "fraccion_baja_confianza_reciente": 0.155
       }
     ],
     "procesamiento_diario": {
@@ -30225,7 +30225,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 461.2,
+        "libre_gb": 461.1,
         "total_gb": 984.1,
         "mensaje": "461 GB libres de 984 GB."
       },
@@ -30233,7 +30233,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-08T10:22:43.336134"
+        "actualizado_en": "2026-10-08T10:28:41.659898"
       },
       "mantenimiento": {
         "ok": true,
@@ -30253,7 +30253,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-08T10:20:03.397070"
+        "actualizado_en": "2026-10-08T10:30:02.833069"
       },
       "planilla": {
         "ok": true,
@@ -30269,7 +30269,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-08T10:23:29"
+        "actualizado_en": "2026-10-08T10:28:41"
       }
     }
   }

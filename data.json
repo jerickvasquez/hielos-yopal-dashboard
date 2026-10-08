@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-08T02:50:06.276078",
-  "generado_en_epoch": 1791445806,
+  "generado_en": "2026-10-08T03:00:10.378451",
+  "generado_en_epoch": 1791446410,
   "dias": [
     {
       "fecha": "2026-10-08",
@@ -15,8 +15,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 170,
-        "minutos_esperados": 170,
+        "minutos_cubiertos": 180,
+        "minutos_esperados": 180,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -29833,8 +29833,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-08T02:49:50.272455",
-        "fraccion_baja_confianza_reciente": 0.01
+        "ultimo_heartbeat": "2026-10-08T02:59:56.134909",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -29846,20 +29846,20 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 456.6,
+        "libre_gb": 464.6,
         "total_gb": 984.1,
-        "mensaje": "457 GB libres de 984 GB."
+        "mensaje": "465 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-08T02:40:15.863359"
+        "actualizado_en": "2026-10-08T02:50:14.748851"
       },
       "mantenimiento": {
         "ok": true,
-        "mensaje": "460 GB libres de 984 GB. evidencia 520 GB (1322 clips). 10 clips viejos borrados (7.6 GB liberados).",
-        "actualizado_en": "2026-10-07T03:00:05.822853"
+        "mensaje": "465 GB libres de 984 GB. evidencia 515 GB (1309 clips). 29 clips viejos borrados (8.0 GB liberados).",
+        "actualizado_en": "2026-10-08T03:00:06.630929"
       },
       "informes": {
         "ok": true,
@@ -29874,7 +29874,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-08T02:50:03.598178"
+        "actualizado_en": "2026-10-08T03:00:05.225236"
       },
       "planilla": {
         "ok": true,
@@ -29890,7 +29890,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-08T02:46:08"
+        "actualizado_en": "2026-10-08T02:56:08"
       }
     }
   }

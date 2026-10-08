@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-08T11:00:07.620629",
-  "generado_en_epoch": 1791475207,
+  "generado_en": "2026-10-08T11:10:05.586900",
+  "generado_en_epoch": 1791475805,
   "dias": [
     {
       "fecha": "2026-10-08",
@@ -394,9 +394,9 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 655,
-        "minutos_esperados": 660,
-        "porcentaje": 99.2,
+        "minutos_cubiertos": 665,
+        "minutos_esperados": 670,
+        "porcentaje": 99.3,
         "huecos": []
       },
       "validacion": {
@@ -30226,8 +30226,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-08T10:59:43.836844",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-08T11:09:48.739538",
+        "fraccion_baja_confianza_reciente": 0.02
       }
     ],
     "procesamiento_diario": {
@@ -30239,7 +30239,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 461.1,
+        "libre_gb": 461.0,
         "total_gb": 984.1,
         "mensaje": "461 GB libres de 984 GB."
       },
@@ -30247,7 +30247,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-08T10:50:14.848285"
+        "actualizado_en": "2026-10-08T11:00:17.658051"
       },
       "mantenimiento": {
         "ok": true,
@@ -30267,7 +30267,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-08T11:00:03.433626"
+        "actualizado_en": "2026-10-08T11:10:02.804276"
       },
       "planilla": {
         "ok": true,
@@ -30283,7 +30283,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-08T10:58:44"
+        "actualizado_en": "2026-10-08T11:08:45"
       }
     }
   }

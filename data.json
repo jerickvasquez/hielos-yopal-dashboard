@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-09T15:37:28.550465",
-  "generado_en_epoch": 1791578248,
+  "generado_en": "2026-10-09T15:40:06.752982",
+  "generado_en_epoch": 1791578406,
   "dias": [
     {
       "fecha": "2026-10-09",
@@ -10,17 +10,12 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 48
+          "unidades": 52
         },
         {
           "canal": "0",
           "clase": "bloque_pequeno",
           "unidades": 64
-        },
-        {
-          "canal": "0",
-          "clase": "sin_identificar",
-          "unidades": 4
         }
       ],
       "despachos": [
@@ -418,16 +413,16 @@
         },
         {
           "hora": "2026-10-09T15:37:18.329216",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": null,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 415.6,
           "gap_sospechoso": false
         }
       ],
@@ -439,33 +434,22 @@
         },
         {
           "planta": "4",
-          "despachos": 12,
-          "bloques": 48
-        },
-        {
-          "planta": "desconocida",
-          "despachos": 1,
-          "bloques": 4
+          "despachos": 13,
+          "bloques": 52
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_grande",
           "etiqueta": "Grande",
-          "despachos": 12,
-          "bloques": 48
+          "despachos": 13,
+          "bloques": 52
         },
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
           "despachos": 10,
           "bloques": 40
-        },
-        {
-          "clase": "sin_identificar",
-          "etiqueta": "Sin identificar",
-          "despachos": 1,
-          "bloques": 4
         }
       ],
       "anomalia": {
@@ -473,8 +457,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 937,
-        "minutos_esperados": 937,
+        "minutos_cubiertos": 940,
+        "minutos_esperados": 940,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -31000,8 +30984,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-09T15:36:58.960302",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-09T15:39:37.935617",
+        "fraccion_baja_confianza_reciente": 0.065
       }
     ],
     "procesamiento_diario": {
@@ -31013,7 +30997,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 462.6,
+        "libre_gb": 462.5,
         "total_gb": 984.1,
         "mensaje": "463 GB libres de 984 GB."
       },
@@ -31021,7 +31005,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-09T15:30:55.238766"
+        "actualizado_en": "2026-10-09T15:37:36.753860"
       },
       "mantenimiento": {
         "ok": true,
@@ -31035,13 +31019,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "665 clips disponibles en la pagina (1 nuevos). Espacio: 8.1 de 9 GB.",
-        "actualizado_en": "2026-10-09T15:33:49.372103"
+        "mensaje": "666 clips disponibles en la pagina (1 nuevos). Espacio: 8.1 de 9 GB.",
+        "actualizado_en": "2026-10-09T15:40:03.632472"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-09T15:30:03.011216"
+        "actualizado_en": "2026-10-09T15:40:03.985386"
       },
       "planilla": {
         "ok": true,

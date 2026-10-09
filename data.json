@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-08T23:00:07.655804",
-  "generado_en_epoch": 1791518407,
+  "generado_en": "2026-10-08T23:01:04.347492",
+  "generado_en_epoch": 1791518464,
   "dias": [
     {
       "fecha": "2026-10-08",
@@ -679,8 +679,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1376,
-        "minutos_esperados": 1380,
+        "minutos_cubiertos": 1377,
+        "minutos_esperados": 1381,
         "porcentaje": 99.7,
         "huecos": []
       },
@@ -30497,8 +30497,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-08T23:00:00.679232",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-08T23:01:01.094445",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -30518,7 +30518,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-08T22:50:14.066261"
+        "actualizado_en": "2026-10-08T23:00:16.436900"
       },
       "mantenimiento": {
         "ok": true,
@@ -30547,14 +30547,14 @@
       },
       "atribucion": {
         "ok": true,
-        "mensaje": "Despachos anteriores: 1221 de 1221 clips revisados (0 con planta identificada en esta corrida).",
-        "actualizado_en": "2026-10-07T23:00:14.135536"
+        "mensaje": "Despachos anteriores: 1227 de 1227 clips revisados (0 con planta identificada en esta corrida).",
+        "actualizado_en": "2026-10-08T23:01:01.768958"
       },
       "camara": {
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-08T22:55:16"
+        "actualizado_en": "2026-10-08T23:00:17"
       }
     }
   }

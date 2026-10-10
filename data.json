@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-10T03:00:11.065139",
-  "generado_en_epoch": 1791619211,
+  "generado_en": "2026-10-10T03:10:05.627060",
+  "generado_en_epoch": 1791619805,
   "dias": [
     {
       "fecha": "2026-10-10",
@@ -15,9 +15,9 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 84,
-        "minutos_esperados": 180,
-        "porcentaje": 46.7,
+        "minutos_cubiertos": 94,
+        "minutos_esperados": 190,
+        "porcentaje": 49.5,
         "huecos": [
           {
             "inicio": "01:24",
@@ -31226,9 +31226,9 @@
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
-        "ok": false,
-        "mensaje": "Heartbeat viejo (5823s).",
-        "ultimo_heartbeat": "2026-10-10T01:23:08.316794",
+        "ok": true,
+        "mensaje": "Operando normal.",
+        "ultimo_heartbeat": "2026-10-10T03:09:51.553986",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -31249,12 +31249,12 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-10T02:59:56.773876"
+        "actualizado_en": "2026-10-10T03:00:18.948731"
       },
       "mantenimiento": {
         "ok": true,
-        "mensaje": "468 GB libres de 984 GB. evidencia 511 GB (1331 clips). 21 clips viejos borrados (10.0 GB liberados).",
-        "actualizado_en": "2026-10-09T03:00:05.729194"
+        "mensaje": "465 GB libres de 984 GB. evidencia 514 GB (1371 clips). 4 clips viejos borrados (6.9 GB liberados).",
+        "actualizado_en": "2026-10-10T03:00:11.876707"
       },
       "informes": {
         "ok": true,
@@ -31269,7 +31269,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-10T03:00:07.904416"
+        "actualizado_en": "2026-10-10T03:10:02.913185"
       },
       "planilla": {
         "ok": true,
@@ -31282,10 +31282,10 @@
         "actualizado_en": "2026-10-09T23:01:16.509675"
       },
       "camara": {
-        "ok": null,
-        "mensaje": "Sin revisión reciente de la cámara (el conteo en vivo no está corriendo).",
+        "ok": true,
+        "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-10T01:21:59"
+        "actualizado_en": "2026-10-10T03:05:15"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-10T09:40:06.671557",
-  "generado_en_epoch": 1791643206,
+  "generado_en": "2026-10-10T09:50:05.633091",
+  "generado_en_epoch": 1791643805,
   "dias": [
     {
       "fecha": "2026-10-10",
@@ -15,9 +15,9 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 484,
-        "minutos_esperados": 580,
-        "porcentaje": 83.4,
+        "minutos_cubiertos": 494,
+        "minutos_esperados": 590,
+        "porcentaje": 83.7,
         "huecos": [
           {
             "inicio": "01:24",
@@ -31228,8 +31228,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-10T09:39:45.420699",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-10T09:49:52.518479",
+        "fraccion_baja_confianza_reciente": 0.155
       }
     ],
     "procesamiento_diario": {
@@ -31249,7 +31249,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-10T09:30:13.671026"
+        "actualizado_en": "2026-10-10T09:40:14.947808"
       },
       "mantenimiento": {
         "ok": true,
@@ -31264,12 +31264,12 @@
       "clips": {
         "ok": true,
         "mensaje": "656 clips disponibles en la pagina (0 nuevos). Espacio: 7.9 de 9 GB.",
-        "actualizado_en": "2026-10-10T08:40:07.009999"
+        "actualizado_en": "2026-10-10T09:40:07.173477"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-10T09:40:03.904785"
+        "actualizado_en": "2026-10-10T09:50:02.916696"
       },
       "planilla": {
         "ok": true,
@@ -31285,7 +31285,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-10T09:35:43"
+        "actualizado_en": "2026-10-10T09:45:44"
       }
     }
   }

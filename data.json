@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-12T22:20:07.348120",
-  "generado_en_epoch": 1791861607,
+  "generado_en": "2026-10-12T22:20:27.690135",
+  "generado_en_epoch": 1791861627,
   "dias": [
     {
       "fecha": "2026-10-12",
@@ -15,7 +15,7 @@
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 16
+          "unidades": 20
         }
       ],
       "despachos": [
@@ -270,6 +270,20 @@
           "planta_fuente": null,
           "gap_anterior_seg": 41112.8,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-10-12T22:20:14.510029",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": 21494.1,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
@@ -290,8 +304,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 7,
-          "bloques": 28
+          "despachos": 8,
+          "bloques": 32
         }
       ],
       "por_clase": [
@@ -304,8 +318,8 @@
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 4,
-          "bloques": 16
+          "despachos": 5,
+          "bloques": 20
         }
       ],
       "anomalia": {
@@ -32631,7 +32645,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-12T22:15:12.947051"
+        "actualizado_en": "2026-10-12T22:20:16.305934"
       },
       "mantenimiento": {
         "ok": true,
@@ -32641,7 +32655,7 @@
       "informes": {
         "ok": true,
         "mensaje": "Informe(s) 2026-10-11, 2026-10-12 publicados; 76 informes disponibles para descargar.",
-        "actualizado_en": "2026-10-12T21:20:24.703471"
+        "actualizado_en": "2026-10-12T22:20:24.858530"
       },
       "clips": {
         "ok": true,

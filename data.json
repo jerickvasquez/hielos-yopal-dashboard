@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-13T09:39:02.582428",
-  "generado_en_epoch": 1791902342,
+  "generado_en": "2026-10-13T09:40:07.136520",
+  "generado_en_epoch": 1791902407,
   "dias": [
     {
       "fecha": "2026-10-13",
@@ -163,8 +163,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 579,
-        "minutos_esperados": 579,
+        "minutos_cubiertos": 580,
+        "minutos_esperados": 580,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -32906,8 +32906,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-13T09:38:36.154889",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-13T09:39:46.195499",
+        "fraccion_baja_confianza_reciente": 0.025
       }
     ],
     "procesamiento_diario": {
@@ -32919,7 +32919,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 466.5,
+        "libre_gb": 466.4,
         "total_gb": 984.1,
         "mensaje": "466 GB libres de 984 GB."
       },
@@ -32927,7 +32927,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-13T09:35:03.342245"
+        "actualizado_en": "2026-10-13T09:39:15.695963"
       },
       "mantenimiento": {
         "ok": true,
@@ -32941,13 +32941,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "708 clips disponibles en la pagina (1 nuevos). Espacio: 8.2 de 9 GB.",
-        "actualizado_en": "2026-10-13T09:38:00.996868"
+        "mensaje": "708 clips disponibles en la pagina (0 nuevos). Espacio: 8.2 de 9 GB.",
+        "actualizado_en": "2026-10-13T09:40:06.749866"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-13T09:30:03.681265"
+        "actualizado_en": "2026-10-13T09:40:04.226624"
       },
       "planilla": {
         "ok": true,

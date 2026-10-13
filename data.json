@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-13T16:40:07.068737",
-  "generado_en_epoch": 1791927607,
+  "generado_en": "2026-10-13T16:50:06.581095",
+  "generado_en_epoch": 1791928206,
   "dias": [
     {
       "fecha": "2026-10-13",
@@ -548,8 +548,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1000,
-        "minutos_esperados": 1000,
+        "minutos_cubiertos": 1010,
+        "minutos_esperados": 1010,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -33286,7 +33286,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-13T16:39:44.642636",
+        "ultimo_heartbeat": "2026-10-13T16:49:51.213106",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -33307,7 +33307,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-13T16:30:15.467860"
+        "actualizado_en": "2026-10-13T16:40:16.437425"
       },
       "mantenimiento": {
         "ok": true,
@@ -33321,13 +33321,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "735 clips disponibles en la pagina (1 nuevos). Espacio: 8.5 de 9 GB.",
-        "actualizado_en": "2026-10-13T15:44:05.135154"
+        "mensaje": "735 clips disponibles en la pagina (0 nuevos). Espacio: 8.5 de 9 GB.",
+        "actualizado_en": "2026-10-13T16:40:07.472090"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-13T16:40:04.195651"
+        "actualizado_en": "2026-10-13T16:50:03.782454"
       },
       "planilla": {
         "ok": true,
@@ -33343,7 +33343,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-13T16:37:56"
+        "actualizado_en": "2026-10-13T16:47:57"
       }
     }
   }

@@ -1,15 +1,49 @@
 {
-  "generado_en": "2026-10-13T08:40:07.198890",
-  "generado_en_epoch": 1791898807,
+  "generado_en": "2026-10-13T08:40:42.718280",
+  "generado_en_epoch": 1791898842,
   "dias": [
     {
       "fecha": "2026-10-13",
       "conteo_real": true,
       "metodo": "presencia",
-      "consolidado": [],
-      "despachos": [],
-      "por_planta": [],
-      "por_clase": [],
+      "consolidado": [
+        {
+          "canal": "0",
+          "clase": "sin_identificar",
+          "unidades": 4
+        }
+      ],
+      "despachos": [
+        {
+          "hora": "2026-10-13T08:40:32.609274",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
+        }
+      ],
+      "por_planta": [
+        {
+          "planta": "desconocida",
+          "despachos": 1,
+          "bloques": 4
+        }
+      ],
+      "por_clase": [
+        {
+          "clase": "sin_identificar",
+          "etiqueta": "Sin identificar",
+          "despachos": 1,
+          "bloques": 4
+        }
+      ],
       "anomalia": {
         "es_anomalia": false,
         "motivo": "El dia sigue en curso: se compara cuando termine."
@@ -32774,7 +32808,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-13T08:30:16.956416"
+        "actualizado_en": "2026-10-13T08:40:17.551607"
       },
       "mantenimiento": {
         "ok": true,
@@ -32789,7 +32823,7 @@
       "clips": {
         "ok": true,
         "mensaje": "701 clips disponibles en la pagina (0 nuevos). Espacio: 8.1 de 9 GB.",
-        "actualizado_en": "2026-10-13T07:40:07.246651"
+        "actualizado_en": "2026-10-13T08:40:07.569441"
       },
       "vigia": {
         "ok": true,

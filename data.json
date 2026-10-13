@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-13T09:50:06.708466",
-  "generado_en_epoch": 1791903006,
+  "generado_en": "2026-10-13T09:56:04.859136",
+  "generado_en_epoch": 1791903364,
   "dias": [
     {
       "fecha": "2026-10-13",
@@ -10,7 +10,7 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 36
+          "unidades": 40
         },
         {
           "canal": "0",
@@ -134,19 +134,33 @@
         {
           "hora": "2026-10-13T09:43:50.017348",
           "clase": "bloque_pequeno",
-          "planta": "desconocida",
+          "planta": "3",
           "bloques": 4,
           "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "solo_forma",
-          "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": null,
+          "planta_deducida": true,
+          "planta_fuente": "vecinos",
+          "gap_anterior_seg": 297.7,
           "gap_sospechoso": false
         },
         {
           "hora": "2026-10-13T09:47:09.673402",
+          "clase": "bloque_pequeno",
+          "planta": "3",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "color_y_forma",
+          "planta_deducida": false,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 199.7,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-10-13T09:55:54.537318",
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
@@ -163,21 +177,21 @@
       "por_planta": [
         {
           "planta": "3",
-          "despachos": 8,
-          "bloques": 32
+          "despachos": 10,
+          "bloques": 40
         },
         {
           "planta": "desconocida",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 9,
-          "bloques": 36
+          "despachos": 10,
+          "bloques": 40
         },
         {
           "clase": "sin_identificar",
@@ -191,8 +205,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 591,
-        "minutos_esperados": 590,
+        "minutos_cubiertos": 596,
+        "minutos_esperados": 596,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -32934,8 +32948,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-13T09:50:03.062819",
-        "fraccion_baja_confianza_reciente": 0.12
+        "ultimo_heartbeat": "2026-10-13T09:55:37.416099",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -32955,7 +32969,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-13T09:47:31.529209"
+        "actualizado_en": "2026-10-13T09:50:17.483688"
       },
       "mantenimiento": {
         "ok": true,
@@ -32969,8 +32983,8 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "710 clips disponibles en la pagina (1 nuevos). Espacio: 8.2 de 9 GB.",
-        "actualizado_en": "2026-10-13T09:45:26.995506"
+        "mensaje": "711 clips disponibles en la pagina (1 nuevos). Espacio: 8.3 de 9 GB.",
+        "actualizado_en": "2026-10-13T09:51:13.306072"
       },
       "vigia": {
         "ok": true,
@@ -32991,7 +33005,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-13T09:47:31"
+        "actualizado_en": "2026-10-13T09:52:31"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-13T09:00:08.741821",
-  "generado_en_epoch": 1791900008,
+  "generado_en": "2026-10-13T09:10:06.333250",
+  "generado_en_epoch": 1791900606,
   "dias": [
     {
       "fecha": "2026-10-13",
@@ -107,8 +107,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 540,
-        "minutos_esperados": 540,
+        "minutos_cubiertos": 551,
+        "minutos_esperados": 550,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -32845,8 +32845,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-13T08:59:57.929619",
-        "fraccion_baja_confianza_reciente": 0.125
+        "ultimo_heartbeat": "2026-10-13T09:10:03.301361",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -32858,15 +32858,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 467.5,
+        "libre_gb": 467.0,
         "total_gb": 984.1,
-        "mensaje": "468 GB libres de 984 GB."
+        "mensaje": "467 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-13T08:58:23.634927"
+        "actualizado_en": "2026-10-13T09:00:25.374241"
       },
       "mantenimiento": {
         "ok": true,
@@ -32886,7 +32886,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-13T09:00:04.286396"
+        "actualizado_en": "2026-10-13T09:10:03.491660"
       },
       "planilla": {
         "ok": true,
@@ -32902,7 +32902,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-13T08:57:09"
+        "actualizado_en": "2026-10-13T09:07:10"
       }
     }
   }

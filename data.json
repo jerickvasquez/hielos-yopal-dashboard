@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-12T23:16:40.451921",
-  "generado_en_epoch": 1791865000,
+  "generado_en": "2026-10-12T23:20:07.264455",
+  "generado_en_epoch": 1791865207,
   "dias": [
     {
       "fecha": "2026-10-12",
@@ -10,12 +10,12 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 80
+          "unidades": 84
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 20
+          "unidades": 16
         }
       ],
       "despachos": [
@@ -357,16 +357,16 @@
         },
         {
           "hora": "2026-10-12T23:16:30.386244",
-          "clase": "sin_identificar",
+          "clase": "bloque_pequeno",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "solo_forma",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": 24870.0,
+          "gap_anterior_seg": 1972.1,
           "gap_sospechoso": false
         }
       ],
@@ -396,14 +396,14 @@
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 20,
-          "bloques": 80
+          "despachos": 21,
+          "bloques": 84
         },
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 5,
-          "bloques": 20
+          "despachos": 4,
+          "bloques": 16
         }
       ],
       "anomalia": {
@@ -411,26 +411,33 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1397,
-        "minutos_esperados": 1396,
+        "minutos_cubiertos": 1400,
+        "minutos_esperados": 1400,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "inconsistencias",
-        "mensaje": "1 fila(s) mal llenadas; 2 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
+        "mensaje": "1 fila(s) mal llenadas; 9 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 64,
-        "sistema": 72,
+        "sistema": 100,
         "tandas": 2,
         "tandas_ok": 2,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 2,
-        "bloques_sin_reportar": 8,
+        "despachos_sin_reportar": 9,
+        "bloques_sin_reportar": 36,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 2,
+        "por_anotar": 9,
         "horas_por_anotar": [
           "2026-10-12T22:05:39.673775",
-          "2026-10-12T22:14:53.082561"
+          "2026-10-12T22:14:53.082561",
+          "2026-10-12T22:20:14.510029",
+          "2026-10-12T22:37:56.965771",
+          "2026-10-12T22:43:38.240299",
+          "2026-10-12T22:50:49.972846",
+          "2026-10-12T23:01:06.111658",
+          "2026-10-12T23:05:27.531448",
+          "2026-10-12T23:16:30.386244"
         ],
         "errores_llenado": 1
       }
@@ -32708,7 +32715,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-12T23:16:22.106496",
+        "ultimo_heartbeat": "2026-10-12T23:19:54.091322",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -32729,7 +32736,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-12T23:10:16.369342"
+        "actualizado_en": "2026-10-12T23:16:49.772964"
       },
       "mantenimiento": {
         "ok": true,
@@ -32743,18 +32750,18 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "708 clips disponibles en la pagina (1 nuevos). Espacio: 8.2 de 9 GB.",
-        "actualizado_en": "2026-10-12T23:13:16.682744"
+        "mensaje": "709 clips disponibles en la pagina (1 nuevos). Espacio: 8.2 de 9 GB.",
+        "actualizado_en": "2026-10-12T23:18:13.409785"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-12T23:10:04.486991"
+        "actualizado_en": "2026-10-12T23:20:04.359379"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 49 tandas anotadas, 1 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-12T22:20:06.145903"
+        "actualizado_en": "2026-10-12T23:20:06.297771"
       },
       "atribucion": {
         "ok": true,

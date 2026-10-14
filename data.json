@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-13T20:32:52.398515",
-  "generado_en_epoch": 1791941572,
+  "generado_en": "2026-10-13T20:40:07.139457",
+  "generado_en_epoch": 1791942007,
   "dias": [
     {
       "fecha": "2026-10-13",
@@ -15,12 +15,12 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 60
+          "unidades": 64
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 36
+          "unidades": 32
         }
       ],
       "despachos": [
@@ -502,16 +502,16 @@
         },
         {
           "hora": "2026-10-13T20:32:41.362415",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "2",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": 19298.2,
+          "planta_fuente": "color",
+          "gap_anterior_seg": null,
           "gap_sospechoso": false
         }
       ],
@@ -520,6 +520,11 @@
           "planta": "1",
           "despachos": 5,
           "bloques": 20
+        },
+        {
+          "planta": "2",
+          "despachos": 1,
+          "bloques": 4
         },
         {
           "planta": "3",
@@ -533,8 +538,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 10,
-          "bloques": 40
+          "despachos": 9,
+          "bloques": 36
         }
       ],
       "por_clase": [
@@ -547,14 +552,14 @@
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 15,
-          "bloques": 60
+          "despachos": 16,
+          "bloques": 64
         },
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 9,
-          "bloques": 36
+          "despachos": 8,
+          "bloques": 32
         }
       ],
       "anomalia": {
@@ -562,8 +567,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1233,
-        "minutos_esperados": 1232,
+        "minutos_cubiertos": 1241,
+        "minutos_esperados": 1240,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -33300,7 +33305,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-13T20:32:13.370267",
+        "ultimo_heartbeat": "2026-10-13T20:40:05.583647",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -33313,7 +33318,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 463.3,
+        "libre_gb": 463.1,
         "total_gb": 984.1,
         "mensaje": "463 GB libres de 984 GB."
       },
@@ -33321,7 +33326,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-13T20:20:37.080916"
+        "actualizado_en": "2026-10-13T20:33:00.790522"
       },
       "mantenimiento": {
         "ok": true,
@@ -33335,13 +33340,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "735 clips disponibles en la pagina (0 nuevos). Espacio: 8.5 de 9 GB.",
-        "actualizado_en": "2026-10-13T19:40:07.623123"
+        "mensaje": "736 clips disponibles en la pagina (0 nuevos). Espacio: 8.5 de 9 GB.",
+        "actualizado_en": "2026-10-13T20:40:06.850551"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-13T20:30:03.837556"
+        "actualizado_en": "2026-10-13T20:40:04.221704"
       },
       "planilla": {
         "ok": true,
@@ -33357,7 +33362,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-13T20:28:11"
+        "actualizado_en": "2026-10-13T20:38:11"
       }
     }
   }

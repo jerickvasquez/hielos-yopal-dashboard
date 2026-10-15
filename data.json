@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-15T10:20:28.857014",
-  "generado_en_epoch": 1792077628,
+  "generado_en": "2026-10-15T10:22:40.837328",
+  "generado_en_epoch": 1792077760,
   "dias": [
     {
       "fecha": "2026-10-15",
@@ -11,6 +11,11 @@
           "canal": "0",
           "clase": "bloque_pequeno",
           "unidades": 8
+        },
+        {
+          "canal": "0",
+          "clase": "sin_identificar",
+          "unidades": 4
         }
       ],
       "despachos": [
@@ -41,6 +46,20 @@
           "planta_fuente": "color",
           "gap_anterior_seg": 400.5,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-10-15T10:22:30.740694",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
@@ -48,6 +67,11 @@
           "planta": "2",
           "despachos": 2,
           "bloques": 8
+        },
+        {
+          "planta": "desconocida",
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "por_clase": [
@@ -56,6 +80,12 @@
           "etiqueta": "Pequeño",
           "despachos": 2,
           "bloques": 8
+        },
+        {
+          "clase": "sin_identificar",
+          "etiqueta": "Sin identificar",
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "anomalia": {
@@ -63,8 +93,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 621,
-        "minutos_esperados": 620,
+        "minutos_cubiertos": 623,
+        "minutos_esperados": 622,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -33815,8 +33845,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-15T10:20:12.914246",
-        "fraccion_baja_confianza_reciente": 0.005
+        "ultimo_heartbeat": "2026-10-15T10:22:14.899357",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -33836,7 +33866,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-15T10:20:17.073860"
+        "actualizado_en": "2026-10-15T10:20:38.514007"
       },
       "mantenimiento": {
         "ok": true,
@@ -33872,7 +33902,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-15T10:15:46"
+        "actualizado_en": "2026-10-15T10:20:46"
       }
     }
   }

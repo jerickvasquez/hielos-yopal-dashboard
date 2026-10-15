@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-15T10:26:40.469989",
-  "generado_en_epoch": 1792078000,
+  "generado_en": "2026-10-15T10:30:17.404110",
+  "generado_en_epoch": 1792078217,
   "dias": [
     {
       "fecha": "2026-10-15",
@@ -66,7 +66,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -107,8 +107,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 627,
-        "minutos_esperados": 626,
+        "minutos_cubiertos": 630,
+        "minutos_esperados": 630,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -33859,8 +33859,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-15T10:26:22.243597",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-15T10:29:54.212630",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -33872,7 +33872,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 484.0,
+        "libre_gb": 483.8,
         "total_gb": 984.1,
         "mensaje": "484 GB libres de 984 GB."
       },
@@ -33880,7 +33880,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-15T10:22:50.079795"
+        "actualizado_en": "2026-10-15T10:26:51.085424"
       },
       "mantenimiento": {
         "ok": true,
@@ -33900,7 +33900,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-15T10:20:04.439192"
+        "actualizado_en": "2026-10-15T10:30:14.227354"
       },
       "planilla": {
         "ok": true,

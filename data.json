@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-14T21:43:48.423919",
-  "generado_en_epoch": 1792032228,
+  "generado_en": "2026-10-14T21:50:08.129374",
+  "generado_en_epoch": 1792032608,
   "dias": [
     {
       "fecha": "2026-10-14",
@@ -266,8 +266,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1304,
-        "minutos_esperados": 1303,
+        "minutos_cubiertos": 1310,
+        "minutos_esperados": 1310,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -33723,8 +33723,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-14T21:43:35.357197",
-        "fraccion_baja_confianza_reciente": 0.005
+        "ultimo_heartbeat": "2026-10-14T21:49:38.330858",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -33736,15 +33736,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 472.8,
+        "libre_gb": 472.5,
         "total_gb": 984.1,
-        "mensaje": "473 GB libres de 984 GB."
+        "mensaje": "472 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-14T21:40:33.720206"
+        "actualizado_en": "2026-10-14T21:43:57.786714"
       },
       "mantenimiento": {
         "ok": true,
@@ -33764,7 +33764,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-14T21:40:03.748098"
+        "actualizado_en": "2026-10-14T21:50:05.274253"
       },
       "planilla": {
         "ok": true,
@@ -33780,7 +33780,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-14T21:39:52"
+        "actualizado_en": "2026-10-14T21:49:53"
       }
     }
   }

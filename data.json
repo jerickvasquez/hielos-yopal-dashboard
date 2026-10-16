@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-16T01:20:06.974909",
-  "generado_en_epoch": 1792131606,
+  "generado_en": "2026-10-16T01:20:22.638425",
+  "generado_en_epoch": 1792131622,
   "dias": [
     {
       "fecha": "2026-10-16",
@@ -15,7 +15,7 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 80,
+        "minutos_cubiertos": 81,
         "minutos_esperados": 80,
         "porcentaje": 100.0,
         "huecos": []
@@ -467,7 +467,7 @@
       "validacion": {
         "estado": "inconsistencias",
         "mensaje": "1 de 3 tandas no cuadran; 1 tanda(s) de noche/madrugada no se pueden verificar todavía (el conteo de noche está en ajuste).",
-        "reportado": 120,
+        "reportado": 104,
         "sistema": 104,
         "tandas": 3,
         "tandas_ok": 1,
@@ -34208,7 +34208,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-16T01:19:49.636088",
+        "ultimo_heartbeat": "2026-10-16T01:20:20.216230",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -34229,7 +34229,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-16T01:10:13.797193"
+        "actualizado_en": "2026-10-16T01:20:14.144867"
       },
       "mantenimiento": {
         "ok": true,
@@ -34239,7 +34239,7 @@
       "informes": {
         "ok": true,
         "mensaje": "Informe(s) 2026-10-15, 2026-10-16 publicados; 80 informes disponibles para descargar.",
-        "actualizado_en": "2026-10-16T00:20:19.612334"
+        "actualizado_en": "2026-10-16T01:20:19.768091"
       },
       "clips": {
         "ok": true,
@@ -34254,7 +34254,7 @@
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 59 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-16T00:20:06.668050"
+        "actualizado_en": "2026-10-16T01:20:07.739530"
       },
       "atribucion": {
         "ok": true,

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-16T09:19:13.166273",
-  "generado_en_epoch": 1792160353,
+  "generado_en": "2026-10-16T09:20:07.135398",
+  "generado_en_epoch": 1792160407,
   "dias": [
     {
       "fecha": "2026-10-16",
@@ -93,24 +93,28 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 559,
-        "minutos_esperados": 559,
+        "minutos_cubiertos": 560,
+        "minutos_esperados": 560,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
-        "estado": "ok",
-        "mensaje": "Sin producción: nada anotado ni contado.",
+        "estado": "sin_registro",
+        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 12 bloques.",
         "reportado": 0,
-        "sistema": 0,
+        "sistema": 12,
         "tandas": 0,
         "tandas_ok": 0,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 0,
-        "bloques_sin_reportar": 0,
+        "despachos_sin_reportar": 3,
+        "bloques_sin_reportar": 12,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 0,
-        "horas_por_anotar": [],
+        "por_anotar": 3,
+        "horas_por_anotar": [
+          "2026-10-16T09:00:27.054519",
+          "2026-10-16T09:08:32.346511",
+          "2026-10-16T09:19:02.366068"
+        ],
         "errores_llenado": 0
       }
     },
@@ -34286,8 +34290,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-16T09:18:38.039511",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-16T09:19:54.059548",
+        "fraccion_baja_confianza_reciente": 0.06
       }
     ],
     "procesamiento_diario": {
@@ -34299,7 +34303,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 494.7,
+        "libre_gb": 494.6,
         "total_gb": 984.1,
         "mensaje": "495 GB libres de 984 GB."
       },
@@ -34307,7 +34311,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-16T09:10:13.901428"
+        "actualizado_en": "2026-10-16T09:19:23.500515"
       },
       "mantenimiento": {
         "ok": true,
@@ -34327,12 +34331,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-16T09:10:03.271123"
+        "actualizado_en": "2026-10-16T09:20:04.049228"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 59 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-16T08:20:05.814426"
+        "actualizado_en": "2026-10-16T09:20:05.820173"
       },
       "atribucion": {
         "ok": true,

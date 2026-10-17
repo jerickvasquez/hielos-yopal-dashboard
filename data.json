@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-17T15:20:02.891629",
-  "generado_en_epoch": 1792268402,
+  "generado_en": "2026-10-17T15:20:07.500150",
+  "generado_en_epoch": 1792268407,
   "dias": [
     {
       "fecha": "2026-10-17",
@@ -337,19 +337,30 @@
         "huecos": []
       },
       "validacion": {
-        "estado": "ok",
-        "mensaje": "Todo cuadra: 40 bloques anotados y 40 contados; 1 de 1 tandas coinciden.",
+        "estado": "inconsistencias",
+        "mensaje": "1 fila(s) mal llenadas; 10 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 40,
-        "sistema": 40,
+        "sistema": 80,
         "tandas": 1,
         "tandas_ok": 1,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 0,
-        "bloques_sin_reportar": 0,
+        "despachos_sin_reportar": 10,
+        "bloques_sin_reportar": 40,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 0,
-        "horas_por_anotar": [],
-        "errores_llenado": 0
+        "por_anotar": 10,
+        "horas_por_anotar": [
+          "2026-10-17T14:40:54.624457",
+          "2026-10-17T14:46:28.990591",
+          "2026-10-17T14:50:01.765898",
+          "2026-10-17T14:54:41.986315",
+          "2026-10-17T14:58:02.275835",
+          "2026-10-17T15:02:20.032327",
+          "2026-10-17T15:05:36.854840",
+          "2026-10-17T15:09:18.632158",
+          "2026-10-17T15:13:36.760305",
+          "2026-10-17T15:19:52.730534"
+        ],
+        "errores_llenado": 1
       }
     },
     {
@@ -35132,12 +35143,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-17T15:10:04.316010"
+        "actualizado_en": "2026-10-17T15:20:04.630066"
       },
       "planilla": {
         "ok": true,
-        "mensaje": "Planilla leída: 63 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-17T14:20:06.378794"
+        "mensaje": "Planilla leída: 63 tandas anotadas, 1 fila(s) mal llenadas.",
+        "actualizado_en": "2026-10-17T15:20:06.009480"
       },
       "atribucion": {
         "ok": true,

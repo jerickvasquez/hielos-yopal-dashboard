@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-19T17:20:07.300543",
-  "generado_en_epoch": 1792448407,
+  "generado_en": "2026-10-19T17:30:06.200272",
+  "generado_en_epoch": 1792449006,
   "dias": [
     {
       "fecha": "2026-10-19",
@@ -464,36 +464,25 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1038,
-        "minutos_esperados": 1040,
-        "porcentaje": 99.8,
+        "minutos_cubiertos": 1049,
+        "minutos_esperados": 1050,
+        "porcentaje": 99.9,
         "huecos": []
       },
       "validacion": {
-        "estado": "inconsistencias",
-        "mensaje": "1 fila(s) mal llenadas; 10 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
-        "reportado": 72,
+        "estado": "ok",
+        "mensaje": "Todo cuadra: 112 bloques anotados y 112 contados; 2 de 2 tandas coinciden.",
+        "reportado": 112,
         "sistema": 112,
-        "tandas": 1,
-        "tandas_ok": 1,
+        "tandas": 2,
+        "tandas_ok": 2,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 10,
-        "bloques_sin_reportar": 40,
+        "despachos_sin_reportar": 0,
+        "bloques_sin_reportar": 0,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 10,
-        "horas_por_anotar": [
-          "2026-10-19T14:35:25.344922",
-          "2026-10-19T14:41:49.618113",
-          "2026-10-19T14:48:10.013151",
-          "2026-10-19T14:52:00.233429",
-          "2026-10-19T14:57:58.647675",
-          "2026-10-19T15:02:26.551823",
-          "2026-10-19T15:07:17.226707",
-          "2026-10-19T15:11:03.467091",
-          "2026-10-19T15:27:16.358182",
-          "2026-10-19T15:32:25.627285"
-        ],
-        "errores_llenado": 1
+        "por_anotar": 0,
+        "horas_por_anotar": [],
+        "errores_llenado": 0
       }
     },
     {
@@ -36034,8 +36023,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-19T17:19:53.925188",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-19T17:30:00.606327",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -36055,7 +36044,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-19T16:20:17.117655"
+        "actualizado_en": "2026-10-19T17:21:17.440517"
       },
       "mantenimiento": {
         "ok": true,
@@ -36063,9 +36052,9 @@
         "actualizado_en": "2026-10-19T03:00:06.132023"
       },
       "informes": {
-        "ok": false,
-        "mensaje": "No se pudo generar/publicar el informe: 400 Client Error: Bad Request for url: https://api.github.com/repos/jerickvasquez/hielos-yopal-dashboard/git/blobs",
-        "actualizado_en": "2026-10-19T16:20:32.596185"
+        "ok": true,
+        "mensaje": "Informe(s) 2026-10-18, 2026-10-19 publicados; 83 informes disponibles para descargar.",
+        "actualizado_en": "2026-10-19T17:20:50.113517"
       },
       "clips": {
         "ok": true,
@@ -36075,12 +36064,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-19T17:20:04.294544"
+        "actualizado_en": "2026-10-19T17:30:03.241094"
       },
       "planilla": {
         "ok": true,
-        "mensaje": "Planilla leída: 68 tandas anotadas, 1 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-19T16:20:06.807096"
+        "mensaje": "Planilla leída: 69 tandas anotadas, 0 fila(s) mal llenadas.",
+        "actualizado_en": "2026-10-19T17:20:13.456349"
       },
       "atribucion": {
         "ok": true,
@@ -36091,7 +36080,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-19T17:19:47"
+        "actualizado_en": "2026-10-19T17:29:48"
       }
     }
   }

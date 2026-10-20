@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-19T19:10:06.344895",
-  "generado_en_epoch": 1792455006,
+  "generado_en": "2026-10-19T20:20:56.429871",
+  "generado_en_epoch": 1792459256,
   "dias": [
     {
       "fecha": "2026-10-19",
@@ -15,12 +15,12 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 20
+          "unidades": 28
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 28
+          "unidades": 32
         }
       ],
       "despachos": [
@@ -415,11 +415,58 @@
           "planta_fuente": "color",
           "gap_anterior_seg": 309.3,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-10-19T20:07:11.232244",
+          "clase": "bloque_pequeno",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "discrepancia",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-10-19T20:12:18.607033",
+          "clase": "bloque_pequeno",
+          "planta": "2",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "color_y_forma",
+          "planta_deducida": false,
+          "planta_fuente": "color",
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-10-19T20:19:04.108563",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": 18706.9,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
         {
           "planta": "1",
+          "despachos": 1,
+          "bloques": 4
+        },
+        {
+          "planta": "2",
           "despachos": 1,
           "bloques": 4
         },
@@ -435,8 +482,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 7,
-          "bloques": 28
+          "despachos": 9,
+          "bloques": 36
         }
       ],
       "por_clase": [
@@ -449,14 +496,14 @@
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 5,
-          "bloques": 20
+          "despachos": 7,
+          "bloques": 28
         },
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 7,
-          "bloques": 28
+          "despachos": 8,
+          "bloques": 32
         }
       ],
       "anomalia": {
@@ -464,24 +511,28 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1148,
-        "minutos_esperados": 1150,
-        "porcentaje": 99.8,
+        "minutos_cubiertos": 1219,
+        "minutos_esperados": 1220,
+        "porcentaje": 99.9,
         "huecos": []
       },
       "validacion": {
-        "estado": "ok",
-        "mensaje": "Todo cuadra: 112 bloques anotados y 112 contados; 2 de 2 tandas coinciden.",
+        "estado": "revisar",
+        "mensaje": "Lo que se puede verificar cuadra; 3 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 112,
-        "sistema": 112,
+        "sistema": 124,
         "tandas": 2,
         "tandas_ok": 2,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 0,
-        "bloques_sin_reportar": 0,
+        "despachos_sin_reportar": 3,
+        "bloques_sin_reportar": 12,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 0,
-        "horas_por_anotar": [],
+        "por_anotar": 3,
+        "horas_por_anotar": [
+          "2026-10-19T20:07:11.232244",
+          "2026-10-19T20:12:18.607033",
+          "2026-10-19T20:19:04.108563"
+        ],
         "errores_llenado": 0
       }
     },
@@ -36016,15 +36067,15 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-10-19T18:00:04.353411"
+      "verificado_en": "2026-10-19T20:00:04.505745"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-19T19:09:38.937040",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-19T20:20:37.664696",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -36036,7 +36087,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 508.0,
+        "libre_gb": 507.8,
         "total_gb": 984.1,
         "mensaje": "508 GB libres de 984 GB."
       },
@@ -36044,7 +36095,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-19T18:50:14.792667"
+        "actualizado_en": "2026-10-19T19:10:25.285515"
       },
       "mantenimiento": {
         "ok": true,
@@ -36052,24 +36103,24 @@
         "actualizado_en": "2026-10-19T03:00:06.132023"
       },
       "informes": {
-        "ok": false,
-        "mensaje": "No se pudo generar/publicar el informe: 400 Client Error: Bad Request for url: https://api.github.com/repos/jerickvasquez/hielos-yopal-dashboard/git/blobs",
-        "actualizado_en": "2026-10-19T18:20:25.646598"
+        "ok": true,
+        "mensaje": "Informe(s) 2026-10-18, 2026-10-19 publicados; 83 informes disponibles para descargar.",
+        "actualizado_en": "2026-10-19T20:20:53.415477"
       },
       "clips": {
         "ok": true,
-        "mensaje": "794 clips disponibles en la pagina (0 nuevos). Espacio: 8.3 de 9 GB.",
-        "actualizado_en": "2026-10-19T18:40:08.113022"
+        "mensaje": "796 clips disponibles en la pagina (1 nuevos). Espacio: 8.3 de 9 GB.",
+        "actualizado_en": "2026-10-19T20:15:44.463750"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-19T19:10:03.337128"
+        "actualizado_en": "2026-10-19T20:20:04.333575"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 69 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-19T18:20:05.872279"
+        "actualizado_en": "2026-10-19T20:20:06.582834"
       },
       "atribucion": {
         "ok": true,
@@ -36080,7 +36131,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-19T19:09:56"
+        "actualizado_en": "2026-10-19T20:20:00"
       }
     }
   }

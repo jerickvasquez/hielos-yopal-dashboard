@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-20T14:54:47.160059",
-  "generado_en_epoch": 1792526087,
+  "generado_en": "2026-10-20T15:00:34.276786",
+  "generado_en_epoch": 1792526434,
   "dias": [
     {
       "fecha": "2026-10-20",
@@ -280,8 +280,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 895,
-        "minutos_esperados": 894,
+        "minutos_cubiertos": 901,
+        "minutos_esperados": 900,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -36470,7 +36470,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-20T14:54:15.882311",
+        "ultimo_heartbeat": "2026-10-20T15:00:30.292962",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -36483,7 +36483,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 513.8,
+        "libre_gb": 513.5,
         "total_gb": 984.1,
         "mensaje": "514 GB libres de 984 GB."
       },
@@ -36491,7 +36491,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-20T14:51:08.382686"
+        "actualizado_en": "2026-10-20T14:54:56.076844"
       },
       "mantenimiento": {
         "ok": true,
@@ -36511,7 +36511,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-20T14:50:04.038320"
+        "actualizado_en": "2026-10-20T15:00:29.799834"
       },
       "planilla": {
         "ok": true,
@@ -36527,7 +36527,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-20T14:50:02"
+        "actualizado_en": "2026-10-20T15:00:02"
       }
     }
   }

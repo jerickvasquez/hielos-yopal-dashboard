@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-19T21:20:29.663715",
-  "generado_en_epoch": 1792462829,
+  "generado_en": "2026-10-19T21:30:06.125126",
+  "generado_en_epoch": 1792463406,
   "dias": [
     {
       "fecha": "2026-10-19",
@@ -20,7 +20,7 @@
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 40
+          "unidades": 44
         }
       ],
       "despachos": [
@@ -505,13 +505,27 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "color_sin_confirmar",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": 1254.0,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-10-19T21:25:22.274115",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": 1254.0,
+          "gap_anterior_seg": 399.3,
           "gap_sospechoso": false
         }
       ],
@@ -538,8 +552,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 11,
-          "bloques": 44
+          "despachos": 12,
+          "bloques": 48
         }
       ],
       "por_clase": [
@@ -558,8 +572,8 @@
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 10,
-          "bloques": 40
+          "despachos": 11,
+          "bloques": 44
         }
       ],
       "anomalia": {
@@ -567,9 +581,9 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1277,
-        "minutos_esperados": 1280,
-        "porcentaje": 99.8,
+        "minutos_cubiertos": 1286,
+        "minutos_esperados": 1290,
+        "porcentaje": 99.7,
         "huecos": []
       },
       "validacion": {
@@ -36134,8 +36148,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-19T21:19:59.186510",
-        "fraccion_baja_confianza_reciente": 0.005
+        "ultimo_heartbeat": "2026-10-19T21:29:40.722635",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -36147,7 +36161,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 506.0,
+        "libre_gb": 505.9,
         "total_gb": 984.1,
         "mensaje": "506 GB libres de 984 GB."
       },
@@ -36155,7 +36169,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-19T19:10:25.285515"
+        "actualizado_en": "2026-10-19T21:20:47.161640"
       },
       "mantenimiento": {
         "ok": true,
@@ -36169,13 +36183,13 @@
       },
       "clips": {
         "ok": false,
-        "mensaje": "Fallo al publicar clips: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/jerickvasquez/hielos-yopal-dashboard/git/ref/heads/main (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.github.com', port=443) at 0x1ed326c8910>, 'Connection to api.github.com timed out. (connect timeout=90)'))",
-        "actualizado_en": "2026-10-19T21:17:36.344811"
+        "mensaje": "Fallo al publicar clips: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/jerickvasquez/hielos-yopal-dashboard/git/ref/heads/main (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.github.com', port=443) at 0x12cde4d8910>, 'Connection to api.github.com timed out. (connect timeout=90)'))",
+        "actualizado_en": "2026-10-19T21:21:41.093938"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-19T21:20:04.831000"
+        "actualizado_en": "2026-10-19T21:30:03.156481"
       },
       "planilla": {
         "ok": true,
@@ -36191,7 +36205,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-19T21:15:48"
+        "actualizado_en": "2026-10-19T21:27:26"
       }
     }
   }

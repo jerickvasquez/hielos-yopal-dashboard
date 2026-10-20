@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-20T00:40:07.245650",
-  "generado_en_epoch": 1792474807,
+  "generado_en": "2026-10-20T00:50:06.402456",
+  "generado_en_epoch": 1792475406,
   "dias": [
     {
       "fecha": "2026-10-20",
@@ -15,8 +15,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 40,
-        "minutos_esperados": 40,
+        "minutos_cubiertos": 50,
+        "minutos_esperados": 50,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -36202,7 +36202,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-20T00:39:37.025639",
+        "ultimo_heartbeat": "2026-10-20T00:49:44.009955",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -36223,7 +36223,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-20T00:30:57.909486"
+        "actualizado_en": "2026-10-20T00:40:22.202854"
       },
       "mantenimiento": {
         "ok": true,
@@ -36237,13 +36237,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "804 clips disponibles en la pagina (1 nuevos). Espacio: 8.4 de 9 GB.",
-        "actualizado_en": "2026-10-19T23:40:40.879021"
+        "mensaje": "790 clips disponibles en la pagina (0 nuevos). Espacio: 8.2 de 9 GB.",
+        "actualizado_en": "2026-10-20T00:40:40.612562"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-20T00:40:04.183603"
+        "actualizado_en": "2026-10-20T00:50:03.395746"
       },
       "planilla": {
         "ok": true,
@@ -36259,7 +36259,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-20T00:37:38"
+        "actualizado_en": "2026-10-20T00:47:39"
       }
     }
   }

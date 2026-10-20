@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-20T05:50:06.622768",
-  "generado_en_epoch": 1792493406,
+  "generado_en": "2026-10-20T06:00:08.425796",
+  "generado_en_epoch": 1792494008,
   "dias": [
     {
       "fecha": "2026-10-20",
@@ -15,8 +15,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 351,
-        "minutos_esperados": 350,
+        "minutos_cubiertos": 360,
+        "minutos_esperados": 360,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -36195,14 +36195,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-10-20T04:00:04.385590"
+      "verificado_en": "2026-10-20T06:00:04.603638"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-20T05:50:03.751326",
+        "ultimo_heartbeat": "2026-10-20T05:59:39.798761",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -36243,7 +36243,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-20T05:50:03.553656"
+        "actualizado_en": "2026-10-20T06:00:05.058644"
       },
       "planilla": {
         "ok": true,
@@ -36259,7 +36259,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-20T05:47:59"
+        "actualizado_en": "2026-10-20T05:58:00"
       }
     }
   }

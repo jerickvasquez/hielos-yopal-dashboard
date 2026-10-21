@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-21T11:16:24.260155",
-  "generado_en_epoch": 1792599384,
+  "generado_en": "2026-10-21T11:20:08.404655",
+  "generado_en_epoch": 1792599608,
   "dias": [
     {
       "fecha": "2026-10-21",
@@ -407,7 +407,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -459,23 +459,23 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 676,
-        "minutos_esperados": 676,
+        "minutos_cubiertos": 681,
+        "minutos_esperados": 680,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "sin_registro",
-        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 68 bloques.",
+        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 112 bloques.",
         "reportado": 0,
-        "sistema": 68,
+        "sistema": 112,
         "tandas": 0,
         "tandas_ok": 0,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 17,
-        "bloques_sin_reportar": 68,
+        "despachos_sin_reportar": 28,
+        "bloques_sin_reportar": 112,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 17,
+        "por_anotar": 28,
         "horas_por_anotar": [
           "2026-10-21T07:46:09.989146",
           "2026-10-21T07:53:25.621592",
@@ -493,7 +493,18 @@
           "2026-10-21T09:40:13.328614",
           "2026-10-21T09:55:18.174201",
           "2026-10-21T10:05:53.252694",
-          "2026-10-21T10:16:32.206668"
+          "2026-10-21T10:16:32.206668",
+          "2026-10-21T10:21:26.350941",
+          "2026-10-21T10:31:41.473030",
+          "2026-10-21T10:37:43.211590",
+          "2026-10-21T10:44:36.524845",
+          "2026-10-21T10:48:33.614098",
+          "2026-10-21T10:52:52.729796",
+          "2026-10-21T10:56:21.881320",
+          "2026-10-21T10:59:35.700443",
+          "2026-10-21T11:03:57.459619",
+          "2026-10-21T11:12:03.591532",
+          "2026-10-21T11:16:10.213226"
         ],
         "errores_llenado": 0
       }
@@ -37108,7 +37119,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-21T11:15:57.019726",
+        "ultimo_heartbeat": "2026-10-21T11:20:05.301552",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -37129,7 +37140,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-21T11:12:24.503761"
+        "actualizado_en": "2026-10-21T11:16:33.179404"
       },
       "mantenimiento": {
         "ok": true,
@@ -37143,18 +37154,18 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "834 clips disponibles en la pagina (1 nuevos). Espacio: 8.5 de 9 GB.",
-        "actualizado_en": "2026-10-21T11:13:53.237548"
+        "mensaje": "835 clips disponibles en la pagina (1 nuevos). Espacio: 8.5 de 9 GB.",
+        "actualizado_en": "2026-10-21T11:18:02.488581"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-21T11:10:04.395978"
+        "actualizado_en": "2026-10-21T11:20:05.212028"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 73 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-21T10:20:06.793865"
+        "actualizado_en": "2026-10-21T11:20:06.787433"
       },
       "atribucion": {
         "ok": true,
@@ -37165,7 +37176,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-21T11:12:24"
+        "actualizado_en": "2026-10-21T11:17:24"
       }
     }
   }

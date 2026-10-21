@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-20T21:00:12.068733",
-  "generado_en_epoch": 1792548012,
+  "generado_en": "2026-10-20T21:04:08.529962",
+  "generado_en_epoch": 1792548248,
   "dias": [
     {
       "fecha": "2026-10-20",
@@ -10,7 +10,7 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 84
+          "unidades": 88
         },
         {
           "canal": "0",
@@ -357,6 +357,20 @@
         },
         {
           "hora": "2026-10-20T20:52:27.947182",
+          "clase": "bloque_pequeno",
+          "planta": "2",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "color_y_forma",
+          "planta_deducida": false,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 1924.0,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-10-20T21:03:53.706887",
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
@@ -366,7 +380,7 @@
           "tamano": "sin_dato",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": 591.2,
+          "gap_anterior_seg": 1277.0,
           "gap_sospechoso": false
         }
       ],
@@ -378,8 +392,8 @@
         },
         {
           "planta": "2",
-          "despachos": 3,
-          "bloques": 12
+          "despachos": 4,
+          "bloques": 16
         },
         {
           "planta": "3",
@@ -396,8 +410,8 @@
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 21,
-          "bloques": 84
+          "despachos": 22,
+          "bloques": 88
         },
         {
           "clase": "sin_identificar",
@@ -411,8 +425,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1259,
-        "minutos_esperados": 1260,
+        "minutos_cubiertos": 1263,
+        "minutos_esperados": 1264,
         "porcentaje": 99.9,
         "huecos": []
       },
@@ -36604,7 +36618,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-20T20:59:51.426188",
+        "ultimo_heartbeat": "2026-10-20T21:03:53.650478",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -36625,7 +36639,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-20T17:10:14.880585"
+        "actualizado_en": "2026-10-20T21:00:20.183182"
       },
       "mantenimiento": {
         "ok": true,
@@ -36638,9 +36652,9 @@
         "actualizado_en": "2026-10-20T20:30:34.513498"
       },
       "clips": {
-        "ok": false,
-        "mensaje": "Fallo al publicar clips: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/jerickvasquez/hielos-yopal-dashboard/git/ref/heads/main (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.github.com', port=443) at 0x287cd158910>, 'Connection to api.github.com timed out. (connect timeout=90)'))",
-        "actualizado_en": "2026-10-20T20:53:06.588167"
+        "ok": true,
+        "mensaje": "815 clips disponibles en la pagina (2 nuevos). Espacio: 8.4 de 9 GB.",
+        "actualizado_en": "2026-10-20T21:02:20.522578"
       },
       "vigia": {
         "ok": true,
@@ -36661,7 +36675,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-20T20:56:01"
+        "actualizado_en": "2026-10-20T21:01:02"
       }
     }
   }

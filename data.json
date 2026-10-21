@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-21T08:19:52.523012",
-  "generado_en_epoch": 1792588792,
+  "generado_en": "2026-10-21T08:20:08.355715",
+  "generado_en_epoch": 1792588808,
   "dias": [
     {
       "fecha": "2026-10-21",
@@ -135,24 +135,31 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 500,
-        "minutos_esperados": 499,
+        "minutos_cubiertos": 501,
+        "minutos_esperados": 500,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
-        "estado": "ok",
-        "mensaje": "Sin producción: nada anotado ni contado.",
+        "estado": "sin_registro",
+        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 24 bloques.",
         "reportado": 0,
-        "sistema": 0,
+        "sistema": 24,
         "tandas": 0,
         "tandas_ok": 0,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 0,
-        "bloques_sin_reportar": 0,
+        "despachos_sin_reportar": 6,
+        "bloques_sin_reportar": 24,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 0,
-        "horas_por_anotar": [],
+        "por_anotar": 6,
+        "horas_por_anotar": [
+          "2026-10-21T07:46:09.989146",
+          "2026-10-21T07:53:25.621592",
+          "2026-10-21T08:00:38.035677",
+          "2026-10-21T08:08:03.216790",
+          "2026-10-21T08:13:19.589802",
+          "2026-10-21T08:19:42.046671"
+        ],
         "errores_llenado": 0
       }
     },
@@ -36766,8 +36773,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-21T08:19:20.020827",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-21T08:20:00.974697",
+        "fraccion_baja_confianza_reciente": 0.015
       }
     ],
     "procesamiento_diario": {
@@ -36787,7 +36794,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-21T08:13:46.658834"
+        "actualizado_en": "2026-10-21T08:20:00.822232"
       },
       "mantenimiento": {
         "ok": true,
@@ -36807,12 +36814,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-21T08:10:04.466178"
+        "actualizado_en": "2026-10-21T08:20:05.167431"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 73 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-21T07:20:06.698992"
+        "actualizado_en": "2026-10-21T08:20:06.694896"
       },
       "atribucion": {
         "ok": true,

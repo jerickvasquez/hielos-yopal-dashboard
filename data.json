@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-21T10:16:42.743652",
-  "generado_en_epoch": 1792595802,
+  "generado_en": "2026-10-21T10:20:07.891314",
+  "generado_en_epoch": 1792596007,
   "dias": [
     {
       "fecha": "2026-10-21",
@@ -248,10 +248,10 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_sin_confirmar",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": 3012.6,
@@ -289,23 +289,23 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 617,
-        "minutos_esperados": 616,
+        "minutos_cubiertos": 621,
+        "minutos_esperados": 620,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "sin_registro",
-        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 44 bloques.",
+        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 68 bloques.",
         "reportado": 0,
-        "sistema": 44,
+        "sistema": 68,
         "tandas": 0,
         "tandas_ok": 0,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 11,
-        "bloques_sin_reportar": 44,
+        "despachos_sin_reportar": 17,
+        "bloques_sin_reportar": 68,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 11,
+        "por_anotar": 17,
         "horas_por_anotar": [
           "2026-10-21T07:46:09.989146",
           "2026-10-21T07:53:25.621592",
@@ -317,7 +317,13 @@
           "2026-10-21T08:32:27.885148",
           "2026-10-21T08:40:00.744339",
           "2026-10-21T08:46:43.606641",
-          "2026-10-21T08:52:08.212051"
+          "2026-10-21T08:52:08.212051",
+          "2026-10-21T09:26:19.602475",
+          "2026-10-21T09:33:52.858420",
+          "2026-10-21T09:40:13.328614",
+          "2026-10-21T09:55:18.174201",
+          "2026-10-21T10:05:53.252694",
+          "2026-10-21T10:16:32.206668"
         ],
         "errores_llenado": 0
       }
@@ -36932,8 +36938,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-21T10:16:30.316036",
-        "fraccion_baja_confianza_reciente": 0.01
+        "ultimo_heartbeat": "2026-10-21T10:20:02.321447",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -36953,7 +36959,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-21T10:10:18.645820"
+        "actualizado_en": "2026-10-21T10:16:53.328358"
       },
       "mantenimiento": {
         "ok": true,
@@ -36967,18 +36973,18 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "823 clips disponibles en la pagina (1 nuevos). Espacio: 8.4 de 9 GB.",
-        "actualizado_en": "2026-10-21T10:09:36.468925"
+        "mensaje": "824 clips disponibles en la pagina (1 nuevos). Espacio: 8.4 de 9 GB.",
+        "actualizado_en": "2026-10-21T10:18:17.293514"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-21T10:10:04.568580"
+        "actualizado_en": "2026-10-21T10:20:04.746237"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 73 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-21T09:20:07.045166"
+        "actualizado_en": "2026-10-21T10:20:06.793865"
       },
       "atribucion": {
         "ok": true,
@@ -36989,7 +36995,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-21T10:12:11"
+        "actualizado_en": "2026-10-21T10:17:11"
       }
     }
   }

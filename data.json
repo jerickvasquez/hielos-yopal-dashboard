@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-21T10:06:05.193233",
-  "generado_en_epoch": 1792595165,
+  "generado_en": "2026-10-21T10:10:07.588644",
+  "generado_en_epoch": 1792595407,
   "dias": [
     {
       "fecha": "2026-10-21",
@@ -10,12 +10,12 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 44
+          "unidades": 48
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 20
+          "unidades": 16
         }
       ],
       "despachos": [
@@ -231,43 +231,43 @@
         },
         {
           "hora": "2026-10-21T10:05:53.252694",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": 2373.7,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 635.1,
           "gap_sospechoso": false
         }
       ],
       "por_planta": [
         {
           "planta": "4",
-          "despachos": 11,
-          "bloques": 44
+          "despachos": 12,
+          "bloques": 48
         },
         {
           "planta": "desconocida",
-          "despachos": 5,
-          "bloques": 20
+          "despachos": 4,
+          "bloques": 16
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_grande",
           "etiqueta": "Grande",
-          "despachos": 11,
-          "bloques": 44
+          "despachos": 12,
+          "bloques": 48
         },
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 5,
-          "bloques": 20
+          "despachos": 4,
+          "bloques": 16
         }
       ],
       "anomalia": {
@@ -275,8 +275,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 606,
-        "minutos_esperados": 606,
+        "minutos_cubiertos": 610,
+        "minutos_esperados": 610,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -36918,8 +36918,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-21T10:05:53.214008",
-        "fraccion_baja_confianza_reciente": 0.015
+        "ultimo_heartbeat": "2026-10-21T10:09:55.968577",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -36931,7 +36931,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 520.3,
+        "libre_gb": 520.2,
         "total_gb": 984.1,
         "mensaje": "520 GB libres de 984 GB."
       },
@@ -36939,7 +36939,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-21T10:00:19.813581"
+        "actualizado_en": "2026-10-21T10:06:16.417564"
       },
       "mantenimiento": {
         "ok": true,
@@ -36953,13 +36953,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "822 clips disponibles en la pagina (1 nuevos). Espacio: 8.4 de 9 GB.",
-        "actualizado_en": "2026-10-21T09:57:30.432819"
+        "mensaje": "823 clips disponibles en la pagina (1 nuevos). Espacio: 8.4 de 9 GB.",
+        "actualizado_en": "2026-10-21T10:09:36.468925"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-21T10:00:05.693332"
+        "actualizado_en": "2026-10-21T10:10:04.568580"
       },
       "planilla": {
         "ok": true,
@@ -36975,7 +36975,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-21T10:02:10"
+        "actualizado_en": "2026-10-21T10:07:11"
       }
     }
   }

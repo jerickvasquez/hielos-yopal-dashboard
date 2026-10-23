@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-23T00:20:06.315470",
-  "generado_en_epoch": 1792732806,
+  "generado_en": "2026-10-23T00:20:22.605162",
+  "generado_en_epoch": 1792732822,
   "dias": [
     {
       "fecha": "2026-10-23",
@@ -20,7 +20,21 @@
         "porcentaje": 100.0,
         "huecos": []
       },
-      "validacion": null
+      "validacion": {
+        "estado": "ok",
+        "mensaje": "Sin producción: nada anotado ni contado.",
+        "reportado": 0,
+        "sistema": 0,
+        "tandas": 0,
+        "tandas_ok": 0,
+        "tandas_no_verificables": 0,
+        "despachos_sin_reportar": 0,
+        "bloques_sin_reportar": 0,
+        "sin_reportar_confirmados": 0,
+        "por_anotar": 0,
+        "horas_por_anotar": [],
+        "errores_llenado": 0
+      }
     },
     {
       "fecha": "2026-10-22",
@@ -37575,7 +37589,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-23T00:10:14.248035"
+        "actualizado_en": "2026-10-23T00:20:14.149755"
       },
       "mantenimiento": {
         "ok": true,
@@ -37584,8 +37598,8 @@
       },
       "informes": {
         "ok": true,
-        "mensaje": "Informe(s) 2026-10-21, 2026-10-22 publicados; 86 informes disponibles para descargar.",
-        "actualizado_en": "2026-10-22T23:20:26.037890"
+        "mensaje": "Informe(s) 2026-10-22, 2026-10-23 publicados; 87 informes disponibles para descargar.",
+        "actualizado_en": "2026-10-23T00:20:19.556289"
       },
       "clips": {
         "ok": true,
@@ -37600,7 +37614,7 @@
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 78 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-22T23:20:06.634151"
+        "actualizado_en": "2026-10-23T00:20:06.535493"
       },
       "atribucion": {
         "ok": true,

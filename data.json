@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-23T15:26:08.838962",
-  "generado_en_epoch": 1792787168,
+  "generado_en": "2026-10-23T15:30:06.319775",
+  "generado_en_epoch": 1792787406,
   "dias": [
     {
       "fecha": "2026-10-23",
@@ -431,8 +431,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 926,
-        "minutos_esperados": 926,
+        "minutos_cubiertos": 930,
+        "minutos_esperados": 930,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -37990,8 +37990,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-23T15:25:32.033146",
-        "fraccion_baja_confianza_reciente": 0.005
+        "ultimo_heartbeat": "2026-10-23T15:29:49.477226",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -38003,15 +38003,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 530.6,
+        "libre_gb": 530.4,
         "total_gb": 984.1,
-        "mensaje": "531 GB libres de 984 GB."
+        "mensaje": "530 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-23T15:24:00.637741"
+        "actualizado_en": "2026-10-23T15:26:17.362091"
       },
       "mantenimiento": {
         "ok": true,
@@ -38031,7 +38031,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-23T15:20:03.927211"
+        "actualizado_en": "2026-10-23T15:30:03.196736"
       },
       "planilla": {
         "ok": true,
@@ -38047,7 +38047,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-23T15:24:40"
+        "actualizado_en": "2026-10-23T15:29:40"
       }
     }
   }

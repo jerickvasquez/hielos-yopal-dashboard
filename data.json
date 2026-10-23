@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-23T01:50:05.930477",
-  "generado_en_epoch": 1792738205,
+  "generado_en": "2026-10-23T02:00:08.036012",
+  "generado_en_epoch": 1792738808,
   "dias": [
     {
       "fecha": "2026-10-23",
@@ -15,8 +15,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 110,
-        "minutos_esperados": 110,
+        "minutos_cubiertos": 120,
+        "minutos_esperados": 120,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -37559,16 +37559,16 @@
   ],
   "estado": {
     "dvr": {
-      "ok": false,
-      "mensaje": "ATENCION: la grabacion del DVR estaba APAGADA y se reactivo automaticamente (Enable=True, franjas activas 7/8). Alguien con acceso de admin la desactivo -- revisar el equipo.",
-      "verificado_en": "2026-10-23T00:00:14.479512"
+      "ok": true,
+      "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
+      "verificado_en": "2026-10-23T02:00:04.424283"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-23T01:49:48.018395",
+        "ultimo_heartbeat": "2026-10-23T01:59:55.390053",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -37589,7 +37589,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-23T01:40:15.255394"
+        "actualizado_en": "2026-10-23T01:50:13.918153"
       },
       "mantenimiento": {
         "ok": true,
@@ -37609,7 +37609,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-23T01:50:02.885904"
+        "actualizado_en": "2026-10-23T02:00:04.601911"
       },
       "planilla": {
         "ok": true,
@@ -37625,7 +37625,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-23T01:48:45"
+        "actualizado_en": "2026-10-23T01:58:45"
       }
     }
   }

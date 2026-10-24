@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-23T22:50:06.462023",
-  "generado_en_epoch": 1792813806,
+  "generado_en": "2026-10-23T23:00:13.449437",
+  "generado_en_epoch": 1792814413,
   "dias": [
     {
       "fecha": "2026-10-23",
@@ -589,7 +589,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -646,8 +646,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1370,
-        "minutos_esperados": 1370,
+        "minutos_cubiertos": 1380,
+        "minutos_esperados": 1380,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -38210,8 +38210,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-23T22:49:35.876733",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-23T23:00:13.183988",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -38223,7 +38223,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 526.3,
+        "libre_gb": 525.9,
         "total_gb": 984.1,
         "mensaje": "526 GB libres de 984 GB."
       },
@@ -38231,7 +38231,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-23T22:40:15.110885"
+        "actualizado_en": "2026-10-23T22:50:14.663724"
       },
       "mantenimiento": {
         "ok": true,
@@ -38251,7 +38251,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-23T22:50:03.367329"
+        "actualizado_en": "2026-10-23T23:00:05.881647"
       },
       "planilla": {
         "ok": true,
@@ -38267,7 +38267,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-23T22:45:25"
+        "actualizado_en": "2026-10-23T22:55:26"
       }
     }
   }

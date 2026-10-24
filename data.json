@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-23T23:19:38.472090",
-  "generado_en_epoch": 1792815578,
+  "generado_en": "2026-10-23T23:20:07.423066",
+  "generado_en_epoch": 1792815607,
   "dias": [
     {
       "fecha": "2026-10-23",
@@ -689,26 +689,29 @@
       },
       "cobertura": {
         "minutos_cubiertos": 1400,
-        "minutos_esperados": 1399,
+        "minutos_esperados": 1400,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "inconsistencias",
-        "mensaje": "10 despacho(s) (40 bloques) que nadie anotó; 3 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
+        "mensaje": "10 despacho(s) (40 bloques) que nadie anotó; 6 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 112,
-        "sistema": 164,
+        "sistema": 176,
         "tandas": 2,
         "tandas_ok": 2,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 13,
-        "bloques_sin_reportar": 52,
+        "despachos_sin_reportar": 16,
+        "bloques_sin_reportar": 64,
         "sin_reportar_confirmados": 10,
-        "por_anotar": 3,
+        "por_anotar": 6,
         "horas_por_anotar": [
           "2026-10-23T22:26:51.798852",
           "2026-10-23T22:31:56.134534",
-          "2026-10-23T22:38:34.566725"
+          "2026-10-23T22:38:34.566725",
+          "2026-10-23T23:06:30.054858",
+          "2026-10-23T23:11:25.772702",
+          "2026-10-23T23:19:28.052592"
         ],
         "errores_llenado": 0
       }
@@ -38245,7 +38248,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-23T23:19:27.442423",
+        "ultimo_heartbeat": "2026-10-23T23:19:58.055483",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -38258,7 +38261,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 525.5,
+        "libre_gb": 525.4,
         "total_gb": 984.1,
         "mensaje": "525 GB libres de 984 GB."
       },
@@ -38266,7 +38269,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-23T23:11:44.822355"
+        "actualizado_en": "2026-10-23T23:19:46.336969"
       },
       "mantenimiento": {
         "ok": true,
@@ -38286,12 +38289,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-23T23:10:03.366477"
+        "actualizado_en": "2026-10-23T23:20:04.140267"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 80 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-23T23:04:26.308952"
+        "actualizado_en": "2026-10-23T23:20:05.889398"
       },
       "atribucion": {
         "ok": true,

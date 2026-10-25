@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-25T10:08:37.367160",
-  "generado_en_epoch": 1792940917,
+  "generado_en": "2026-10-25T10:10:06.138816",
+  "generado_en_epoch": 1792941006,
   "dias": [
     {
       "fecha": "2026-10-25",
@@ -19,10 +19,10 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_sin_confirmar",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": null,
@@ -49,8 +49,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 608,
-        "minutos_esperados": 608,
+        "minutos_cubiertos": 610,
+        "minutos_esperados": 610,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -38937,7 +38937,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-25T10:07:59.494309",
+        "ultimo_heartbeat": "2026-10-25T10:09:45.974522",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -38950,7 +38950,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 535.1,
+        "libre_gb": 535.0,
         "total_gb": 984.1,
         "mensaje": "535 GB libres de 984 GB."
       },
@@ -38958,7 +38958,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-25T10:00:16.639641"
+        "actualizado_en": "2026-10-25T10:08:45.424304"
       },
       "mantenimiento": {
         "ok": true,
@@ -38978,7 +38978,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-25T10:00:04.466878"
+        "actualizado_en": "2026-10-25T10:10:02.924075"
       },
       "planilla": {
         "ok": true,

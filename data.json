@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-26T05:10:06.725435",
-  "generado_en_epoch": 1793009406,
+  "generado_en": "2026-10-26T05:20:07.627902",
+  "generado_en_epoch": 1793010007,
   "dias": [
     {
       "fecha": "2026-10-26",
@@ -15,8 +15,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 310,
-        "minutos_esperados": 310,
+        "minutos_cubiertos": 321,
+        "minutos_esperados": 320,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -376,16 +376,16 @@
         "huecos": []
       },
       "validacion": {
-        "estado": "inconsistencias",
-        "mensaje": "10 despacho(s) (40 bloques) que nadie anotó.",
-        "reportado": 40,
+        "estado": "ok",
+        "mensaje": "Todo cuadra: 80 bloques anotados y 80 contados; 2 de 2 tandas coinciden.",
+        "reportado": 80,
         "sistema": 80,
-        "tandas": 1,
-        "tandas_ok": 1,
+        "tandas": 2,
+        "tandas_ok": 2,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 10,
-        "bloques_sin_reportar": 40,
-        "sin_reportar_confirmados": 10,
+        "despachos_sin_reportar": 0,
+        "bloques_sin_reportar": 0,
+        "sin_reportar_confirmados": 0,
         "por_anotar": 0,
         "horas_por_anotar": [],
         "errores_llenado": 0
@@ -39258,7 +39258,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-26T05:09:56.293602",
+        "ultimo_heartbeat": "2026-10-26T05:20:04.391272",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -39279,7 +39279,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-26T05:00:16.813847"
+        "actualizado_en": "2026-10-26T05:10:15.358952"
       },
       "mantenimiento": {
         "ok": true,
@@ -39299,12 +39299,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-26T05:10:03.426722"
+        "actualizado_en": "2026-10-26T05:20:04.284197"
       },
       "planilla": {
         "ok": true,
-        "mensaje": "Planilla leída: 86 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-26T04:20:05.864093"
+        "mensaje": "Planilla leída: 87 tandas anotadas, 0 fila(s) mal llenadas.",
+        "actualizado_en": "2026-10-26T05:20:05.896223"
       },
       "atribucion": {
         "ok": true,
@@ -39315,7 +39315,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-26T05:09:31"
+        "actualizado_en": "2026-10-26T05:19:31"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-26T15:10:07.603854",
-  "generado_en_epoch": 1793045407,
+  "generado_en": "2026-10-26T15:10:26.770406",
+  "generado_en_epoch": 1793045426,
   "dias": [
     {
       "fecha": "2026-10-26",
@@ -15,7 +15,7 @@
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 4
+          "unidades": 8
         }
       ],
       "despachos": [
@@ -144,6 +144,20 @@
           "planta_fuente": null,
           "gap_anterior_seg": 2287.6,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-10-26T15:10:13.345589",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": 482.6,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
@@ -154,8 +168,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 4,
-          "bloques": 16
+          "despachos": 5,
+          "bloques": 20
         }
       ],
       "por_clase": [
@@ -168,8 +182,8 @@
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 1,
-          "bloques": 4
+          "despachos": 2,
+          "bloques": 8
         }
       ],
       "anomalia": {
@@ -39441,7 +39455,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-26T15:06:20.643813"
+        "actualizado_en": "2026-10-26T15:10:16.991981"
       },
       "mantenimiento": {
         "ok": true,
@@ -39477,7 +39491,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-26T15:05:10"
+        "actualizado_en": "2026-10-26T15:10:10"
       }
     }
   }

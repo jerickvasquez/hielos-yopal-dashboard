@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-27T20:19:38.677922",
-  "generado_en_epoch": 1793150378,
+  "generado_en": "2026-10-27T20:20:07.301606",
+  "generado_en_epoch": 1793150407,
   "dias": [
     {
       "fecha": "2026-10-27",
@@ -465,23 +465,28 @@
       },
       "cobertura": {
         "minutos_cubiertos": 1220,
-        "minutos_esperados": 1219,
+        "minutos_esperados": 1220,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
-        "estado": "ok",
-        "mensaje": "Todo cuadra: 96 bloques anotados y 96 contados; 2 de 2 tandas coinciden.",
+        "estado": "revisar",
+        "mensaje": "Lo que se puede verificar cuadra; 4 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 96,
-        "sistema": 96,
+        "sistema": 112,
         "tandas": 2,
         "tandas_ok": 2,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 0,
-        "bloques_sin_reportar": 0,
+        "despachos_sin_reportar": 4,
+        "bloques_sin_reportar": 16,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 0,
-        "horas_por_anotar": [],
+        "por_anotar": 4,
+        "horas_por_anotar": [
+          "2026-10-27T19:45:23.491687",
+          "2026-10-27T20:00:57.895664",
+          "2026-10-27T20:07:49.746034",
+          "2026-10-27T20:19:27.859746"
+        ],
         "errores_llenado": 0
       }
     },
@@ -40006,8 +40011,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-27T20:19:15.255216",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-10-27T20:19:47.515969",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -40027,7 +40032,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-27T20:10:14.287261"
+        "actualizado_en": "2026-10-27T20:19:47.317178"
       },
       "mantenimiento": {
         "ok": true,
@@ -40047,12 +40052,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-27T20:10:02.740395"
+        "actualizado_en": "2026-10-27T20:20:03.830847"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 91 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-10-27T19:20:06.336408"
+        "actualizado_en": "2026-10-27T20:20:05.654971"
       },
       "atribucion": {
         "ok": true,

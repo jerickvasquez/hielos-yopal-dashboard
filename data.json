@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-29T12:38:33.420037",
-  "generado_en_epoch": 1793295513,
+  "generado_en": "2026-10-29T12:40:08.004080",
+  "generado_en_epoch": 1793295608,
   "dias": [
     {
       "fecha": "2026-10-29",
@@ -303,8 +303,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 759,
-        "minutos_esperados": 758,
+        "minutos_cubiertos": 760,
+        "minutos_esperados": 760,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -40872,8 +40872,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-29T12:38:22.679369",
-        "fraccion_baja_confianza_reciente": 0.01
+        "ultimo_heartbeat": "2026-10-29T12:39:53.590837",
+        "fraccion_baja_confianza_reciente": 0.095
       }
     ],
     "procesamiento_diario": {
@@ -40885,7 +40885,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 560.1,
+        "libre_gb": 560.0,
         "total_gb": 984.1,
         "mensaje": "560 GB libres de 984 GB."
       },
@@ -40893,7 +40893,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-29T12:32:15.047724"
+        "actualizado_en": "2026-10-29T12:38:42.025384"
       },
       "mantenimiento": {
         "ok": true,
@@ -40907,13 +40907,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "859 clips disponibles en la pagina (1 nuevos). Espacio: 7.9 de 9 GB.",
-        "actualizado_en": "2026-10-29T12:33:38.957008"
+        "mensaje": "859 clips disponibles en la pagina (0 nuevos). Espacio: 7.9 de 9 GB.",
+        "actualizado_en": "2026-10-29T12:40:07.081512"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-29T12:30:03.512255"
+        "actualizado_en": "2026-10-29T12:40:04.366618"
       },
       "planilla": {
         "ok": true,

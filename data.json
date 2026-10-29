@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-29T14:37:39.216223",
-  "generado_en_epoch": 1793302659,
+  "generado_en": "2026-10-29T14:40:08.054195",
+  "generado_en_epoch": 1793302808,
   "dias": [
     {
       "fecha": "2026-10-29",
@@ -309,7 +309,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -361,8 +361,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 878,
-        "minutos_esperados": 877,
+        "minutos_cubiertos": 880,
+        "minutos_esperados": 880,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -40914,7 +40914,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-29T14:37:16.019227",
+        "ultimo_heartbeat": "2026-10-29T14:39:49.445094",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -40935,7 +40935,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-29T14:33:43.438244"
+        "actualizado_en": "2026-10-29T14:37:48.171230"
       },
       "mantenimiento": {
         "ok": true,
@@ -40949,13 +40949,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "862 clips disponibles en la pagina (1 nuevos). Espacio: 7.9 de 9 GB.",
-        "actualizado_en": "2026-10-29T14:35:32.465179"
+        "mensaje": "863 clips disponibles en la pagina (0 nuevos). Espacio: 7.9 de 9 GB.",
+        "actualizado_en": "2026-10-29T14:40:06.789909"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-29T14:30:03.855190"
+        "actualizado_en": "2026-10-29T14:40:04.656496"
       },
       "planilla": {
         "ok": true,

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-30T11:00:07.151949",
-  "generado_en_epoch": 1793376007,
+  "generado_en": "2026-10-30T11:00:44.933941",
+  "generado_en_epoch": 1793376044,
   "dias": [
     {
       "fecha": "2026-10-30",
@@ -15,7 +15,7 @@
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 8
+          "unidades": 12
         }
       ],
       "despachos": [
@@ -102,6 +102,20 @@
           "planta_fuente": "color",
           "gap_anterior_seg": 2061.7,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-10-30T11:00:31.493488",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": 4943.7,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
@@ -112,8 +126,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 3,
+          "bloques": 12
         }
       ],
       "por_clase": [
@@ -126,8 +140,8 @@
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 3,
+          "bloques": 12
         }
       ],
       "anomalia": {
@@ -41268,7 +41282,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 566.0,
+        "libre_gb": 565.9,
         "total_gb": 984.1,
         "mensaje": "566 GB libres de 984 GB."
       },
@@ -41276,7 +41290,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-30T10:50:14.769959"
+        "actualizado_en": "2026-10-30T11:00:16.231933"
       },
       "mantenimiento": {
         "ok": true,

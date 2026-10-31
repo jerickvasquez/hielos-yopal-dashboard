@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-10-31T09:47:19.592137",
-  "generado_en_epoch": 1793458039,
+  "generado_en": "2026-10-31T09:50:07.043812",
+  "generado_en_epoch": 1793458207,
   "dias": [
     {
       "fecha": "2026-10-31",
@@ -94,7 +94,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -135,8 +135,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 587,
-        "minutos_esperados": 587,
+        "minutos_cubiertos": 591,
+        "minutos_esperados": 590,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -41703,7 +41703,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-10-31T09:46:59.012079",
+        "ultimo_heartbeat": "2026-10-31T09:50:00.148720",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -41724,7 +41724,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-10-31T09:40:15.790243"
+        "actualizado_en": "2026-10-31T09:47:27.853535"
       },
       "mantenimiento": {
         "ok": true,
@@ -41738,13 +41738,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "875 clips disponibles en la pagina (0 nuevos). Espacio: 8.0 de 9 GB.",
-        "actualizado_en": "2026-10-31T09:40:06.926839"
+        "mensaje": "876 clips disponibles en la pagina (1 nuevos). Espacio: 8.0 de 9 GB.",
+        "actualizado_en": "2026-10-31T09:48:41.111431"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-10-31T09:40:04.289593"
+        "actualizado_en": "2026-10-31T09:50:03.564835"
       },
       "planilla": {
         "ok": true,
@@ -41760,7 +41760,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-10-31T09:43:23"
+        "actualizado_en": "2026-10-31T09:48:23"
       }
     }
   }

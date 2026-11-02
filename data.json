@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-02T10:00:11.144806",
-  "generado_en_epoch": 1793631611,
+  "generado_en": "2026-11-02T10:00:57.717920",
+  "generado_en_epoch": 1793631657,
   "dias": [
     {
       "fecha": "2026-11-02",
@@ -15,7 +15,7 @@
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 4
+          "unidades": 8
         }
       ],
       "despachos": [
@@ -186,6 +186,20 @@
           "planta_fuente": "color",
           "gap_anterior_seg": 330.0,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-11-02T10:00:43.595131",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": 3263.3,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
@@ -201,8 +215,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 1,
-          "bloques": 4
+          "despachos": 2,
+          "bloques": 8
         }
       ],
       "por_clase": [
@@ -215,8 +229,8 @@
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 1,
-          "bloques": 4
+          "despachos": 2,
+          "bloques": 8
         }
       ],
       "anomalia": {
@@ -42809,7 +42823,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-02T10:00:06.620425",
+        "ultimo_heartbeat": "2026-11-02T10:00:36.787123",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -42830,7 +42844,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-02T09:52:58.340736"
+        "actualizado_en": "2026-11-02T10:00:19.084386"
       },
       "mantenimiento": {
         "ok": true,

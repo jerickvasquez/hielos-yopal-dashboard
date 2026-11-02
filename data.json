@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-01T22:08:22.985926",
-  "generado_en_epoch": 1793588902,
+  "generado_en": "2026-11-01T22:10:06.996226",
+  "generado_en_epoch": 1793589006,
   "dias": [
     {
       "fecha": "2026-11-01",
@@ -234,7 +234,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -280,8 +280,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1328,
-        "minutos_esperados": 1328,
+        "minutos_cubiertos": 1331,
+        "minutos_esperados": 1330,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -42560,8 +42560,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-01T22:07:36.584458",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-11-01T22:10:02.321964",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -42573,7 +42573,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 567.8,
+        "libre_gb": 567.7,
         "total_gb": 984.1,
         "mensaje": "568 GB libres de 984 GB."
       },
@@ -42581,7 +42581,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-01T22:00:31.866282"
+        "actualizado_en": "2026-11-01T22:08:31.256198"
       },
       "mantenimiento": {
         "ok": true,
@@ -42595,13 +42595,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "913 clips disponibles en la pagina (1 nuevos). Espacio: 8.2 de 9 GB.",
-        "actualizado_en": "2026-11-01T22:07:28.923881"
+        "mensaje": "914 clips disponibles en la pagina (1 nuevos). Espacio: 8.2 de 9 GB.",
+        "actualizado_en": "2026-11-01T22:09:52.766730"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-01T22:00:04.568517"
+        "actualizado_en": "2026-11-01T22:10:03.606071"
       },
       "planilla": {
         "ok": true,

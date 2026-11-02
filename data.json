@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-01T21:20:06.569547",
-  "generado_en_epoch": 1793586006,
+  "generado_en": "2026-11-01T21:20:22.571745",
+  "generado_en_epoch": 1793586022,
   "dias": [
     {
       "fecha": "2026-11-01",
@@ -188,18 +188,22 @@
         "huecos": []
       },
       "validacion": {
-        "estado": "ok",
-        "mensaje": "Todo cuadra: 24 bloques anotados y 24 contados; 1 de 1 tandas coinciden.",
+        "estado": "revisar",
+        "mensaje": "Lo que se puede verificar cuadra; 3 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 24,
-        "sistema": 24,
+        "sistema": 36,
         "tandas": 1,
         "tandas_ok": 1,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 0,
-        "bloques_sin_reportar": 0,
+        "despachos_sin_reportar": 3,
+        "bloques_sin_reportar": 12,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 0,
-        "horas_por_anotar": [],
+        "por_anotar": 3,
+        "horas_por_anotar": [
+          "2026-11-01T20:59:39.298059",
+          "2026-11-01T21:07:06.621137",
+          "2026-11-01T21:11:29.601620"
+        ],
         "errores_llenado": 0
       }
     },
@@ -42479,7 +42483,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-01T21:11:48.473614"
+        "actualizado_en": "2026-11-01T21:20:14.886585"
       },
       "mantenimiento": {
         "ok": true,
@@ -42489,7 +42493,7 @@
       "informes": {
         "ok": true,
         "mensaje": "Informe(s) 2026-10-31, 2026-11-01 publicados; 90 informes disponibles para descargar.",
-        "actualizado_en": "2026-11-01T20:20:24.811642"
+        "actualizado_en": "2026-11-01T21:20:19.110764"
       },
       "clips": {
         "ok": true,

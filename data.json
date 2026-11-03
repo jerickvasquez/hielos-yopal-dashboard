@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-02T21:50:06.686579",
-  "generado_en_epoch": 1793674206,
+  "generado_en": "2026-11-02T22:00:11.017187",
+  "generado_en_epoch": 1793674811,
   "dias": [
     {
       "fecha": "2026-11-02",
@@ -425,8 +425,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1311,
-        "minutos_esperados": 1310,
+        "minutos_cubiertos": 1321,
+        "minutos_esperados": 1320,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -43004,14 +43004,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-11-02T20:00:04.251181"
+      "verificado_en": "2026-11-02T22:00:04.369536"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-02T21:50:02.079421",
+        "ultimo_heartbeat": "2026-11-02T22:00:08.732460",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -43032,7 +43032,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-02T21:40:15.780926"
+        "actualizado_en": "2026-11-02T21:50:14.684155"
       },
       "mantenimiento": {
         "ok": true,
@@ -43052,7 +43052,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-02T21:50:03.255269"
+        "actualizado_en": "2026-11-02T22:00:05.105187"
       },
       "planilla": {
         "ok": true,
@@ -43068,7 +43068,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-02T21:48:58"
+        "actualizado_en": "2026-11-02T21:58:59"
       }
     }
   }

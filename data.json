@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-02T21:17:29.512097",
-  "generado_en_epoch": 1793672249,
+  "generado_en": "2026-11-02T21:20:07.523498",
+  "generado_en_epoch": 1793672407,
   "dias": [
     {
       "fecha": "2026-11-02",
@@ -374,10 +374,10 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_sin_confirmar",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": 951.0,
@@ -425,27 +425,34 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1278,
-        "minutos_esperados": 1277,
+        "minutos_cubiertos": 1280,
+        "minutos_esperados": 1280,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "inconsistencias",
-        "mensaje": "1 de 2 tandas no cuadran; 3 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
+        "mensaje": "1 de 2 tandas no cuadran; 10 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 80,
-        "sistema": 76,
+        "sistema": 104,
         "tandas": 2,
         "tandas_ok": 1,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 3,
-        "bloques_sin_reportar": 12,
+        "despachos_sin_reportar": 10,
+        "bloques_sin_reportar": 40,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 3,
+        "por_anotar": 10,
         "horas_por_anotar": [
           "2026-11-02T19:58:05.928877",
           "2026-11-02T20:05:00.199268",
-          "2026-11-02T20:09:24.902840"
+          "2026-11-02T20:09:24.902840",
+          "2026-11-02T20:33:32.951485",
+          "2026-11-02T20:37:15.366308",
+          "2026-11-02T20:41:29.192576",
+          "2026-11-02T20:57:18.067344",
+          "2026-11-02T21:01:28.230693",
+          "2026-11-02T21:04:38.510968",
+          "2026-11-02T21:17:19.234105"
         ],
         "errores_llenado": 0
       }
@@ -43004,7 +43011,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-02T21:17:11.379640",
+        "ultimo_heartbeat": "2026-11-02T21:19:42.732255",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -43017,7 +43024,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 569.5,
+        "libre_gb": 569.4,
         "total_gb": 984.1,
         "mensaje": "569 GB libres de 984 GB."
       },
@@ -43025,7 +43032,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-02T21:10:14.930097"
+        "actualizado_en": "2026-11-02T21:17:37.825941"
       },
       "mantenimiento": {
         "ok": true,
@@ -43039,18 +43046,18 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "905 clips disponibles en la pagina (1 nuevos). Espacio: 8.0 de 9 GB.",
-        "actualizado_en": "2026-11-02T21:14:22.912471"
+        "mensaje": "906 clips disponibles en la pagina (1 nuevos). Espacio: 8.0 de 9 GB.",
+        "actualizado_en": "2026-11-02T21:19:00.587398"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-02T21:10:03.538210"
+        "actualizado_en": "2026-11-02T21:20:04.007059"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 109 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-02T20:20:06.020464"
+        "actualizado_en": "2026-11-02T21:20:06.430709"
       },
       "atribucion": {
         "ok": true,
@@ -43061,7 +43068,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-02T21:13:56"
+        "actualizado_en": "2026-11-02T21:18:57"
       }
     }
   }

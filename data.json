@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-04T15:50:07.238623",
-  "generado_en_epoch": 1793825407,
+  "generado_en": "2026-11-04T16:00:09.115117",
+  "generado_en_epoch": 1793826009,
   "dias": [
     {
       "fecha": "2026-11-04",
@@ -280,8 +280,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 950,
-        "minutos_esperados": 950,
+        "minutos_cubiertos": 961,
+        "minutos_esperados": 960,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -44002,16 +44002,16 @@
   ],
   "estado": {
     "dvr": {
-      "ok": true,
-      "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-11-04T14:00:14.031357"
+      "ok": false,
+      "mensaje": "ATENCION: la grabacion del DVR estaba APAGADA y se reactivo automaticamente (Enable=True, franjas activas 7/8). Alguien con acceso de admin la desactivo -- revisar el equipo.",
+      "verificado_en": "2026-11-04T16:00:04.916355"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-04T15:49:55.378429",
+        "ultimo_heartbeat": "2026-11-04T16:00:05.218696",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -44032,7 +44032,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-04T15:40:19.711355"
+        "actualizado_en": "2026-11-04T15:50:15.901209"
       },
       "mantenimiento": {
         "ok": true,
@@ -44052,7 +44052,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-04T15:50:03.590664"
+        "actualizado_en": "2026-11-04T16:00:05.145936"
       },
       "planilla": {
         "ok": true,
@@ -44068,7 +44068,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-04T15:47:38"
+        "actualizado_en": "2026-11-04T15:57:39"
       }
     }
   }

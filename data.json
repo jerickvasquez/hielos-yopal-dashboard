@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-05T12:30:07.269542",
-  "generado_en_epoch": 1793899807,
+  "generado_en": "2026-11-05T12:40:08.287731",
+  "generado_en_epoch": 1793900408,
   "dias": [
     {
       "fecha": "2026-11-05",
@@ -280,8 +280,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 750,
-        "minutos_esperados": 750,
+        "minutos_cubiertos": 760,
+        "minutos_esperados": 760,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -44589,7 +44589,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-05T12:29:50.670421",
+        "ultimo_heartbeat": "2026-11-05T12:39:58.704702",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -44610,7 +44610,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-05T12:20:38.253178"
+        "actualizado_en": "2026-11-05T12:30:16.386895"
       },
       "mantenimiento": {
         "ok": true,
@@ -44624,13 +44624,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "896 clips disponibles en la pagina (1 nuevos). Espacio: 7.5 de 9 GB.",
-        "actualizado_en": "2026-11-05T11:52:51.172423"
+        "mensaje": "896 clips disponibles en la pagina (0 nuevos). Espacio: 7.5 de 9 GB.",
+        "actualizado_en": "2026-11-05T12:40:07.727649"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-05T12:30:03.680983"
+        "actualizado_en": "2026-11-05T12:40:04.644893"
       },
       "planilla": {
         "ok": true,
@@ -44646,7 +44646,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-05T12:29:04"
+        "actualizado_en": "2026-11-05T12:39:04"
       }
     }
   }

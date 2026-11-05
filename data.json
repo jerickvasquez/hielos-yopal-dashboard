@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-04T22:05:58.062673",
-  "generado_en_epoch": 1793847958,
+  "generado_en": "2026-11-04T22:10:08.123196",
+  "generado_en_epoch": 1793848208,
   "dias": [
     {
       "fecha": "2026-11-04",
@@ -10,7 +10,7 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 40
+          "unidades": 44
         },
         {
           "canal": "0",
@@ -20,7 +20,7 @@
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 24
+          "unidades": 20
         }
       ],
       "despachos": [
@@ -418,16 +418,16 @@
         },
         {
           "hora": "2026-11-04T22:05:44.130518",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": 411.6,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 2349.5,
           "gap_sospechoso": false
         }
       ],
@@ -444,21 +444,21 @@
         },
         {
           "planta": "4",
-          "despachos": 10,
-          "bloques": 40
+          "despachos": 11,
+          "bloques": 44
         },
         {
           "planta": "desconocida",
-          "despachos": 6,
-          "bloques": 24
+          "despachos": 5,
+          "bloques": 20
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_grande",
           "etiqueta": "Grande",
-          "despachos": 10,
-          "bloques": 40
+          "despachos": 11,
+          "bloques": 44
         },
         {
           "clase": "bloque_pequeno",
@@ -469,8 +469,8 @@
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 6,
-          "bloques": 24
+          "despachos": 5,
+          "bloques": 20
         }
       ],
       "anomalia": {
@@ -478,8 +478,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1326,
-        "minutos_esperados": 1325,
+        "minutos_cubiertos": 1330,
+        "minutos_esperados": 1330,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -44219,7 +44219,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-04T22:05:27.324271",
+        "ultimo_heartbeat": "2026-11-04T22:09:41.031372",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -44232,7 +44232,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 575.6,
+        "libre_gb": 575.5,
         "total_gb": 984.1,
         "mensaje": "576 GB libres de 984 GB."
       },
@@ -44240,7 +44240,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-04T22:00:29.539255"
+        "actualizado_en": "2026-11-04T22:06:08.211725"
       },
       "mantenimiento": {
         "ok": true,
@@ -44254,13 +44254,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "908 clips disponibles en la pagina (1 nuevos). Espacio: 7.8 de 9 GB.",
-        "actualizado_en": "2026-11-04T22:00:39.908911"
+        "mensaje": "909 clips disponibles en la pagina (1 nuevos). Espacio: 7.8 de 9 GB.",
+        "actualizado_en": "2026-11-04T22:08:23.689090"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-04T22:00:14.646759"
+        "actualizado_en": "2026-11-04T22:10:04.517202"
       },
       "planilla": {
         "ok": true,
@@ -44276,7 +44276,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-04T22:03:04"
+        "actualizado_en": "2026-11-04T22:08:04"
       }
     }
   }

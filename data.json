@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-04T21:59:03.982214",
-  "generado_en_epoch": 1793847543,
+  "generado_en": "2026-11-04T22:00:21.630532",
+  "generado_en_epoch": 1793847621,
   "dias": [
     {
       "fecha": "2026-11-04",
@@ -407,10 +407,10 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_sin_confirmar",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": 912.7,
@@ -464,8 +464,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1319,
-        "minutos_esperados": 1319,
+        "minutos_cubiertos": 1320,
+        "minutos_esperados": 1320,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -44198,14 +44198,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-11-04T20:00:04.231347"
+      "verificado_en": "2026-11-04T22:00:14.102211"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-04T21:58:52.044189",
+        "ultimo_heartbeat": "2026-11-04T21:59:52.490311",
         "fraccion_baja_confianza_reciente": 0.02
       }
     ],
@@ -44226,7 +44226,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-04T21:50:16.110153"
+        "actualizado_en": "2026-11-04T21:59:12.626280"
       },
       "mantenimiento": {
         "ok": true,
@@ -44246,7 +44246,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-04T21:50:04.400528"
+        "actualizado_en": "2026-11-04T22:00:14.646759"
       },
       "planilla": {
         "ok": true,

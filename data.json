@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-06T21:51:51.182700",
-  "generado_en_epoch": 1794019911,
+  "generado_en": "2026-11-06T22:00:10.018647",
+  "generado_en_epoch": 1794020410,
   "dias": [
     {
       "fecha": "2026-11-06",
@@ -364,8 +364,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1308,
-        "minutos_esperados": 1311,
+        "minutos_cubiertos": 1317,
+        "minutos_esperados": 1320,
         "porcentaje": 99.8,
         "huecos": []
       },
@@ -45100,17 +45100,17 @@
   ],
   "estado": {
     "dvr": {
-      "ok": true,
-      "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-11-06T20:00:03.914412"
+      "ok": false,
+      "mensaje": "ATENCION: la grabacion del DVR estaba APAGADA y se reactivo automaticamente (Enable=True, franjas activas 7/8). Alguien con acceso de admin la desactivo -- revisar el equipo.",
+      "verificado_en": "2026-11-06T22:00:04.502528"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-06T21:51:27.291134",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-11-06T22:00:05.545333",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -45122,7 +45122,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 586.4,
+        "libre_gb": 586.1,
         "total_gb": 984.1,
         "mensaje": "586 GB libres de 984 GB."
       },
@@ -45130,7 +45130,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-06T21:50:14.533619"
+        "actualizado_en": "2026-11-06T21:51:59.398538"
       },
       "mantenimiento": {
         "ok": true,
@@ -45150,7 +45150,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-06T21:50:02.612120"
+        "actualizado_en": "2026-11-06T22:00:03.767655"
       },
       "planilla": {
         "ok": true,
@@ -45166,7 +45166,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-06T21:48:49"
+        "actualizado_en": "2026-11-06T21:58:50"
       }
     }
   }

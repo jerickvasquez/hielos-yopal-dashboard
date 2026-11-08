@@ -1,7 +1,27 @@
 {
-  "generado_en": "2026-11-07T23:59:54.926745",
-  "generado_en_epoch": 1794113994,
+  "generado_en": "2026-11-08T00:00:08.684610",
+  "generado_en_epoch": 1794114008,
   "dias": [
+    {
+      "fecha": "2026-11-08",
+      "conteo_real": true,
+      "metodo": "presencia",
+      "consolidado": [],
+      "despachos": [],
+      "por_planta": [],
+      "por_clase": [],
+      "anomalia": {
+        "es_anomalia": false,
+        "motivo": "El dia sigue en curso: se compara cuando termine."
+      },
+      "cobertura": {
+        "minutos_cubiertos": 1,
+        "minutos_esperados": 0,
+        "porcentaje": null,
+        "huecos": []
+      },
+      "validacion": null
+    },
     {
       "fecha": "2026-11-07",
       "conteo_real": true,
@@ -503,12 +523,12 @@
       ],
       "anomalia": {
         "es_anomalia": false,
-        "motivo": "El dia sigue en curso: se compara cuando termine."
+        "motivo": "Dentro del rango habitual (121.3 +/- 40.4)."
       },
       "cobertura": {
         "minutos_cubiertos": 1434,
-        "minutos_esperados": 1439,
-        "porcentaje": 99.7,
+        "minutos_esperados": 1440,
+        "porcentaje": 99.6,
         "huecos": []
       },
       "validacion": {
@@ -45690,16 +45710,16 @@
   ],
   "estado": {
     "dvr": {
-      "ok": false,
-      "mensaje": "ATENCION: la grabacion del DVR estaba APAGADA y se reactivo automaticamente (Enable=True, franjas activas 7/8). Alguien con acceso de admin la desactivo -- revisar el equipo.",
-      "verificado_en": "2026-11-07T22:00:04.572052"
+      "ok": true,
+      "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
+      "verificado_en": "2026-11-08T00:00:04.441432"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-07T23:59:20.417667",
+        "ultimo_heartbeat": "2026-11-08T00:00:03.361447",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -45720,7 +45740,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-07T23:51:45.441121"
+        "actualizado_en": "2026-11-08T00:00:03.115799"
       },
       "mantenimiento": {
         "ok": true,
@@ -45740,7 +45760,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-07T23:50:02.768109"
+        "actualizado_en": "2026-11-08T00:00:04.636573"
       },
       "planilla": {
         "ok": true,

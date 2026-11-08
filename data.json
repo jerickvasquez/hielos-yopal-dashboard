@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-08T09:57:01.788573",
-  "generado_en_epoch": 1794149821,
+  "generado_en": "2026-11-08T10:00:10.743943",
+  "generado_en_epoch": 1794150010,
   "dias": [
     {
       "fecha": "2026-11-08",
@@ -107,8 +107,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 597,
-        "minutos_esperados": 597,
+        "minutos_cubiertos": 600,
+        "minutos_esperados": 600,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -45851,14 +45851,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-11-08T08:00:03.895115"
+      "verificado_en": "2026-11-08T10:00:04.066620"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-08T09:56:45.570689",
+        "ultimo_heartbeat": "2026-11-08T09:59:47.268376",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -45871,7 +45871,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 578.8,
+        "libre_gb": 578.6,
         "total_gb": 984.1,
         "mensaje": "579 GB libres de 984 GB."
       },
@@ -45879,7 +45879,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-08T09:50:14.015681"
+        "actualizado_en": "2026-11-08T09:57:09.903065"
       },
       "mantenimiento": {
         "ok": true,
@@ -45899,7 +45899,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-08T09:50:02.720276"
+        "actualizado_en": "2026-11-08T10:00:04.434404"
       },
       "planilla": {
         "ok": true,
@@ -45915,7 +45915,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-08T09:54:01"
+        "actualizado_en": "2026-11-08T09:59:01"
       }
     }
   }

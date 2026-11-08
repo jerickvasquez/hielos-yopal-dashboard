@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-07T21:55:06.224973",
-  "generado_en_epoch": 1794106506,
+  "generado_en": "2026-11-07T22:00:10.116478",
+  "generado_en_epoch": 1794106810,
   "dias": [
     {
       "fecha": "2026-11-07",
@@ -295,10 +295,10 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_sin_confirmar",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": 22606.2,
@@ -352,8 +352,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1309,
-        "minutos_esperados": 1315,
+        "minutos_cubiertos": 1314,
+        "minutos_esperados": 1320,
         "porcentaje": 99.5,
         "huecos": []
       },
@@ -45526,16 +45526,16 @@
   ],
   "estado": {
     "dvr": {
-      "ok": true,
-      "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-11-07T20:00:04.147572"
+      "ok": false,
+      "mensaje": "ATENCION: la grabacion del DVR estaba APAGADA y se reactivo automaticamente (Enable=True, franjas activas 7/8). Alguien con acceso de admin la desactivo -- revisar el equipo.",
+      "verificado_en": "2026-11-07T22:00:04.572052"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-07T21:54:29.750744",
+        "ultimo_heartbeat": "2026-11-07T21:59:47.435450",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -45556,7 +45556,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-07T21:50:13.927644"
+        "actualizado_en": "2026-11-07T21:55:14.756743"
       },
       "mantenimiento": {
         "ok": true,
@@ -45570,13 +45570,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "890 clips disponibles en la pagina (1 nuevos). Espacio: 7.3 de 9 GB.",
-        "actualizado_en": "2026-11-07T21:46:39.007188"
+        "mensaje": "891 clips disponibles en la pagina (1 nuevos). Espacio: 7.3 de 9 GB.",
+        "actualizado_en": "2026-11-07T21:56:28.230917"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-07T21:50:02.734296"
+        "actualizado_en": "2026-11-07T22:00:03.139975"
       },
       "planilla": {
         "ok": true,
@@ -45592,7 +45592,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-07T21:53:14"
+        "actualizado_en": "2026-11-07T21:58:14"
       }
     }
   }

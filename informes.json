@@ -2,13 +2,22 @@
  "iteraciones": 200000,
  "informes": [
   {
+   "fecha": "2026-11-09",
+   "archivo": "informes/informe_2026-11-09.xlsx.enc",
+   "nombre_descarga": "Informe Hielos Yopal 2026-11-09.xlsx",
+   "iv": "Wz+euZzYgBO+Haz/",
+   "salt": "tukfz8ThTZJATaaMCEUbdg==",
+   "generado_en": "2026-11-09T00:20:05",
+   "parcial": true
+  },
+  {
    "fecha": "2026-11-08",
    "archivo": "informes/informe_2026-11-08.xlsx.enc",
    "nombre_descarga": "Informe Hielos Yopal 2026-11-08.xlsx",
-   "iv": "TSNr/2vrRSGrUDUj",
-   "salt": "TyQ8oVcSqagMHd9+NKd2vw==",
-   "generado_en": "2026-11-08T23:20:05",
-   "parcial": true
+   "iv": "US1dg0qJGiewuR3z",
+   "salt": "C7MO0UQ4s2fgNughZIuxwA==",
+   "generado_en": "2026-11-09T00:20:05",
+   "parcial": false
   },
   {
    "fecha": "2026-11-07",
@@ -799,15 +808,6 @@
    "nombre_descarga": "Informe Hielos Yopal 2026-08-12.xlsx",
    "iv": "c7nJT1xq/E49ZNyJ",
    "salt": "OQJidrybBkPDXiXOSI3Y9g==",
-   "generado_en": "2026-09-29T07:15:19",
-   "parcial": false
-  },
-  {
-   "fecha": "2026-08-11",
-   "archivo": "informes/informe_2026-08-11.xlsx.enc",
-   "nombre_descarga": "Informe Hielos Yopal 2026-08-11.xlsx",
-   "iv": "H/9aTTWhUXVMW/gX",
-   "salt": "zkwK8tThhW4WRAPQVIxPVg==",
    "generado_en": "2026-09-29T07:15:19",
    "parcial": false
   }

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-09T01:30:06.439971",
-  "generado_en_epoch": 1794205806,
+  "generado_en": "2026-11-09T01:30:28.017713",
+  "generado_en_epoch": 1794205828,
   "dias": [
     {
       "fecha": "2026-11-09",
@@ -11,6 +11,11 @@
           "canal": "0",
           "clase": "bloque_pequeno",
           "unidades": 12
+        },
+        {
+          "canal": "0",
+          "clase": "sin_identificar",
+          "unidades": 4
         }
       ],
       "despachos": [
@@ -54,6 +59,20 @@
           "planta_deducida": false,
           "planta_fuente": "color",
           "gap_anterior_seg": 287.2,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-11-09T01:30:17.665479",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": true,
+          "motivo_revision": "madrugada",
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": null,
           "gap_sospechoso": false
         }
       ],
@@ -46060,7 +46079,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-09T01:21:59.494268"
+        "actualizado_en": "2026-11-09T01:30:14.456501"
       },
       "mantenimiento": {
         "ok": true,

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-10T17:50:07.124377",
-  "generado_en_epoch": 1794351007,
+  "generado_en": "2026-11-10T18:00:08.854836",
+  "generado_en_epoch": 1794351608,
   "dias": [
     {
       "fecha": "2026-11-10",
@@ -420,9 +420,9 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1049,
-        "minutos_esperados": 1070,
-        "porcentaje": 98.0,
+        "minutos_cubiertos": 1059,
+        "minutos_esperados": 1080,
+        "porcentaje": 98.1,
         "huecos": [
           {
             "inicio": "14:40",
@@ -47010,16 +47010,16 @@
   ],
   "estado": {
     "dvr": {
-      "ok": false,
-      "mensaje": "ATENCION: la grabacion del DVR estaba APAGADA y se reactivo automaticamente (Enable=True, franjas activas 7/8). Alguien con acceso de admin la desactivo -- revisar el equipo.",
-      "verificado_en": "2026-11-10T16:00:05.259025"
+      "ok": true,
+      "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
+      "verificado_en": "2026-11-10T18:00:04.577481"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-10T17:49:49.018853",
+        "ultimo_heartbeat": "2026-11-10T17:59:54.474605",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -47040,7 +47040,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-10T17:40:15.554142"
+        "actualizado_en": "2026-11-10T17:50:15.016014"
       },
       "mantenimiento": {
         "ok": true,
@@ -47060,7 +47060,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-10T17:50:03.485009"
+        "actualizado_en": "2026-11-10T18:00:04.779899"
       },
       "planilla": {
         "ok": true,
@@ -47076,7 +47076,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-10T17:49:08"
+        "actualizado_en": "2026-11-10T17:59:09"
       }
     }
   }

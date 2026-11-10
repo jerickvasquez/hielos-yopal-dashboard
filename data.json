@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-10T11:10:06.887203",
-  "generado_en_epoch": 1794327006,
+  "generado_en": "2026-11-10T11:20:07.516891",
+  "generado_en_epoch": 1794327607,
   "dias": [
     {
       "fecha": "2026-11-10",
@@ -162,8 +162,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 670,
-        "minutos_esperados": 670,
+        "minutos_cubiertos": 680,
+        "minutos_esperados": 680,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -46755,7 +46755,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-10T11:09:47.136787",
+        "ultimo_heartbeat": "2026-11-10T11:19:53.501951",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -46776,7 +46776,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-10T11:00:19.682487"
+        "actualizado_en": "2026-11-10T11:10:17.172746"
       },
       "mantenimiento": {
         "ok": true,
@@ -46796,12 +46796,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-10T11:10:03.205973"
+        "actualizado_en": "2026-11-10T11:20:03.733506"
       },
       "planilla": {
-        "ok": false,
-        "mensaje": "No se pudo leer la planilla: HTTPSConnectionPool(host='docs.google.com', port=443): Max retries exceeded with url: /spreadsheets/d/1WGQdZCyKGi079kopEQ-AzPJNAYQfgPQMl7jAxp1L-nQ/export?format=xlsx (Caused by NameResolutionError(\"HTTPSConnection(host='docs.google.com', port=443): Failed to resolve 'docs.google.com' ([Errno 11001] getaddrinfo failed)\"))",
-        "actualizado_en": "2026-11-10T10:20:51.431144"
+        "ok": true,
+        "mensaje": "Planilla leída: 131 tandas anotadas, 0 fila(s) mal llenadas.",
+        "actualizado_en": "2026-11-10T11:20:05.628359"
       },
       "atribucion": {
         "ok": true,
@@ -46812,7 +46812,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-10T11:08:00"
+        "actualizado_en": "2026-11-10T11:18:01"
       }
     }
   }

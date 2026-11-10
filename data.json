@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-10T10:10:06.846846",
-  "generado_en_epoch": 1794323406,
+  "generado_en": "2026-11-10T10:21:45.856442",
+  "generado_en_epoch": 1794324105,
   "dias": [
     {
       "fecha": "2026-11-10",
@@ -162,8 +162,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 610,
-        "minutos_esperados": 610,
+        "minutos_cubiertos": 622,
+        "minutos_esperados": 621,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -46755,7 +46755,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-10T10:10:06.499632",
+        "ultimo_heartbeat": "2026-11-10T10:21:45.365063",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -46776,7 +46776,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-10T10:00:16.893859"
+        "actualizado_en": "2026-11-10T10:10:16.120762"
       },
       "mantenimiento": {
         "ok": true,
@@ -46786,7 +46786,7 @@
       "informes": {
         "ok": true,
         "mensaje": "Informe(s) 2026-11-09, 2026-11-10 publicados; 90 informes disponibles para descargar.",
-        "actualizado_en": "2026-11-10T09:20:31.954911"
+        "actualizado_en": "2026-11-10T10:21:42.215897"
       },
       "clips": {
         "ok": true,
@@ -46796,12 +46796,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-10T10:10:03.188231"
+        "actualizado_en": "2026-11-10T10:20:40.692776"
       },
       "planilla": {
-        "ok": true,
-        "mensaje": "Planilla leída: 131 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-10T09:20:05.993906"
+        "ok": false,
+        "mensaje": "No se pudo leer la planilla: HTTPSConnectionPool(host='docs.google.com', port=443): Max retries exceeded with url: /spreadsheets/d/1WGQdZCyKGi079kopEQ-AzPJNAYQfgPQMl7jAxp1L-nQ/export?format=xlsx (Caused by NameResolutionError(\"HTTPSConnection(host='docs.google.com', port=443): Failed to resolve 'docs.google.com' ([Errno 11001] getaddrinfo failed)\"))",
+        "actualizado_en": "2026-11-10T10:20:51.431144"
       },
       "atribucion": {
         "ok": true,
@@ -46812,7 +46812,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-10T10:07:56"
+        "actualizado_en": "2026-11-10T10:17:57"
       }
     }
   }

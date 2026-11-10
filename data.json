@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-10T01:19:38.148353",
-  "generado_en_epoch": 1794291578,
+  "generado_en": "2026-11-10T01:20:07.756253",
+  "generado_en_epoch": 1794291607,
   "dias": [
     {
       "fecha": "2026-11-10",
@@ -168,20 +168,20 @@
       },
       "cobertura": {
         "minutos_cubiertos": 80,
-        "minutos_esperados": 79,
+        "minutos_esperados": 80,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "sin_registro",
-        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 12 bloques.",
+        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 40 bloques.",
         "reportado": 0,
-        "sistema": 12,
+        "sistema": 40,
         "tandas": 0,
         "tandas_ok": 0,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 3,
-        "bloques_sin_reportar": 12,
+        "despachos_sin_reportar": 10,
+        "bloques_sin_reportar": 40,
         "sin_reportar_confirmados": 0,
         "por_anotar": 0,
         "horas_por_anotar": [],
@@ -46760,8 +46760,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-10T01:19:22.541562",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-11-10T01:19:52.587210",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -46773,7 +46773,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 573.8,
+        "libre_gb": 573.7,
         "total_gb": 984.1,
         "mensaje": "574 GB libres de 984 GB."
       },
@@ -46781,7 +46781,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-10T01:10:15.003433"
+        "actualizado_en": "2026-11-10T01:19:46.977602"
       },
       "mantenimiento": {
         "ok": true,
@@ -46801,12 +46801,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-10T01:10:03.085916"
+        "actualizado_en": "2026-11-10T01:20:03.888946"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 130 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-10T00:20:05.410911"
+        "actualizado_en": "2026-11-10T01:20:05.830535"
       },
       "atribucion": {
         "ok": true,

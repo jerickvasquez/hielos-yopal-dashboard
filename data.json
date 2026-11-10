@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-10T15:40:07.036326",
-  "generado_en_epoch": 1794343207,
+  "generado_en": "2026-11-10T15:50:27.008743",
+  "generado_en_epoch": 1794343827,
   "dias": [
     {
       "fecha": "2026-11-10",
@@ -336,9 +336,9 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 925,
-        "minutos_esperados": 940,
-        "porcentaje": 98.4,
+        "minutos_cubiertos": 930,
+        "minutos_esperados": 950,
+        "porcentaje": 97.9,
         "huecos": [
           {
             "inicio": "14:40",
@@ -46942,8 +46942,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-10T15:40:03.966080",
-        "fraccion_baja_confianza_reciente": 0.02
+        "ultimo_heartbeat": "2026-11-10T15:50:00.937523",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -46963,7 +46963,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-10T15:38:31.108751"
+        "actualizado_en": "2026-11-10T15:40:15.217359"
       },
       "mantenimiento": {
         "ok": true,
@@ -46977,13 +46977,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "864 clips disponibles en la pagina (1 nuevos). Espacio: 6.8 de 9 GB.",
-        "actualizado_en": "2026-11-10T15:35:22.759667"
+        "mensaje": "865 clips disponibles en la pagina (1 nuevos). Espacio: 6.8 de 9 GB.",
+        "actualizado_en": "2026-11-10T15:40:21.920031"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-10T15:40:02.849969"
+        "actualizado_en": "2026-11-10T15:50:10.558793"
       },
       "planilla": {
         "ok": true,
@@ -46999,7 +46999,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-10T15:36:03"
+        "actualizado_en": "2026-11-10T15:49:00"
       }
     }
   }

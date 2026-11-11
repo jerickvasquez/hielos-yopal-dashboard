@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-11T05:10:06.244785",
-  "generado_en_epoch": 1794391806,
+  "generado_en": "2026-11-11T05:30:06.179813",
+  "generado_en_epoch": 1794393006,
   "dias": [
     {
       "fecha": "2026-11-11",
@@ -15,8 +15,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 311,
-        "minutos_esperados": 310,
+        "minutos_cubiertos": 330,
+        "minutos_esperados": 330,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -47148,7 +47148,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-11T05:10:02.985599",
+        "ultimo_heartbeat": "2026-11-11T05:29:43.771001",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -47169,7 +47169,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-11T05:00:15.085679"
+        "actualizado_en": "2026-11-11T05:10:14.205173"
       },
       "mantenimiento": {
         "ok": true,
@@ -47177,9 +47177,9 @@
         "actualizado_en": "2026-11-11T03:00:07.182332"
       },
       "informes": {
-        "ok": true,
-        "mensaje": "Informe(s) 2026-11-10, 2026-11-11 publicados; 90 informes disponibles para descargar.",
-        "actualizado_en": "2026-11-11T04:20:23.693984"
+        "ok": false,
+        "mensaje": "No se pudo generar/publicar el informe: 400 Client Error: Bad Request for url: https://api.github.com/repos/jerickvasquez/hielos-yopal-dashboard/git/blobs",
+        "actualizado_en": "2026-11-11T05:21:15.086018"
       },
       "clips": {
         "ok": true,
@@ -47189,12 +47189,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-11T05:10:02.566703"
+        "actualizado_en": "2026-11-11T05:30:02.511658"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 132 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-11T04:20:05.267966"
+        "actualizado_en": "2026-11-11T05:20:05.206000"
       },
       "atribucion": {
         "ok": true,
@@ -47205,7 +47205,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-11T05:09:55"
+        "actualizado_en": "2026-11-11T05:29:56"
       }
     }
   }

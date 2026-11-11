@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-11T06:20:07.373330",
-  "generado_en_epoch": 1794396007,
+  "generado_en": "2026-11-11T06:20:28.290303",
+  "generado_en_epoch": 1794396028,
   "dias": [
     {
       "fecha": "2026-11-11",
@@ -15,7 +15,7 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 380,
+        "minutos_cubiertos": 381,
         "minutos_esperados": 380,
         "porcentaje": 100.0,
         "huecos": []
@@ -47148,7 +47148,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-11T06:19:46.680233",
+        "ultimo_heartbeat": "2026-11-11T06:20:17.010272",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -47169,7 +47169,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-11T06:10:15.029824"
+        "actualizado_en": "2026-11-11T06:20:15.351821"
       },
       "mantenimiento": {
         "ok": true,
@@ -47177,9 +47177,9 @@
         "actualizado_en": "2026-11-11T03:00:07.182332"
       },
       "informes": {
-        "ok": false,
-        "mensaje": "No se pudo generar/publicar el informe: 400 Client Error: Bad Request for url: https://api.github.com/repos/jerickvasquez/hielos-yopal-dashboard/git/blobs",
-        "actualizado_en": "2026-11-11T05:21:15.086018"
+        "ok": true,
+        "mensaje": "Informe(s) 2026-11-10, 2026-11-11 publicados; 90 informes disponibles para descargar.",
+        "actualizado_en": "2026-11-11T06:20:24.553213"
       },
       "clips": {
         "ok": true,

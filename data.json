@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-11T21:54:13.305008",
-  "generado_en_epoch": 1794452053,
+  "generado_en": "2026-11-11T22:00:11.060659",
+  "generado_en_epoch": 1794452411,
   "dias": [
     {
       "fecha": "2026-11-11",
@@ -397,8 +397,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1314,
-        "minutos_esperados": 1314,
+        "minutos_cubiertos": 1320,
+        "minutos_esperados": 1320,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -47525,14 +47525,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-11-11T20:00:03.913847"
+      "verificado_en": "2026-11-11T22:00:03.981420"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-11T21:53:46.746813",
+        "ultimo_heartbeat": "2026-11-11T21:59:56.504747",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -47545,7 +47545,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 582.3,
+        "libre_gb": 582.1,
         "total_gb": 984.1,
         "mensaje": "582 GB libres de 984 GB."
       },
@@ -47553,7 +47553,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-11T21:50:14.149370"
+        "actualizado_en": "2026-11-11T21:54:22.068269"
       },
       "mantenimiento": {
         "ok": true,
@@ -47573,7 +47573,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-11T21:50:02.617556"
+        "actualizado_en": "2026-11-11T22:00:04.389345"
       },
       "planilla": {
         "ok": true,
@@ -47589,7 +47589,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-11T21:51:01"
+        "actualizado_en": "2026-11-11T21:56:01"
       }
     }
   }

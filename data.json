@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-16T09:20:07.524038",
-  "generado_en_epoch": 1794838807,
+  "generado_en": "2026-11-16T09:20:29.898850",
+  "generado_en_epoch": 1794838829,
   "dias": [
     {
       "fecha": "2026-11-16",
@@ -19,7 +19,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -49,7 +49,7 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 560,
+        "minutos_cubiertos": 561,
         "minutos_esperados": 560,
         "porcentaje": 100.0,
         "huecos": []
@@ -49533,8 +49533,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-16T09:19:41.295542",
-        "fraccion_baja_confianza_reciente": 0.01
+        "ultimo_heartbeat": "2026-11-16T09:20:11.901815",
+        "fraccion_baja_confianza_reciente": 0.005
       }
     ],
     "procesamiento_diario": {
@@ -49548,13 +49548,13 @@
         "ok": true,
         "libre_gb": 598.5,
         "total_gb": 984.1,
-        "mensaje": "598 GB libres de 984 GB."
+        "mensaje": "599 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-16T09:18:10.359795"
+        "actualizado_en": "2026-11-16T09:20:17.125752"
       },
       "mantenimiento": {
         "ok": true,
@@ -49564,7 +49564,7 @@
       "informes": {
         "ok": true,
         "mensaje": "Informe(s) 2026-11-15, 2026-11-16 publicados; 90 informes disponibles para descargar.",
-        "actualizado_en": "2026-11-16T08:20:25.387883"
+        "actualizado_en": "2026-11-16T09:20:25.567664"
       },
       "clips": {
         "ok": true,

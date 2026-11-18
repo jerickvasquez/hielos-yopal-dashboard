@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-18T12:56:53.760097",
-  "generado_en_epoch": 1795024613,
+  "generado_en": "2026-11-18T13:00:08.820084",
+  "generado_en_epoch": 1795024808,
   "dias": [
     {
       "fecha": "2026-11-18",
@@ -603,7 +603,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -660,8 +660,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 777,
-        "minutos_esperados": 776,
+        "minutos_cubiertos": 781,
+        "minutos_esperados": 780,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -50946,7 +50946,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-18T12:56:29.039384",
+        "ultimo_heartbeat": "2026-11-18T13:00:05.153596",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -50967,7 +50967,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-18T12:50:16.257094"
+        "actualizado_en": "2026-11-18T12:57:03.002040"
       },
       "mantenimiento": {
         "ok": true,
@@ -50981,13 +50981,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "870 clips disponibles en la pagina (0 nuevos). Espacio: 6.8 de 9 GB.",
-        "actualizado_en": "2026-11-18T12:40:07.224874"
+        "mensaje": "871 clips disponibles en la pagina (1 nuevos). Espacio: 6.8 de 9 GB.",
+        "actualizado_en": "2026-11-18T12:58:18.725478"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-18T12:50:03.519134"
+        "actualizado_en": "2026-11-18T13:00:04.218098"
       },
       "planilla": {
         "ok": true,
@@ -51003,7 +51003,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-18T12:53:41"
+        "actualizado_en": "2026-11-18T12:58:41"
       }
     }
   }

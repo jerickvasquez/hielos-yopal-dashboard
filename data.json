@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-18T03:10:07.182817",
-  "generado_en_epoch": 1794989407,
+  "generado_en": "2026-11-18T03:20:08.398286",
+  "generado_en_epoch": 1794990008,
   "dias": [
     {
       "fecha": "2026-11-18",
@@ -162,21 +162,21 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 190,
-        "minutos_esperados": 190,
+        "minutos_cubiertos": 201,
+        "minutos_esperados": 200,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "sin_registro",
-        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 32 bloques.",
+        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 40 bloques.",
         "reportado": 0,
-        "sistema": 32,
+        "sistema": 40,
         "tandas": 0,
         "tandas_ok": 0,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 8,
-        "bloques_sin_reportar": 32,
+        "despachos_sin_reportar": 10,
+        "bloques_sin_reportar": 40,
         "sin_reportar_confirmados": 0,
         "por_anotar": 0,
         "horas_por_anotar": [],
@@ -50440,7 +50440,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-18T03:09:58.914165",
+        "ultimo_heartbeat": "2026-11-18T03:20:05.038596",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -50461,7 +50461,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-18T03:00:24.339214"
+        "actualizado_en": "2026-11-18T03:10:17.015170"
       },
       "mantenimiento": {
         "ok": true,
@@ -50481,12 +50481,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-18T03:10:03.165036"
+        "actualizado_en": "2026-11-18T03:20:04.289984"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 150 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-18T02:20:06.476413"
+        "actualizado_en": "2026-11-18T03:20:06.521131"
       },
       "atribucion": {
         "ok": true,
@@ -50497,7 +50497,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-18T03:07:57"
+        "actualizado_en": "2026-11-18T03:17:57"
       }
     }
   }

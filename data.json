@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-19T15:00:28.087740",
-  "generado_en_epoch": 1795118428,
+  "generado_en": "2026-11-19T15:10:14.146889",
+  "generado_en_epoch": 1795119014,
   "dias": [
     {
       "fecha": "2026-11-19",
@@ -275,8 +275,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 901,
-        "minutos_esperados": 900,
+        "minutos_cubiertos": 910,
+        "minutos_esperados": 910,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -51415,8 +51415,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-19T15:00:07.391610",
-        "fraccion_baja_confianza_reciente": 0.01
+        "ultimo_heartbeat": "2026-11-19T15:10:13.380351",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -51436,7 +51436,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-19T14:58:50.887636"
+        "actualizado_en": "2026-11-19T15:00:37.497688"
       },
       "mantenimiento": {
         "ok": true,
@@ -51450,13 +51450,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "872 clips disponibles en la pagina (1 nuevos). Espacio: 6.8 de 9 GB.",
-        "actualizado_en": "2026-11-19T14:56:22.994252"
+        "mensaje": "873 clips disponibles en la pagina (1 nuevos). Espacio: 6.8 de 9 GB.",
+        "actualizado_en": "2026-11-19T15:00:45.100270"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-19T15:00:20.805995"
+        "actualizado_en": "2026-11-19T15:10:10.081520"
       },
       "planilla": {
         "ok": true,
@@ -51472,7 +51472,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-19T14:56:18"
+        "actualizado_en": "2026-11-19T15:06:18"
       }
     }
   }

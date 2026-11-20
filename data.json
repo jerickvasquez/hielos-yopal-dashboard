@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-19T21:37:22.999108",
-  "generado_en_epoch": 1795142242,
+  "generado_en": "2026-11-19T21:40:08.120482",
+  "generado_en_epoch": 1795142408,
   "dias": [
     {
       "fecha": "2026-11-19",
@@ -295,10 +295,10 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_sin_confirmar",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": 2774.4,
@@ -347,8 +347,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1297,
-        "minutos_esperados": 1297,
+        "minutos_cubiertos": 1301,
+        "minutos_esperados": 1300,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -51489,7 +51489,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-19T21:36:44.143198",
+        "ultimo_heartbeat": "2026-11-19T21:40:04.811964",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -51502,7 +51502,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 605.6,
+        "libre_gb": 605.5,
         "total_gb": 984.1,
         "mensaje": "606 GB libres de 984 GB."
       },
@@ -51510,7 +51510,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-19T21:30:15.008769"
+        "actualizado_en": "2026-11-19T21:37:32.985782"
       },
       "mantenimiento": {
         "ok": true,
@@ -51524,13 +51524,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "876 clips disponibles en la pagina (1 nuevos). Espacio: 6.8 de 9 GB.",
-        "actualizado_en": "2026-11-19T21:29:39.898402"
+        "mensaje": "877 clips disponibles en la pagina (0 nuevos). Espacio: 6.8 de 9 GB.",
+        "actualizado_en": "2026-11-19T21:40:06.320148"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-19T21:30:02.783465"
+        "actualizado_en": "2026-11-19T21:40:04.016714"
       },
       "planilla": {
         "ok": true,

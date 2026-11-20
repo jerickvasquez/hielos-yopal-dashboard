@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-20T02:50:07.086992",
-  "generado_en_epoch": 1795161007,
+  "generado_en": "2026-11-20T03:00:11.687380",
+  "generado_en_epoch": 1795161611,
   "dias": [
     {
       "fecha": "2026-11-20",
@@ -15,8 +15,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 170,
-        "minutos_esperados": 170,
+        "minutos_cubiertos": 180,
+        "minutos_esperados": 180,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -51716,7 +51716,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-20T02:49:41.717273",
+        "ultimo_heartbeat": "2026-11-20T02:59:47.152255",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -51729,20 +51729,20 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 604.5,
+        "libre_gb": 611.0,
         "total_gb": 984.1,
-        "mensaje": "604 GB libres de 984 GB."
+        "mensaje": "611 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-20T02:40:16.021983"
+        "actualizado_en": "2026-11-20T02:50:15.830585"
       },
       "mantenimiento": {
         "ok": true,
-        "mensaje": "607 GB libres de 984 GB. evidencia 372 GB (1726 clips). 22 clips viejos borrados (7.5 GB liberados).",
-        "actualizado_en": "2026-11-19T03:00:07.847958"
+        "mensaje": "611 GB libres de 984 GB. evidencia 368 GB (1747 clips). 13 clips viejos borrados (6.6 GB liberados).",
+        "actualizado_en": "2026-11-20T03:00:06.698541"
       },
       "informes": {
         "ok": true,
@@ -51757,7 +51757,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-20T02:50:02.990384"
+        "actualizado_en": "2026-11-20T03:00:04.427559"
       },
       "planilla": {
         "ok": true,
@@ -51773,7 +51773,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-20T02:47:09"
+        "actualizado_en": "2026-11-20T02:57:09"
       }
     }
   }

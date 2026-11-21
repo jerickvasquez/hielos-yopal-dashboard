@@ -1,7 +1,27 @@
 {
-  "generado_en": "2026-11-20T23:57:59.195919",
-  "generado_en_epoch": 1795237079,
+  "generado_en": "2026-11-21T00:00:45.606428",
+  "generado_en_epoch": 1795237245,
   "dias": [
+    {
+      "fecha": "2026-11-21",
+      "conteo_real": true,
+      "metodo": "presencia",
+      "consolidado": [],
+      "despachos": [],
+      "por_planta": [],
+      "por_clase": [],
+      "anomalia": {
+        "es_anomalia": false,
+        "motivo": "El dia sigue en curso: se compara cuando termine."
+      },
+      "cobertura": {
+        "minutos_cubiertos": 1,
+        "minutos_esperados": 0,
+        "porcentaje": null,
+        "huecos": []
+      },
+      "validacion": null
+    },
     {
       "fecha": "2026-11-20",
       "conteo_real": true,
@@ -522,12 +542,12 @@
       ],
       "anomalia": {
         "es_anomalia": false,
-        "motivo": "El dia sigue en curso: se compara cuando termine."
+        "motivo": "Dentro del rango habitual (115.1 +/- 40.6)."
       },
       "cobertura": {
-        "minutos_cubiertos": 1438,
-        "minutos_esperados": 1437,
-        "porcentaje": 100.0,
+        "minutos_cubiertos": 1439,
+        "minutos_esperados": 1440,
+        "porcentaje": 99.9,
         "huecos": []
       },
       "validacion": {
@@ -52222,15 +52242,15 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-11-20T22:00:04.429528"
+      "verificado_en": "2026-11-21T00:00:41.423115"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-20T23:57:41.649453",
-        "fraccion_baja_confianza_reciente": 0.005
+        "ultimo_heartbeat": "2026-11-21T00:00:29.863106",
+        "fraccion_baja_confianza_reciente": 0.215
       }
     ],
     "procesamiento_diario": {
@@ -52242,7 +52262,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 607.8,
+        "libre_gb": 607.7,
         "total_gb": 984.1,
         "mensaje": "608 GB libres de 984 GB."
       },
@@ -52250,7 +52270,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-20T23:50:30.323352"
+        "actualizado_en": "2026-11-20T23:58:10.671773"
       },
       "mantenimiento": {
         "ok": true,
@@ -52286,7 +52306,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-20T23:54:07"
+        "actualizado_en": "2026-11-20T23:59:08"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-21T10:10:08.199884",
-  "generado_en_epoch": 1795273808,
+  "generado_en": "2026-11-21T10:20:08.608186",
+  "generado_en_epoch": 1795274408,
   "dias": [
     {
       "fecha": "2026-11-21",
@@ -280,29 +280,40 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 610,
-        "minutos_esperados": 610,
+        "minutos_cubiertos": 621,
+        "minutos_esperados": 620,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "sin_registro",
-        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 20 bloques.",
+        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 64 bloques.",
         "reportado": 0,
-        "sistema": 20,
+        "sistema": 64,
         "tandas": 0,
         "tandas_ok": 0,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 5,
-        "bloques_sin_reportar": 20,
+        "despachos_sin_reportar": 16,
+        "bloques_sin_reportar": 64,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 5,
+        "por_anotar": 16,
         "horas_por_anotar": [
           "2026-11-21T08:38:54.711529",
           "2026-11-21T08:43:34.849059",
           "2026-11-21T09:07:13.275439",
           "2026-11-21T09:11:28.449911",
-          "2026-11-21T09:16:41.975926"
+          "2026-11-21T09:16:41.975926",
+          "2026-11-21T09:20:59.586677",
+          "2026-11-21T09:24:46.835316",
+          "2026-11-21T09:28:59.853291",
+          "2026-11-21T09:34:08.555044",
+          "2026-11-21T09:38:05.700554",
+          "2026-11-21T09:43:22.520938",
+          "2026-11-21T09:49:27.686281",
+          "2026-11-21T09:55:34.679557",
+          "2026-11-21T09:59:04.515876",
+          "2026-11-21T10:02:46.534262",
+          "2026-11-21T10:07:04.187541"
         ],
         "errores_llenado": 0
       }
@@ -52711,7 +52722,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-21T10:09:59.551966",
+        "ultimo_heartbeat": "2026-11-21T10:20:06.080587",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -52732,7 +52743,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-21T10:07:27.668087"
+        "actualizado_en": "2026-11-21T10:10:17.564290"
       },
       "mantenimiento": {
         "ok": true,
@@ -52752,12 +52763,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-21T10:10:03.911576"
+        "actualizado_en": "2026-11-21T10:20:04.259666"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 162 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-21T09:20:06.435836"
+        "actualizado_en": "2026-11-21T10:20:06.181839"
       },
       "atribucion": {
         "ok": true,
@@ -52768,7 +52779,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-21T10:05:07"
+        "actualizado_en": "2026-11-21T10:20:08"
       }
     }
   }

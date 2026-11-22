@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-22T09:20:08.927526",
-  "generado_en_epoch": 1795357208,
+  "generado_en": "2026-11-22T09:20:30.510923",
+  "generado_en_epoch": 1795357230,
   "dias": [
     {
       "fecha": "2026-11-22",
@@ -541,7 +541,7 @@
         "estado": "inconsistencias",
         "mensaje": "1 de 2 tandas no cuadran; 1 tanda(s) de noche/madrugada no se pueden verificar todavía (el conteo de noche está en ajuste); 18 despacho(s) de noche/madrugada sin anotar por revisar en video.",
         "reportado": 96,
-        "sistema": 112,
+        "sistema": 136,
         "tandas": 2,
         "tandas_ok": 0,
         "tandas_no_verificables": 1,
@@ -53414,7 +53414,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 609.5,
+        "libre_gb": 609.4,
         "total_gb": 984.1,
         "mensaje": "609 GB libres de 984 GB."
       },
@@ -53422,7 +53422,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-22T09:10:35.311114"
+        "actualizado_en": "2026-11-22T09:20:16.751153"
       },
       "mantenimiento": {
         "ok": true,
@@ -53432,7 +53432,7 @@
       "informes": {
         "ok": true,
         "mensaje": "Informe(s) 2026-11-21, 2026-11-22 publicados; 90 informes disponibles para descargar.",
-        "actualizado_en": "2026-11-22T08:20:25.542598"
+        "actualizado_en": "2026-11-22T09:20:26.290251"
       },
       "clips": {
         "ok": true,
@@ -53447,7 +53447,7 @@
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 167 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-22T08:20:06.733737"
+        "actualizado_en": "2026-11-22T09:20:12.862882"
       },
       "atribucion": {
         "ok": true,

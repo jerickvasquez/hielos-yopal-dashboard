@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-23T10:34:59.124772",
-  "generado_en_epoch": 1795448099,
+  "generado_en": "2026-11-23T10:40:08.592381",
+  "generado_en_epoch": 1795448408,
   "dias": [
     {
       "fecha": "2026-11-23",
@@ -10,12 +10,12 @@
         {
           "canal": "0",
           "clase": "bloque_grande",
-          "unidades": 8
+          "unidades": 12
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 24
+          "unidades": 20
         }
       ],
       "despachos": [
@@ -119,43 +119,43 @@
         },
         {
           "hora": "2026-11-23T10:34:39.388128",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_grande",
+          "planta": "4",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": 553.5,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 2914.7,
           "gap_sospechoso": false
         }
       ],
       "por_planta": [
         {
           "planta": "4",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 3,
+          "bloques": 12
         },
         {
           "planta": "desconocida",
-          "despachos": 6,
-          "bloques": 24
+          "despachos": 5,
+          "bloques": 20
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_grande",
           "etiqueta": "Grande",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 3,
+          "bloques": 12
         },
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 6,
-          "bloques": 24
+          "despachos": 5,
+          "bloques": 20
         }
       ],
       "anomalia": {
@@ -163,8 +163,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 635,
-        "minutos_esperados": 634,
+        "minutos_cubiertos": 641,
+        "minutos_esperados": 640,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -53824,7 +53824,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-23T10:34:26.278812",
+        "ultimo_heartbeat": "2026-11-23T10:40:01.293931",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -53837,7 +53837,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 616.8,
+        "libre_gb": 616.7,
         "total_gb": 984.1,
         "mensaje": "617 GB libres de 984 GB."
       },
@@ -53845,7 +53845,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-23T10:30:16.175499"
+        "actualizado_en": "2026-11-23T10:35:11.896437"
       },
       "mantenimiento": {
         "ok": true,
@@ -53859,13 +53859,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "882 clips disponibles en la pagina (1 nuevos). Espacio: 6.7 de 9 GB.",
-        "actualizado_en": "2026-11-23T10:27:55.791392"
+        "mensaje": "883 clips disponibles en la pagina (0 nuevos). Espacio: 6.7 de 9 GB.",
+        "actualizado_en": "2026-11-23T10:40:06.861032"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-23T10:30:03.508925"
+        "actualizado_en": "2026-11-23T10:40:04.292161"
       },
       "planilla": {
         "ok": true,
@@ -53881,7 +53881,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-23T10:29:46"
+        "actualizado_en": "2026-11-23T10:35:12"
       }
     }
   }

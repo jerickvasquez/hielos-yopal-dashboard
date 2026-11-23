@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-22T23:10:21.273374",
-  "generado_en_epoch": 1795407021,
+  "generado_en": "2026-11-22T23:20:08.256518",
+  "generado_en_epoch": 1795407608,
   "dias": [
     {
       "fecha": "2026-11-22",
@@ -677,18 +677,18 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1391,
-        "minutos_esperados": 1390,
+        "minutos_cubiertos": 1400,
+        "minutos_esperados": 1400,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "inconsistencias",
-        "mensaje": "1 de 3 tandas no cuadran; 1 fila(s) mal llenadas.",
-        "reportado": 136,
-        "sistema": 148,
-        "tandas": 3,
-        "tandas_ok": 2,
+        "mensaje": "1 fila(s) mal llenadas.",
+        "reportado": 176,
+        "sistema": 176,
+        "tandas": 4,
+        "tandas_ok": 4,
         "tandas_no_verificables": 0,
         "despachos_sin_reportar": 0,
         "bloques_sin_reportar": 0,
@@ -53546,7 +53546,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-22T23:10:03.679753",
+        "ultimo_heartbeat": "2026-11-22T23:19:40.248528",
         "fraccion_baja_confianza_reciente": 0.005
       }
     ],
@@ -53559,15 +53559,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 607.5,
+        "libre_gb": 607.1,
         "total_gb": 984.1,
-        "mensaje": "608 GB libres de 984 GB."
+        "mensaje": "607 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-22T23:10:03.522094"
+        "actualizado_en": "2026-11-22T23:10:29.542353"
       },
       "mantenimiento": {
         "ok": true,
@@ -53587,12 +53587,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-22T23:10:17.076499"
+        "actualizado_en": "2026-11-22T23:20:03.849637"
       },
       "planilla": {
         "ok": true,
-        "mensaje": "Planilla leída: 168 tandas anotadas, 1 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-22T22:20:06.754488"
+        "mensaje": "Planilla leída: 169 tandas anotadas, 1 fila(s) mal llenadas.",
+        "actualizado_en": "2026-11-22T23:20:05.866004"
       },
       "atribucion": {
         "ok": true,
@@ -53603,7 +53603,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-22T23:08:15"
+        "actualizado_en": "2026-11-22T23:18:15"
       }
     }
   }

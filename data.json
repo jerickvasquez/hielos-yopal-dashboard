@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-24T15:15:41.997534",
-  "generado_en_epoch": 1795551341,
+  "generado_en": "2026-11-24T15:20:08.741271",
+  "generado_en_epoch": 1795551608,
   "dias": [
     {
       "fecha": "2026-11-24",
@@ -281,10 +281,10 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_sin_confirmar",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": 21665.5,
@@ -333,31 +333,35 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 915,
-        "minutos_esperados": 915,
+        "minutos_cubiertos": 920,
+        "minutos_esperados": 920,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
-        "estado": "revisar",
-        "mensaje": "Lo que se puede verificar cuadra; 5 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
+        "estado": "inconsistencias",
+        "mensaje": "1 fila(s) mal llenadas; 9 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 40,
-        "sistema": 60,
+        "sistema": 76,
         "tandas": 1,
         "tandas_ok": 1,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 5,
-        "bloques_sin_reportar": 20,
+        "despachos_sin_reportar": 9,
+        "bloques_sin_reportar": 36,
         "sin_reportar_confirmados": 0,
-        "por_anotar": 5,
+        "por_anotar": 9,
         "horas_por_anotar": [
           "2026-11-24T12:49:59.678049",
           "2026-11-24T12:58:43.160665",
           "2026-11-24T13:02:25.540385",
           "2026-11-24T13:25:38.293358",
-          "2026-11-24T13:33:30.311714"
+          "2026-11-24T13:33:30.311714",
+          "2026-11-24T14:36:14.306403",
+          "2026-11-24T14:57:44.350834",
+          "2026-11-24T15:05:30.313118",
+          "2026-11-24T15:15:28.668561"
         ],
-        "errores_llenado": 0
+        "errores_llenado": 1
       }
     },
     {
@@ -54560,7 +54564,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-24T15:14:59.238806",
+        "ultimo_heartbeat": "2026-11-24T15:19:53.238365",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -54581,7 +54585,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-24T15:10:35.804087"
+        "actualizado_en": "2026-11-24T15:15:51.081962"
       },
       "mantenimiento": {
         "ok": true,
@@ -54595,18 +54599,18 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "907 clips disponibles en la pagina (1 nuevos). Espacio: 6.9 de 9 GB.",
-        "actualizado_en": "2026-11-24T15:12:07.760466"
+        "mensaje": "908 clips disponibles en la pagina (1 nuevos). Espacio: 7.0 de 9 GB.",
+        "actualizado_en": "2026-11-24T15:17:04.745438"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-24T15:10:23.010811"
+        "actualizado_en": "2026-11-24T15:20:04.303381"
       },
       "planilla": {
         "ok": true,
-        "mensaje": "Planilla leída: 174 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-24T14:20:46.708905"
+        "mensaje": "Planilla leída: 174 tandas anotadas, 1 fila(s) mal llenadas.",
+        "actualizado_en": "2026-11-24T15:20:06.135885"
       },
       "atribucion": {
         "ok": true,
@@ -54617,7 +54621,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-24T15:13:07"
+        "actualizado_en": "2026-11-24T15:18:07"
       }
     }
   }

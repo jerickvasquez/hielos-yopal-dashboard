@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-24T12:58:54.458246",
-  "generado_en_epoch": 1795543134,
+  "generado_en": "2026-11-24T13:00:12.826049",
+  "generado_en_epoch": 1795543212,
   "dias": [
     {
       "fecha": "2026-11-24",
@@ -183,10 +183,10 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_sin_confirmar",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": 13460.0,
@@ -235,8 +235,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 779,
-        "minutos_esperados": 778,
+        "minutos_cubiertos": 781,
+        "minutos_esperados": 780,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -54456,8 +54456,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-24T12:58:26.567953",
-        "fraccion_baja_confianza_reciente": 0.0
+        "ultimo_heartbeat": "2026-11-24T13:00:03.799568",
+        "fraccion_baja_confianza_reciente": 0.02
       }
     ],
     "procesamiento_diario": {
@@ -54469,7 +54469,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 620.2,
+        "libre_gb": 620.1,
         "total_gb": 984.1,
         "mensaje": "620 GB libres de 984 GB."
       },
@@ -54477,7 +54477,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-24T12:50:21.155883"
+        "actualizado_en": "2026-11-24T12:59:03.425777"
       },
       "mantenimiento": {
         "ok": true,
@@ -54497,7 +54497,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-24T12:50:03.394586"
+        "actualizado_en": "2026-11-24T13:00:04.230327"
       },
       "planilla": {
         "ok": true,

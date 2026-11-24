@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-24T16:13:51.960353",
-  "generado_en_epoch": 1795554831,
+  "generado_en": "2026-11-24T16:20:08.933413",
+  "generado_en_epoch": 1795555208,
   "dias": [
     {
       "fecha": "2026-11-24",
@@ -15,12 +15,12 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 40
+          "unidades": 44
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 16
+          "unidades": 12
         }
       ],
       "despachos": [
@@ -390,16 +390,16 @@
         },
         {
           "hora": "2026-11-24T16:13:39.752916",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "3",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": 1168.7,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 316.3,
           "gap_sospechoso": false
         }
       ],
@@ -411,8 +411,8 @@
         },
         {
           "planta": "3",
-          "despachos": 1,
-          "bloques": 4
+          "despachos": 2,
+          "bloques": 8
         },
         {
           "planta": "4",
@@ -421,8 +421,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 4,
-          "bloques": 16
+          "despachos": 3,
+          "bloques": 12
         }
       ],
       "por_clase": [
@@ -435,14 +435,14 @@
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 10,
-          "bloques": 40
+          "despachos": 11,
+          "bloques": 44
         },
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 4,
-          "bloques": 16
+          "despachos": 3,
+          "bloques": 12
         }
       ],
       "anomalia": {
@@ -450,33 +450,36 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 974,
-        "minutos_esperados": 973,
+        "minutos_cubiertos": 981,
+        "minutos_esperados": 980,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
         "estado": "inconsistencias",
-        "mensaje": "1 fila(s) mal llenadas; 9 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
+        "mensaje": "5 despacho(s) (20 bloques) que nadie anotó; 1 fila(s) mal llenadas; 12 despacho(s) de las últimas horas todavía sin anotar (la tanda puede seguir en curso).",
         "reportado": 40,
-        "sistema": 76,
+        "sistema": 108,
         "tandas": 1,
         "tandas_ok": 1,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 9,
-        "bloques_sin_reportar": 36,
-        "sin_reportar_confirmados": 0,
-        "por_anotar": 9,
+        "despachos_sin_reportar": 17,
+        "bloques_sin_reportar": 68,
+        "sin_reportar_confirmados": 5,
+        "por_anotar": 12,
         "horas_por_anotar": [
-          "2026-11-24T12:49:59.678049",
-          "2026-11-24T12:58:43.160665",
-          "2026-11-24T13:02:25.540385",
-          "2026-11-24T13:25:38.293358",
-          "2026-11-24T13:33:30.311714",
           "2026-11-24T14:36:14.306403",
           "2026-11-24T14:57:44.350834",
           "2026-11-24T15:05:30.313118",
-          "2026-11-24T15:15:28.668561"
+          "2026-11-24T15:15:28.668561",
+          "2026-11-24T15:20:48.321842",
+          "2026-11-24T15:29:16.673221",
+          "2026-11-24T15:36:05.217744",
+          "2026-11-24T15:43:30.076464",
+          "2026-11-24T15:54:11.031323",
+          "2026-11-24T15:59:55.739837",
+          "2026-11-24T16:08:23.489061",
+          "2026-11-24T16:13:39.752916"
         ],
         "errores_llenado": 1
       }
@@ -54681,7 +54684,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-24T16:13:19.454370",
+        "ultimo_heartbeat": "2026-11-24T16:20:04.604774",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -54694,15 +54697,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 614.6,
+        "libre_gb": 614.5,
         "total_gb": 984.1,
-        "mensaje": "615 GB libres de 984 GB."
+        "mensaje": "614 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-24T16:10:31.999352"
+        "actualizado_en": "2026-11-24T16:14:00.338713"
       },
       "mantenimiento": {
         "ok": true,
@@ -54716,18 +54719,18 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "915 clips disponibles en la pagina (1 nuevos). Espacio: 7.0 de 9 GB.",
-        "actualizado_en": "2026-11-24T16:10:47.373039"
+        "mensaje": "916 clips disponibles en la pagina (1 nuevos). Espacio: 7.0 de 9 GB.",
+        "actualizado_en": "2026-11-24T16:17:22.304087"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-24T16:10:18.517944"
+        "actualizado_en": "2026-11-24T16:20:04.475139"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 174 tandas anotadas, 1 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-24T15:20:06.135885"
+        "actualizado_en": "2026-11-24T16:20:06.349894"
       },
       "atribucion": {
         "ok": true,
@@ -54738,7 +54741,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-24T16:13:09"
+        "actualizado_en": "2026-11-24T16:18:10"
       }
     }
   }

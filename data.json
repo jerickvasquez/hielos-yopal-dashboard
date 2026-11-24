@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-24T15:20:31.303612",
-  "generado_en_epoch": 1795551631,
+  "generado_en": "2026-11-24T15:20:59.979959",
+  "generado_en_epoch": 1795551659,
   "dias": [
     {
       "fecha": "2026-11-24",
@@ -20,7 +20,7 @@
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 8
+          "unidades": 12
         }
       ],
       "despachos": [
@@ -289,6 +289,20 @@
           "planta_fuente": null,
           "gap_anterior_seg": 21665.5,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-11-24T15:20:48.321842",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": 319.7,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
@@ -304,8 +318,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 3,
+          "bloques": 12
         }
       ],
       "por_clase": [
@@ -324,8 +338,8 @@
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 3,
+          "bloques": 12
         }
       ],
       "anomalia": {
@@ -54577,7 +54591,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 615.5,
+        "libre_gb": 615.4,
         "total_gb": 984.1,
         "mensaje": "615 GB libres de 984 GB."
       },
@@ -54585,7 +54599,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-24T15:20:16.665232"
+        "actualizado_en": "2026-11-24T15:20:39.194127"
       },
       "mantenimiento": {
         "ok": true,

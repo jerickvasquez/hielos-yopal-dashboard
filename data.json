@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-23T19:10:07.379391",
-  "generado_en_epoch": 1795479007,
+  "generado_en": "2026-11-23T19:20:08.656306",
+  "generado_en_epoch": 1795479608,
   "dias": [
     {
       "fecha": "2026-11-23",
@@ -459,8 +459,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1150,
-        "minutos_esperados": 1150,
+        "minutos_cubiertos": 1161,
+        "minutos_esperados": 1160,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -54113,8 +54113,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-23T19:09:59.788109",
-        "fraccion_baja_confianza_reciente": 0.01
+        "ultimo_heartbeat": "2026-11-23T19:20:06.976089",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -54134,7 +54134,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-23T19:00:16.556347"
+        "actualizado_en": "2026-11-23T19:10:15.498920"
       },
       "mantenimiento": {
         "ok": true,
@@ -54154,12 +54154,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-23T19:10:03.181192"
+        "actualizado_en": "2026-11-23T19:20:03.964099"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 172 tandas anotadas, 0 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-23T18:20:05.940817"
+        "actualizado_en": "2026-11-23T19:20:05.878338"
       },
       "atribucion": {
         "ok": true,
@@ -54170,7 +54170,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-23T19:06:18"
+        "actualizado_en": "2026-11-23T19:16:19"
       }
     }
   }

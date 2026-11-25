@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-25T00:15:08.180821",
-  "generado_en_epoch": 1795583708,
+  "generado_en": "2026-11-25T00:18:50.565784",
+  "generado_en_epoch": 1795583930,
   "dias": [
     {
       "fecha": "2026-11-25",
@@ -10,12 +10,26 @@
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 4
+          "unidades": 8
         }
       ],
       "despachos": [
         {
           "hora": "2026-11-25T00:14:54.525239",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": true,
+          "por_revisar": true,
+          "motivo_revision": "madrugada",
+          "tamano": "color_sin_confirmar",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-11-25T00:18:35.519740",
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
@@ -25,7 +39,7 @@
           "tamano": "sin_dato",
           "planta_deducida": false,
           "planta_fuente": null,
-          "gap_anterior_seg": null,
+          "gap_anterior_seg": 221.0,
           "gap_sospechoso": false
         }
       ],
@@ -36,8 +50,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 15,
-        "minutos_esperados": 15,
+        "minutos_cubiertos": 19,
+        "minutos_esperados": 18,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -54876,7 +54890,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-25T00:14:40.077386",
+        "ultimo_heartbeat": "2026-11-25T00:18:18.385427",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -54897,7 +54911,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-25T00:10:16.061980"
+        "actualizado_en": "2026-11-25T00:15:16.328007"
       },
       "mantenimiento": {
         "ok": true,
@@ -54911,8 +54925,8 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "927 clips disponibles en la pagina (0 nuevos). Espacio: 7.1 de 9 GB.",
-        "actualizado_en": "2026-11-24T23:40:08.045453"
+        "mensaje": "912 clips disponibles en la pagina (1 nuevos). Espacio: 7.0 de 9 GB.",
+        "actualizado_en": "2026-11-25T00:16:34.697769"
       },
       "vigia": {
         "ok": true,

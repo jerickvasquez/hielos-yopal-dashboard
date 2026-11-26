@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-26T14:30:06.940384",
-  "generado_en_epoch": 1795721406,
+  "generado_en": "2026-11-26T14:30:31.797843",
+  "generado_en_epoch": 1795721431,
   "dias": [
     {
       "fecha": "2026-11-26",
@@ -15,7 +15,7 @@
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 20
+          "unidades": 24
         }
       ],
       "despachos": [
@@ -312,6 +312,20 @@
           "planta_fuente": "color",
           "gap_anterior_seg": 22352.9,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-11-26T14:30:19.186491",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": 730.5,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
@@ -332,8 +346,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 4,
-          "bloques": 16
+          "despachos": 5,
+          "bloques": 20
         }
       ],
       "por_clase": [
@@ -346,8 +360,8 @@
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 4,
-          "bloques": 16
+          "despachos": 5,
+          "bloques": 20
         }
       ],
       "anomalia": {
@@ -55959,7 +55973,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 620.8,
+        "libre_gb": 620.7,
         "total_gb": 984.1,
         "mensaje": "621 GB libres de 984 GB."
       },
@@ -55967,7 +55981,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-26T14:22:49.383250"
+        "actualizado_en": "2026-11-26T14:30:15.485003"
       },
       "mantenimiento": {
         "ok": true,
@@ -56003,7 +56017,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-26T14:25:10"
+        "actualizado_en": "2026-11-26T14:30:10"
       }
     }
   }

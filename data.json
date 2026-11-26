@@ -1,13 +1,34 @@
 {
-  "generado_en": "2026-11-26T01:30:07.844174",
-  "generado_en_epoch": 1795674607,
+  "generado_en": "2026-11-26T01:33:39.617909",
+  "generado_en_epoch": 1795674819,
   "dias": [
     {
       "fecha": "2026-11-26",
       "conteo_real": true,
       "metodo": "presencia",
-      "consolidado": [],
-      "despachos": [],
+      "consolidado": [
+        {
+          "canal": "0",
+          "clase": "sin_identificar",
+          "unidades": 4
+        }
+      ],
+      "despachos": [
+        {
+          "hora": "2026-11-26T01:33:28.704742",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": true,
+          "motivo_revision": "madrugada",
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
+        }
+      ],
       "por_planta": [],
       "por_clase": [],
       "anomalia": {
@@ -15,8 +36,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 90,
-        "minutos_esperados": 90,
+        "minutos_cubiertos": 94,
+        "minutos_esperados": 93,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -55608,7 +55629,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-26T01:29:43.202469",
+        "ultimo_heartbeat": "2026-11-26T01:33:14.699849",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -55621,7 +55642,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 610.5,
+        "libre_gb": 610.4,
         "total_gb": 984.1,
         "mensaje": "610 GB libres de 984 GB."
       },
@@ -55629,7 +55650,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-26T01:20:39.041249"
+        "actualizado_en": "2026-11-26T01:30:16.290621"
       },
       "mantenimiento": {
         "ok": true,

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-26T14:37:58.838511",
-  "generado_en_epoch": 1795721878,
+  "generado_en": "2026-11-26T14:40:06.982073",
+  "generado_en_epoch": 1795722006,
   "dias": [
     {
       "fecha": "2026-11-26",
@@ -337,10 +337,10 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_sin_confirmar",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": 1178.0,
@@ -399,8 +399,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 878,
-        "minutos_esperados": 877,
+        "minutos_cubiertos": 880,
+        "minutos_esperados": 880,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -55990,8 +55990,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-26T14:37:44.815354",
-        "fraccion_baja_confianza_reciente": 0.02
+        "ultimo_heartbeat": "2026-11-26T14:39:46.305034",
+        "fraccion_baja_confianza_reciente": 0.045
       }
     ],
     "procesamiento_diario": {
@@ -56011,7 +56011,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-26T14:30:39.854131"
+        "actualizado_en": "2026-11-26T14:38:08.033494"
       },
       "mantenimiento": {
         "ok": true,
@@ -56025,13 +56025,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "945 clips disponibles en la pagina (1 nuevos). Espacio: 7.3 de 9 GB.",
-        "actualizado_en": "2026-11-26T14:32:55.420113"
+        "mensaje": "946 clips disponibles en la pagina (0 nuevos). Espacio: 7.3 de 9 GB.",
+        "actualizado_en": "2026-11-26T14:40:06.190187"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-26T14:30:02.552036"
+        "actualizado_en": "2026-11-26T14:40:02.506066"
       },
       "planilla": {
         "ok": true,

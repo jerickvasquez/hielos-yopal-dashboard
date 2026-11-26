@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-26T13:10:07.027945",
-  "generado_en_epoch": 1795716607,
+  "generado_en": "2026-11-26T13:20:07.931234",
+  "generado_en_epoch": 1795717207,
   "dias": [
     {
       "fecha": "2026-11-26",
@@ -327,8 +327,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 790,
-        "minutos_esperados": 790,
+        "minutos_cubiertos": 800,
+        "minutos_esperados": 800,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -342,12 +342,9 @@
         "tandas_no_verificables": 0,
         "despachos_sin_reportar": 19,
         "bloques_sin_reportar": 76,
-        "sin_reportar_confirmados": 5,
-        "por_anotar": 6,
+        "sin_reportar_confirmados": 8,
+        "por_anotar": 3,
         "horas_por_anotar": [
-          "2026-11-26T09:59:57.555945",
-          "2026-11-26T10:39:12.294867",
-          "2026-11-26T10:44:32.835854",
           "2026-11-26T11:50:59.959046",
           "2026-11-26T12:02:48.706813",
           "2026-11-26T12:07:43.286163"
@@ -55923,7 +55920,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-26T13:09:52.183180",
+        "ultimo_heartbeat": "2026-11-26T13:19:58.701218",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -55944,7 +55941,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-26T13:00:19.301358"
+        "actualizado_en": "2026-11-26T13:10:15.443432"
       },
       "mantenimiento": {
         "ok": true,
@@ -55964,12 +55961,12 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-26T13:10:02.664662"
+        "actualizado_en": "2026-11-26T13:20:03.453823"
       },
       "planilla": {
         "ok": true,
         "mensaje": "Planilla leída: 178 tandas anotadas, 6 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-26T12:20:05.360499"
+        "actualizado_en": "2026-11-26T13:20:05.980371"
       },
       "atribucion": {
         "ok": true,
@@ -55980,7 +55977,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-26T13:10:05"
+        "actualizado_en": "2026-11-26T13:20:06"
       }
     }
   }

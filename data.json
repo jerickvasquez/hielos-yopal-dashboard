@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-27T08:22:08.908996",
-  "generado_en_epoch": 1795785728,
+  "generado_en": "2026-11-27T08:30:07.003281",
+  "generado_en_epoch": 1795786207,
   "dias": [
     {
       "fecha": "2026-11-27",
@@ -10,12 +10,12 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 32
+          "unidades": 36
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 12
+          "unidades": 8
         }
       ],
       "despachos": [
@@ -161,20 +161,25 @@
         },
         {
           "hora": "2026-11-27T08:21:56.488809",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "1",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": 1321.0,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 15123.9,
           "gap_sospechoso": false
         }
       ],
       "por_planta": [
+        {
+          "planta": "1",
+          "despachos": 1,
+          "bloques": 4
+        },
         {
           "planta": "2",
           "despachos": 1,
@@ -182,22 +187,22 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "por_clase": [
         {
           "clase": "bloque_pequeno",
           "etiqueta": "Pequeño",
-          "despachos": 1,
-          "bloques": 4
+          "despachos": 2,
+          "bloques": 8
         },
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 2,
-          "bloques": 8
+          "despachos": 1,
+          "bloques": 4
         }
       ],
       "anomalia": {
@@ -205,8 +210,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 502,
-        "minutos_esperados": 502,
+        "minutos_cubiertos": 510,
+        "minutos_esperados": 510,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -56593,7 +56598,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-27T08:21:39.896974",
+        "ultimo_heartbeat": "2026-11-27T08:29:53.587115",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -56606,15 +56611,15 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 623.5,
+        "libre_gb": 623.2,
         "total_gb": 984.1,
-        "mensaje": "624 GB libres de 984 GB."
+        "mensaje": "623 GB libres de 984 GB."
       },
       "publicacion": {
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-27T08:20:40.729950"
+        "actualizado_en": "2026-11-27T08:22:17.931578"
       },
       "mantenimiento": {
         "ok": true,
@@ -56628,13 +56633,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "957 clips disponibles en la pagina (1 nuevos). Espacio: 7.4 de 9 GB.",
-        "actualizado_en": "2026-11-27T08:01:39.360433"
+        "mensaje": "958 clips disponibles en la pagina (1 nuevos). Espacio: 7.5 de 9 GB.",
+        "actualizado_en": "2026-11-27T08:28:07.292225"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-27T08:20:03.644460"
+        "actualizado_en": "2026-11-27T08:30:02.696120"
       },
       "planilla": {
         "ok": true,
@@ -56650,7 +56655,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-27T08:21:36"
+        "actualizado_en": "2026-11-27T08:26:37"
       }
     }
   }

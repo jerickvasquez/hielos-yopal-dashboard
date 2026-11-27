@@ -1,7 +1,27 @@
 {
-  "generado_en": "2026-11-26T23:50:07.142205",
-  "generado_en_epoch": 1795755007,
+  "generado_en": "2026-11-27T00:00:11.716790",
+  "generado_en_epoch": 1795755611,
   "dias": [
+    {
+      "fecha": "2026-11-27",
+      "conteo_real": true,
+      "metodo": "presencia",
+      "consolidado": [],
+      "despachos": [],
+      "por_planta": [],
+      "por_clase": [],
+      "anomalia": {
+        "es_anomalia": false,
+        "motivo": "El dia sigue en curso: se compara cuando termine."
+      },
+      "cobertura": {
+        "minutos_cubiertos": 0,
+        "minutos_esperados": 0,
+        "porcentaje": null,
+        "huecos": []
+      },
+      "validacion": null
+    },
     {
       "fecha": "2026-11-26",
       "conteo_real": true,
@@ -774,11 +794,11 @@
       ],
       "anomalia": {
         "es_anomalia": false,
-        "motivo": "El dia sigue en curso: se compara cuando termine."
+        "motivo": "Dentro del rango habitual (119.9 +/- 35.8)."
       },
       "cobertura": {
-        "minutos_cubiertos": 1431,
-        "minutos_esperados": 1430,
+        "minutos_cubiertos": 1440,
+        "minutos_esperados": 1440,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -56363,14 +56383,14 @@
     "dvr": {
       "ok": true,
       "mensaje": "OK: 192.168.1.24:37777 alcanzable. Grabacion activa.",
-      "verificado_en": "2026-11-26T22:00:04.095031"
+      "verificado_en": "2026-11-27T00:00:04.788891"
     },
     "conteo_en_vivo": [
       {
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-26T23:50:05.249579",
+        "ultimo_heartbeat": "2026-11-26T23:59:41.551481",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -56391,7 +56411,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-26T23:40:16.370328"
+        "actualizado_en": "2026-11-26T23:50:15.433806"
       },
       "mantenimiento": {
         "ok": true,
@@ -56411,7 +56431,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-26T23:50:02.803406"
+        "actualizado_en": "2026-11-27T00:00:05.031295"
       },
       "planilla": {
         "ok": true,
@@ -56427,7 +56447,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-26T23:46:03"
+        "actualizado_en": "2026-11-26T23:56:04"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-27T04:10:07.067500",
-  "generado_en_epoch": 1795770607,
+  "generado_en": "2026-11-27T04:20:08.181899",
+  "generado_en_epoch": 1795771208,
   "dias": [
     {
       "fecha": "2026-11-27",
@@ -10,12 +10,12 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 16
+          "unidades": 20
         },
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 8
+          "unidades": 4
         }
       ],
       "despachos": [
@@ -91,16 +91,16 @@
         },
         {
           "hora": "2026-11-27T04:09:52.575998",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "1",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": true,
           "motivo_revision": "madrugada",
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": 9790.3,
+          "planta_fuente": "color",
+          "gap_anterior_seg": null,
           "gap_sospechoso": false
         }
       ],
@@ -111,25 +111,25 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 250,
-        "minutos_esperados": 250,
+        "minutos_cubiertos": 260,
+        "minutos_esperados": 260,
         "porcentaje": 100.0,
         "huecos": []
       },
       "validacion": {
-        "estado": "sin_registro",
-        "mensaje": "Nadie anotó producción en la planilla; el sistema contó 20 bloques.",
+        "estado": "inconsistencias",
+        "mensaje": "1 fila(s) mal llenadas; 6 despacho(s) de noche/madrugada sin anotar por revisar en video.",
         "reportado": 0,
-        "sistema": 20,
+        "sistema": 24,
         "tandas": 0,
         "tandas_ok": 0,
         "tandas_no_verificables": 0,
-        "despachos_sin_reportar": 5,
-        "bloques_sin_reportar": 20,
+        "despachos_sin_reportar": 6,
+        "bloques_sin_reportar": 24,
         "sin_reportar_confirmados": 0,
         "por_anotar": 0,
         "horas_por_anotar": [],
-        "errores_llenado": 0
+        "errores_llenado": 1
       }
     },
     {
@@ -914,7 +914,7 @@
       },
       "validacion": {
         "estado": "inconsistencias",
-        "mensaje": "1 de 1 tandas no cuadran; 18 despacho(s) (72 bloques) que nadie anotó; 3 fila(s) mal llenadas; 8 despacho(s) de noche/madrugada sin anotar por revisar en video.",
+        "mensaje": "1 de 1 tandas no cuadran; 18 despacho(s) (72 bloques) que nadie anotó; 5 fila(s) mal llenadas; 8 despacho(s) de noche/madrugada sin anotar por revisar en video.",
         "reportado": 72,
         "sistema": 200,
         "tandas": 1,
@@ -925,7 +925,7 @@
         "sin_reportar_confirmados": 18,
         "por_anotar": 0,
         "horas_por_anotar": [],
-        "errores_llenado": 3
+        "errores_llenado": 5
       }
     },
     {
@@ -56496,7 +56496,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-27T04:09:49.809292",
+        "ultimo_heartbeat": "2026-11-27T04:19:56.927078",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -56509,7 +56509,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 624.0,
+        "libre_gb": 623.8,
         "total_gb": 984.1,
         "mensaje": "624 GB libres de 984 GB."
       },
@@ -56517,7 +56517,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-27T04:00:17.762675"
+        "actualizado_en": "2026-11-27T04:10:15.671719"
       },
       "mantenimiento": {
         "ok": true,
@@ -56531,18 +56531,18 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "952 clips disponibles en la pagina (0 nuevos). Espacio: 7.4 de 9 GB.",
-        "actualizado_en": "2026-11-27T03:40:07.120652"
+        "mensaje": "953 clips disponibles en la pagina (1 nuevos). Espacio: 7.4 de 9 GB.",
+        "actualizado_en": "2026-11-27T04:12:56.833490"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-27T04:10:02.843016"
+        "actualizado_en": "2026-11-27T04:20:03.641381"
       },
       "planilla": {
         "ok": true,
-        "mensaje": "Planilla leída: 179 tandas anotadas, 9 fila(s) mal llenadas.",
-        "actualizado_en": "2026-11-27T03:20:05.451385"
+        "mensaje": "Planilla leída: 179 tandas anotadas, 12 fila(s) mal llenadas.",
+        "actualizado_en": "2026-11-27T04:20:05.302827"
       },
       "atribucion": {
         "ok": true,
@@ -56553,7 +56553,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-27T04:06:19"
+        "actualizado_en": "2026-11-27T04:16:19"
       }
     }
   }

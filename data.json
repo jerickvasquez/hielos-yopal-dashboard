@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-27T20:20:30.857314",
-  "generado_en_epoch": 1795828830,
+  "generado_en": "2026-11-27T20:25:56.285894",
+  "generado_en_epoch": 1795829156,
   "dias": [
     {
       "fecha": "2026-11-27",
@@ -15,7 +15,7 @@
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 36
+          "unidades": 40
         }
       ],
       "despachos": [
@@ -466,6 +466,20 @@
           "planta_fuente": "color",
           "gap_anterior_seg": 427.3,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-11-27T20:25:43.090748",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": 1806.6,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [
@@ -486,8 +500,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 14,
-          "bloques": 56
+          "despachos": 15,
+          "bloques": 60
         }
       ],
       "por_clase": [
@@ -500,8 +514,8 @@
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 8,
-          "bloques": 32
+          "despachos": 9,
+          "bloques": 36
         }
       ],
       "anomalia": {
@@ -509,8 +523,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1221,
-        "minutos_esperados": 1220,
+        "minutos_cubiertos": 1226,
+        "minutos_esperados": 1225,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -56901,7 +56915,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-27T20:20:02.826081",
+        "ultimo_heartbeat": "2026-11-27T20:25:36.253600",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -56922,7 +56936,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-27T20:20:16.711056"
+        "actualizado_en": "2026-11-27T20:20:39.148904"
       },
       "mantenimiento": {
         "ok": true,
@@ -56958,7 +56972,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-27T20:17:34"
+        "actualizado_en": "2026-11-27T20:22:34"
       }
     }
   }

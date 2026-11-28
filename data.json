@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-28T01:20:39.346996",
-  "generado_en_epoch": 1795846839,
+  "generado_en": "2026-11-28T01:30:07.479306",
+  "generado_en_epoch": 1795847407,
   "dias": [
     {
       "fecha": "2026-11-28",
@@ -10,12 +10,7 @@
         {
           "canal": "0",
           "clase": "bloque_pequeno",
-          "unidades": 4
-        },
-        {
-          "canal": "0",
-          "clase": "sin_identificar",
-          "unidades": 4
+          "unidades": 8
         }
       ],
       "despachos": [
@@ -35,16 +30,16 @@
         },
         {
           "hora": "2026-11-28T01:17:56.208473",
-          "clase": "sin_identificar",
-          "planta": "desconocida",
+          "clase": "bloque_pequeno",
+          "planta": "1",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": true,
           "motivo_revision": "madrugada",
-          "tamano": "sin_dato",
+          "tamano": "color_y_forma",
           "planta_deducida": false,
-          "planta_fuente": null,
-          "gap_anterior_seg": null,
+          "planta_fuente": "color",
+          "gap_anterior_seg": 243.0,
           "gap_sospechoso": false
         }
       ],
@@ -55,8 +50,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 81,
-        "minutos_esperados": 80,
+        "minutos_cubiertos": 90,
+        "minutos_esperados": 90,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -57322,8 +57317,8 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-28T01:20:20.423959",
-        "fraccion_baja_confianza_reciente": 0.03
+        "ultimo_heartbeat": "2026-11-28T01:29:56.803317",
+        "fraccion_baja_confianza_reciente": 0.0
       }
     ],
     "procesamiento_diario": {
@@ -57343,7 +57338,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-28T01:20:24.229788"
+        "actualizado_en": "2026-11-28T01:20:47.287271"
       },
       "mantenimiento": {
         "ok": true,
@@ -57357,13 +57352,13 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "968 clips disponibles en la pagina (1 nuevos). Espacio: 7.4 de 9 GB.",
-        "actualizado_en": "2026-11-28T01:15:49.905819"
+        "mensaje": "969 clips disponibles en la pagina (1 nuevos). Espacio: 7.4 de 9 GB.",
+        "actualizado_en": "2026-11-28T01:21:34.892460"
       },
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-28T01:20:11.351071"
+        "actualizado_en": "2026-11-28T01:30:03.115553"
       },
       "planilla": {
         "ok": true,
@@ -57379,7 +57374,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-28T01:18:19"
+        "actualizado_en": "2026-11-28T01:28:20"
       }
     }
   }

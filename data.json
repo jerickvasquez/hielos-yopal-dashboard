@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-27T23:43:44.142662",
-  "generado_en_epoch": 1795841024,
+  "generado_en": "2026-11-27T23:47:31.317443",
+  "generado_en_epoch": 1795841251,
   "dias": [
     {
       "fecha": "2026-11-27",
@@ -20,7 +20,7 @@
         {
           "canal": "0",
           "clase": "sin_identificar",
-          "unidades": 92
+          "unidades": 96
         }
       ],
       "despachos": [
@@ -729,13 +729,27 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
           "planta_deducida": false,
           "planta_fuente": null,
           "gap_anterior_seg": 662.5,
+          "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-11-27T23:47:18.672469",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": false,
+          "motivo_revision": null,
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": 228.1,
           "gap_sospechoso": false
         }
       ],
@@ -762,8 +776,8 @@
         },
         {
           "planta": "desconocida",
-          "despachos": 28,
-          "bloques": 112
+          "despachos": 29,
+          "bloques": 116
         }
       ],
       "por_clase": [
@@ -782,8 +796,8 @@
         {
           "clase": "sin_identificar",
           "etiqueta": "Sin identificar",
-          "despachos": 22,
-          "bloques": 88
+          "despachos": 23,
+          "bloques": 92
         }
       ],
       "anomalia": {
@@ -791,8 +805,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1424,
-        "minutos_esperados": 1423,
+        "minutos_cubiertos": 1427,
+        "minutos_esperados": 1427,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -57200,7 +57214,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-27T23:43:23.203851",
+        "ultimo_heartbeat": "2026-11-27T23:46:56.683870",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -57221,7 +57235,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-27T23:40:16.574614"
+        "actualizado_en": "2026-11-27T23:43:55.036704"
       },
       "mantenimiento": {
         "ok": true,
@@ -57235,8 +57249,8 @@
       },
       "clips": {
         "ok": true,
-        "mensaje": "997 clips disponibles en la pagina (0 nuevos). Espacio: 7.7 de 9 GB.",
-        "actualizado_en": "2026-11-27T23:40:06.952664"
+        "mensaje": "998 clips disponibles en la pagina (1 nuevos). Espacio: 7.7 de 9 GB.",
+        "actualizado_en": "2026-11-27T23:45:28.586058"
       },
       "vigia": {
         "ok": true,

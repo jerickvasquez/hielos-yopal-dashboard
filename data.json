@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-28T03:50:07.494319",
-  "generado_en_epoch": 1795855807,
+  "generado_en": "2026-11-28T03:57:04.121646",
+  "generado_en_epoch": 1795856224,
   "dias": [
     {
       "fecha": "2026-11-28",
@@ -11,6 +11,11 @@
           "canal": "0",
           "clase": "bloque_pequeno",
           "unidades": 8
+        },
+        {
+          "canal": "0",
+          "clase": "sin_identificar",
+          "unidades": 4
         }
       ],
       "despachos": [
@@ -41,6 +46,20 @@
           "planta_fuente": "color",
           "gap_anterior_seg": 243.0,
           "gap_sospechoso": false
+        },
+        {
+          "hora": "2026-11-28T03:56:48.053695",
+          "clase": "sin_identificar",
+          "planta": "desconocida",
+          "bloques": 4,
+          "evidencia": false,
+          "por_revisar": true,
+          "motivo_revision": "madrugada",
+          "tamano": "sin_dato",
+          "planta_deducida": false,
+          "planta_fuente": null,
+          "gap_anterior_seg": null,
+          "gap_sospechoso": false
         }
       ],
       "por_planta": [],
@@ -50,8 +69,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 230,
-        "minutos_esperados": 230,
+        "minutos_cubiertos": 237,
+        "minutos_esperados": 237,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -57288,7 +57307,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-28T03:49:58.609647",
+        "ultimo_heartbeat": "2026-11-28T03:56:32.566518",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -57301,7 +57320,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 636.3,
+        "libre_gb": 636.2,
         "total_gb": 984.1,
         "mensaje": "636 GB libres de 984 GB."
       },
@@ -57309,7 +57328,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-28T03:40:16.305540"
+        "actualizado_en": "2026-11-28T03:50:15.546350"
       },
       "mantenimiento": {
         "ok": true,
@@ -57345,7 +57364,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-28T03:48:30"
+        "actualizado_en": "2026-11-28T03:53:30"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
-  "generado_en": "2026-11-27T19:41:36.657578",
-  "generado_en_epoch": 1795826496,
+  "generado_en": "2026-11-27T19:50:08.245258",
+  "generado_en_epoch": 1795827008,
   "dias": [
     {
       "fecha": "2026-11-27",
@@ -416,7 +416,7 @@
           "clase": "sin_identificar",
           "planta": "desconocida",
           "bloques": 4,
-          "evidencia": false,
+          "evidencia": true,
           "por_revisar": false,
           "motivo_revision": null,
           "tamano": "sin_dato",
@@ -467,8 +467,8 @@
         "motivo": "El dia sigue en curso: se compara cuando termine."
       },
       "cobertura": {
-        "minutos_cubiertos": 1182,
-        "minutos_esperados": 1181,
+        "minutos_cubiertos": 1190,
+        "minutos_esperados": 1190,
         "porcentaje": 100.0,
         "huecos": []
       },
@@ -56852,7 +56852,7 @@
         "planta": "desconocida",
         "ok": true,
         "mensaje": "Operando normal.",
-        "ultimo_heartbeat": "2026-11-27T19:41:23.584692",
+        "ultimo_heartbeat": "2026-11-27T19:49:58.876327",
         "fraccion_baja_confianza_reciente": 0.0
       }
     ],
@@ -56865,7 +56865,7 @@
     "sistema": {
       "disco": {
         "ok": true,
-        "libre_gb": 621.0,
+        "libre_gb": 620.6,
         "total_gb": 984.1,
         "mensaje": "621 GB libres de 984 GB."
       },
@@ -56873,7 +56873,7 @@
         "ok": true,
         "mensaje": "Publicando normal. El token de GitHub no tiene vencimiento.",
         "dias_token": null,
-        "actualizado_en": "2026-11-27T19:40:16.247943"
+        "actualizado_en": "2026-11-27T19:41:45.642752"
       },
       "mantenimiento": {
         "ok": true,
@@ -56893,7 +56893,7 @@
       "vigia": {
         "ok": true,
         "mensaje": "Vigia de actividad corriendo.",
-        "actualizado_en": "2026-11-27T19:40:03.860921"
+        "actualizado_en": "2026-11-27T19:50:03.244546"
       },
       "planilla": {
         "ok": true,
@@ -56909,7 +56909,7 @@
         "ok": true,
         "mensaje": "La cámara está en su sitio y se ve bien.",
         "etiqueta": null,
-        "actualizado_en": "2026-11-27T19:37:32"
+        "actualizado_en": "2026-11-27T19:47:32"
       }
     }
   }
